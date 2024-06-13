@@ -1,4 +1,4 @@
-footer {
+/* footer {
   padding: 2rem;
   background-color: var(--light-color);
   font-size: var(--body-font-size-s);
@@ -11,4 +11,108 @@ footer .footer {
 
 footer .footer p {
   margin: 0;
+} */
+
+footer.footer-wrapper{
+  padding: 0px;
+  background: #365069 !important;
 }
+/* Footer Background Color */
+
+/* Footer max Width Container */
+footer.footer-wrapper .footer{
+  margin: 0 auto;
+  max-width: 1320px;
+  padding: 2rem 0.75rem;
+}
+.footer-wrapper p {
+    color: #fff;
+}
+
+.footer-section-first  {
+  border-bottom: 1px solid rgb(94 115 119);
+}
+.footer-section-second {
+  border-bottom: 1px solid rgb(94 115 119);
+  padding: 1rem;
+}
+.footer-section-third {
+  border-bottom: 1px solid rgb(94 115 119);
+  padding: 1rem;
+}
+.footer-section-second {
+  border-bottom: 1px solid rgb(94 115 119);
+  padding: 1rem;
+}
+.footer-section-first .columns-img-col{
+margin-bottom: 30PX;
+}
+.footer-section-first .columns-img-col img {
+  width: 9.5rem;
+  height: 4.25rem;
+}
+
+.footer-section-first .columns-wrapper p {
+  font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: right;
+    margin-right: 150px;
+}
+
+.footer-section-third .columns-2-cols > div > div{
+  display: flex;
+  gap: 20px;
+}
+
+.footer-section-third .columns-2-cols > div > div p{
+  margin-top: 1em;
+  font-size: .875rem;
+  margin-bottom: 1em;
+}
+
+.footer-section-third .columns-2-cols > div > div:first-child img{
+    width: 124px;
+    height: 38px;
+}
+
+.footer-section-third .columns > div{
+  display: flex;
+  justify-content: space-between;
+}
+.footer-section-third .columns > div > div:second-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section-four .default-content-wrapper p{
+  font-size: 1rem;
+  text-align: center;
+  color: rgb(175 185 195);
+}
+
+.footer-section-second .columns >div {
+  align-items: unset;
+}
+.footer-section-second ul>li>p{
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-section-second  ul>li> ul>li{
+  font-size: 16px;
+  color: #fff;
+  margin-left: -40px;
+}
+
+.footer-section-second ul>li::marker{
+  color: transparent;
+}
+
+/* .footer-section-second .columns ul>li> ul>li{
+  font-size: 16px;
+  color: #fff;
+  margin-left: -40px;
+} */

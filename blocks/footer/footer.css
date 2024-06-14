@@ -210,4 +210,7 @@ color: #F58667;
   .footer-section-third .columns-2-cols > div > div p {
     margin: 10px 0 0;
   }
+  .footer-section-first .columns > div > div:last-child{
+      margin-right: 20%;
+  }
 }

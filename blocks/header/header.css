@@ -276,6 +276,14 @@ header nav .nav-tools {
 
 /* header custom css */
 
+header nav .nav-sections .nav-drop::after{
+  content: none !important;
+}
+
+.header-wrapper .nav-wrapper{
+  position: relative;
+}
+
 .header-wrapper .nav-wrapper {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   height: 112px;
@@ -301,7 +309,7 @@ header nav .nav-tools {
   padding: 0 12px;
 }
 
-.header-wrapper .nav-wrapper nav .nav-brand .default-content-wrapper>picture>img {
+.header-wrapper .nav-wrapper nav .nav-brand .default-content-wrapper>p>picture>img {
   width: 108px;
   height: 58px;
 }
@@ -323,8 +331,41 @@ header nav .nav-tools {
 }
 
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li {
+  position: relative;
+  margin-right: 1rem;
+  padding: 8px 8px 8px 8px;
+  color: rgb(51 51 51);
   font-size: 16px;
-  font-weight: 700;
+  font-family: 'Nunito-SemiBold', sans-serif;
+  display: block;
+}
+
+header nav .nav-sections ul {
+  gap: unset;
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li.nav-drop>p {
+  position: relative;
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li.nav-drop>p::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 1px;
+    right: -18px;
+    transform: rotate(135deg);
+    width: 8px;
+    height: 8px;
+    border: 2px solid currentcolor;
+    border-radius: 0 1px 0 0;
+    border-width: 2px 2px 0 0;
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li.nav-drop[aria-expanded="true"]>p::after {
+  top: unset;
+  bottom: 0;
+  transform: rotate(315deg);
 }
 
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li[aria-expanded="true"]>ul {
@@ -343,6 +384,7 @@ header nav .nav-tools {
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 12px;
+  font-family: "Nunito-Bold";
 }
 
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>ul>li>ul {
@@ -465,9 +507,14 @@ header nav .nav-tools {
       right: 1rem;
   }
 
+  .header-wrapper .nav-wrapper nav .nav-brand .default-content-wrapper>p>picture>img {
+      width: 82px;
+      height: 44px;
+  }
+
   .header-wrapper .nav-wrapper .nav-hamburger button {
-      height: 30px;
-      width: 30px;
+      width: 24px;
+      height: 24px;
   }
 
   .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon {
@@ -519,8 +566,9 @@ header nav .nav-tools {
   }
 
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li{
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      padding: 16px;
+    padding: 16px 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-right: 0;
   }
 
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>ul{
@@ -553,8 +601,8 @@ header nav .nav-tools {
       border-bottom: 0;
   }
 
-  .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li.nav-drop{
-      padding-right: 0;
+  .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li.nav-drop>p::after {
+    right: 0;
   }
 
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li.nav-drop.active > ul{

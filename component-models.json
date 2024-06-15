@@ -198,10 +198,10 @@
     ]
   },
   {
-    "id": "aem-experience-fragment",
+    "id": "xf",
     "fields": [
       {
-        "component": "aem-experience-fragment",
+        "component": "expreeiencefragment",
         "name": "picker",
         "label": "Experience Fragment Picker",
         "valueType": "string",

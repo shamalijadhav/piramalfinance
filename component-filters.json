@@ -15,7 +15,8 @@
       "text",
       "image",
       "button",
-      "title"
+      "title",
+      "xf"
     ]
   },
   {
@@ -28,13 +29,15 @@
       "hero",
       "cards",
       "columns",
-      "productcomponent"
+      "productcomponent",
+      "xf"
     ]
   },
   {
     "id": "cards",
     "components": [
-      "card"
+      "card",
+      "xf"
     ]
   }
 ]

@@ -207,5 +207,16 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "piramalsince",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "rte",
+        "label": "Rich-Text Field",
+        "valueType": "string"
+      }
+    ]
   }
 ]

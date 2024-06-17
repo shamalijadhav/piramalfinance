@@ -208,5 +208,16 @@
         "variationName": "experienceFragmentVariation"
       }
     ]
+  },
+  {
+    "id": "loanproducts",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "rte",
+        "label": "Rich-Text Field",
+        "valueType": "string"
+      }
+    ]
   }
 ]

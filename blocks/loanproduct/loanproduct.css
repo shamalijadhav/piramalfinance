@@ -1,0 +1,15 @@
+.box-shadow-css .default-content-wrapper h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 800;
+}
+
+.box-shadow-css .columns-wrapper .columns > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body {
+  background-color: red;
+}

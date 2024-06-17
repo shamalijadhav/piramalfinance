@@ -15,8 +15,7 @@
       "text",
       "image",
       "button",
-      "title",
-      "xf"
+      "title"
     ]
   },
   {
@@ -30,14 +29,13 @@
       "cards",
       "columns",
       "loanproducts",
-      "xf"
+      "calculator"
     ]
   },
   {
     "id": "cards",
     "components": [
-      "card",
-      "xf"
+      "card"
     ]
   }
 ]

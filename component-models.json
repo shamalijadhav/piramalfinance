@@ -185,32 +185,20 @@
         "valueType": "string"
       }
     ]
-  },
+  }, 
   {
-    "id": "aem-tag-picker",
+    "id": "loanproducts",
     "fields": [
       {
-        "component": "aem-tag",
-        "label": "AEM Tag Picker",
-        "name": "cq:tags",
+        "component": "richtext",
+        "name": "rte",
+        "label": "Rich-Text Field",
         "valueType": "string"
       }
     ]
   },
   {
-    "id": "xf",
-    "fields": [
-      {
-        "component": "aem-experience-fragment",
-        "name": "picker",
-        "label": "Experience Fragment Picker",
-        "valueType": "string",
-        "variationName": "experienceFragmentVariation"
-      }
-    ]
-  },
-  {
-    "id": "loanproducts",
+    "id": "calculator",
     "fields": [
       {
         "component": "richtext",

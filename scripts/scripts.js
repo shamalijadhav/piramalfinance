@@ -149,10 +149,11 @@ async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
-  await loadingCustomCss();
+  await loadingCustomCss(); 
 }
 
 loadPage();
+
 
 async function loadingCustomCss(){
   // load custom css files
@@ -170,3 +171,4 @@ async function loadingCustomCss(){
   });
 
 }
+

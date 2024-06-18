@@ -1,0 +1,109 @@
+.loan-products-main {
+    background-color: var(--gradient-gray-light);
+  }
+  
+  .loan-products-main .columns-wrapper .columns > div > div {
+    display: flex;
+    align-items: center;
+    background-color: rgb(255 255 255 / 1);
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 0px 4px 12px rgba(51, 51, 51, 0.08);
+  }
+  
+  .loan-products-main .columns-wrapper .columns > div > div:hover {
+    box-shadow: 0px 32px 32px rgba(0, 0, 0, 0.08),
+      0px 0px 32px rgba(0, 0, 0, 0.12), 0px 0px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (width >= 360px) {
+    .loan-products-main .loanproducts-wrapper .loanproducts p {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+  
+    .loan-products-main .columns-wrapper .columns > div {
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 0.9rem;
+      margin-top: 0.9rem;
+    }
+  
+    .loan-products-main .columns-wrapper .columns > div > div {
+      flex-direction: column;
+      width: 30%;
+      padding: 1.3rem 0;
+    }
+  
+    .loan-products-main .columns-wrapper .columns > div > div img {
+      height: 3rem;
+    }
+  
+    .loan-products-main .columns-wrapper .columns > div > div > p {
+      margin: 0;
+      font-size: 0.67rem;
+      text-align: center;
+      line-height: 1rem;
+      padding: 0 0.8rem;
+      font-weight: 700;
+    }
+  }
+  
+  @media (width >= 600px) {
+    .loan-products-main .loanproducts-wrapper .loanproducts p {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+  
+    .loan-products-main .columns-wrapper .columns > div {
+      flex-wrap: nowrap;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+  
+    .loan-products-main .columns-wrapper .columns > div > div {
+      flex-direction: row;
+      padding: 0.5rem;
+    }
+  
+    .loan-products-main .columns-wrapper .columns > div > div > p {
+      font-size: 1rem;
+      line-height: 1.4rem;
+      font-weight: 700;
+      margin-left: 1rem;
+      padding: 0;
+    }
+  
+    .loan-products-main .columns-wrapper .columns > div > div img {
+      height: 5rem;
+    }
+  }
+  
+  @media (width >= 900px) {
+    .loan-products-main .loanproducts-wrapper .loanproducts p {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+      font-weight: 800;
+    }
+  
+    .loan-products-main .columns-wrapper .columns > div {
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+  
+    .loan-products-main .columns-wrapper .columns > div > div {
+      padding: 1.4rem 0.5rem;
+    }
+  
+    .loan-products-main .columns-wrapper .columns > div > div img {
+      height: 5rem;
+    }
+  
+    .loan-products-main .columns-wrapper .columns > div > div > p {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      font-weight: 700;
+      margin-left: 1rem;
+    }
+  }
+  

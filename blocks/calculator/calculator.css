@@ -22,12 +22,15 @@
     overflow: hidden;
     border-radius: 32px;
 }
+.calculator-section-css .columns-wrapper .columns >div >div p{
+    margin-top: 0;
+}
 .calculator-section-css .columns-wrapper .columns img{
     border-radius: 32px;
 }
 
 .calculator-section-css  img:hover {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s;
     transform: scale(1.2);
 }
 

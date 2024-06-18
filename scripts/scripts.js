@@ -158,12 +158,12 @@ loadPage();
 async function loadingCustomCss(){
   // load custom css files
   var loadCssArray = [
-    "`${window.hlx.codeBasePath}/styles/loanproducts/loanproducts.css`",
-    "`${window.hlx.codeBasePath}/styles/calculator/calculator.css`",
-    "`${window.hlx.codeBasePath}/styles/choose-us/choose-us.css`",
-    "`${window.hlx.codeBasePath}/styles/download-piramal/download-piramal.css`",
-    "`${window.hlx.codeBasePath}/styles/our-media/our-media.css`",
-    "`${window.hlx.codeBasePath}/styles/piramal-since/piramal-since.css`",
+    `${window.hlx.codeBasePath}/styles/loanproducts/loanproducts.css`,
+    `${window.hlx.codeBasePath}/styles/calculator/calculator.css`,
+    `${window.hlx.codeBasePath}/styles/choose-us/choose-us.css`,
+    `${window.hlx.codeBasePath}/styles/download-piramal/download-piramal.css`,
+    `${window.hlx.codeBasePath}/styles/our-media/our-media.css`,
+    `${window.hlx.codeBasePath}/styles/piramal-since/piramal-since.css`,
   ]
 
   loadCssArray.forEach( async (eachCss) => {

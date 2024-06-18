@@ -229,5 +229,27 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "ourmedia",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "rte",
+        "label": "Rich-Text Field",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "chooseus",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "rte",
+        "label": "Rich-Text Field",
+        "valueType": "string"
+      }
+    ]
   }
 ]

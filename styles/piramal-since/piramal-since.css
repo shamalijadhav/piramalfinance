@@ -1,0 +1,111 @@
+.piramal-since-css .piramal-since-wrapper .piramal-since p {
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+  }
+  
+  .piramal-since-css .default-content-wrapper p {
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 2.7rem;
+  }
+  
+  .piramal-since-css .columns-wrapper .columns > div {
+    gap: 5.375rem;
+  }
+  
+  .piramal-since-css .columns-wrapper .columns > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .piramal-since-css .columns-wrapper .columns div div > p {
+    margin: 0;
+  }
+  
+  .piramal-since-css .columns-wrapper .columns div div :nth-child(2) {
+    font-weight: 400;
+    margin-bottom: 0.625rem;
+  }
+  
+  .piramal-since-css .columns-wrapper .columns div div :nth-child(3) {
+    font-weight: 700;
+  }
+  
+  @media (width >= 360px) {
+    .piramal-since-css .piramal-since-wrapper .piramal-since p {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+  
+    .piramal-since-css .default-content-wrapper p {
+      font-size: .875rem;
+      line-height: 1.25rem;
+    }
+  
+    .piramal-since-css .columns-wrapper .columns > div {
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 3rem;
+      justify-content: space-between;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      text-align: center;
+    }
+  
+    .piramal-since-css .columns-wrapper .columns > div > div {
+      width: 35%;
+    }
+  
+    .piramal-since-css .columns-wrapper .columns div div > p > picture > img {
+      height: 3rem;
+      width: 3rem;
+    }
+  
+    .piramal-since-css .columns-wrapper .columns div div :nth-child(2) {
+      font-size: 1rem;
+      line-height: 1.75rem;
+    }
+  
+    .piramal-since-css .columns-wrapper .columns div div :nth-child(3) {
+      font-size: 1rem;
+      line-height: 1.75rem;
+    }
+  }
+  
+  @media (width >= 600px) {
+    .piramal-since-css .columns-wrapper .columns > div > div {
+      width: 42%;
+    }
+  }
+  
+  @media (width >= 900px) {
+    .piramal-since-css .piramal-since-wrapper .piramal-since p {
+      font-size: 2rem;
+      line-height: 1.75rem;
+    }
+  
+    .piramal-since-css .default-content-wrapper p {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+  
+    .piramal-since-css .columns-wrapper .columns div div > p > picture > img {
+      height: 5rem;
+      width: 5rem;
+    }
+  
+    .piramal-since-css .columns-wrapper .columns div div :nth-child(2) {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+  
+    .piramal-since-css .columns-wrapper .columns div div :nth-child(3) {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+  }
+  

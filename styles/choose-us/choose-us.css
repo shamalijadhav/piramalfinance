@@ -1,0 +1,81 @@
+.choose-us-css .default-content-wrapper h4 {
+    font-weight: 800;
+  }
+  
+  .choose-us-css .choose-us-wrapper .choose-us div > div > p {
+    color: rgb(51 51 51 / var(--tw-text-opacity));
+    font-weight: 400;
+  }
+  
+  .choose-us-css .columns-wrapper .columns > div {
+    margin-top: 2.5rem;
+  }
+  
+  .choose-us-css .columns-wrapper .columns div div > p {
+    margin: 0;
+  }
+  
+  .choose-us-css .columns-wrapper .columns div div :nth-child(2) {
+    font-weight: 800;
+    padding-bottom: 1rem;
+  }
+  
+  @media (width >= 360px) {
+    .choose-us-css .default-content-wrapper h4 {
+      font-size: 1.125rem;
+    }
+  
+    .choose-us-css .choose-us-wrapper .choose-us div > div > p {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+  
+    .choose-us-css .columns-wrapper .columns > div {
+      gap: 2.25rem;
+    }
+  
+    .choose-us-css .columns-wrapper .columns > div > div {
+      width: 100%;
+    }
+  
+    .choose-us-css .columns-wrapper .columns div div > p > picture > img {
+      height: 3rem;
+      width: 3rem;
+    }
+  
+    .choose-us-css .columns-wrapper .columns div div :nth-child(2) {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      padding-bottom: 0.75rem;
+    }
+  }
+  
+  @media (width >= 600px) {
+  }
+  
+  @media (width >= 900px) {
+    .choose-us-css .default-content-wrapper h4 {
+      font-size: 2rem;
+      line-height: 1.75rem;
+    }
+  
+    .choose-us-css .choose-us-wrapper .choose-us div > div > p {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  
+    .choose-us-css .columns-wrapper .columns > div {
+      gap: 5rem;
+    }
+  
+    .choose-us-css .columns-wrapper .columns div div > p > picture > img {
+      height: 5rem;
+      width: 5rem;
+    }
+  
+    .choose-us-css .columns-wrapper .columns div div :nth-child(2) {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+  }
+  

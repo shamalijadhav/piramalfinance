@@ -18,6 +18,7 @@
   --light-color: #eee;
   --dark-color: #ccc;
   --text-color: black;
+  --gradient-gray-light: #ebeef050;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback;

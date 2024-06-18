@@ -207,5 +207,49 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "downloadpiramal",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "rte",
+        "label": "Rich-Text Field",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "piramalsince",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "rte",
+        "label": "Rich-Text Field",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "ourmedia",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "rte",
+        "label": "Rich-Text Field",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "chooseus",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "rte",
+        "label": "Rich-Text Field",
+        "valueType": "string"
+      }
+    ]
   }
 ]

@@ -205,7 +205,7 @@
         "valueType": "string",
         "name": "fileReference1",
         "label": "Image Desktop",
-        "multi": true
+        "multi": false
       },
       {
         "component": "text",
@@ -226,7 +226,7 @@
         "valueType": "string",
         "name": "fileReference2",
         "label": "Image Mobile",
-        "multi": true
+        "multi": false
       },
       {
         "component": "text",

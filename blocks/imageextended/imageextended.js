@@ -1,34 +1,34 @@
 export default function decorate(block) {
-  var newDiv = gettingImage(block);
+  const newDiv = gettingImage(block);
 
   block.innerHTML(newDiv);
 
 }
 
 function gettingImage(block) {
-  const isDesktop = window.matchMedia("(min-width: 900px)");
-  const isMobile = window.matchMedia("(max-width: 768px)");
+  let isDesktop = window.matchMedia("(min-width: 900px)");
+  let isMobile = window.matchMedia("(max-width: 768px)");
 
   // Getting Element
-  const blockContainer = block.innerHTML.trim();
+  let blockContainer = block.innerHTML.trim();
 
   // Div
-  const blockDiv = document.createElement("div");
+  let blockDiv = document.createElement("div");
 
   // Div Inner HTMl
   blockDiv.innerHTML = blockContainer;
 
   // Div child
-  const blockDivChild = blockDiv.children;
+  let blockDivChild = blockDiv.children;
 
   // Picture
-  const blockPic = "";
+  let blockPic = "";
 
   // Text
-  const hrefElem = "";
+  let hrefElem = "";
 
   // A tag
-  const createHref = document.createElement("a");
+  let createHref = document.createElement("a");
 
   // Creating a DIV for desktop tag
   const createDivDesktop = document.createElement("div");

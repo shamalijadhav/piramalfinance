@@ -25,7 +25,7 @@
     .loan-products-main .columns-wrapper .columns > div {
       flex-wrap: wrap;
       flex-direction: row;
-      gap: 0.9rem;
+      justify-content: space-between;
       margin-top: 0.9rem;
     }
   

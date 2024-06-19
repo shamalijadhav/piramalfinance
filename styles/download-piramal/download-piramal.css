@@ -1,9 +1,13 @@
 .download-piramal-css {
     max-width: 1200px;
     position: relative;
-    margin: 0 auto;
+    margin: 0 auto; 
 }
 
+.download-piramal-css .default-content-wrapper {
+    position: relative;
+
+}
 .download-piramal-css > div:first-child p{
     position: relative;
 }
@@ -13,45 +17,50 @@
 
 .download-piramal-css .default-content-wrapper h4{
     position: absolute;
-}
-
-.download-piramal-css .default-content-wrapper p:nth-child(2){
-    position: absolute;
-    width: 156px;
-    height: 52px;
-
-}
-.download-piramal-css .default-content-wrapper p:nth-child(3){
-    position: absolute;
-    width: 156px;
-    height: 52px;
-    left: 45%;
-}
-.download-piramal-css .download-piramal-wrapper .download-piramal p{
-    position: absolute;
-    top: 25%;
+    left: 5%;
+    top: 10%;
     font-size: 30px;
     font-family: "Nunito-Regular";
     font-weight: 700;
     color: #ffffff;
-    left: 15%;
 }
-.download-piramal-css .default-content-wrapper:last-child {
+
+.download-piramal-css .default-content-wrapper p:nth-child(4){
     position: absolute;
-    top: 35%;
+    width: 156px;
+    height: 52px;
+    bottom: 20%;
+    left: 5%;
+}
+.download-piramal-css .default-content-wrapper p:nth-child(4) img{
+    width: 156px;
+    height: 52px;
+}
+.download-piramal-css .default-content-wrapper p:nth-child(5){
+    position: absolute;
+    width: 156px;
+    height: 52px;
+    left: 20%;
+    bottom: 20%;
+}
+.download-piramal-css .default-content-wrapper p:nth-child(3){
+    position: absolute;
+    top: 25%;
     font-size: 24px;
     font-family: "Nunito-Regular";
     color: #ffffff;
-    left: 15%;
-    margin-bottom: 0;
+    left: 5%;
+
 }
+
 .download-piramal-css .default-content-wrapper:last-child p{
     margin-bottom: 0;
 }
 
-.download-piramal-css .default-content-wrapper p:nth-child(4){
+.download-piramal-css .default-content-wrapper p:nth-child(6){
     display: none;
 }
+
 .download-piramal-css .button-container{
     display: none;
 }
@@ -59,18 +68,18 @@
 
 @media screen and (max-width:767.99px) {
     .download-piramal-css .default-content-wrapper h4,
-    .download-piramal-css > div:first-child p,
     .download-piramal-css .default-content-wrapper p:first-child img,
-    .download-piramal-css .default-content-wrapper p:nth-child(2),
-    .download-piramal-css .default-content-wrapper p:nth-child(3),
-    .download-piramal-css .download-piramal-wrapper
+    .download-piramal-css .default-content-wrapper p:nth-child(3)
+    .download-piramal-css .default-content-wrapper p:nth-child(4),
+    .download-piramal-css .default-content-wrapper p:nth-child(5)
     {
         display: none;
     }
-    .download-piramal-css .default-content-wrapper p:nth-child(4){
+    .download-piramal-css .default-content-wrapper p:nth-child(6){
         position: absolute;
-        bottom: 50%;
+        margin-bottom: -20%;
         display: block;
+        bottom: 20%;
     }
     .download-piramal-css .button-container {
         display: block;
@@ -81,7 +90,7 @@
         font-size: 12px;
         top: -50%;
         background: #F26841;
-        left: 20px;
+        left: 7%;
         padding: 8px 15px;
         border-radius: 10px;
         margin-top: 0;
@@ -90,8 +99,8 @@
         position: relative;
         left: 1%;
     }
-    .download-piramal-css .default-content-wrapper p:nth-child(4) img{
+    /* .download-piramal-css .default-content-wrapper p:nth-child(4) img{
         width: revert-layer;
         height: 176px;
-    }
+    } */
 }

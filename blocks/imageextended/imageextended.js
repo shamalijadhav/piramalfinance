@@ -1,7 +1,7 @@
 export default function decorate(block) {
   const newDiv = gettingImage(block);
 
-  block.innerHTML(newDiv);
+  block.innerHTML = newDiv ;
 
 }
 
@@ -40,7 +40,7 @@ function gettingImage(block) {
     createHref.target = "_blank";
     createHref.appendChild(blockPic);
     createDiv.classList.add("image-href-desktop");
-    createDiv.innerHTML = createHref;
+    createDiv.appendChild(createHref);
   } else if (isMobile.matches) {
     blockPic = blockDivChild[3].querySelector("picture");
     hrefElem = blockDivChild[5].innerText.trim();
@@ -48,7 +48,7 @@ function gettingImage(block) {
     createHref.target = "_blank";
     createHref.appendChild(blockPic);
     createDiv.classList.add("image-href-mobile");
-    createDiv.innerHTML = createHref;
+    createDiv.appendChild(createHref);
   }
 
   return createDiv;

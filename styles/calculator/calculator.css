@@ -1,3 +1,6 @@
+main .calculator-section-css {
+    padding-top: 0px;
+}
 .calculator-section-css .calculator-wrapper .calculator >div >div p {
     font-size: 2rem;
     font-family: "Nunito-Regular";
@@ -75,7 +78,7 @@
         position: relative;
     }
     .calculator-section-css .columns-wrapper .columns h4{
-        top: 0%;
+        top: 15%;
         position: absolute;
         font-size: 1rem;
         color: #ffffff;
@@ -85,16 +88,16 @@
     
     .calculator-section-css .columns-wrapper .columns .button-container a{
         font-size: 14px;
-        padding: 9px 11px;
+        padding: 7px 11px;
         background: #F26841;
         color: #ffffff;
         border-radius: 8px;
         position: absolute;
-        top: 25%;
-        margin-left: 20px;
+        bottom: 10%;
+        margin-left: 6%;
     } 
     .calculator-section-css .columns-wrapper .columns > div > div p:first-child{
-       margin: 0;
+       margin: 20px 0;
     }
 }
 

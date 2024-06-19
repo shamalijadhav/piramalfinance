@@ -60,13 +60,6 @@
         "name": "alt",
         "value": "Default alt",
         "label": "Alt Text"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "href",
-        "value": "",
-        "label": "Link"
       }
     ]
   },
@@ -192,9 +185,9 @@
         "valueType": "string"
       }
     ]
-  }, 
+  },
   {
-    "id": "loanproducts",
+    "id": "rte",
     "fields": [
       {
         "component": "richtext",
@@ -205,57 +198,35 @@
     ]
   },
   {
-    "id": "calculator",
+    "id": "imagextended",
     "fields": [
       {
-        "component": "richtext",
-        "name": "rte",
-        "label": "Rich-Text Field",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "downloadpiramal",
-    "fields": [
+        "component": "reference",
+        "valueType": "string",
+        "name": "fileReference1",
+        "label": "Image Desktop",
+        "multi": true
+      },
       {
-        "component": "richtext",
-        "name": "rte",
-        "label": "Rich-Text Field",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "piramalsince",
-    "fields": [
+        "component": "text",
+        "valueType": "string",
+        "name": "alt1",
+        "value": "Default alt Desktop",
+        "label": "Alt Text Desktop"
+      },
       {
-        "component": "richtext",
-        "name": "rte",
-        "label": "Rich-Text Field",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "ourmedia",
-    "fields": [
+        "component": "reference",
+        "valueType": "string",
+        "name": "fileReference2",
+        "label": "Image Mobile",
+        "multi": true
+      },
       {
-        "component": "richtext",
-        "name": "rte",
-        "label": "Rich-Text Field",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "chooseus",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "rte",
-        "label": "Rich-Text Field",
-        "valueType": "string"
+        "component": "text",
+        "valueType": "string",
+        "name": "alt2",
+        "value": "Default alt Mobile",
+        "label": "Alt Text Mobile"
       }
     ]
   }

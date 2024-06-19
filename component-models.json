@@ -203,28 +203,28 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "fileReference",
+        "name": "fileReference1",
         "label": "Image Desktop",
         "multi": true
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "alt",
+        "name": "alt1",
         "value": "Default alt Desktop",
         "label": "Alt Text Desktop"
       },
       {
         "component": "reference",
         "valueType": "string",
-        "name": "fileReference",
+        "name": "fileReference2",
         "label": "Image Mobile",
         "multi": true
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "alt",
+        "name": "alt2",
         "value": "Default alt Mobile",
         "label": "Alt Text Mobile"
       }

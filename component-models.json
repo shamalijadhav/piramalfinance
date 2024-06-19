@@ -60,13 +60,6 @@
         "name": "alt",
         "value": "Default alt",
         "label": "Alt Text"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "href",
-        "value": "",
-        "label": "Link"
       }
     ]
   },

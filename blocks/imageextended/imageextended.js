@@ -38,17 +38,17 @@ function gettingImage(block) {
     hrefElem = blockDivChild[2].innerText.trim();
     createHref.href = hrefElem;
     createHref.target = "_blank";
-    createHref.innerHTML = blockPic;
+    createHref.appendChild(blockPic);
     createDiv.classList.add("image-href-desktop");
-    createDiv.innerHTML(createHref);
+    createDiv.innerHTML = createHref;
   } else if (isMobile.matches) {
     blockPic = blockDivChild[3].querySelector("picture");
     hrefElem = blockDivChild[5].innerText.trim();
     createHref.href = hrefElem;
     createHref.target = "_blank";
-    createHref.innerHTML = blockPic;
+    createHref.appendChild(blockPic);
     createDiv.classList.add("image-href-mobile");
-    createDiv.innerHTML(createHref);
+    createDiv.innerHTML = createHref;
   }
 
   return createDivDesktop;

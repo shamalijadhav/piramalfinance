@@ -1,26 +1,39 @@
 .choose-us-css .default-content-wrapper h4 {
+  font-size: 2rem;
+  line-height: 1.75rem;
   font-weight: 700;
 }
 
 .choose-us-css .rte-wrapper .rte div > div > p {
   color: rgb(51 51 51 / var(--tw-text-opacity));
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   font-weight: 400;
 }
 
 .choose-us-css .columns-wrapper .columns > div {
+  gap: 5rem;
   margin-top: 2.5rem;
+  align-items: flex-start;
 }
 
 .choose-us-css .columns-wrapper .columns div div > p {
   margin: 0;
 }
 
+.choose-us-css .columns-wrapper .columns div div > p > picture > img {
+  height: 5rem;
+  width: 5rem;
+}
+
 .choose-us-css .columns-wrapper .columns div div :nth-child(2) {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   font-weight: 800;
   padding-bottom: 1rem;
 }
 
-@media (width >= 360px) {
+@media screen and (max-width: 767.99px) {
   .choose-us-css .default-content-wrapper h4 {
     font-size: 1.125rem;
   }
@@ -47,32 +60,5 @@
     font-size: 1rem;
     line-height: 1.5rem;
     padding-bottom: 0.75rem;
-  }
-}
-
-
-@media (width >= 900px) {
-  .choose-us-css .default-content-wrapper h4 {
-    font-size: 2rem;
-    line-height: 1.75rem;
-  }
-
-  .choose-us-css .rte-wrapper .rte div > div > p {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-
-  .choose-us-css .columns-wrapper .columns > div {
-    gap: 5rem;
-  }
-
-  .choose-us-css .columns-wrapper .columns div div > p > picture > img {
-    height: 5rem;
-    width: 5rem;
-  }
-
-  .choose-us-css .columns-wrapper .columns div div :nth-child(2) {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
   }
 }

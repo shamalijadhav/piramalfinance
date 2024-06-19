@@ -5,8 +5,12 @@ export default function decorate(block) {
 
         }else if(block.classList.contains('image-href-desktop') || block.classList.contains('image-href-mobile')){
             if(block.classList.contains('image-href-desktop')){
-                var blockImageDesktop = block.querySelector('div > picture');
-                var hrefTag = document.createElement('a');
+                const blockImageDesktop = block.querySelector('div > picture');
+                const hrefTag = document.createElement('a');
+                const parentElementDesktop = block.querySelector('div > picture').parentElement;
+                hrefTag.innerHTML = blockImageDesktop;
+                parentElementDesktop.replaceWith(hrefTag);
+                
             }
             if(block.classList.contains('image-href-mobile')){
                 var blockImageMobile = "";

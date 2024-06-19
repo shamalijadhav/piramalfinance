@@ -161,7 +161,7 @@
                 "template": {
                   "name": "imageextended",
                   "model": "imageextended",
-                  "classes": "image-bg"
+                  "classes": ["image-bg","image-bg-desktop","image-href","image-href-desktop","image-href-mobile"]
                 }
               }
             }

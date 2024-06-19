@@ -51,5 +51,5 @@ function gettingImage(block) {
     createDiv.innerHTML = createHref;
   }
 
-  return createDivDesktop;
+  return createDiv;
 }

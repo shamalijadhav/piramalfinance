@@ -42,7 +42,7 @@ function gettingImage(block) {
     createDivDesktop.innerHTML(createHref);
   } else if (isMobile.matches) {
     blockPic = blockDivChild[3].querySelector("picture");
-    hrefElem = blockDivChild[6].innerText.trim();
+    hrefElem = blockDivChild[5].innerText.trim();
     createHref.href = hrefElem;
     createHref.target = "_blank";
     createHref.innerHTML = blockPic;

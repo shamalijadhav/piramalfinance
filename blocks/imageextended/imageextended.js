@@ -31,23 +31,24 @@ function gettingImage(block) {
   let createHref = document.createElement("a");
 
   // Creating a DIV for desktop tag
-  const createDivDesktop = document.createElement("div");
+  let createDiv = document.createElement("div");
+
   if (isDesktop.matches) {
     blockPic = blockDivChild[0].querySelector("picture");
     hrefElem = blockDivChild[2].innerText.trim();
     createHref.href = hrefElem;
     createHref.target = "_blank";
     createHref.innerHTML = blockPic;
-    createDivDesktop.classList.add("image-href-desktop");
-    createDivDesktop.innerHTML(createHref);
+    createDiv.classList.add("image-href-desktop");
+    createDiv.innerHTML(createHref);
   } else if (isMobile.matches) {
     blockPic = blockDivChild[3].querySelector("picture");
     hrefElem = blockDivChild[5].innerText.trim();
     createHref.href = hrefElem;
     createHref.target = "_blank";
     createHref.innerHTML = blockPic;
-    createDivDesktop.classList.add("image-href-mobile");
-    createDivDesktop.innerHTML(createHref);
+    createDiv.classList.add("image-href-mobile");
+    createDiv.innerHTML(createHref);
   }
 
   return createDivDesktop;

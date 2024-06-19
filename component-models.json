@@ -198,7 +198,7 @@
     ]
   },
   {
-    "id": "imageExtended",
+    "id": "imagextended",
     "fields": [
       {
         "component": "reference",

@@ -1,8 +1,9 @@
 export default function decorate(block) {
   const newDiv = gettingImage(block);
 
-  block.innerHTML = newDiv ;
-
+  block.innerHTML = '';
+  block.appendChild(newDiv);
+  
 }
 
 function gettingImage(block) {

@@ -1,5 +1,4 @@
 export default function decorate(block) {
-    debugger;
     if(block.classList.contains('image-bg') || block.classList.contains('image-href')){
         if(block.classList.contains('image-bg-desktop')){
 

@@ -185,7 +185,7 @@
         "valueType": "string"
       }
     ]
-  }, 
+  },
   {
     "id": "rte",
     "fields": [
@@ -196,5 +196,38 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "imageExtended",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "fileReference",
+        "label": "Image Desktop",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "alt",
+        "value": "Default alt Desktop",
+        "label": "Alt Text Desktop"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "fileReference",
+        "label": "Image Mobile",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "alt",
+        "value": "Default alt Mobile",
+        "label": "Alt Text Mobile"
+      }
+    ]
   }
-  ]
+]

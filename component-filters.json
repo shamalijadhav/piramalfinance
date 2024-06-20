@@ -21,7 +21,8 @@
       "columns",
       "rte",
       "imgwithlink",
-      "carousel"
+      "carousel",
+      "teaser"
     ]
   },
   {
@@ -36,7 +37,8 @@
       "columns",
       "rte",
       "imgwithlink",
-      "carousel"
+      "carousel",
+      "teaser"
     ]
   },
   {

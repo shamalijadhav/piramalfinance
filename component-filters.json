@@ -42,5 +42,11 @@
     "components": [
       "card"
     ]
+  },
+  {
+    "id": "hero",
+    "components": [
+      "imgwithlink"
+    ]
   }
 ]

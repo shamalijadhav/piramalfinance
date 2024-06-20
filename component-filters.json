@@ -49,9 +49,19 @@
     ]
   },
   {
-    "id": "hero",
+    "id": "carousel",
     "components": [
-      "imgwithlink"
+      "text",
+      "image",
+      "button",
+      "title",
+      "hero",
+      "cards",
+      "columns",
+      "rte",
+      "imgwithlink",
+      "carousel",
+      "teaser"
     ]
   }
 ]

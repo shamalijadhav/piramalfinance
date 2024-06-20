@@ -1,0 +1,86 @@
+@import "../teaser/teaser.css";
+@import "../detailed-teaser/detailed-teaser.css";
+
+/* carousel wrapper stretches over complete width */
+.section div.carousel-wrapper {
+  margin-bottom: var(--spectrum-spacing-500);
+  max-width: unset;
+
+  /* stretches to window edge in mobile view */
+  margin-left: calc(-1 * var(--space-token-xs));
+  margin-right: calc(-1 * var(--space-token-xs));
+}
+
+/* contains all teaser divs */
+.carousel.block > .panel-container {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow: auto;
+  scroll-behavior: smooth;
+  margin: auto;
+  align-items: stretch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel.block > .panel-container::-webkit-scrollbar {
+  display:none;
+}
+
+/* teaser inside carousel have same height and texts are centered */
+.carousel.block > .panel-container > .detailed-teaser.block,
+.carousel.block > .panel-container > .teaser.block {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  height:auto;
+}
+
+.carousel.block > .panel-container > .detailed-teaser.block > .foreground,
+.carousel.block > .panel-container > .teaser.block > .foreground {
+  height: 100%;
+  display: flex;
+}
+
+.carousel.block > .panel-container > .teaser.block > .foreground {
+  align-items: center;
+}
+
+/* contains the carousel buttons */
+.carousel.block > .button-container {
+  display:flex;
+  justify-content: center;
+  gap: 4px;
+  padding-top:22px;
+}
+
+/* defines look of a button */
+.carousel.block > .button-container button {
+  display: block;
+  height: 10px;
+  width: 10px;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  border: 1px solid grey;
+  background-color: transparent;
+}
+
+.carousel.block > .button-container button.selected {
+  background-color: grey;
+}
+
+/* ----- TABLET ----- */
+@media (min-width: 600px) {
+  .section div.carousel-wrapper {
+    /* stretches to window edge, cover section padding */
+    margin-left: calc(-1 * var(--space-token-xl));
+    margin-right: calc(-1 * var(--space-token-xl));
+  }
+}
+
+@media (min-width: 600px) {
+  .section.carousel-container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

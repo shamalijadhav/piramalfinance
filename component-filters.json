@@ -15,7 +15,12 @@
       "text",
       "image",
       "button",
-      "title"
+      "title",
+      "hero",
+      "cards",
+      "columns",
+      "rte",
+      "imgwithlink"
     ]
   },
   {
@@ -29,8 +34,7 @@
       "cards",
       "columns",
       "rte",
-      "imgwithlink",
-      "fragment"
+      "imgwithlink"
     ]
   },
   {

@@ -65,7 +65,7 @@
         "component": "text",
         "valueType": "string",
         "name": "href",
-        "value": "#",
+        "value": "",
         "label": "Link"
       }
     ]

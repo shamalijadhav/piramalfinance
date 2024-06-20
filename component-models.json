@@ -243,5 +243,9 @@
         "label": "Link Mobile"
       }
     ]
+  },
+  {
+    "id": "carousel",
+    "fields": []
   }
 ]

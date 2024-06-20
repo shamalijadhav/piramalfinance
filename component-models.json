@@ -249,6 +249,10 @@
     "fields": []
   },
   {
+    "id": "tabs",
+    "fields": []
+  },
+  {
     "id": "teaser",
     "fields": [
       {
@@ -496,6 +500,25 @@
         "value": "",
         "label": "Second CTA Link",
         "description": "What link to open when clicking the button."
+      }
+    ]
+  },
+  {
+    "id": "tab",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "value": "",
+        "label": "Heading"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "value": "",
+        "label": "Body"
       }
     ]
   }

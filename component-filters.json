@@ -23,7 +23,8 @@
       "rte",
       "imgwithlink",
       "carousel",
-      "teaser"
+      "teaser",
+      "tabs"
     ]
   },
   {
@@ -39,7 +40,8 @@
       "rte",
       "imgwithlink",
       "carousel",
-      "teaser"
+      "teaser",
+      "tabs"
     ]
   },
   {
@@ -56,12 +58,11 @@
       "button",
       "title",
       "hero",
-      "cards",
-      "columns",
-      "rte",
-      "imgwithlink",
-      "carousel",
       "teaser"
     ]
+  },
+  {
+    "id": "tab",
+    "components": ["tab"]
   }
 ]

@@ -371,7 +371,173 @@
               {
                 "name": "Yellow",
                 "value": "bg-spectrum-yellow-700"
-              }
+              },
+                {
+                  "name": "darkcharcoal",
+                  "value": "--darkcharcoal"
+                },
+                {
+                  "name": "darkgrey",
+                  "value": "--darkgrey"
+                },
+                {
+                  "name": "white",
+                  "value": "--white"
+                },
+                {
+                  "name": "orange",
+                  "value": "--orange"
+                },
+                {
+                  "name": "black",
+                  "value": "--black"
+                },
+                {
+                  "name": "grey",
+                  "value": "--grey"
+                },
+                {
+                  "name": "darkblack",
+                  "value": "--darkblack"
+                },
+                {
+                  "name": "green",
+                  "value": "--green"
+                },
+                {
+                  "name": "greyishblue",
+                  "value": "--greyishblue"
+                },
+                {
+                  "name": "floralwhite",
+                  "value": "--floralwhite"
+                },
+                {
+                  "name": "lilen",
+                  "value": "--lilen"
+                },
+                {
+                  "name": "dustygrey",
+                  "value": "--dustygrey"
+                },
+                {
+                  "name": "matterhorn",
+                  "value": "--matterhorn"
+                },
+                {
+                  "name": "chinesesilver",
+                  "value": "--chinesesilver"
+                },
+                {
+                  "name": "midnight",
+                  "value": "--midnight"
+                },
+                {
+                  "name": "pattensblue",
+                  "value": "--pattensblue"
+                },
+                {
+                  "name": "rosewhite",
+                  "value": "--rosewhite"
+                },
+                {
+                  "name": "solitude",
+                  "value": "--solitude"
+                },
+                {
+                  "name": "swansdown",
+                  "value": "--swansdown"
+                },
+                {
+                  "name": "camarone",
+                  "value": "--camarone"
+                },
+                {
+                  "name": "zinc",
+                  "value": "--zinc"
+                },
+                {
+                  "name": "cloud",
+                  "value": "--cloud"
+                },
+                {
+                  "name": "silver",
+                  "value": "--silver"
+                },
+                {
+                  "name": "arsenic",
+                  "value": "--arsenic"
+                },
+                {
+                  "name": "whisper",
+                  "value": "--whisper"
+                },
+                {
+                  "name": "fossil",
+                  "value": "--fossil"
+                },
+                {
+                  "name": "blackpearl",
+                  "value": "--blackpearl"
+                },
+                {
+                  "name": "lightgrey",
+                  "value": "--lightgrey"
+                },
+                {
+                  "name": "blue",
+                  "value": "--blue"
+                },
+                {
+                  "name": "whitesmoke",
+                  "value": "--whitesmoke"
+                },
+                {
+                  "name": "coral",
+                  "value": "--coral"
+                },
+                {
+                  "name": "salmon",
+                  "value": "--salmon"
+                },
+                {
+                  "name": "seashell",
+                  "value": "--seashell"
+                },
+                {
+                  "name": "pale",
+                  "value": "--pale"
+                },
+                {
+                  "name": "cinnabar",
+                  "value": "--cinnabar"
+                },
+                {
+                  "name": "coralred",
+                  "value": "--coralred"
+                },
+                {
+                  "name": "flamingo",
+                  "value": "--flamingo"
+                },
+                {
+                  "name": "mischka",
+                  "value": "--mischka"
+                },
+                {
+                  "name": "midorange",
+                  "value": "--midorange"
+                },
+                {
+                  "name": "pearl",
+                  "value": "--pearl"
+                },
+                {
+                  "name": "submidorange",
+                  "value": "--submidorange"
+                }
+            
+              
             ]
           }
         ]

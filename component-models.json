@@ -1058,5 +1058,17 @@
         "description": "What link to open when clicking the button."
       }
     ]
+  },
+  {
+    "id": "code",
+    "fields": [
+      {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "htmlCode",
+        "value": "",
+        "label": "Author HTML Code"
+      }
+    ]
   }
 ]

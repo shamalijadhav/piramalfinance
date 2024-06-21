@@ -1052,7 +1052,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "href",
+        "name": "ctaTexthref",
         "value": "",
         "label": "First CTA Link",
         "description": "What link to open when clicking the button."

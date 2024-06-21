@@ -41,7 +41,8 @@
       "imgwithlink",
       "carousel",
       "teaser",
-      "tabs"
+      "tabs",
+      "detailed-teaser"
     ]
   },
   {
@@ -58,7 +59,8 @@
       "button",
       "title",
       "hero",
-      "teaser"
+      "teaser",
+      "detailed-teaser"
     ]
   },
   {

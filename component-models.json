@@ -546,29 +546,6 @@
                 "value": "--submidorange"
               }
             ]
-          },
-          {
-            "component": "reference",
-            "valueType": "string",
-            "name": "ctaImageRefOne",
-            "label": "CTA Image 1",
-            "description": "Select CTA Image 1"
-          },
-          {
-            "component": "text",
-            "valueType": "string",
-            "name": "ctaImageUrlOne",
-            "value": "",
-            "label": "CTA Image URL 1",
-            "description": "Enter CTA Image URL 1"
-          },
-          {
-            "component": "text",
-            "valueType": "string",
-            "name": "ctaImageAltOne",
-            "value": "",
-            "label": "CTA Image Alt 1",
-            "description": "Enter CTA Image Alt 1"
           }
         ]
       },

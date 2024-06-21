@@ -247,7 +247,39 @@
   },
   {
     "id": "carousel",
-    "fields": []
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "previcon",
+        "value": "",
+        "label": "Previous Icon"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "nexticon",
+        "value": "",
+        "label": "Next Icon"
+      },
+      {
+        "component": "select",
+        "name": "carouselshowtype",
+        "value": "",
+        "label": "Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "tabs",

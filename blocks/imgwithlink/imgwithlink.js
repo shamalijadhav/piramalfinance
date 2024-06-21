@@ -1,5 +1,4 @@
 export default function decorate(block) {
-  console.log(block);
   const newDiv = createImageWithLink(block);
   if (newDiv) {
     block.innerHTML = "";

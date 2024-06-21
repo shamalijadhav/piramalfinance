@@ -1,60 +1,42 @@
 export default function decorate(block) {
-  const props = [...block.children].map((row) => row.firstElementChild);
-  var renderTeaserHTML = renderTeaserHTMLFactory(props);
-  block.innerHTML = '';
+  const props = Array.from(block.children, (row) => row.firstElementChild);
+  const renderTeaserHTML = renderTeaserHTMLFactory(props);
+  block.innerHTML = "";
   block.append(renderTeaserHTML);
 }
 
 function renderTeaserHTMLFactory(props) {
   const [mainHref, bgImage, frontImage, title, description, mobileDescription, button, buttonHref] = props;
 
-  const mainhrefCallDiv = document.createElement("a");
-  mainhrefCallDiv.href = mainHref?.textContent.trim();
-  console.log(mainhrefCallDiv);
+  const createElement = (tag, className, content) => {
+    const element = document.createElement(tag);
+    if (className) element.className = className;
+    if (content) element.innerHTML = content;
+    return element;
+  };
 
-  const bgImageCallDiv = document.createElement("div");
-  const bgImageSrc = bgImage?.querySelector("picture > img").src;
-  bgImageSrc && (bgImageCallDiv.style.backgroundImage = `url(${bgImageSrc})`);
-//   console.log(bgImageCallDiv);
+  const mainLink = mainHref?.textContent.trim();
+  const container = mainLink ? document.createElement("a") : document.createElement("div");
+  if (mainLink) container.href = mainLink;
 
-  const frontImageCallDiv = document.createElement("div");
-  const frontImageCall = frontImage.querySelector("picture");
-  //   frontImageCall.querySelector('img').alt = altTextImage.textContent.trim();
-  frontImageCallDiv.append(frontImageCall || frontImageCallDiv);
-//   console.log(frontImageCallDiv);
+  const bgImageSrc = bgImage?.querySelector("picture > img")?.src;
+  const bgImageDiv = createElement("div", "bg-image");
+  if (bgImageSrc) bgImageDiv.style.backgroundImage = `url(${bgImageSrc})`;
 
-  const titleCallDiv = document.createElement("div");
-  const titleDiv = title?.textContent.trim() || titleCallDiv;
-  titleCallDiv.innerHTML = titleDiv;
-//   console.log(titleCallDiv);
+  const frontImagePic = frontImage?.querySelector("picture");
+  const frontImageDiv = createElement("div", "front-image");
+  if (frontImagePic) frontImageDiv.append(frontImagePic);
 
-  const descriptionCallDiv = document.createElement("div");
-  const descriptionDiv = description?.textContent.trim() || descriptionCallDiv;
-  descriptionCallDiv.innerHTML = descriptionDiv;
-//   console.log(descriptionCallDiv);
+  const titleDiv = createElement("div", "title", title?.textContent.trim());
+  const descriptionDiv = createElement("div", "description", description?.textContent.trim());
 
-  const buttonHrefAnchor = buttonHref.querySelector("a");
-  const buttonDiv = button?.textContent.trim();
-  buttonHrefAnchor.innerText = buttonDiv;
-//   console.log(buttonHrefAnchor);
-
-  let mainWrapper = ''
-  if (mainhrefCallDiv instanceof HTMLAnchorElement) {
-    mainhrefCallDiv.append(bgImageCallDiv);
-    mainhrefCallDiv.append(frontImageCallDiv);
-    mainhrefCallDiv.append(titleCallDiv);
-    mainhrefCallDiv.append(descriptionCallDiv);
-    mainhrefCallDiv.append(buttonHrefAnchor);
-    mainWrapper = mainhrefCallDiv;
+  const buttonHrefAnchor = buttonHref?.querySelector("a");
+  if (buttonHrefAnchor) {
+    buttonHrefAnchor.innerText = button?.textContent.trim();
+    container.append(bgImageDiv, frontImageDiv, titleDiv, descriptionDiv, buttonHrefAnchor);
   } else {
-    var mainDiv = document.createElement("div");
-    mainDiv.append(bgImageCallDiv);
-    mainDiv.append(frontImageCallDiv);
-    mainDiv.append(titleCallDiv);
-    mainDiv.append(descriptionCallDiv);
-    mainDiv.append(buttonHrefAnchor);
-    mainWrapper = mainDiv;
+    container.append(bgImageDiv, frontImageDiv, titleDiv, descriptionDiv);
   }
 
-  return mainWrapper;
+  return container;
 }

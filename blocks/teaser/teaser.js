@@ -15,12 +15,15 @@ export function decorateButtons(...buttons) {
   
   export function generateTeaserDOM(props, classes) {
     // Extract properties, always same order as in model, empty string if not set
-    const [pictureContainer, eyebrow, title, longDescr, shortDescr, firstCta, secondCta] = props;
+    const [pictureBgContainer,pictureContainer, eyebrow, title, longDescr, shortDescr, firstCta, secondCta] = props;
+    const bgPicture = pictureBgContainer.querySelector('picture');
     const picture = pictureContainer.querySelector('picture');
+    console.log(bgPicture , picture);
     const hasShortDescr = shortDescr.textContent.trim() !== '';
     // Build DOM
     const teaserDOM = document.createRange().createContextualFragment(`
-      <div class='background'>${picture ? picture.outerHTML : ''}</div>
+      <div class='background'>${bgPicture ? bgPicture.outerHTML : ''}</div>
+      <div class="front-picture">${picture ? picture.outerHTML : ''}</div>
       <div class='foreground'>
         <div class='text'>
           ${

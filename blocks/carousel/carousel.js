@@ -39,15 +39,17 @@ export default function decorate(block) {
   slideNavButtons.classList.add("carousel-navigation-buttons");
   slideNavButtons.innerHTML = `
     <button type="button" class="slide-prev" aria-label="${"Previous Slide"
-    }"><</button>
+    }">${block.children[0].outerHTML || "<"}</button>
     <button type="button" class="slide-next" aria-label="${"Next Slide"
-    }">></button>
+    }">${block.children[1].outerHTML || ">"}</button>
   `;
   // block.appendChild(slideNavButtons);
 
-
+  const carouselshowtype = block.children[2].innerText;
+  block.classList.add(carouselshowtype.trim());
   // get all children elements
-  const panels = [...block.children];
+  // const panels = [...block.children];
+  const panels = Array.from(block.children).slice(3);
 
   // loop through all children blocks
   [...panels].forEach((panel, i) => {

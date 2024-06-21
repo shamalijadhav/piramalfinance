@@ -268,9 +268,9 @@
         "component": "reference",
         "valueType": "string",
         "name": "fileReference1",
-        "label": "The Multi teaser images",
-        "description": "The Multi teaser images",
-        "multi": true
+        "label": "The Multi teaser image",
+        "description": "The Multi teaser image",
+        "multi": false
       },
       {
         "component": "text",
@@ -531,7 +531,8 @@
         "name": "title",
         "value": "",
         "label": "Heading",
-        "description": "Sets the main title of the teaser."
+        "description": "Sets the main title of the teaser.",
+        "multi" : true
       },
       {
         "component": "select",
@@ -640,6 +641,22 @@
         "name": "cta2Text",
         "value": "",
         "label": "Second CTA Text",
+        "description": "Text to be shown inside button."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "cta2",
+        "value": "",
+        "label": "Second CTA Link",
+        "description": "What link to open when clicking the button."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaImg",
+        "value": "",
+        "label": "CTA Image 1",
         "description": "Text to be shown inside button."
       },
       {

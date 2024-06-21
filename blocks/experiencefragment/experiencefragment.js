@@ -6,6 +6,8 @@ export default async function decorate(blocks){
         const responseawait = await fragemntData.text();    
         const cfDiv = document.createElement('div');
         cfDiv.innerHTML = responseawait;
+        blocks.innerHTML = ''
+        blocks.apppend(cfDiv);
     } catch (error) {
         console.error(error);
     }

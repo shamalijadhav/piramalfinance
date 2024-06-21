@@ -7,7 +7,7 @@ export default async function decorate(blocks){
         const cfDiv = document.createElement('div');
         cfDiv.innerHTML = responseawait;
         blocks.innerHTML = ''
-        blocks.apppend(cfDiv);
+        blocks.append(cfDiv);
     } catch (error) {
         console.error(error);
     }

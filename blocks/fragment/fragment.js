@@ -19,7 +19,7 @@ import {
  */
 export async function loadFragment(path) {
   if (path && path.startsWith('/')) {
-    const resp = await fetch(`https://author-p133703-e1305981.adobeaemcloud.com`+`${path}.plain.html`);
+    const resp = await fetch(`${path}.plain.html`);
     if (resp.ok) {
       const main = document.createElement('main');
       main.innerHTML = await resp.text();

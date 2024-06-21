@@ -45,7 +45,7 @@ export default function decorate(block) {
   `;
   // block.appendChild(slideNavButtons);
 
-  const carouselshowtype = block.children[2].innerText.trim();
+  const carouselshowtype = block.children[2].innerText.trim() || "primary";
   block.classList.add(carouselshowtype);
   // get all children elements
   // const panels = [...block.children];

@@ -971,14 +971,6 @@
         "description": "Background Image"
       },
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "fileReferenceAlt",
-        "value": "",
-        "label": "Alt Text BG Image",
-        "description": "Alt text for background image"
-      },
-      {
         "component": "reference",
         "valueType": "string",
         "name": "fileReference1",
@@ -1028,7 +1020,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "cta1",
+        "name": "href",
         "value": "",
         "label": "First CTA Link",
         "description": "What link to open when clicking the button."

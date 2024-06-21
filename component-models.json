@@ -697,7 +697,7 @@
         "value": "",
         "label": "CTA Image Alt 1",
         "description": "Enter CTA Alt 1"
-      }
+      },
       {
         "component": "text",
         "valueType": "string",

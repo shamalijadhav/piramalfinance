@@ -24,7 +24,8 @@
       "imgwithlink",
       "carousel",
       "teaser",
-      "tabs"
+      "tabs",
+      "accordion-group"
     ]
   },
   {
@@ -42,7 +43,8 @@
       "carousel",
       "teaser",
       "tabs",
-      "detailed-teaser"
+      "detailed-teaser",
+      "accordion-group"
     ]
   },
   {
@@ -80,5 +82,9 @@
     "components": [
       "tabs"
   ]
+  },
+  {
+    "id": "accordion",
+    "components": ["accordion"]
   }
 ]

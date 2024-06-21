@@ -15,7 +15,8 @@ export function decorateButtons(...buttons) {
   
   export function generateTeaserDOM(props, classes) {
     // Extract properties, always same order as in model, empty string if not set
-    const [pictureBgContainer,pictureContainer, eyebrow, title, longDescr, shortDescr, firstCta, secondCta] = props;
+    const [pictureBgContainer,pictureContainer, eyebrow, title, longDescr, shortDescr, firstCta, secondCta , ctaImage , ctaImageUrl ] = props;
+    console.log(ctaImage , ctaImageUrl);
     const bgPicture = pictureBgContainer.querySelector('picture');
     const picture = pictureContainer.querySelector('picture');
     console.log(bgPicture , picture);

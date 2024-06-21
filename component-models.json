@@ -265,7 +265,7 @@
       {
         "component": "select",
         "name": "carouselshowtype",
-        "value": "",
+        "value": "primary",
         "label": "Type",
         "valueType": "string",
         "options": [
@@ -684,20 +684,27 @@
         "description": "What link to open when clicking the button."
       },
       {
-        "component": "text",
+        "component": "reference",
         "valueType": "string",
-        "name": "ctaImg",
-        "value": "",
+        "name": "ctaImageOne",
         "label": "CTA Image 1",
-        "description": "Text to be shown inside button."
+        "description": "Select CTA Image 1"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "cta2",
+        "name": "ctaImageAltOne",
         "value": "",
-        "label": "Second CTA Link",
-        "description": "What link to open when clicking the button."
+        "label": "CTA Image Alt 1",
+        "description": "Enter CTA Alt 1"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaImageURLOne",
+        "value": "",
+        "label": "CTA Image URL 1",
+        "description": "Enter CTA Image URL 1"
       }
     ]
   },

@@ -1,13 +1,13 @@
 
 export default async function decorate(blocks){
     try {
-        const cfURL = blocks.querySelector('a').textContent.trim();
-        const fragemntData = await fetch(`${cfURL}.plain.html`);
-        const responseawait = await fragemntData.text();    
-        const cfDiv = document.createElement('div');
-        cfDiv.innerHTML = responseawait;
+        const xfURL = blocks.querySelector('a').textContent.trim();
+        const xfFragemntData = await fetch(`${xfURL}.plain.html`);
+        const xfResponseawait = await xfFragemntData.text();    
+        const xfDiv = document.createElement('div');
+        xfDiv.innerHTML = xfResponseawait;
         blocks.innerHTML = ''
-        blocks.append(cfDiv);
+        blocks.append(xfDiv);
     } catch (error) {
         console.error(error);
     }

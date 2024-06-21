@@ -265,7 +265,7 @@
       {
         "component": "select",
         "name": "carouselshowtype",
-        "value": "",
+        "value": "primary",
         "label": "Type",
         "valueType": "string",
         "options": [

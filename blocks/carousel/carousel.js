@@ -45,8 +45,8 @@ export default function decorate(block) {
   `;
   // block.appendChild(slideNavButtons);
 
-  const carouselshowtype = block.children[2].innerText;
-  block.classList.add(carouselshowtype.trim());
+  const carouselshowtype = block.children[2].innerText.trim();
+  block.classList.add(carouselshowtype);
   // get all children elements
   // const panels = [...block.children];
   const panels = Array.from(block.children).slice(3);
@@ -65,19 +65,19 @@ export default function decorate(block) {
     //   blockType === 'detailed-teaser'
     //     ? generateDetailedTeaserDOM([imagebg, image, ...rest], classes)
     //     : generateTeaserDOM([imagebg, image, ...rest], classes);
-    let teaserDOM = null;
+    let generateOtherComponent = null;
     classes.forEach(function (className) {
       if (carouselContainerMapping[className]) {
         blockType = className;
-        teaserDOM = carouselContainerMapping[className];
+        generateOtherComponent = carouselContainerMapping[className];
       }
     })
-    teaserDOM = teaserDOM ? teaserDOM([imagebg, image, ...rest], classes) : generateTeaserDOM([imagebg, image, ...rest], classes);
+    generateOtherComponent = generateOtherComponent ? generateOtherComponent([imagebg, image, ...rest], classes) : generateTeaserDOM([imagebg, image, ...rest], classes);
     panel.textContent = '';
     panel.classList.add(blockType, 'block');
     classes.forEach((c) => panel.classList.add(c.trim()));
     panel.dataset.panel = `panel_${i}`;
-    panel.append(teaserDOM);
+    panel.append(generateOtherComponent);
     panelContainer.append(panel);
 
     if (panels.length > 1) {

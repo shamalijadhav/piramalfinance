@@ -52,7 +52,7 @@
         "valueType": "string",
         "name": "fileReference",
         "label": "Image",
-        "multi": false
+        "multi": true
       },
       {
         "component": "text",
@@ -193,7 +193,8 @@
         "component": "richtext",
         "name": "rte",
         "label": "Rich-Text Field",
-        "valueType": "string"
+        "valueType": "string",
+        "raw": true
       }
     ]
   },
@@ -267,9 +268,9 @@
         "component": "reference",
         "valueType": "string",
         "name": "fileReference1",
-        "label": "Front Image",
-        "description": "The teaser image, min Xpx x Ypx...",
-        "multi": false
+        "label": "The Multi teaser images",
+        "description": "The Multi teaser images",
+        "multi": true
       },
       {
         "component": "text",
@@ -290,6 +291,10 @@
           {
             "name": "Theme",
             "children": [
+              {
+                "name": "Light",
+                "value": "light"
+              },
               {
                 "name": "Light",
                 "value": "light"
@@ -317,52 +322,24 @@
             "name": "Background Color",
             "children": [
               {
-                "name": "Grey",
-                "value": "bg-spectrum-gray-700"
+                "name": "Background Image",
+                "value": "bg-image"
               },
               {
-                "name": "Blue",
-                "value": "bg-spectrum-blue-700"
+                "name": "Yellow Light",
+                "value": "bg-yellow-light"
               },
               {
-                "name": "Green",
-                "value": "bg-spectrum-green-700"
-              },
-              {
-                "name": "Orange",
-                "value": "bg-spectrum-orange-700"
-              },
-              {
-                "name": "Red",
-                "value": "bg-spectrum-red-700"
-              },
-              {
-                "name": "Celery",
-                "value": "bg-spectrum-celery-700"
-              },
-              {
-                "name": "Chartreuse",
-                "value": "bg-spectrum-chartreuse-700"
-              },
-              {
-                "name": "Cyan",
-                "value": "bg-spectrum-cyan-700"
-              },
-              {
-                "name": "Fuchsia",
-                "value": "bg-spectrum-fuchsia-700"
-              },
-              {
-                "name": "Indigo",
-                "value": "bg-spectrum-indigo-700"
-              },
-              {
-                "name": "Magenta",
-                "value": "bg-spectrum-magenta-700"
+                "name": "Blue Light",
+                "value": "bg-blue-light"
               },
               {
                 "name": "Purple",
-                "value": "bg-spectrum-purple-700"
+                "value": "bg-purple"
+              },
+              {
+                "name": "Orange",
+                "value": "bg-orange"
               },
               {
                 "name": "Seafoam",
@@ -371,6 +348,170 @@
               {
                 "name": "Yellow",
                 "value": "bg-spectrum-yellow-700"
+              },
+              {
+                "name": "darkcharcoal",
+                "value": "--darkcharcoal"
+              },
+              {
+                "name": "darkgrey",
+                "value": "--darkgrey"
+              },
+              {
+                "name": "white",
+                "value": "--white"
+              },
+              {
+                "name": "orange",
+                "value": "--orange"
+              },
+              {
+                "name": "black",
+                "value": "--black"
+              },
+              {
+                "name": "grey",
+                "value": "--grey"
+              },
+              {
+                "name": "darkblack",
+                "value": "--darkblack"
+              },
+              {
+                "name": "green",
+                "value": "--green"
+              },
+              {
+                "name": "greyishblue",
+                "value": "--greyishblue"
+              },
+              {
+                "name": "floralwhite",
+                "value": "--floralwhite"
+              },
+              {
+                "name": "lilen",
+                "value": "--lilen"
+              },
+              {
+                "name": "dustygrey",
+                "value": "--dustygrey"
+              },
+              {
+                "name": "matterhorn",
+                "value": "--matterhorn"
+              },
+              {
+                "name": "chinesesilver",
+                "value": "--chinesesilver"
+              },
+              {
+                "name": "midnight",
+                "value": "--midnight"
+              },
+              {
+                "name": "pattensblue",
+                "value": "--pattensblue"
+              },
+              {
+                "name": "rosewhite",
+                "value": "--rosewhite"
+              },
+              {
+                "name": "solitude",
+                "value": "--solitude"
+              },
+              {
+                "name": "swansdown",
+                "value": "--swansdown"
+              },
+              {
+                "name": "camarone",
+                "value": "--camarone"
+              },
+              {
+                "name": "zinc",
+                "value": "--zinc"
+              },
+              {
+                "name": "cloud",
+                "value": "--cloud"
+              },
+              {
+                "name": "silver",
+                "value": "--silver"
+              },
+              {
+                "name": "arsenic",
+                "value": "--arsenic"
+              },
+              {
+                "name": "whisper",
+                "value": "--whisper"
+              },
+              {
+                "name": "fossil",
+                "value": "--fossil"
+              },
+              {
+                "name": "blackpearl",
+                "value": "--blackpearl"
+              },
+              {
+                "name": "lightgrey",
+                "value": "--lightgrey"
+              },
+              {
+                "name": "blue",
+                "value": "--blue"
+              },
+              {
+                "name": "whitesmoke",
+                "value": "--whitesmoke"
+              },
+              {
+                "name": "coral",
+                "value": "--coral"
+              },
+              {
+                "name": "salmon",
+                "value": "--salmon"
+              },
+              {
+                "name": "seashell",
+                "value": "--seashell"
+              },
+              {
+                "name": "pale",
+                "value": "--pale"
+              },
+              {
+                "name": "cinnabar",
+                "value": "--cinnabar"
+              },
+              {
+                "name": "coralred",
+                "value": "--coralred"
+              },
+              {
+                "name": "flamingo",
+                "value": "--flamingo"
+              },
+              {
+                "name": "mischka",
+                "value": "--mischka"
+              },
+              {
+                "name": "midorange",
+                "value": "--midorange"
+              },
+              {
+                "name": "pearl",
+                "value": "--pearl"
+              },
+              {
+                "name": "submidorange",
+                "value": "--submidorange"
               }
             ]
           }

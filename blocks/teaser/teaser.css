@@ -414,4 +414,77 @@
         width:70%;
       }
     }
-    
+
+/* about us cards carousel start */
+.section.carousel-container .default-content-wrapper>p>strong{
+  margin: 20px 0 24px;
+  color: var(--black);
+  display: block;
+  font-family: 'Nunito-Extrabold',sans-serif;
+  font-size: 2pc;
+  line-height: 40px;
+}
+
+.section.carousel-container .carousel-wrapper .panel-container .teaser.block {
+  position: relative;
+  padding: 82px 16px 10px 40px;
+}
+
+.section.carousel-container .carousel-wrapper .panel-container .teaser.block .background img {
+  object-fit: fill;
+  background-position: 100%;
+  background-repeat: no-repeat;
+}
+
+.section.carousel-container .carousel-wrapper .panel-container .teaser.block .front-picture {
+  position: absolute;
+}
+
+.section.carousel-container .carousel-wrapper .panel-container .teaser.block .front-picture img{
+  height: 72px;
+  width: 72px;
+}
+
+.section.carousel-container .carousel-wrapper .panel-container .teaser.block .foreground .text .long-description>p,
+.section.carousel-container .carousel-wrapper .panel-container .teaser.block .foreground .text .short-description>p {
+  color: var(--darkcharcoal);
+  display: block;
+  font-family: 'Nunito-Regular',sans-serif;
+  font-size: 1pc;
+  line-height: 24px;
+  margin-bottom: 2pc;
+}
+
+.section.carousel-container .carousel-wrapper .panel-container .teaser.block .foreground .text .long-description>p>strong,
+.section.carousel-container .carousel-wrapper .panel-container .teaser.block .foreground .text .short-description>p>strong{
+  color: var(--black);
+  font-family: 'Nunito-Bold',sans-serif;
+  font-size: 1pc;
+  line-height: 24px;
+}
+
+.section.carousel-container .carousel-wrapper .panel-container .teaser.block .foreground .text .cta {
+  position: absolute;
+  top: 10px;
+  left: 7%;
+}
+
+.section.carousel-container .carousel-wrapper .panel-container .teaser.block .foreground .text .cta>a {
+  background-color: var(--greyishblue);
+  border-radius: 67px;
+  padding: 10px 20px;
+  width: 10pc;
+  color: #fff;
+  font-family: 'Nunito-Bold',sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+@media screen and (max-width:768px) {
+  .section.carousel-container .default-content-wrapper>p>strong {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 20px 0;
+  }
+}
+/* about us cards carousel end */

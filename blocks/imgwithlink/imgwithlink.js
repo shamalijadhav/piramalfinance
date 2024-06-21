@@ -4,6 +4,7 @@ export default function decorate(block) {
   if (newDiv) {
     block.innerHTML = "";
     block.appendChild(newDiv);
+    aTagPreventDefault();
   }
 }
 
@@ -25,6 +26,7 @@ function createImageWithLink(block) {
   const createHref = document.createElement("a");
   createHref.href = hrefElem;
   createHref.target = "_blank";
+  createHref.classList.add("anchor-event-link");
   createHref.appendChild(blockPic);
 
   const createDiv = document.createElement("div");
@@ -32,4 +34,14 @@ function createImageWithLink(block) {
   createDiv.appendChild(createHref);
 
   return createDiv;
+}
+
+function aTagPreventDefault() {
+  const anchorLinks = document.querySelectorAll('.anchor-event-link');
+
+  anchorLinks?.forEach(link => {
+    if (link.getAttribute('href') === '#') {
+      link.addEventListener('click', e => e.preventDefault());
+    }
+  });
 }

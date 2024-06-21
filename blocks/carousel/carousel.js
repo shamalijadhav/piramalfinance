@@ -1,6 +1,10 @@
 import { generateDetailedTeaserDOM } from '../detailed-teaser/detailed-teaser.js';
 import { generateTeaserDOM } from '../teaser/teaser.js';
 
+const carouselContainerMapping = {}
+carouselContainerMapping["detailed-teaser"] = generateDetailedTeaserDOM;
+carouselContainerMapping["ss-teaser"] = generateDetailedTeaserDOM;
+
 // callback for touch based scrolling event
 function updateButtons(entries) {
   entries.forEach((entry) => {
@@ -37,15 +41,24 @@ export default function decorate(block) {
   [...panels].forEach((panel, i) => {
     console.log("panel :: ", panel);
     // generate the  panel
-    const [imagebg ,image, classList, ...rest] = panel.children;
+    const [imagebg, image, classList, ...rest] = panel.children;
     const classesText = classList.textContent.trim();
     const classes = (classesText ? classesText.split(',') : []).map((c) => c && c.trim()).filter((c) => !!c);
-    const blockType = [...classes].includes('detailed-teaser') ? 'detailed-teaser' : 'teaser';
+    const blockType = 'teaser';
+    // const blockType = [...classes].includes('detailed-teaser') ? 'detailed-teaser' : 'teaser';
     // check if we have to render teaser or a detailed teaser
-    const teaserDOM =
-      blockType === 'detailed-teaser'
-        ? generateDetailedTeaserDOM([imagebg ,image, ...rest], classes)
-        : generateTeaserDOM([imagebg ,image, ...rest], classes);
+    // const teaserDOM = 
+    //   blockType === 'detailed-teaser'
+    //     ? generateDetailedTeaserDOM([imagebg, image, ...rest], classes)
+    //     : generateTeaserDOM([imagebg, image, ...rest], classes);
+    let teaserDOM = null;
+    classes.forEach(function (className) {
+      if (carouselContainerMapping[className]) {
+        blockType = className;
+        teaserDOM = carouselContainerMapping[className];
+      }
+    })
+    teaserDOM = teaserDOM ? teaserDOM([imagebg, image, ...rest], classes) : generateTeaserDOM([imagebg, image, ...rest], classes);
     panel.textContent = '';
     panel.classList.add(blockType, 'block');
     classes.forEach((c) => panel.classList.add(c.trim()));

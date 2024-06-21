@@ -1,12 +1,13 @@
 
-import { loadFragment } from '../fragment/fragment.js';
-
 export default async function decorate(blocks){
     try {
         const cfURL = blocks.querySelector('a').textContent.trim();
         const fragemntData = await fetch(`${cfURL}.plain.html`);
-        const responseawait = await fragemntData.json();
-        console.log(responseawait);
+        const responseawait = await fragemntData.text();    
+        const cfDiv = document.createElement('div');
+        cfDiv.innerHTML = responseawait;
+        blocks.innerHTML = ''
+        blocks.append(cfDiv);
     } catch (error) {
         console.error(error);
     }

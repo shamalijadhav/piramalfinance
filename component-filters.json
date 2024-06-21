@@ -46,7 +46,9 @@
       "detailed-teaser",
       "accordion-group",
       "teaserv2",
-      "code"
+      "code",
+      "contentfragment",
+      "experiencefragment"
     ]
   },
   {

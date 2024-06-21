@@ -268,9 +268,9 @@
         "component": "reference",
         "valueType": "string",
         "name": "fileReference1",
-        "label": "Front Image",
-        "description": "The teaser image, min Xpx x Ypx...",
-        "multi": false
+        "label": "The Multi teaser images",
+        "description": "The Multi teaser images",
+        "multi": true
       },
       {
         "component": "text",

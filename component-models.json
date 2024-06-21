@@ -259,7 +259,7 @@
         "component": "reference",
         "valueType": "string",
         "name": "fileReference",
-        "label": "Image",
+        "label": "Background Image",
         "description": "The teaser image, Background",
         "multi": false
       },
@@ -267,7 +267,7 @@
         "component": "reference",
         "valueType": "string",
         "name": "fileReference1",
-        "label": "Image",
+        "label": "Front Image",
         "description": "The teaser image, min Xpx x Ypx...",
         "multi": false
       },

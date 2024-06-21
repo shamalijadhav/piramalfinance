@@ -705,6 +705,52 @@
         "value": "",
         "label": "CTA Image URL 1",
         "description": "Enter CTA Image URL 1"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "ctaImageTwo",
+        "label": "CTA Image 2",
+        "description": "Select CTA Image 2"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaImageAltTwo",
+        "value": "",
+        "label": "CTA Image Alt 2",
+        "description": "Enter CTA Alt 2"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaImageURLTwo",
+        "value": "",
+        "label": "CTA Image URL 2",
+        "description": "Enter CTA Image URL 2"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "ctaImageThree",
+        "label": "CTA Image 3",
+        "description": "Select CTA Image 3"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaImageAltThree",
+        "value": "",
+        "label": "CTA Image Alt 3",
+        "description": "Enter CTA Alt 3"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaImageURLThree",
+        "value": "",
+        "label": "CTA Image URL 3",
+        "description": "Enter CTA Image URL 3"
       }
     ]
   },

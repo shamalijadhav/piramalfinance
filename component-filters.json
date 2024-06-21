@@ -74,5 +74,11 @@
       "hero",
       "teaser"
   ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tabs"
+  ]
   }
 ]

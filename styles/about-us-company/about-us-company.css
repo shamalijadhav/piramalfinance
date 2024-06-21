@@ -1,0 +1,194 @@
+/* Director Banner Start*/
+
+.section.teaser-container {
+    padding: 0;
+    margin: 0 !important;
+    background-color: #365069;
+}
+
+.section.teaser-container .teaser-wrapper {
+    position: relative;
+}
+
+.section.teaser-container .teaser-wrapper .teaser {
+    overflow: unset;
+    padding-top: 49px;
+    min-height: 485px;
+}
+
+.section.teaser-container .teaser-wrapper .teaser .front-picture {
+    height: 365px;
+    width: 440px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.section.teaser-container .teaser-wrapper .teaser .front-picture picture img {
+    height: 365px;
+    width: 440px;
+    display: blocks;
+}
+
+.section.teaser-container .teaser-wrapper .teaser .foreground {
+    display: block;
+    min-height: 485px;
+}
+
+.section.teaser-container .teaser-wrapper .teaser .foreground .text {
+    padding: 130px 0;
+    justify-content: center;
+    max-width: 640px;
+    width: 100%;
+}
+
+.section.teaser-container .teaser-wrapper .teaser .foreground .text .long-description {
+    margin-bottom: 32px;
+}
+
+.section.teaser-container .teaser-wrapper .teaser .foreground .text .long-description>p {
+    color: #fff;
+    font-family: Nunito-Regular, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 2pc;
+}
+
+.section.teaser-container .teaser-wrapper .teaser .foreground .text .short-description p {
+    font-size: 1pc;
+}
+
+.section.teaser-container .teaser-wrapper .teaser .foreground .text .short-description {
+    display: block;
+}
+
+.section.teaser-container .teaser-wrapper .teaser .foreground .text .short-description p strong {
+    font-size: 24px;
+    display: block;
+    font-family: ' Nunito-Bold', sans-serif;
+}
+
+@media screen and (max-width:768px) {
+    .section.teaser-container {
+        padding: 0 16px;
+    }
+
+    .section.teaser-container .teaser-wrapper .teaser {
+        padding-top: 9px;
+        min-height: auto;
+    }
+
+    .section.teaser-container .teaser-wrapper .teaser .front-picture {
+        height: 170px;
+        width: 200px;
+    }
+
+    .section.teaser-container .teaser-wrapper .teaser .front-picture picture img {
+        height: 170px;
+        width: 200px;
+    }
+
+    .section.teaser-container .teaser-wrapper .teaser .foreground {
+        min-height: auto;
+    }
+
+    .section.teaser-container .teaser-wrapper .teaser .foreground .text {
+        padding: 3pc 0 190px;
+        max-width: 97%;
+    }
+
+    .section.teaser-container .teaser-wrapper .teaser .foreground .text .long-description,
+    .section.teaser-container .teaser-wrapper .teaser .foreground .text .short-description {
+        display: block;
+    }
+
+    .section.teaser-container .teaser-wrapper .teaser .foreground .text .long-description>p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .section.teaser-container .teaser-wrapper .teaser .foreground .text .short-description p strong {
+        font-size: 16px;
+    }
+}
+
+
+/* Director Banner End*/
+
+/* About us Buttons Start */
+.section.about-us-buttons .default-content-wrapper {
+    display: flex;
+    column-gap: 54px;
+    row-gap: 10px;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 0 !important;
+    margin-top: 2pc !important;
+}
+
+.section.about-us-buttons .default-content-wrapper p {
+    margin: 0;
+    border: 1px solid #333;
+    border-radius: 50px;
+    position: relative;
+}
+
+.section.about-us-buttons .default-content-wrapper p::after {
+    border-radius: 1px;
+    border-right: 2px solid #ccc;
+    content: "";
+    height: 22px;
+    position: absolute;
+    right: -24px;
+    top: 26%;
+    width: 2px;
+}
+
+.section.about-us-buttons .default-content-wrapper p:last-child::after {
+    display: none;
+}
+
+.section.about-us-buttons .default-content-wrapper p a {
+    display: block;
+    text-align: center;
+    background: transparent;
+    margin: 0;
+    color: #333;
+    font-family: 'Nunito-Bold', sans-serif;
+    padding: 8px 1pc 7px;
+    font-size: 1pc;
+    font-weight: 700;
+    line-height: 24px;
+    border: 0;
+}
+
+.section.about-us-buttons .default-content-wrapper p a:active {
+    background-color: #365069;
+    color: #fff;
+}
+
+/* About us Buttons End */
+
+/* Who we are text Start */
+.section.about-us-text .default-content-wrapper p:first-child {
+    margin: 0;
+    color: #000;
+    display: block;
+    font-family: Nunito-Extrabold, sans-serif;
+    font-size: 2pc;
+    font-weight: 800;
+    line-height: 40px;
+    margin-bottom: 8px;
+}
+
+.section.about-us-text .default-content-wrapper p:last-child {
+    margin: 0;
+    color: #000;
+    font-family: Nunito-Regular, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/* Who we are text End */

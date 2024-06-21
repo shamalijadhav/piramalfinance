@@ -1081,5 +1081,41 @@
         "description": "What link to open when clicking the button."
       }
     ]
-  }
+  },
+  {
+    "id": "code",
+    "fields": [
+      {
+        "component": "text-area",
+        "valueType": "string",
+        "name": "htmlCode",
+        "value": "",
+        "label": "Author HTML Code"
+      }
+    ]
+  },
+    {
+      "id": "contentfragment",
+      "fields": [
+        {
+          "component": "aem-content-fragment",
+          "name": "picker",
+          "label": "Content Fragment Picker",
+          "valueType": "string",
+          "variationName": "contentFragmentVariation"
+        }
+      ]
+    },
+    {
+        "id": "experiencefragment",
+        "fields": [
+          {
+            "component": "aem-experience-fragment",
+            "name": "picker",
+            "label": "Experience Fragment Picker",
+            "valueType": "string",
+            "variationName": "experienceFragmentVariation"
+          }
+        ]
+      }
 ]

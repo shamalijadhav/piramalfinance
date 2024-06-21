@@ -34,6 +34,18 @@ export default function decorate(block) {
   const buttonContainer = document.createElement('div');
   buttonContainer.classList.add('button-container');
 
+
+  const slideNavButtons = document.createElement("div");
+  slideNavButtons.classList.add("carousel-navigation-buttons");
+  slideNavButtons.innerHTML = `
+    <button type="button" class="slide-prev" aria-label="${"Previous Slide"
+    }"><</button>
+    <button type="button" class="slide-next" aria-label="${"Next Slide"
+    }">></button>
+  `;
+  // block.appendChild(slideNavButtons);
+
+
   // get all children elements
   const panels = [...block.children];
 
@@ -41,7 +53,7 @@ export default function decorate(block) {
   [...panels].forEach((panel, i) => {
     console.log("panel :: ", panel);
     // generate the  panel
-    const [classList , imagebg, image, ...rest] = panel.children;
+    const [classList, imagebg, image, ...rest] = panel.children;
     const classesText = classList.textContent.trim();
     const classes = (classesText ? classesText.split(',') : []).map((c) => c && c.trim()).filter((c) => !!c);
     let blockType = 'teaser';
@@ -85,5 +97,20 @@ export default function decorate(block) {
 
   block.textContent = '';
   block.append(panelContainer);
+  block.append(slideNavButtons);
+  block.querySelector(".slide-prev").addEventListener("click", function (e) {
+    const actviveBtn = buttonContainer.querySelector(".selected")
+    const activePanel = block.querySelector('[data-panel=' + actviveBtn.dataset.panel + ']');
+    const panel = activePanel.previousElementSibling;
+    panelContainer.scrollTo({ top: 0, left: panel.offsetLeft - panel.parentNode.offsetLeft, behavior: 'smooth' });
+  })
+  block.querySelector(".slide-next").addEventListener("click", function (e) {
+    const actviveBtn = buttonContainer.querySelector(".selected")
+    const activePanel = block.querySelector('[data-panel=' + actviveBtn.dataset.panel + ']');
+    const panel = activePanel.nextElementSibling; panelContainer.scrollTo({ top: 0, left: panel.offsetLeft - panel.parentNode.offsetLeft, behavior: 'smooth' });
+  })
+  function activePanel(panel) {
+
+  }
   if (buttonContainer.children.length) block.append(buttonContainer);
 }

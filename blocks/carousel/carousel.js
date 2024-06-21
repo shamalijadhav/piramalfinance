@@ -98,19 +98,21 @@ export default function decorate(block) {
   block.textContent = '';
   block.append(panelContainer);
   block.append(slideNavButtons);
+
+  function activePanelContainer(panel) {
+    panelContainer.scrollTo({ top: 0, left: panel.offsetLeft - panel.parentNode.offsetLeft, behavior: 'smooth' });
+  }
   block.querySelector(".slide-prev").addEventListener("click", function (e) {
     const actviveBtn = buttonContainer.querySelector(".selected")
     const activePanel = block.querySelector('[data-panel=' + actviveBtn.dataset.panel + ']');
     const panel = activePanel.previousElementSibling;
-    panelContainer.scrollTo({ top: 0, left: panel.offsetLeft - panel.parentNode.offsetLeft, behavior: 'smooth' });
+    panel && activePanelContainer(panel)
   })
   block.querySelector(".slide-next").addEventListener("click", function (e) {
     const actviveBtn = buttonContainer.querySelector(".selected")
     const activePanel = block.querySelector('[data-panel=' + actviveBtn.dataset.panel + ']');
-    const panel = activePanel.nextElementSibling; panelContainer.scrollTo({ top: 0, left: panel.offsetLeft - panel.parentNode.offsetLeft, behavior: 'smooth' });
+    const panel = activePanel.nextElementSibling;
+    panel && activePanelContainer(panel)
   })
-  function activePanel(panel) {
-
-  }
   if (buttonContainer.children.length) block.append(buttonContainer);
 }

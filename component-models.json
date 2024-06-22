@@ -1109,6 +1109,14 @@
         "value": "",
         "label": "First CTA Link",
         "description": "What link to open when clicking the button."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bgcolor",
+        "value": "",
+        "label": "Background Color Code",
+        "description": "Background Color Code"
       }
     ]
   },
@@ -1124,28 +1132,28 @@
       }
     ]
   },
-    {
-      "id": "contentfragment",
-      "fields": [
-        {
-          "component": "aem-content-fragment",
-          "name": "picker",
-          "label": "Content Fragment Picker",
-          "valueType": "string",
-          "variationName": "contentFragmentVariation"
-        }
-      ]
-    },
-    {
-        "id": "experiencefragment",
-        "fields": [
-          {
-            "component": "aem-experience-fragment",
-            "name": "picker",
-            "label": "Experience Fragment Picker",
-            "valueType": "string",
-            "variationName": "experienceFragmentVariation"
-          }
-        ]
+  {
+    "id": "contentfragment",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "picker",
+        "label": "Content Fragment Picker",
+        "valueType": "string",
+        "variationName": "contentFragmentVariation"
       }
+    ]
+  },
+  {
+    "id": "experiencefragment",
+    "fields": [
+      {
+        "component": "aem-experience-fragment",
+        "name": "picker",
+        "label": "Experience Fragment Picker",
+        "valueType": "string",
+        "variationName": "experienceFragmentVariation"
+      }
+    ]
+  }
 ]

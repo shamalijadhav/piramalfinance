@@ -1161,6 +1161,12 @@
         "label": "Experience Fragment Picker",
         "valueType": "string",
         "variationName": "experienceFragmentVariation"
+      },
+      {
+        "component": "text",
+        "name": "Domain Name",
+        "label": "Domain Name",
+        "valueType": "string"
       }
     ]
   },

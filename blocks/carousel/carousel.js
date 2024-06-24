@@ -11,7 +11,8 @@ function updateButtons(entries) {
     // if panel has become > 60% visible
     if (entry.isIntersecting) {
       // get the buttons
-      const carouselButtons = entry.target.parentNode.parentNode.querySelector('.button-container');
+      // const carouselButtons = entry.target.parentNode.parentNode.querySelector('.button-container');
+      const carouselButtons = entry.target.parentNode.parentNode.lastChild;
       // remove selected state from whatever button has it
       [...carouselButtons.querySelectorAll(':scope button')].forEach((b) => b.classList.remove('selected'));
       // add selected state to proper button

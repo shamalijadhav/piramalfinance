@@ -1,4 +1,4 @@
-.choose-us-css .default-content-wrapper h4 {
+.choose-us-css .default-content-wrapper h2 {
   color: #000;
   display: block;
   font-family: Nunito-Extrabold, sans-serif;
@@ -9,12 +9,9 @@
   margin: 0;
 }
 
-.choose-us-css .rte-wrapper .rte div>div {
+.choose-us-css .default-content-wrapper  p{
   margin-bottom: 24px;
-}
-
-.choose-us-css .rte-wrapper .rte div>div>p {
-  color: rgb(51 51 51 / var(--tw-text-opacity));
+  color: #666;
   display: block;
   font-family: Nunito-Regular, sans-serif;
   font-size: 20px;
@@ -22,6 +19,10 @@
   line-height: 28px;
   padding-bottom: 8px;
   margin: 0;
+}
+
+.choose-us-css > .columns-wrapper > .columns.block {
+  margin-top : 20px;
 }
 
 .choose-us-css .columns-wrapper .columns>div {

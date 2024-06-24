@@ -33,7 +33,7 @@ function renderTeaserHTMLFactory(props) {
   const titleDiv = createElement("div", "title", title?.textContent.trim());
   const descriptionDiv = createElement("div", "description", description?.textContent.trim()) ;
 
-  const buttonHrefAnchor = buttonHref?.querySelector("a");
+  const buttonHrefAnchor = buttonHref?.querySelector("a") || "";
   if (buttonHrefAnchor) buttonHrefAnchor.innerText = button?.textContent.trim() || "";
 
   bgImageDiv.append(frontImageDiv, titleDiv, descriptionDiv, buttonHrefAnchor);

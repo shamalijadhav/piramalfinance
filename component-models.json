@@ -1239,5 +1239,15 @@
         ]
       }
     ]
-  }  
+  },
+  {
+    "id": "mycontainer",
+    "fields": [
+      {
+      "name": "content",
+      "label": "Content",
+      "component": "myContainer"
+    }
+  ]
+  }
 ]

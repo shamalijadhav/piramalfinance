@@ -3,7 +3,8 @@
     "id": "main",
     "components": [
       "section",
-      "title"
+      "title",
+      "container"
     ]
   },
   {
@@ -49,7 +50,8 @@
       "code",
       "contentfragment",
       "experiencefragment",
-      "wrappercreation"
+      "wrappercreation",
+      "container"
     ]
   },
   {

@@ -1157,15 +1157,7 @@
     ]
   },
   {
-    "id": "div",
-    "fields": [
-      {
-        "component": "text",
-        "name": "style",
-        "value": "",
-        "label": "Style",
-        "valueType": "string"
-      }
-    ]
+    "id": "wrappercreation",
+    "fields": []
   }
 ]

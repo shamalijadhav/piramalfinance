@@ -68,13 +68,92 @@
 .carousel.block>.button-container button.selected {
   background-color: grey;
 }
+
 .primary.block>.carousel-navigation-buttons {
   display: none;
+}
+
+/* .carousel-container {
+  background-color: black;
+} */
+
+.bg-yellow-light {
+  background-color: var(--light-yellow);
+}
+
+.carousel-container {
+  padding: 0 !important;
+}
+
+.carousel-container .carousel-wrapper .carousel .panel-container .teaser {
+  position: relative;
+  height: 529px;
+}
+
+.carousel-container .carousel-wrapper .carousel .panel-container .teaser .front-picture {
+  position: absolute;
+  right: 0;
+}
+
+.carousel-container .carousel-wrapper .carousel .panel-container .teaser .front-picture picture>img {
+  width: 300px;
+}
+
+.carousel-container .carousel-wrapper .carousel .panel-container .teaser .foreground {
+  padding: 0 150px;
+}
+
+.carousel-container .carousel-wrapper .carousel .panel-container .teaser .foreground .text {
+  width: 100%;
+}
+
+.carousel-container .carousel-wrapper .carousel .panel-container .teaser .foreground .text .eyebrow {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 60px;
+}
+
+.carousel-container .carousel-wrapper .carousel .panel-container .teaser .foreground .text .title h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 60px;
+}
+
+.carousel-container .carousel-wrapper .carousel .panel-container .teaser .foreground .long-description {
+  margin-top: 1rem;
+}
+
+.carousel-container .carousel-wrapper .carousel .panel-container .teaser .foreground .long-description ol {
+  list-style: none;
+  padding: 0;
+}
+
+.carousel-container .carousel-wrapper .carousel .panel-container .teaser .foreground .long-description ol>li {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 400;
+  color: var(--gradient-gray);
+}
+
+.carousel-container .carousel-wrapper .carousel .panel-container .teaser .foreground .cta {
+  margin-top: 2rem;
+}
+
+.carousel-container .carousel-wrapper .carousel .panel-container .teaser .foreground .cta>a {
+  background: #F26841;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  padding: 1rem 2.16rem;
+  object-fit: contain;
 }
 
 .secondary.block>.button-container {
   display: none;
 }
+
 /* ----- TABLET ----- */
 @media (min-width: 600px) {
   .section div.carousel-wrapper {

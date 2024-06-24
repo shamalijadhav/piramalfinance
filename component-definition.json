@@ -246,6 +246,7 @@
                   "name": "Tab",
                   "model": "tab",
                   "title": "Tab",
+                  "filter": "tabs",
                   "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
                 }
               }
@@ -270,7 +271,7 @@
                   "titleType": "h3",
                   "description": "Description",
                   "subject": "/content/dam/summit-subject.png",
-                  "classes": ["light", "left" , "detailed-teaser"]
+                  "classes": ["light", "left", "detailed-teaser"]
                 }
               }
             }
@@ -376,6 +377,24 @@
               }
             }
           }
+        },
+        {
+          "title": "Extra Div Created",
+          "id": "div",
+          "components": [
+            {
+              "title": "Extra Div Created",
+              "id": "div",
+              "plugins": {
+                "xwalk": {
+                  "page": {
+                    "resourceType": "core/franklin/components/section/v1/section",
+                    "template": {}
+                  }
+                }
+              }
+            }
+          ]
         }
       ]
     }

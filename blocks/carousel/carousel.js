@@ -53,7 +53,6 @@ export default function decorate(block) {
 
   // loop through all children blocks
   [...panels].forEach((panel, i) => {
-    console.log("panel :: ", panel);
     // generate the  panel
     const [classList, imagebg, image, ...rest] = panel.children;
     const classesText = classList.textContent.trim();

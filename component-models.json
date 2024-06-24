@@ -1179,13 +1179,13 @@
         "collapsible": true,
         "fields": [
           {
-            "component": "text-input",
+            "component": "tab",
             "label": "Simple Text 1",
             "name": "text",
             "valueType": "string"
           },
           {
-            "component": "text-input",
+            "component": "tab",
             "label": "Simple Text 2",
             "name": "text2",
             "valueType": "string"

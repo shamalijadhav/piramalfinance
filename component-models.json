@@ -1155,5 +1155,17 @@
         "variationName": "experienceFragmentVariation"
       }
     ]
+  },
+  {
+    "id": "div",
+    "fields": [
+      {
+        "component": "text",
+        "name": "style",
+        "value": "",
+        "label": "Style",
+        "valueType": "string"
+      }
+    ]
   }
 ]

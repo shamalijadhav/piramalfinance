@@ -1,31 +1,14 @@
-.download-piramal-css {
-  max-width: 1200px;
-  position: relative;
-  margin: 0 auto;
-}
-
-/* .download-piramal-css .default-content-wrapper h4 {
-  position: relative;
-} */
-.download-piramal-css>div:first-child p {
+/* download app banner section start */
+.download-piramal-wrapper {
   position: relative;
 }
 
-.download-piramal-css .default-content-wrapper p:first-child img {
+.download-piramal-wrapper .default-content-wrapper p:first-child img {
   border-radius: 20px;
 }
 
-/* .download-piramal-css .default-content-wrapper h4 {
-  position: absolute;
-  left: 5%;
-  top: 10%;
-  font-size: 30px;
-  font-family: "Nunito-Regular";
-  font-weight: 700;
-  color: #ffffff;
-} */
-
-.download-piramal-css .default-content-wrapper p:nth-child(4) {
+.download-piramal-wrapper .default-content-wrapper p:nth-child(4),
+.download-piramal-wrapper .default-content-wrapper p:nth-child(5) {
   position: absolute;
   width: 156px;
   height: 52px;
@@ -33,20 +16,12 @@
   left: 5%;
 }
 
-.download-piramal-css .default-content-wrapper p:nth-child(4) img {
+.download-piramal-wrapper .default-content-wrapper p:nth-child(4) img {
   width: 156px;
   height: 52px;
 }
 
-.download-piramal-css .default-content-wrapper p:nth-child(5) {
-  position: absolute;
-  width: 156px;
-  height: 52px;
-  left: 20%;
-  bottom: 20%;
-}
-
-.download-piramal-css .default-content-wrapper p:nth-child(3) {
+.download-piramal-wrapper .default-content-wrapper p:nth-child(3) {
   position: absolute;
   top: 25%;
   font-size: 24px;
@@ -55,137 +30,135 @@
   left: 5%;
 }
 
-.download-piramal-css .default-content-wrapper:last-child p {
+.download-piramal-wrapper .default-content-wrapper:last-child p {
   margin-bottom: 0;
 }
 
-.download-piramal-css .default-content-wrapper p:nth-child(6) {
+.download-piramal-wrapper .default-content-wrapper p:nth-child(6) {
   display: none;
 }
 
-.download-piramal-css .button-container {
+.download-piramal-wrapper .button-container {
   display: none;
 }
 
 @media screen and (max-width: 767.99px) {
 
-  .download-piramal-css .default-content-wrapper h4,
-  .download-piramal-css .default-content-wrapper p:first-child img,
-  .download-piramal-css .default-content-wrapper p:nth-child(3) .download-piramal-css .default-content-wrapper p:nth-child(4),
-  .download-piramal-css .default-content-wrapper p:nth-child(5) {
+  .download-piramal-wrapper .default-content-wrapper h4,
+  .download-piramal-wrapper .default-content-wrapper p:first-child img,
+  .download-piramal-wrapper .default-content-wrapper p:nth-child(3) .download-piramal-wrapper .default-content-wrapper p:nth-child(4),
+  .download-piramal-wrapper .default-content-wrapper p:nth-child(5) {
     display: none;
   }
 
-  .download-piramal-css .default-content-wrapper p:nth-child(6) {
+  .download-piramal-wrapper .default-content-wrapper p:nth-child(6) {
     position: absolute;
     margin-bottom: -20%;
     display: block;
     bottom: 20%;
   }
 
-  .download-piramal-css .button-container {
+  .download-piramal-wrapper .button-container {
     display: block;
   }
 
-  .section.download-piramal-css div:nth-child(5) >p >a{
+  .section.download-piramal-wrapper div:nth-child(5)>p>a {
     display: none;
     position: absolute;
     background: #f26841;
     border-radius: 8px;
     color: #fff;
-    font-family: Nunito-Bold, sans-serif;
+    font-family: "Nunito-Bold", sans-serif;
     font-size: 9pt;
     font-weight: 700;
     line-height: 1pc;
     padding: 8px 15px;
-    bottom: 90px;
-    left: 56px;
+    bottom: 75px;
+    left: 40px;
   }
 
-  .download-piramal-css .default-content-wrapper:last-child {
+  .download-piramal-wrapper .default-content-wrapper:last-child {
     position: relative;
     left: 1%;
   }
-
-  /* .download-piramal-css .default-content-wrapper p:nth-child(4) img{
-        width: revert-layer;
-        height: 176px;
-    } */
 }
 
-.section.download-piramal-css div:nth-child(1)>.imgwithlink>.image-href-desktop>a>picture>img {
+.section.download-piramal-wrapper div:nth-child(1)>.imgwithlink>.image-href-desktop>a>picture>img {
   display: block;
   height: 272px;
-  min-height: 17pc;
   width: 100%;
+  border-radius: 20px;
 }
 
-.section.download-piramal-css> div:nth-child(2) {
+.section.download-piramal-wrapper>div:nth-child(2) {
   display: block;
   position: absolute;
-  left: 96px;
-  top: 114px;
+  left: 204px;
+  top: 50px;
   font-size: 30px;
   font-family: "Nunito-Regular";
   font-weight: 700;
   color: #ffffff;
 }
 
-.section.download-piramal-css>.default-content-wrapper>h4 {
+.section.download-piramal-wrapper>.default-content-wrapper>h4 {
   margin: 0;
   color: #fff;
-  font-family: Nunito-Bold, sans-serif;
+  font-family: "Nunito-Bold", sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
   margin-bottom: 8px;
 }
 
-.section.download-piramal-css>.default-content-wrapper>p {
+.section.download-piramal-wrapper>.default-content-wrapper>p {
   margin: 0px;
   color: #fff;
-  font-family: Nunito-Regular, sans-serif;
+  font-family: "Nunito-Regular", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 2pc;
 }
 
-.section.download-piramal-css div:nth-child(3),
-.section.download-piramal-css div:nth-child(4) {
+.section.download-piramal-wrapper div:nth-child(3),
+.section.download-piramal-wrapper div:nth-child(4) {
   position: absolute;
-  top: 234px;
+  top: 162px;
 }
 
-.section.download-piramal-css div:nth-child(3) {
-  left: 96px;
+.section.download-piramal-wrapper div:nth-child(3) {
+  left: 204px;
 }
 
-.section.download-piramal-css div:nth-child(4) {
-  left: 292px;
+.section.download-piramal-wrapper div:nth-child(4) {
+  left: 398px;
 }
 
-.section.download-piramal-css div:nth-child(3)>.imgwithlink>.image-href-desktop>a>picture>img,
-.section.download-piramal-css div:nth-child(4)>.imgwithlink>.image-href-desktop>a>picture>img {
+.section.download-piramal-wrapper div:nth-child(3)>.imgwithlink>.image-href-desktop>a>picture>img,
+.section.download-piramal-wrapper div:nth-child(4)>.imgwithlink>.image-href-desktop>a>picture>img {
   height: 52px;
   width: 11pc;
   display: block;
 }
 
 @media screen and (max-width:768px) {
-  .section.download-piramal-css div:nth-child(1)>.imgwithlink>.image-href-desktop>a>picture>img {
+  .section.download-piramal-wrapper div:nth-child(1)>.imgwithlink>.image-href-desktop>a>picture>img {
     height: 176px;
     min-height: 176px;
   }
 
-  .section.download-piramal-css div:nth-child(3),
-  .section.download-piramal-css div:nth-child(4) {
+  .section.download-piramal-wrapper div:nth-child(3),
+  .section.download-piramal-wrapper div:nth-child(4) {
     display: none;
   }
 
-  .section.download-piramal-css div:nth-child(2) {
+  .section.download-piramal-wrapper div:nth-child(2) {
     display: none;
   }
-  .section.download-piramal-css div:nth-child(5) >p >a{
+
+  .section.download-piramal-wrapper div:nth-child(5)>p>a {
     display: block;
   }
 }
+
+/* download app banner section end */

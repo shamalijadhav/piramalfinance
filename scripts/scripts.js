@@ -165,6 +165,7 @@ async function loadingCustomCss(){
     `${window.hlx.codeBasePath}/styles/our-media/our-media.css`,
     `${window.hlx.codeBasePath}/styles/piramal-since/piramal-since.css`,
     `${window.hlx.codeBasePath}/styles/about-us-company/about-us-company.css`,
+    `${window.hlx.codeBasePath}/styles/reset.css`,
   ]
 
   loadCssArray.forEach( async (eachCss) => {

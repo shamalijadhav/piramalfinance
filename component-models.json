@@ -1167,5 +1167,27 @@
   {
     "id": "wrappercreation",
     "fields": []
-  }
+  },
+  {
+    "id": "container",
+    "fields": [
+      {
+        "component": "container",
+        "label": "Container",
+        "name": "container",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "tabs",
+            "fields" : []
+          },
+          {
+            "component": "tabs",
+            "fields" : []
+          }
+        ]
+      }
+    ]
+  }  
 ]

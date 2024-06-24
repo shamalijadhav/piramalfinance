@@ -100,7 +100,7 @@
       "indentation": ["indent", "outdent"],
       "sr_script": ["superscript", "subscript"],
       "list": ["bullist", "numlist"],
-      "insert": ["link", "image"],
+      "insert": ["link", "image", "table"],
       "advanced": [],
       "extensions": [],
       "editor": ["removeformat"]

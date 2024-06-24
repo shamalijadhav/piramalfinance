@@ -105,5 +105,9 @@
       "extensions": [],
       "editor": ["removeformat"]
     }
+  },
+  { 
+  "id" : "div",
+  "components": null
   }
 ]

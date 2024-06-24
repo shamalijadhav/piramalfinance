@@ -1,0 +1,23 @@
+@import "../accordion/accordion.css";
+
+/* inside accordion group we can have text below first div */
+
+.shade-box {
+    background-color: var(--spectrum-gray-100);
+    padding: 14px 21px 21px;
+    border-radius: 7px;
+    margin-bottom: 28px;
+}
+
+.accordion-group>.accordion details div {
+    font-size: var(--exlm-font-size-content);
+    line-height: var(--exlm-line-height-h4);
+    margin-left: 14px;
+    margin-top: 14px;
+}
+
+/* override /docs font size */
+.accordion-group>.accordion details summary {
+    font-size: var(--spectrum-font-size-200);
+    line-height: var(--exlm-line-height-h4);
+}

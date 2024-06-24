@@ -24,7 +24,8 @@
       "imgwithlink",
       "carousel",
       "teaser",
-      "tabs"
+      "tabs",
+      "accordion-group"
     ]
   },
   {
@@ -42,7 +43,12 @@
       "carousel",
       "teaser",
       "tabs",
-      "detailed-teaser"
+      "detailed-teaser",
+      "accordion-group",
+      "teaserv2",
+      "code",
+      "contentfragment",
+      "experiencefragment"
     ]
   },
   {
@@ -72,7 +78,8 @@
       "button",
       "title",
       "hero",
-      "teaser"
+      "teaser",
+      "columns"
   ]
   },
   {
@@ -80,5 +87,23 @@
     "components": [
       "tabs"
   ]
+  },
+  {
+    "id": "accordion",
+    "components": ["accordion"]
+  },
+  {
+    "id": "text",
+    "rte": {
+      "format": ["bold", "italic", "underline", "strikethrough"],
+      "alignment": ["left", "center", "right"],
+      "indentation": ["indent", "outdent"],
+      "sr_script": ["superscript", "subscript"],
+      "list": ["bullist", "numlist"],
+      "insert": ["link", "image"],
+      "advanced": [],
+      "extensions": [],
+      "editor": ["removeformat"]
+    }
   }
 ]

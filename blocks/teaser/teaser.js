@@ -15,12 +15,19 @@ export function decorateButtons(...buttons) {
   
   export function generateTeaserDOM(props, classes) {
     // Extract properties, always same order as in model, empty string if not set
-    const [pictureBgContainer,pictureContainer, eyebrow, title, longDescr, shortDescr, firstCta, secondCta] = props;
+    const nullDom = document.createElement("a");
+    const [pictureBgContainer,pictureContainer, eyebrow, title, longDescr, shortDescr, firstCta, secondCta , ctaImage = nullDom , ctaImageAlt = nullDom , ctaImageUrl =  nullDom, ctaImage2 = nullDom , ctaImageAlt2 = nullDom , ctaImageUrl2 = nullDom , ctaImage3 = nullDom , ctaImageAlt3 = nullDom , ctaImageUrl3 = nullDom ] = props;
     const bgPicture = pictureBgContainer.querySelector('picture');
     const picture = pictureContainer.querySelector('picture');
     console.log(bgPicture , picture);
     const hasShortDescr = shortDescr.textContent.trim() !== '';
     // Build DOM
+    const ctaImageAnchor = ctaImageUrl.querySelector("a") || nullDom;
+    const ctaImageAnchor2 = ctaImageUrl2.querySelector("a") || nullDom;
+    const ctaImageAnchor3 = ctaImageUrl3.querySelector("a") || nullDom;
+    ctaImageAnchor.innerHTML = ctaImage.innerHTML;
+    ctaImageAnchor2.innerHTML = ctaImage2.innerHTML;
+    ctaImageAnchor3.innerHTML = ctaImage3.innerHTML;
     const teaserDOM = document.createRange().createContextualFragment(`
       <div class='background'>${bgPicture ? bgPicture.outerHTML : ''}</div>
       <div class="front-picture">${picture ? picture.outerHTML : ''}</div>
@@ -38,6 +45,9 @@ export function decorateButtons(...buttons) {
         </div>
         <div class='spacer'>
         </div>
+        <div class="cta-image">${ctaImageAnchor ? ctaImageAnchor.outerHTML : ''}</div>
+        <div class="cta-image">${ctaImageAnchor2 ? ctaImageAnchor2.outerHTML : ''}</div>
+        <div class="cta-image">${ctaImageAnchor3 ? ctaImageAnchor3.outerHTML : ''}</div>
       </div>
     `);
   

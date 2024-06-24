@@ -52,7 +52,7 @@
         "valueType": "string",
         "name": "fileReference",
         "label": "Image",
-        "multi": false
+        "multi": true
       },
       {
         "component": "text",
@@ -193,7 +193,8 @@
         "component": "richtext",
         "name": "rte",
         "label": "Rich-Text Field",
-        "valueType": "string"
+        "valueType": "string",
+        "raw": true
       }
     ]
   },
@@ -246,7 +247,39 @@
   },
   {
     "id": "carousel",
-    "fields": []
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "previcon",
+        "value": "",
+        "label": "Previous Icon"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "nexticon",
+        "value": "",
+        "label": "Next Icon"
+      },
+      {
+        "component": "select",
+        "name": "carouselshowtype",
+        "value": "primary",
+        "label": "Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "tabs",
@@ -259,7 +292,7 @@
         "component": "reference",
         "valueType": "string",
         "name": "fileReference",
-        "label": "Image",
+        "label": "Background Image",
         "description": "The teaser image, Background",
         "multi": false
       },
@@ -267,8 +300,8 @@
         "component": "reference",
         "valueType": "string",
         "name": "fileReference1",
-        "label": "Image",
-        "description": "The teaser image, min Xpx x Ypx...",
+        "label": "The Multi teaser image",
+        "description": "The Multi teaser image",
         "multi": false
       },
       {
@@ -290,6 +323,10 @@
           {
             "name": "Theme",
             "children": [
+              {
+                "name": "Light",
+                "value": "light"
+              },
               {
                 "name": "Light",
                 "value": "light"
@@ -317,52 +354,24 @@
             "name": "Background Color",
             "children": [
               {
-                "name": "Grey",
-                "value": "bg-spectrum-gray-700"
+                "name": "Background Image",
+                "value": "bg-image"
               },
               {
-                "name": "Blue",
-                "value": "bg-spectrum-blue-700"
+                "name": "Yellow Light",
+                "value": "bg-yellow-light"
               },
               {
-                "name": "Green",
-                "value": "bg-spectrum-green-700"
-              },
-              {
-                "name": "Orange",
-                "value": "bg-spectrum-orange-700"
-              },
-              {
-                "name": "Red",
-                "value": "bg-spectrum-red-700"
-              },
-              {
-                "name": "Celery",
-                "value": "bg-spectrum-celery-700"
-              },
-              {
-                "name": "Chartreuse",
-                "value": "bg-spectrum-chartreuse-700"
-              },
-              {
-                "name": "Cyan",
-                "value": "bg-spectrum-cyan-700"
-              },
-              {
-                "name": "Fuchsia",
-                "value": "bg-spectrum-fuchsia-700"
-              },
-              {
-                "name": "Indigo",
-                "value": "bg-spectrum-indigo-700"
-              },
-              {
-                "name": "Magenta",
-                "value": "bg-spectrum-magenta-700"
+                "name": "Blue Light",
+                "value": "bg-blue-light"
               },
               {
                 "name": "Purple",
-                "value": "bg-spectrum-purple-700"
+                "value": "bg-purple"
+              },
+              {
+                "name": "Orange",
+                "value": "bg-orange"
               },
               {
                 "name": "Seafoam",
@@ -371,6 +380,170 @@
               {
                 "name": "Yellow",
                 "value": "bg-spectrum-yellow-700"
+              },
+              {
+                "name": "darkcharcoal",
+                "value": "--darkcharcoal"
+              },
+              {
+                "name": "darkgrey",
+                "value": "--darkgrey"
+              },
+              {
+                "name": "white",
+                "value": "--white"
+              },
+              {
+                "name": "orange",
+                "value": "--orange"
+              },
+              {
+                "name": "black",
+                "value": "--black"
+              },
+              {
+                "name": "grey",
+                "value": "--grey"
+              },
+              {
+                "name": "darkblack",
+                "value": "--darkblack"
+              },
+              {
+                "name": "green",
+                "value": "--green"
+              },
+              {
+                "name": "greyishblue",
+                "value": "--greyishblue"
+              },
+              {
+                "name": "floralwhite",
+                "value": "--floralwhite"
+              },
+              {
+                "name": "lilen",
+                "value": "--lilen"
+              },
+              {
+                "name": "dustygrey",
+                "value": "--dustygrey"
+              },
+              {
+                "name": "matterhorn",
+                "value": "--matterhorn"
+              },
+              {
+                "name": "chinesesilver",
+                "value": "--chinesesilver"
+              },
+              {
+                "name": "midnight",
+                "value": "--midnight"
+              },
+              {
+                "name": "pattensblue",
+                "value": "--pattensblue"
+              },
+              {
+                "name": "rosewhite",
+                "value": "--rosewhite"
+              },
+              {
+                "name": "solitude",
+                "value": "--solitude"
+              },
+              {
+                "name": "swansdown",
+                "value": "--swansdown"
+              },
+              {
+                "name": "camarone",
+                "value": "--camarone"
+              },
+              {
+                "name": "zinc",
+                "value": "--zinc"
+              },
+              {
+                "name": "cloud",
+                "value": "--cloud"
+              },
+              {
+                "name": "silver",
+                "value": "--silver"
+              },
+              {
+                "name": "arsenic",
+                "value": "--arsenic"
+              },
+              {
+                "name": "whisper",
+                "value": "--whisper"
+              },
+              {
+                "name": "fossil",
+                "value": "--fossil"
+              },
+              {
+                "name": "blackpearl",
+                "value": "--blackpearl"
+              },
+              {
+                "name": "lightgrey",
+                "value": "--lightgrey"
+              },
+              {
+                "name": "blue",
+                "value": "--blue"
+              },
+              {
+                "name": "whitesmoke",
+                "value": "--whitesmoke"
+              },
+              {
+                "name": "coral",
+                "value": "--coral"
+              },
+              {
+                "name": "salmon",
+                "value": "--salmon"
+              },
+              {
+                "name": "seashell",
+                "value": "--seashell"
+              },
+              {
+                "name": "pale",
+                "value": "--pale"
+              },
+              {
+                "name": "cinnabar",
+                "value": "--cinnabar"
+              },
+              {
+                "name": "coralred",
+                "value": "--coralred"
+              },
+              {
+                "name": "flamingo",
+                "value": "--flamingo"
+              },
+              {
+                "name": "mischka",
+                "value": "--mischka"
+              },
+              {
+                "name": "midorange",
+                "value": "--midorange"
+              },
+              {
+                "name": "pearl",
+                "value": "--pearl"
+              },
+              {
+                "name": "submidorange",
+                "value": "--submidorange"
               }
             ]
           }
@@ -390,7 +563,8 @@
         "name": "title",
         "value": "",
         "label": "Heading",
-        "description": "Sets the main title of the teaser."
+        "description": "Sets the main title of the teaser.",
+        "multi": true
       },
       {
         "component": "select",
@@ -508,6 +682,75 @@
         "value": "",
         "label": "Second CTA Link",
         "description": "What link to open when clicking the button."
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "ctaImageOne",
+        "label": "CTA Image 1",
+        "description": "Select CTA Image 1"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaImageAltOne",
+        "value": "",
+        "label": "CTA Image Alt 1",
+        "description": "Enter CTA Alt 1"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaImageURLOne",
+        "value": "",
+        "label": "CTA Image URL 1",
+        "description": "Enter CTA Image URL 1"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "ctaImageTwo",
+        "label": "CTA Image 2",
+        "description": "Select CTA Image 2"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaImageAltTwo",
+        "value": "",
+        "label": "CTA Image Alt 2",
+        "description": "Enter CTA Alt 2"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaImageURLTwo",
+        "value": "",
+        "label": "CTA Image URL 2",
+        "description": "Enter CTA Image URL 2"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "ctaImageThree",
+        "label": "CTA Image 3",
+        "description": "Select CTA Image 3"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaImageAltThree",
+        "value": "",
+        "label": "CTA Image Alt 3",
+        "description": "Enter CTA Alt 3"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaImageURLThree",
+        "value": "",
+        "label": "CTA Image URL 3",
+        "description": "Enter CTA Image URL 3"
       }
     ]
   },
@@ -533,13 +776,6 @@
   {
     "id": "detailed-teaser",
     "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "fileReference",
-        "label": "Background Image",
-        "multi": false
-      },
       {
         "component": "multiselect",
         "name": "classes",
@@ -575,6 +811,13 @@
             ]
           }
         ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "fileReference",
+        "label": "Background Image",
+        "multi": false
       },
       {
         "component": "reference",
@@ -739,6 +982,177 @@
         "value": "",
         "label": "Second CTA Link",
         "description": "What link to open when clicking the button."
+      }
+    ]
+  },
+  {
+    "id": "accordion-group",
+    "fields": []
+  },
+  {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "value": "",
+        "label": "Heading"
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "headingType",
+        "value": "h3",
+        "label": "Heading Type",
+        "options": [
+          {
+            "name": "H2",
+            "value": "h2"
+          },
+          {
+            "name": "H3",
+            "value": "h3"
+          },
+          {
+            "name": "H4",
+            "value": "h4"
+          },
+          {
+            "name": "H5",
+            "value": "h5"
+          },
+          {
+            "name": "H6",
+            "value": "h6"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "body",
+        "value": "",
+        "label": "Body"
+      }
+    ]
+  },
+  {
+    "id": "teaserv2",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "href",
+        "value": "",
+        "label": "Link",
+        "description": "Main Anchor Tag"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "fileReference",
+        "label": "Background Image",
+        "description": "Background Image"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "fileReference1",
+        "label": "Image",
+        "description": "Front Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "fileReferenceAlt",
+        "value": "",
+        "label": "Alt Text Front Image",
+        "description": "Alt text for front image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "value": "",
+        "label": "Heading",
+        "description": "Sets the main title of the teaser."
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "longDescr",
+        "value": "",
+        "label": "Long Description",
+        "description": "The description shown in Desktop and Tablet view."
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "shortDescr",
+        "value": "",
+        "label": "Short Description",
+        "description": "The description shown in Mobile view. If not set long text is used."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "cta1Text",
+        "value": "",
+        "label": "First CTA Text",
+        "description": "Text to be shown inside button."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaTexthref",
+        "value": "",
+        "label": "First CTA Link",
+        "description": "What link to open when clicking the button."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bgcolor",
+        "value": "",
+        "label": "Background Color Code",
+        "description": "Background Color Code"
+      }
+    ]
+  },
+  {
+    "id": "code",
+    "fields": [
+      {
+        "component": "text-area",
+        "valueType": "string",
+        "name": "htmlCode",
+        "value": "",
+        "label": "Author HTML Code"
+      }
+    ]
+  },
+  {
+    "id": "contentfragment",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "picker",
+        "label": "Content Fragment Picker",
+        "valueType": "string",
+        "variationName": "contentFragmentVariation"
+      }
+    ]
+  },
+  {
+    "id": "experiencefragment",
+    "fields": [
+      {
+        "component": "aem-experience-fragment",
+        "name": "picker",
+        "label": "Experience Fragment Picker",
+        "valueType": "string",
+        "variationName": "experienceFragmentVariation"
       }
     ]
   }

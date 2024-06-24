@@ -69,6 +69,10 @@
   background-color: grey;
 }
 
+.primary.block>.carousel-navigation-buttons {
+  display: none;
+}
+
 /* .carousel-container {
   background-color: black;
 } */
@@ -144,6 +148,10 @@
   font-weight: 700;
   padding: 1rem 2.16rem;
   object-fit: contain;
+}
+
+.secondary.block>.button-container {
+  display: none;
 }
 
 /* ----- TABLET ----- */

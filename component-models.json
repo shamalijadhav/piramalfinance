@@ -1179,16 +1179,12 @@
         "collapsible": true,
         "fields": [
           {
-            "component": "tab",
-            "label": "Simple Text 1",
-            "name": "text",
-            "valueType": "string"
+            "component": "tabs",
+            "fields" : []
           },
           {
-            "component": "tab",
-            "label": "Simple Text 2",
-            "name": "text2",
-            "valueType": "string"
+            "component": "tabs",
+            "fields" : []
           }
         ]
       }

@@ -418,6 +418,7 @@
                 "template": {
                     "name": "mySection",
                     "label": "My Section",
+                    "model": "mycontainer",
                     "isContainer": true,
                     "allowedChildComponents": ["text", "image"]
                 }

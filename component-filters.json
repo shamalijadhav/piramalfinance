@@ -51,7 +51,8 @@
       "contentfragment",
       "experiencefragment",
       "wrappercreation",
-      "container"
+      "container",
+      "mycontainer"
     ]
   },
   {

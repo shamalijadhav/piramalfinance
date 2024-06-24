@@ -81,13 +81,14 @@
       "title",
       "hero",
       "teaser",
-      "columns"
+      "columns",
+      "container"
   ]
   },
   {
     "id": "tabs",
     "components": [
-      "tabs", "tab"
+      "tabs", "tab", "container"
   ]
   },
   {
@@ -111,5 +112,9 @@
   { 
   "id" : "div",
   "components": null
+  },
+  {
+    "id":"container",
+    "components" : []
   }
 ]

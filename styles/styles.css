@@ -113,15 +113,16 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
   display: none;
+  padding-top: 112px !important;
 }
 
 body.appear {
   display: block;
 }
 
-header {
+/* header {
   height: var(--nav-height);
-}
+} */
 
 h1,
 h2,
@@ -256,6 +257,10 @@ main .section {
   main .section {
   padding: 0 16px 40px;
   }
+
+  body {
+    padding-top: 64px;
+  }
 }
 
 /* @media (width >= 600px) {
@@ -265,7 +270,7 @@ main .section {
 } */
 
 @media (width >= 900px) {
-  .section > div {
+  .section.page-container > div {
     max-width: 1240px!important;
     margin: 0 auto!important;
   }

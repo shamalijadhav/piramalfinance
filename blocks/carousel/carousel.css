@@ -73,86 +73,188 @@
   display: none;
 }
 
-/* .carousel-container {
-  background-color: black;
-} */
-
-.bg-yellow-light {
-  background-color: var(--light-yellow);
+.secondary.block>.button-container {
+  display: none;
 }
 
-.carousel-container {
-  padding: 0 !important;
-}
-
-.carousel-container .carousel-wrapper .carousel .panel-container .teaser {
+/* homepage top banner carousel css start */
+.section.banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser {
   position: relative;
   height: 529px;
 }
 
-.carousel-container .carousel-wrapper .carousel .panel-container .teaser .front-picture {
-  position: absolute;
-  right: 0;
+.section.banner-carousel-wrapper .carousel-wrapper .carousel.block {
+  position: relative;
 }
 
-.carousel-container .carousel-wrapper .carousel .panel-container .teaser .front-picture picture>img {
-  width: 300px;
+.banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser .foreground {
+  width: 60%;
 }
 
-.carousel-container .carousel-wrapper .carousel .panel-container .teaser .foreground {
-  padding: 0 150px;
-}
-
-.carousel-container .carousel-wrapper .carousel .panel-container .teaser .foreground .text {
-  width: 100%;
-}
-
-.carousel-container .carousel-wrapper .carousel .panel-container .teaser .foreground .text .eyebrow {
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 60px;
-}
-
-.carousel-container .carousel-wrapper .carousel .panel-container .teaser .foreground .text .title h3 {
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 60px;
-}
-
-.carousel-container .carousel-wrapper .carousel .panel-container .teaser .foreground .long-description {
+.banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser .foreground .long-description {
   margin-top: 1rem;
 }
 
-.carousel-container .carousel-wrapper .carousel .panel-container .teaser .foreground .long-description ol {
-  list-style: none;
-  padding: 0;
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block > .background .front-picture {
+  position: absolute;
+  right: 150px;
+  bottom: 0;
 }
 
-.carousel-container .carousel-wrapper .carousel .panel-container .teaser .foreground .long-description ol>li {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 400;
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block > .background {
+  background-position: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 150px;
+}
+ 
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block > .background .front-picture img {
+  height: 100%;
+  max-height: 335px;
+  max-width: 394px;
+  width: 100%;
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block > .background .foreground .text .title>h2,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block > .background .foreground .text .eyebrow,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five .background .foreground .text .title>h3,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five .background .foreground .text .eyebrow,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six .background .foreground .text .title>h3,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six .background .foreground .text .eyebrow,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven .background .foreground .text .title>h3,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven .background .foreground .text .eyebrow
+{
+  color: var(--black);
+  font-family: "Nunito-Extrabold",sans-serif;
+  font-size: 3pc;
+  font-weight: 800;
+  line-height: 60px;
+  margin: unset;
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five > .background .foreground .text .short-description>p,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five > .background .foreground .text .short-description>p>em,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five > .background .foreground .text .short-description>p>strong,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six > .background .foreground .text .long-description>p,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-one > .background .foreground .text .long-description>p,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven > .background .foreground .text .long-description>p
+{
   color: var(--gradient-gray);
+  font-family: "Nunito-Regular",sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 2pc;
+  margin: unset;
+  display: inline;
 }
 
-.carousel-container .carousel-wrapper .carousel .panel-container .teaser .foreground .cta {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five > .background .foreground {
+  width: 45%;
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five > .background .foreground .text .short-description>p>em {
+  text-decoration: line-through;
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five > .background .foreground .text .short-description>p>strong {
+  color: var(--orange);
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six > .background .foreground .text .long-description {
+  margin-right: 30px;
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block > .background .foreground .text .short-description>p {
+  color: var(--black);
+  font-family: "Nunito-Regular",sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 2pc;
+  margin: unset;
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block > .background .foreground .text .cta {
+  position: unset;
   margin-top: 2rem;
 }
 
-.carousel-container .carousel-wrapper .carousel .panel-container .teaser .foreground .cta>a {
-  background: #F26841;
-  color: #ffffff;
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block > .background .foreground .text .cta>a {
+  background: var(--orange);
   border-radius: 8px;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  color: #fff;
+  font-family: 'Nunito-Bold',sans-serif;
+  font-size: 18px;
   font-weight: 700;
-  padding: 1rem 2.16rem;
-  object-fit: contain;
+  line-height: 28px;
+  padding: 18px 2.16pc 18px 34.65px;
+  width: fit-content;
+  position: unset;
 }
 
-.secondary.block>.button-container {
-  display: none;
+.section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container {
+  position: absolute;
+  left: 150px;
+  bottom: 70px;
 }
+
+.section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container>button {
+  height: 8px;
+  width: 8px;
+  background-color: var(--black);
+  opacity: .2;
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container>button.selected {
+  width: 24px;
+  background-color: var(--black);
+  opacity: 1;
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.--coralred > .background .foreground .text .title>h2 {
+  color: var(--orange);
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.--white > .background .foreground .text .title>h2 {
+  color: var(--white);
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.--white > .background .foreground .text .eyebrow {
+  font-family: 'Nunito-Regular',sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 2pc;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.--white > .background .front-picture {
+  bottom: 80px;
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven > .background .foreground .cta-image>a img {
+  height: 58px;
+  width: 196px;
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven > .background .foreground {
+  position: relative;
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five > .background {
+  background-color: var(--lilen);
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six > .background {
+  background-color: var(--rosewhite);
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven > .background {
+  background: linear-gradient(320.12deg, rgb(127, 76, 168) -0.41%, rgb(242, 104, 65) 101.64%);
+}
+
+/* homepage top banner carousel css end */
 
 /* ----- TABLET ----- */
 @media (min-width: 600px) {

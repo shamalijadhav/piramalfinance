@@ -1,105 +1,129 @@
-main .calculator-section-css {
-    padding-top: 0px;
-}
-.calculator-section-css .calculator-wrapper .calculator >div >div p {
-    font-size: 2rem;
-    font-family: "Nunito-Regular";
-    font-weight: bold;
+/* Calculator Start */
+
+.section.calculator-section-wrapper .default-content-wrapper h2 {
     margin: 0;
+    color: #000;
+    display: block;
+    font-family: Nunito-Extrabold, sans-serif;
+    font-size: 2pc;
+    font-weight: 800;
+    line-height: 40px;
+    padding-bottom: 8px;
 }
 
-.calculator-section-css .default-content-wrapper p {
-   font-size: 20px;
-   font-family: "Nunito-Regular";
-   color: #666666;
-   margin-top: 0;
+.section.calculator-section-wrapper .default-content-wrapper p {
+    margin: 0;
+    margin-bottom: 24px;
+    color: #666;
+    display: block;
+    font-family: Nunito-Regular, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    padding-bottom: 8px;
 }
 
-.calculator-section-css .columns-wrapper .columns{
+.section.calculator-section-wrapper .wrappercreation-wrapper .block .wrapper-creation-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    row-gap: 24px;
+}
+
+.section.calculator-section-wrapper .wrappercreation-wrapper .block .wrapper-creation-container .teaserv2-wrapper {
+    border-radius: 20px;
+    cursor: pointer;
+    height: 150px;
+    overflow: hidden;
+    width: 49%;
     position: relative;
 }
 
-.calculator-section-css .columns-wrapper .columns >div >div{
+.section.calculator-section-wrapper .wrappercreation-wrapper .block .wrapper-creation-container .teaserv2-wrapper .block>a .bg-image .front-image picture img {
+    display: block;
     width: 100%;
     height: 150px;
-    overflow: hidden;
-    border-radius: 32px;
-}
-.calculator-section-css .columns-wrapper .columns >div >div p{
-    margin-top: 0;
-}
-.calculator-section-css .columns-wrapper .columns img{
-    border-radius: 32px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition-timing-function: linear;
+    transition-duration: .2s
 }
 
-.calculator-section-css  img:hover {
-    transition: transform 0.3s;
-    transform: scale(1.2);
+.section.calculator-section-wrapper .wrappercreation-wrapper .block .wrapper-creation-container .teaserv2-wrapper .block>a .bg-image .front-image picture img:hover {
+    transform: scale(1.25);
+    transition-timing-function: linear;
+    transition-duration: .2s
 }
 
-.calculator-section-css .columns-wrapper .columns h4{
-    top: 10%;
+.section.calculator-section-wrapper .wrappercreation-wrapper .block .wrapper-creation-container .teaserv2-wrapper .block>a .bg-image .title {
     position: absolute;
-    font-size: 1.5rem;
-    color: #ffffff;
-    padding-left: 20px;
-    font-family: "Nunito-Regular";
+    top: 24px;
+    left: 24px;
+    color: #fff;
+    font-family: 'Nunito-Bold', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 2pc;
 }
 
-.calculator-section-css .columns-wrapper .columns .button-container a{
-    font-size: 14px;
-    padding: 15px 18px;
-    background: #F26841;
-    color: #ffffff;
+.section.calculator-section-wrapper .wrappercreation-wrapper .block .wrapper-creation-container .teaserv2-wrapper .block>a .bg-image .button {
+    margin: 0;
+    position: absolute;
+    top: 80px;
+    left: 24px;
+    background: #f26841;
     border-radius: 8px;
-    position: absolute;
-    top: 40%;
-    margin-left: 20px;
-} 
+    color: #fff;
+    font-family: Nunito-Bold, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 15.5px 17.5px;
+}
 
-@media screen and (max-width: 767.99px) {
-    .calculator-section-css .calculator-wrapper .calculator >div >div p {
-        font-size: 18px;
-        font-weight: bold;
-        margin: 0;
+@media screen and (max-width:768px) {
+    .section.calculator-section-wrapper .default-content-wrapper h2 {
+        font-size: 20px;
+        line-height: 28px;
+        padding-bottom: 4px;
     }
-    
-    .calculator-section-css .default-content-wrapper p {
-       font-size: 14px;
-       color: #666666;
-       margin-top: 0;
-    }
-    .calculator-section-css .columns-wrapper .columns img {
-        width: 100%;
-        height: 110px;
-        border-radius: 16px;
-    }
-    .calculator-section-css .columns-wrapper .columns > div > div {
-        position: relative;
-    }
-    .calculator-section-css .columns-wrapper .columns h4{
-        top: 15%;
-        position: absolute;
-        font-size: 1rem;
-        color: #ffffff;
-        padding-left: 20px;
-        font-family: "Nunito-Regular";
-    }
-    
-    .calculator-section-css .columns-wrapper .columns .button-container a{
+
+    .section.calculator-section-wrapper .default-content-wrapper p {
+        margin-bottom: 20px;
         font-size: 14px;
-        padding: 7px 11px;
-        background: #F26841;
-        color: #ffffff;
-        border-radius: 8px;
-        position: absolute;
-        bottom: 10%;
-        margin-left: 6%;
-    } 
-    .calculator-section-css .columns-wrapper .columns > div > div p:first-child{
-       margin: 20px 0;
+        line-height: 20px;
+        padding-bottom: 4px;
+    }
+
+    .section.calculator-section-wrapper .wrappercreation-wrapper .block .wrapper-creation-container {
+        flex-direction: column;
+        gap: 1pc;
+    }
+
+    .section.calculator-section-wrapper .wrappercreation-wrapper .block .wrapper-creation-container .teaserv2-wrapper {
+        height: 110px;
+        width: 100%;
+    }
+
+    .section.calculator-section-wrapper .wrappercreation-wrapper .block .wrapper-creation-container .teaserv2-wrapper .block>a .bg-image .front-image picture img {
+        height: 110px;
+    }
+
+    .section.calculator-section-wrapper .wrappercreation-wrapper .block .wrapper-creation-container .teaserv2-wrapper .block>a .bg-image .title {
+        top: 16px;
+        left: 16px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .section.calculator-section-wrapper .wrappercreation-wrapper .block .wrapper-creation-container .teaserv2-wrapper .block>a .bg-image .button {
+        top: 60px;
+        left: 16px;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 9px 11.21px;
     }
 }
 
-
-
+/* Calculator End */

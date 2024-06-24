@@ -9,59 +9,80 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+html {
+  scroll-behavior: smooth
+}
+
+input,
+select {
+  vertical-align: middle
+}
+
+ul {
+  list-style: none
+}
+
+input,
+input:focus,
+select,
+select:focus,
+textarea,
+textarea:focus {
+  outline: 0
+}
 
 :root {
   /* colors */
-    --link-color: #035fe6;
-    --link-hover-color: #136ff6;
-    --background-color: white;
-    --light-color: #eee;
-    --dark-color: #ccc;
-    --text-color: black;
-    --gradient-gray-light: #ebeef050;
-    --gradient-gray: #666;
-    --tw-text-opacity: 1;
-    --darkcharcoal: #333333;
-    --darkgrey: #666666;
-    --white: #ffffff;
-    --orange: #F26841;
-    --black: #000000;
-    --grey: #808080;
-    --darkblack: #030303;
-    --green: #41C66E;
-    --greyishblue: #365069;
-    --floralwhite: #FFF9F2;
-    --lilen: #FFF4E7;
-    --dustygrey: #999999;
-    --matterhorn: #4d4d4d;
-    --chinesesilver: #CCCCCC;
-    --midnight: #20303f;
-    --pattensblue: #d7dce1;
-    --rosewhite: #FEF0EC;
-    --solitude: #e5e7eb;
-    --swansdown: #E3F6E9;
-    --camarone: #277742;
-    --zinc: #afb9c3;
-    --cloud: #EBEEF0;
-    --silver: #C4C4C4;
-    --arsenic: #364754;
-    --whisper: #EBEBEB;
-    --fossil: #a9a9a9;
-    --blackpearl: #010812;
-    --lightgrey: #ebeaea;
-    --blue: #007bff;
-    --whitesmoke: #f8f8f8;
-    --coral: #FAC3B3;
-    --salmon: #F58667;
-    --seashell: #fff7f4;
-    --pale: #EEF3FF;
-    --cinnabar: #da4d34;
-    --coralred: #EF4444;
-    --flamingo: #eb5752;
-    --mischka: #9ca3af;
-    --midorange: #f26741;
-    --pearl: #F0F0F0;
-    --submidorange: #fce6e5;
+  --link-color: #035fe6;
+  --link-hover-color: #136ff6;
+  --background-color: white;
+  --light-color: #eee;
+  --dark-color: #ccc;
+  --text-color: black;
+  --gradient-gray-light: #ebeef050;
+  --gradient-gray: #666;
+  --tw-text-opacity: 1;
+  --darkcharcoal: #333333;
+  --darkgrey: #666666;
+  --white: #ffffff;
+  --orange: #F26841;
+  --black: #000000;
+  --grey: #808080;
+  --darkblack: #030303;
+  --green: #41C66E;
+  --greyishblue: #365069;
+  --floralwhite: #FFF9F2;
+  --lilen: #FFF4E7;
+  --dustygrey: #999999;
+  --matterhorn: #4d4d4d;
+  --chinesesilver: #CCCCCC;
+  --midnight: #20303f;
+  --pattensblue: #d7dce1;
+  --rosewhite: #FEF0EC;
+  --solitude: #e5e7eb;
+  --swansdown: #E3F6E9;
+  --camarone: #277742;
+  --zinc: #afb9c3;
+  --cloud: #EBEEF0;
+  --silver: #C4C4C4;
+  --arsenic: #364754;
+  --whisper: #EBEBEB;
+  --fossil: #a9a9a9;
+  --blackpearl: #010812;
+  --lightgrey: #ebeaea;
+  --blue: #007bff;
+  --whitesmoke: #f8f8f8;
+  --coral: #FAC3B3;
+  --salmon: #F58667;
+  --seashell: #fff7f4;
+  --pale: #EEF3FF;
+  --cinnabar: #da4d34;
+  --coralred: #EF4444;
+  --flamingo: #eb5752;
+  --mischka: #9ca3af;
+  --midorange: #f26741;
+  --pearl: #F0F0F0;
+  --submidorange: #fce6e5;
   /* fonts */
   --body-font-family: roboto, roboto-fallback;
   --heading-font-family: var(--body-font-family);
@@ -84,7 +105,7 @@
   --nav-height: 64px;
 
 
-  
+
 }
 
 @font-face {
@@ -94,7 +115,7 @@
   src: local('Arial');
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   :root {
     --heading-font-size-xxl: 60px;
     --heading-font-size-xl: 48px;
@@ -137,12 +158,29 @@ h6 {
   scroll-margin: calc(var(--nav-height) + 1em);
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
 
 p,
 dl,
@@ -249,12 +287,12 @@ main img {
 
 /* sections */
 main .section {
-  padding: 0 0 72px; 
+  padding: 0 0 72px;
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
   main .section {
-  padding: 0 16px 40px;
+    padding: 0 16px 40px;
   }
 }
 
@@ -264,10 +302,10 @@ main .section {
   }
 } */
 
-@media (width >= 900px) {
-  .section > div {
-    max-width: 1240px!important;
-    margin: 0 auto!important;
+@media (width >=900px) {
+  .section>div {
+    max-width: 1240px !important;
+    margin: 0 auto !important;
   }
 }
 

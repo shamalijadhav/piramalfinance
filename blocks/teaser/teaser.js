@@ -44,7 +44,8 @@ export function generateTeaserDOM(props, classes) {
     }
           <div class='title'>${title.innerHTML}</div>
           <div class='long-description'>${longDescr.innerHTML}</div>
-          <div class='short-description'>${hasShortDescr ? shortDescr.innerHTML : longDescr.innerHTML}</div>
+          <!-- <div class='short-description'>${hasShortDescr ? shortDescr.innerHTML : longDescr.innerHTML}</div>-->
+          <div class='short-description'>${ shortDescr.innerHTML }</div>
           <div class='cta'>${decorateButtons(firstCta, secondCta)}</div>
         </div>
         <div class='spacer'>

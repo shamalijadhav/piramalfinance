@@ -246,7 +246,7 @@
                   "name": "Tab",
                   "model": "tab",
                   "title": "Tab",
-                  "filter": "tabs",
+                  "filter": "section",
                   "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
                 }
               }
@@ -392,7 +392,22 @@
               }
             }
           }
-        }
+        },
+        {
+          "title": "Add Container",
+          "id": "container",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "container",
+                  "model": "container"
+                }
+              }
+            }
+          }
+        }    
       ]
     }
   ]

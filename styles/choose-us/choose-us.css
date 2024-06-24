@@ -1,64 +1,103 @@
-.choose-us-css .default-content-wrapper h4 {
-  font-size: 2rem;
-  line-height: 1.75rem;
-  font-weight: 700;
-}
-
-.choose-us-css .rte-wrapper .rte div > div > p {
-  color: rgb(51 51 51 / var(--tw-text-opacity));
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-weight: 400;
-}
-
-.choose-us-css .columns-wrapper .columns > div {
-  gap: 5rem;
-  margin-top: 2.5rem;
-  align-items: flex-start;
-}
-
-.choose-us-css .columns-wrapper .columns div div > p {
+.choose-us-css .default-content-wrapper h2 {
+  color: #000;
+  display: block;
+  font-family: Nunito-Extrabold, sans-serif;
+  font-size: 2pc;
+  font-weight: 800;
+  line-height: 40px;
+  padding-bottom: 8px;
   margin: 0;
 }
 
-.choose-us-css .columns-wrapper .columns div div > p > picture > img {
-  height: 5rem;
-  width: 5rem;
+.choose-us-css .default-content-wrapper  p{
+  margin-bottom: 24px;
+  color: #666;
+  display: block;
+  font-family: Nunito-Regular, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  padding-bottom: 8px;
+  margin: 0;
+}
+
+.choose-us-css > .columns-wrapper > .columns.block {
+  margin-top : 20px;
+}
+
+.choose-us-css .columns-wrapper .columns>div {
+  align-items: flex-start;
+  column-gap: 5pc;
+}
+
+.choose-us-css .columns-wrapper .columns>div:nth-child(2) {
+  padding-top: 40px;
+}
+
+.choose-us-css .columns-wrapper .columns div div>p {
+  margin: 0;
+}
+
+.choose-us-css .columns-wrapper .columns div div :nth-child(1) {
+  height: 72px;
+  width: 72px;
+}
+
+.choose-us-css .columns-wrapper .columns div div>p>picture>img {
+  height: 72px;
+  width: 72px;
 }
 
 .choose-us-css .columns-wrapper .columns div div :nth-child(2) {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  color: #333;
+  font-family: Nunito-Extrabold, sans-serif;
+  font-size: 20px;
   font-weight: 800;
-  padding-bottom: 1rem;
+  line-height: 28px;
+  padding: 1pc 0;
 }
 
-@media screen and (max-width: 767.99px) {
+@media screen and (max-width: 768px) {
   .choose-us-css .default-content-wrapper h4 {
-    font-size: 1.125rem;
+    font-size: 20px;
+    line-height: 28px;
+    padding-bottom: 4px;
   }
 
-  .choose-us-css .rte-wrapper .rte div > div > p {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+  .choose-us-css .rte-wrapper .rte div>div>p {
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 4px;
   }
 
-  .choose-us-css .columns-wrapper .columns > div {
-    gap: 2.25rem;
+  .choose-us-css .rte-wrapper .rte div>div {
+    margin-bottom: 20px;
   }
 
-  .choose-us-css .columns-wrapper .columns > div > div {
+  .choose-us-css .columns-wrapper .columns>div {
+    row-gap: 24px;
+  }
+
+  .choose-us-css .columns-wrapper .columns>div>div {
     width: 100%;
   }
 
-  .choose-us-css .columns-wrapper .columns div div > p > picture > img {
-    height: 3rem;
-    width: 3rem;
+  .choose-us-css .columns-wrapper .columns div div :nth-child(1) {
+    height: 3pc;
+    width: 40px;
+  }
+
+  .choose-us-css .columns-wrapper .columns div div>p>picture>img {
+    height: 3pc;
+    width: 40px;
   }
 
   .choose-us-css .columns-wrapper .columns div div :nth-child(2) {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    padding-bottom: 0.75rem;
+    color: #333;
+    font-family: Nunito-Bold, sans-serif;
+    font-size: 1pc;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 8px 0 9pt;
   }
 }

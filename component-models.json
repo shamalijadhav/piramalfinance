@@ -318,7 +318,6 @@
         "label": "Style",
         "valueType": "string",
         "required": true,
-        "maxSize": 3,
         "options": [
           {
             "name": "Theme",
@@ -544,6 +543,47 @@
               {
                 "name": "submidorange",
                 "value": "--submidorange"
+              }
+            ]
+          },
+          {
+            "name": "Style To Add",
+            "children": [
+              {
+                "name": "Teaser 1",
+                "value": "teaser-block-one"
+              },
+              {
+                "name": "Teaser 2",
+                "value": "teaser-block-two"
+              },
+              {
+                "name": "Teaser 3",
+                "value": "teaser-block-three"
+              },
+              {
+                "name": "Teaser 4",
+                "value": "teaser-block-four"
+              },
+              {
+                "name": "Teaser 5",
+                "value": "teaser-block-five"
+              },
+              {
+                "name": "Teaser 6",
+                "value": "teaser-block-six"
+              },
+              {
+                "name": "Teaser 7",
+                "value": "teaser-block-seven"
+              },
+              {
+                "name": "Teaser 8",
+                "value": "teaser-block-eight"
+              },
+              {
+                "name": "Teaser 9",
+                "value": "teaser-block-nine"
               }
             ]
           }
@@ -1161,11 +1201,53 @@
         "label": "Experience Fragment Picker",
         "valueType": "string",
         "variationName": "experienceFragmentVariation"
+      },
+      {
+        "component": "text",
+        "name": "Domain Name",
+        "label": "Domain Name",
+        "valueType": "string"
       }
     ]
   },
   {
     "id": "wrappercreation",
     "fields": []
+  },
+  {
+    "id": "container",
+    "fields": [
+      {
+        "component": "container",
+        "label": "Container",
+        "name": "container",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text-input",
+            "label": "Simple Text 1",
+            "name": "text",
+            "valueType": "string"
+          },
+          {
+            "component": "text-input",
+            "label": "Simple Text 2",
+            "name": "text2",
+            "valueType": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mycontainer",
+    "fields": [
+      {
+      "name": "content",
+      "label": "Content",
+      "component": "myContainer"
+    }
+  ]
   }
 ]

@@ -60,7 +60,7 @@ export function generateTeaserDOM(props, classes) {
       <div class="front-picture">${picture ? picture.outerHTML : ""}</div>
       <div class='foreground'>
         <div class='text'>
-          ${eyebrow.textContent.trim() !== "" ? `<div class='eyebrow'>${eyebrow.textContent.trim().toUpperCase()}</div>` : ``}
+          ${eyebrow.textContent.trim() !== "" ? `<div class='eyebrow'>${eyebrow.textContent.trim()}</div>` : ``}
           <div class='title'>${title.innerHTML}</div>
           <div class='long-description'>${longDescr.innerHTML}</div>
           <!-- <div class='short-description'>${hasShortDescr ? shortDescr.innerHTML : longDescr.innerHTML}</div>-->

@@ -1,5 +1,4 @@
 export default function decorate(block) {
-    debugger;
     const mainParentContainer = block.parentElement.closest('.section');
     const mainParentContainerChildren = Array.from(mainParentContainer.children);
     let wrapperChecker = false;

@@ -12,19 +12,6 @@
 
 :root {
   /* colors */
-<<<<<<< HEAD
-  --link-color: #035fe6;
-  --link-hover-color: #136ff6;
-  --background-color: white;
-  --light-color: #eee;
-  --dark-color: #ccc;
-  --text-color: black;
-  --gradient-gray-light: #ebeef050;
-  --gradient-gray: #666;
-  --light-yellow: rgb(255, 244, 231);
-  --tw-text-opacity: 1;
-
-=======
     --link-color: #035fe6;
     --link-hover-color: #136ff6;
     --background-color: white;
@@ -75,7 +62,6 @@
     --midorange: #f26741;
     --pearl: #F0F0F0;
     --submidorange: #fce6e5;
->>>>>>> ba82153621963377a681b03d07626e6f01f6d1a9
   /* fonts */
   --body-font-family: roboto, roboto-fallback;
   --heading-font-family: var(--body-font-family);

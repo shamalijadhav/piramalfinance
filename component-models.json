@@ -751,6 +751,14 @@
         "value": "",
         "label": "CTA Image URL 3",
         "description": "Enter CTA Image URL 3"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "href",
+        "value": "",
+        "label": "Link",
+        "description": "Main Anchor Tag"
       }
     ]
   },

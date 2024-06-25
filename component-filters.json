@@ -4,6 +4,7 @@
     "components": [
       "section",
       "title",
+      "tab-container",
       "container"
     ]
   },
@@ -43,6 +44,7 @@
       "imgwithlink",
       "carousel",
       "teaser",
+      "tab-container",
       "tabs",
       "detailed-teaser",
       "accordion-group",
@@ -53,7 +55,8 @@
       "wrappercreation",
       "container",
       "mycontainer",
-      "keyfeatures"
+      "keyfeatures",
+      "embed"
     ]
   },
   {
@@ -64,6 +67,18 @@
   },
   {
     "id": "carousel",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title",
+      "hero",
+      "teaser",
+      "detailed-teaser"
+    ]
+  },
+  {
+    "id": "tab-container",
     "components": [
       "text",
       "image",

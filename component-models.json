@@ -305,6 +305,15 @@
         "label": "Tab Name",
         "description": "Sets the name of the tab.",
         "multi": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tab-id",
+        "value": "",
+        "label": "Tab Id",
+        "description": "Sets the id of the tab.",
+        "multi": true
       }
     ]
   },

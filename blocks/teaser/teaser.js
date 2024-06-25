@@ -55,10 +55,15 @@ export function generateTeaserDOM(props, classes) {
   ctaImageAnchor3.innerHTML = ctaImage3.innerHTML;
   const bgPictureStyle = bgPicture?.querySelector('img')?.src || "";
   const mobileImageStyle = mobileImage?.querySelector('img')?.src || "";
+  let bgImageAllow = bgPictureStyle;
+  const isMobile = window.matchMedia('(max-width: 768px)');
+  if(isMobile){
+     bgImageAllow = mobileImageStyle;
+  }
 
   const teaserDOM = document.createRange().createContextualFragment(
   `
-    <div class='background' style='background-image:url(${bgPictureStyle})'>
+    <div class='background' style='background-image:url(${bgImageAllow})'>
       <div class="front-picture">${picture ? picture.outerHTML : ""}</div>
       <div class='foreground'>
         <div class='text'>

@@ -1260,13 +1260,13 @@
       },
       {
         "component": "text",
-        "name": "text",
+        "name": "innerhref",
         "label": "Inner text",
         "valueType": "string"
       },
       {
         "component": "text",
-        "name": "text",
+        "name": "innertext",
         "label": "Inner text",
         "valueType": "string"
       },
@@ -1278,7 +1278,7 @@
       },
       {
         "component": "text",
-        "name": "text",
+        "name": "leftsideimagealt",
         "label": "Left-Side Image Alt",
         "valueType": "string"
       },
@@ -1290,19 +1290,19 @@
       },
       {
         "component": "text",
-        "name": "text",
+        "name": "rightsideimagealt",
         "label": "Right-Side Image Alt",
         "valueType": "string"
       },
       {
         "component": "text",
-        "name": "text",
+        "name": "rightsideimagelink",
         "label": "Right-Side Image Link",
         "valueType": "string"
       },
       {
         "component": "text",
-        "name": "text",
+        "name": "keyfeaturetitle",
         "label": "Key Feature Title",
         "valueType": "string"
       },
@@ -1326,7 +1326,7 @@
       },
       {
         "component": "text",
-        "name": "text",
+        "name": "keyfeatureinnertext",
         "label": "Key Feature Inner Text",
         "valueType": "string"
       }

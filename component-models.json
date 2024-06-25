@@ -1265,12 +1265,6 @@
         "valueType": "string"
       },
       {
-        "component": "richtext",
-        "name": "innertext",
-        "label": "Inner text",
-        "valueType": "string"
-      },
-      {
         "component": "reference",
         "valueType": "string",
         "name": "leftsideimage",
@@ -1321,12 +1315,36 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "keyfeatureimageinnerimage",
+        "name": "keyfeatureimageinnerimage1",
         "label": "Key Feature Inner Image"
       },
       {
         "component": "richtext",
-        "name": "keyfeatureinnertext",
+        "name": "keyfeatureinnertext1",
+        "label": "Key Feature Inner Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "keyfeatureimageinnerimage2",
+        "label": "Key Feature Inner Image"
+      },
+      {
+        "component": "richtext",
+        "name": "keyfeatureinnertext2",
+        "label": "Key Feature Inner Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "keyfeatureimageinnerimage3",
+        "label": "Key Feature Inner Image"
+      },
+      {
+        "component": "richtext",
+        "name": "keyfeatureinnertext3",
         "label": "Key Feature Inner Text",
         "valueType": "string"
       }

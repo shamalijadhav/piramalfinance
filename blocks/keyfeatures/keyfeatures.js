@@ -62,8 +62,7 @@ function generateFeatureHTML(props) {
                 <div data-cmp-is="image"
                     data-cmp-filereference="${leftSideImage}" data-cmp-hook-image="imageV3" class="cmp-image" itemscope=""
                     itemtype="">
-                    <img src=""
-                        loading="lazy" class="cmp-image__image" itemprop="contentUrl" alt="${leftSideImageAlt}" src="${leftSideImage}">
+                    <img loading="lazy" class="cmp-image__image" itemprop="contentUrl" alt="${leftSideImageAlt}" src="${leftSideImage}">
                 </div>
             </div>
         </a>

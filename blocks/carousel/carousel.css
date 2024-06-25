@@ -95,13 +95,13 @@
   margin-top: 1rem;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block > .background .front-picture {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .front-picture {
   position: absolute;
   right: 150px;
   bottom: 0;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block > .background {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background {
   background-position: 100%;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -109,40 +109,39 @@
   align-items: center;
   padding: 0 150px;
 }
- 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block > .background .front-picture img {
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .front-picture img {
   height: 100%;
   max-height: 335px;
   max-width: 394px;
   width: 100%;
+  display: block;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block > .background .foreground .text .title>h2,
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block > .background .foreground .text .eyebrow,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .title>h2,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .eyebrow,
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five .background .foreground .text .title>h3,
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five .background .foreground .text .eyebrow,
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six .background .foreground .text .title>h3,
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six .background .foreground .text .eyebrow,
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven .background .foreground .text .title>h3,
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven .background .foreground .text .eyebrow
-{
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven .background .foreground .text .eyebrow {
   color: var(--black);
-  font-family: "Nunito-Extrabold",sans-serif;
+  font-family: "Nunito-Extrabold", sans-serif;
   font-size: 3pc;
   font-weight: 800;
   line-height: 60px;
   margin: unset;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five > .background .foreground .text .short-description>p,
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five > .background .foreground .text .short-description>p>em,
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five > .background .foreground .text .short-description>p>strong,
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six > .background .foreground .text .long-description>p,
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-one > .background .foreground .text .long-description>p,
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven > .background .foreground .text .long-description>p
-{
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p>em,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p>strong,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .long-description>p,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-one>.background .foreground .text .long-description>p,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .text .long-description>p {
   color: var(--gradient-gray);
-  font-family: "Nunito-Regular",sans-serif;
+  font-family: "Nunito-Regular", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 2pc;
@@ -150,41 +149,41 @@
   display: inline;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five > .background .foreground {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground {
   width: 45%;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five > .background .foreground .text .short-description>p>em {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p>em {
   text-decoration: line-through;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five > .background .foreground .text .short-description>p>strong {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p>strong {
   color: var(--orange);
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six > .background .foreground .text .long-description {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .long-description {
   margin-right: 30px;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block > .background .foreground .text .short-description>p {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .short-description>p {
   color: var(--black);
-  font-family: "Nunito-Regular",sans-serif;
+  font-family: "Nunito-Regular", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 2pc;
   margin: unset;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block > .background .foreground .text .cta {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .cta {
   position: unset;
   margin-top: 2rem;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block > .background .foreground .text .cta>a {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .cta>a {
   background: var(--orange);
   border-radius: 8px;
   color: #fff;
-  font-family: 'Nunito-Bold',sans-serif;
+  font-family: 'Nunito-Bold', sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 28px;
@@ -196,7 +195,7 @@
 .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container {
   position: absolute;
   left: 150px;
-  bottom: 70px;
+  bottom: 60px;
 }
 
 .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container>button {
@@ -212,19 +211,19 @@
   opacity: 1;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.--coralred > .background .foreground .text .title>h2 {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.--coralred>.background .foreground .text .title>h2 {
   color: var(--orange);
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.--white > .background .foreground .text .title>h2,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-two>.background .foreground .text .title>h2,
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven .background .foreground .text .title>h3,
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven .background .foreground .text .eyebrow,
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven > .background .foreground .text .long-description>p {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .text .long-description>p {
   color: var(--white);
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.--white > .background .foreground .text .eyebrow {
-  font-family: 'Nunito-Regular',sans-serif;
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-two>.background .foreground .text .eyebrow {
+  font-family: 'Nunito-Regular', sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 2pc;
@@ -232,51 +231,51 @@
   color: var(--white);
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.--white > .background .front-picture {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-two>.background .front-picture {
   bottom: 80px;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven > .background .foreground .cta-image-wrapper {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .cta-image-wrapper {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven > .background .foreground .cta-image-wrapper>.cta-image>a img {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .cta-image-wrapper>.cta-image>a img {
   height: 58px;
   width: 196px;
   border-radius: 10px;
 }
 
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five > .background {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background {
   background-color: var(--lilen);
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six > .background {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background {
   background-color: var(--rosewhite);
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven > .background {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background {
   background: url("url"), linear-gradient(320.12deg, rgb(127, 76, 168) -0.41%, rgb(242, 104, 65) 101.64%) !important;
   background-size: 100% 100%;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six > .background .foreground .text .short-description>ul>li {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li {
   display: flex;
   align-items: center;
   gap: 32px;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six > .background .foreground .text .short-description>ul>li>p {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li>p {
   position: unset;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six > .background .foreground .text .short-description>ul>li>p>a {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li>p>a {
   background: var(--orange);
   border-radius: 8px;
   color: #fff;
-  font-family: 'Nunito-Bold',sans-serif;
+  font-family: 'Nunito-Bold', sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 28px;
@@ -285,17 +284,17 @@
   position: unset;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six > .background .foreground .text .short-description>ul>li>ul>li {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li>ul>li {
   color: #666;
-  font-family: 'Nunito-Regular',sans-serif;
+  font-family: 'Nunito-Regular', sans-serif;
   font-size: 1pc;
   font-weight: 400;
   line-height: 28px;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six > .background .foreground .text .short-description>ul>li>ul>li>a {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li>ul>li>a {
   color: #365069;
-  font-family: 'Nunito-Bold',sans-serif;
+  font-family: 'Nunito-Bold', sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
@@ -303,6 +302,112 @@
 }
 
 /* homepage top banner carousel css end */
+
+@media screen and (max-width:768px) {
+  .section.banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser {
+    height: 100%;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background {
+    padding: 0;
+    background-size: 100% 100%;
+  }
+
+  .banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser .foreground,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground {
+    width: 100%;
+    min-height: 450px;
+    padding: 0 16px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .title>h2,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .eyebrow,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five .background .foreground .text .title>h3,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five .background .foreground .text .eyebrow,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six .background .foreground .text .title>h3,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six .background .foreground .text .eyebrow,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven .background .foreground .text .title>h3,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven .background .foreground .text .eyebrow {
+    font-size: 1.5rem;
+    line-height: 32px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p>em,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p>strong,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .long-description>p,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-one>.background .foreground .text .long-description>p,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .text .long-description>p {
+    font-size: .875rem;
+    line-height: 1rem;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .cta>a,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li>p>a {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    padding: 14px 16px;
+    margin: 0;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .long-description {
+    margin-right: 0;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li {
+    align-items: start;
+    gap: 20px;
+    flex-direction: column;
+    margin-top: 24px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li>ul>li {
+    font-size: .75rem;
+    line-height: 1rem;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li>ul>li>a {
+    font-size: .875rem;
+    line-height: 1.25rem;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text {
+    padding-top: 24px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container {
+    left: 12px;
+    bottom: 40px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container>button {
+    height: 5px;
+    width: 5px;
+    margin-left: 4px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container>button.selected {
+    width: 13px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-two>.background .foreground .text .eyebrow {
+    font-size: .875rem;
+    line-height: 1rem;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .front-picture img {
+    max-height: 170px;
+    max-width: 200px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .front-picture {
+    right: 16px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-two>.background .front-picture {
+    bottom: 0;
+  }
+}
 
 /* ----- TABLET ----- */
 @media (min-width: 600px) {

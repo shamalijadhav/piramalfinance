@@ -83,6 +83,7 @@ textarea:focus {
   --midorange: #f26741;
   --pearl: #F0F0F0;
   --submidorange: #fce6e5;
+  --skyblue:#DEF3FD;
   /* fonts */
   --body-font-family: roboto, roboto-fallback;
   --heading-font-family: var(--body-font-family);

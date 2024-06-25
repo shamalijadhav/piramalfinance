@@ -40,6 +40,8 @@ function renderTeaserHTMLFactory(props) {
 
   if(container.tagName === 'A') {
     container.append(bgImageDiv);
+  }else{
+    container.append(bgImageDiv);
   }
 
   return container;

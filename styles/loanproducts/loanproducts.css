@@ -1,3 +1,5 @@
+/* loan products start */
+
 .section.loan-products-wrapper {
   background-color: var(--gradient-gray-light);
 }
@@ -88,3 +90,5 @@
     margin-left: 0;
   }
 }
+
+/* loan products end */

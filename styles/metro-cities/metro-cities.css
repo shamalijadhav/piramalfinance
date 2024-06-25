@@ -1,0 +1,82 @@
+/* quick Approvals Start */
+
+.section.metro-cities-wrapper {
+    background-color: #FFF7F4;
+}
+
+.section.metro-cities-wrapper .default-content-wrapper {
+    padding-top: 80px;
+}
+
+.section.metro-cities-wrapper .default-content-wrapper>h2 {
+    color: #000;
+    display: block;
+    font-family: Nunito-Extrabold, sans-serif;
+    font-size: 2pc;
+    font-weight: 800;
+    line-height: 40px;
+    padding-bottom: 8px;
+}
+
+.section.metro-cities-wrapper .default-content-wrapper>p {
+    margin-bottom: 24px;
+    color: #666;
+    display: block;
+    font-family: 'Nunito-Regular', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    padding-bottom: 8px;
+}
+
+.section.metro-cities-wrapper .default-content-wrapper>ul {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    list-style-type: disc;
+}
+
+.section.metro-cities-wrapper .default-content-wrapper>ul li {
+    display: list-item;
+    list-style-position: inside;
+    list-style-type: disc;
+}
+
+.section.metro-cities-wrapper .default-content-wrapper>ul li::marker {
+    color: #f26841;
+    font-size: 19px;
+}
+
+.section.metro-cities-wrapper .default-content-wrapper>ul li a {
+    color: #333;
+    font-family: 'Nunito-Regular', sans-serif;
+    font-size: 1pc;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+@media screen and (max-width:768px) {
+    .section.metro-cities-wrapper .default-content-wrapper {
+        padding-top: 40px;
+    }
+
+    .section.metro-cities-wrapper .default-content-wrapper>h2 {
+        font-size: 20px;
+        line-height: 28px;
+        padding-bottom: 4px;
+    }
+
+    .section.metro-cities-wrapper .default-content-wrapper>p {
+        font-size: 14px;
+        line-height: 20px;
+        padding-bottom: 4px;
+        margin-bottom: 20px;
+    }
+
+    .section.metro-cities-wrapper .default-content-wrapper>ul {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+
+/* Quick Approvals end */

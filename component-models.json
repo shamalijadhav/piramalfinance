@@ -1380,8 +1380,9 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "videourl",
-        "label": "videourl"
+        "name": "videolink",
+        "label": "videourl",
+        "value": "Video Url"
       }
     ]
   }

@@ -4,6 +4,7 @@
     "components": [
       "section",
       "title",
+      "tab-container",
       "container"
     ]
   },
@@ -43,6 +44,7 @@
       "imgwithlink",
       "carousel",
       "teaser",
+      "tab-container",
       "tabs",
       "detailed-teaser",
       "accordion-group",

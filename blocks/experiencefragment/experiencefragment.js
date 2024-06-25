@@ -6,7 +6,7 @@ export default async function decorate(blocks){
         const xfURLLink = xfPath.querySelector('a').textContent.trim();
         const xfAuhorLink = xfAuhtorURL.querySelector('a').textContent.trim();
         const xfFragemntData = await fetch(`${xfAuhorLink}${xfURLLink}/master.html`);
-        const xfResponseawait = await xfFragemntData.text();    
+        let xfResponseawait = await xfFragemntData.text();    
         const currUrl = new URL(location.href);
         xfResponseawait = xfResponseawait.replace(/(http:|)(^|\/\/)(.*?\/)/g, xfAuhorLink)
         const xfDiv = document.createElement('div');

@@ -60,7 +60,7 @@ export function generateTeaserDOM(props, classes) {
       <div class="front-picture">${picture ? picture.outerHTML : ""}</div>
       <div class='foreground'>
         <div class='text'>
-          ${eyebrow.textContent.trim() !== "" ? `<div class='eyebrow'>${eyebrow.textContent.trim().toUpperCase()}</div>` : ``}
+          ${eyebrow.textContent.trim() !== "" ? `<div class='eyebrow'>${eyebrow.textContent.trim()}</div>` : ``}
           <div class='title'>${title.innerHTML}</div>
           <div class='long-description'>${longDescr.innerHTML}</div>
           <!-- <div class='short-description'>${hasShortDescr ? shortDescr.innerHTML : longDescr.innerHTML}</div>-->
@@ -68,9 +68,11 @@ export function generateTeaserDOM(props, classes) {
           <div class='cta'>${decorateButtons(firstCta, secondCta)}</div>
         </div>
         <div class='spacer'></div>
-        <div class="cta-image">${ctaImageAnchor ? ctaImageAnchor.outerHTML : ""}</div>
-        <div class="cta-image">${ctaImageAnchor2 ? ctaImageAnchor2.outerHTML : ""}</div>
-        <div class="cta-image">${ctaImageAnchor3 ? ctaImageAnchor3.outerHTML : ""}</div>
+        <div class='cta-image-wrapper'>
+          <div class="cta-image">${ctaImageAnchor ? ctaImageAnchor.outerHTML : ""}</div>
+          <div class="cta-image">${ctaImageAnchor2 ? ctaImageAnchor2.outerHTML : ""}</div>
+          <div class="cta-image">${ctaImageAnchor3 ? ctaImageAnchor3.outerHTML : ""}</div>
+        </div>
       </div>
   ` 
   );

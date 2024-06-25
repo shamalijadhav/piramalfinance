@@ -2,6 +2,8 @@
 
 .section.loan-products-wrapper {
   background-color: var(--gradient-gray-light);
+  margin-bottom: 72px;
+  padding: 0 0 5pc;
 }
 
 .section.loan-products-wrapper .default-content-wrapper h2 {
@@ -31,9 +33,11 @@
   padding: 24px;
   width: 32%;
 }
-.section.loan-products-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .teaserv2-wrapper .block >a:hover{
+
+.section.loan-products-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .teaserv2-wrapper .block>a:hover {
   text-decoration: none;
-} 
+}
+
 .section.loan-products-wrapper .wrappercreation-wrapper .teaserv2-wrapper .bg-image {
   display: flex;
   align-items: center;
@@ -59,6 +63,12 @@
 }
 
 @media screen and (max-width: 768px) {
+  .section.loan-products-wrapper {
+    background-color: var(--gradient-gray-light);
+    margin-bottom: 40px;
+    padding: 0 16px 3pc;
+  }
+
   .section.loan-products-wrapper .default-content-wrapper h2 {
     font-size: 20px;
     line-height: 28px;
@@ -74,6 +84,7 @@
     padding: 0.75rem;
     width: 30%;
   }
+
   .section.loan-products-wrapper .wrappercreation-wrapper .teaserv2-wrapper .bg-image {
     flex-direction: column;
   }

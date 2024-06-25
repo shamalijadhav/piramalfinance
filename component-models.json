@@ -1378,7 +1378,7 @@
         "label": "videourl"
       },
       {
-        "component": "text",
+        "component": "reference",
         "valueType": "string",
         "name": "thumbnail",
         "label": "thumbnail"

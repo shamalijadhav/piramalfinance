@@ -791,13 +791,6 @@
         "value": "",
         "label": "CTA Image URL 3",
         "description": "Enter CTA Image URL 3"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "mobile-bg-image",
-        "label": "Mobile Background Image",
-        "description": "Mobile Background Image"
       }
     ]
   },

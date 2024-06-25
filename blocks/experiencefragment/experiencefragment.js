@@ -14,7 +14,9 @@ export default async function decorate(blocks) {
         blocks.innerHTML = ''
         blocks.append(xfDiv);
         xfDiv.querySelectorAll("script").forEach(function (script) {
-            blocks.append(script);
+            const newscript = document.createElement("script");
+            newscript.src = script.src;
+            blocks.append(newscript);
         })
     } catch (error) {
         console.error(error);

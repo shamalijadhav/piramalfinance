@@ -16,7 +16,7 @@ function renderTeaserHTMLFactory(props) {
   };
 
   const mainLink = mainHref?.textContent.trim() || "";
-  const container = mainLink && document.createElement("a");
+  const container = mainLink && document.createElement("a") || document.createElement("div");
   if (mainLink) container.href = mainLink;
 
   const bgImageSrc = bgImage?.querySelector("picture > img")?.src || "";

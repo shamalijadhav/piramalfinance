@@ -416,7 +416,7 @@
     }
 
 /* about us cards carousel start */
-.section.carousel-container .default-content-wrapper>p>strong{
+/* .section.carousel-container .default-content-wrapper>p>strong{
   margin: 20px 0 24px;
   color: var(--black);
   display: block;
@@ -486,5 +486,5 @@
     line-height: 28px;
     margin: 20px 0;
   }
-}
+} */
 /* about us cards carousel end */

@@ -1273,7 +1273,7 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "reference",
+        "name": "leftsideimage",
         "label": "Left-Side Image"
       },
       {
@@ -1285,7 +1285,7 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "reference",
+        "name": "rightsideimage",
         "label": "Right-Side Image"
       },
       {
@@ -1309,19 +1309,19 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "reference",
+        "name": "keyfeatureimageplus",
         "label": "Key Feature Image Plus"
       },
       {
         "component": "reference",
         "valueType": "string",
-        "name": "reference",
+        "name": "keyfeatureimageminus",
         "label": "Key Feature Image Minus"
       },
       {
         "component": "reference",
         "valueType": "string",
-        "name": "reference",
+        "name": "keyfeatureimageinnerimage",
         "label": "Key Feature Inner Image"
       },
       {

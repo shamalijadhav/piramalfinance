@@ -7,12 +7,14 @@ carouselContainerMapping["ss-teaser"] = generateDetailedTeaserDOM;
 
 export default function decorate(block) {
     const tabid = block.children[0].innerText;
-    const tabclass = block.children[1].innerText;
-    // block.classList.add(tabclass);
+    const tabclass = block.children[1].innerText.trim();
+    block.classList.add(tabclass);
     const panelContainer = document.createElement('div');
     panelContainer.classList.add('panel-container');
     block.dataset.id = tabid.trim().replace(/ /g, '-');
-    const panels = Array.from(block.children).slice(1);
+    const panels = Array.from(block.children).slice(2);
+    block.children[0].remove();
+    block.children[1].remove();
     [...panels].forEach((panel, i) => {
         // generate the  panel
         const [imagebg, image, classList, ...rest] = panel.children;

@@ -225,7 +225,7 @@
                     "title": "Teaser Title",
                     "titleType": "h3",
                     "longDescr": "<p>Teaser Description</p>",
-                    "classes": ["light", "left"]
+                    "classes": ["light", "left" , "dp-none"]
                   }
                 }
               }

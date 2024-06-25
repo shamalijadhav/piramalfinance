@@ -291,6 +291,23 @@
         "value": "",
         "label": "Tab Container",
         "description": "Sets the id of the tab."
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "isactive",
+        "value": "dp-none",
+        "label": "Is Active",
+        "options": [
+          {
+            "name": "Hide",
+            "value": "dp-none"
+          },
+          {
+            "name": "Active",
+            "value": "active"
+          }
+        ]
       }
     ]
   },

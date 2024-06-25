@@ -1375,13 +1375,13 @@
         "component": "reference",
         "valueType": "string",
         "name": "videourl",
-        "label": "Video Url"
+        "label": "videourl"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "videolink",
-        "label": "Video Link"
+        "name": "videourl",
+        "label": "videourl"
       }
     ]
   }

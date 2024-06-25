@@ -4,6 +4,7 @@
     "components": [
       "section",
       "title",
+      "tab-name",
       "tab-container",
       "container"
     ]
@@ -44,6 +45,7 @@
       "imgwithlink",
       "carousel",
       "teaser",
+      "tab-name",
       "tab-container",
       "tabs",
       "detailed-teaser",
@@ -86,6 +88,12 @@
       "hero",
       "teaser",
       "detailed-teaser"
+    ]
+  },
+  {
+    "id": "tab-name",
+    "components": [
+      "tab-container"
     ]
   },
   {

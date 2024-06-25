@@ -287,7 +287,20 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "tab-container-name",
+        "name": "tab-container",
+        "value": "",
+        "label": "Tab Container",
+        "description": "Sets the id of the tab."
+      }
+    ]
+  },
+  {
+    "id": "tab-name",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tab-name",
         "value": "",
         "label": "Tab Name",
         "description": "Sets the name of the tab.",

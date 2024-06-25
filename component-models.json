@@ -793,12 +793,11 @@
         "description": "Enter CTA Image URL 3"
       },
       {
-        "component": "text",
+        "component": "reference",
         "valueType": "string",
-        "name": "href",
-        "value": "",
-        "label": "Link",
-        "description": "Main Anchor Tag"
+        "name": "mobile-bg-image",
+        "label": "Mobile Background Image",
+        "description": "Mobile Background Image"
       }
     ]
   },

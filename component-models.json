@@ -1380,5 +1380,22 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "embed",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "videourl",
+        "label": "videourl"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "videourl",
+        "label": "videourl"
+      }
+    ]
   }
 ]

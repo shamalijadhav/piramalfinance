@@ -155,6 +155,7 @@
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p>em {
   text-decoration: line-through;
+  font-style: normal;
 }
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p>strong {
@@ -245,10 +246,11 @@
   height: 58px;
   width: 196px;
   border-radius: 10px;
+  display: block;
 }
 
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background {
+/* .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background {
   background-color: var(--lilen);
 }
 
@@ -259,7 +261,7 @@
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background {
   background: url("url"), linear-gradient(320.12deg, rgb(127, 76, 168) -0.41%, rgb(242, 104, 65) 101.64%) !important;
   background-size: 100% 100%;
-}
+} */
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li {
   display: flex;
@@ -300,8 +302,6 @@
   line-height: 28px;
   text-decoration: underline;
 }
-
-/* homepage top banner carousel css end */
 
 @media screen and (max-width:768px) {
   .section.banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser {
@@ -378,12 +378,12 @@
   .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container {
     left: 12px;
     bottom: 40px;
+    gap: 8px;
   }
 
   .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container>button {
     height: 5px;
     width: 5px;
-    margin-left: 4px;
   }
 
   .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container>button.selected {
@@ -407,7 +407,19 @@
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-two>.background .front-picture {
     bottom: 0;
   }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .cta-image-wrapper {
+    gap: 12px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .cta-image-wrapper>.cta-image>a img {
+    height: 30px;
+    width: 100px;
+    border-radius: 2px;
+  }
 }
+
+/* homepage top banner carousel css end */
 
 /* ----- TABLET ----- */
 @media (min-width: 600px) {

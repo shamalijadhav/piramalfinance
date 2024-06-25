@@ -13,11 +13,13 @@ export default async function decorate(blocks) {
         xfDiv.innerHTML = xfResponseawait;
         blocks.innerHTML = ''
         blocks.append(xfDiv);
-        xfDiv.querySelectorAll("script").forEach(function (script) {
-            const newscript = document.createElement("script");
-            newscript.src = script.src;
-            blocks.append(newscript);
-        })
+        setTimeout(function () {
+            xfDiv.querySelectorAll("script").forEach(function (script) {
+                const newscript = document.createElement("script");
+                newscript.src = script.src;
+                blocks.append(newscript);
+            })
+        }, 1000)
     } catch (error) {
         console.error(error);
     }

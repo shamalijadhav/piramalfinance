@@ -415,6 +415,26 @@ main img {
   margin-bottom: 80px;
 }
 
+
+/* common classes for banner background start */ 
+.teaser.block.bg--lilen>.background{
+  background-color: var(--lilen);
+}
+
+.teaser.block.bg--rosewhite>.background{
+  background-color: var(--rosewhite);
+}
+
+.teaser.block.bg--linear-red>.background {
+  background: url("url"), linear-gradient(320.12deg, rgb(127, 76, 168) -0.41%, rgb(242, 104, 65) 101.64%) !important;
+  background-size: 100% 100%;
+}
+
+.teaser.block.bg----skyblue>.background {
+  background-color: var(--skyblue);
+}
+/* common classes for banner background end */ 
+
 @media (width <=768px) {
   main .section.page-container {
     padding: 0 16px;

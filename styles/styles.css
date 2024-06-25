@@ -417,11 +417,11 @@ main img {
 
 
 /* common classes for banner background start */ 
-.teaser.block.bg--lilen>.background{
+.teaser.block.--lilen>.background{
   background-color: var(--lilen);
 }
 
-.teaser.block.bg--rosewhite>.background{
+.teaser.block.--rosewhite>.background{
   background-color: var(--rosewhite);
 }
 
@@ -430,7 +430,7 @@ main img {
   background-size: 100% 100%;
 }
 
-.teaser.block.bg----skyblue>.background {
+.teaser.block.--skyblue>.background {
   background-color: var(--skyblue);
 }
 /* common classes for banner background end */ 

@@ -222,7 +222,7 @@ color: #F58667;
     font-size: 0.75rem;
     line-height: 1rem;
     color: #fff;
-    margin-left: -40px;
+    /* margin-left: -40px; */
     margin-top: 0.5rem;
   }
   .footer-section-second .columns > div {
@@ -275,5 +275,15 @@ color: #F58667;
   } */
   .footer-section-first .columns > div > div:last-child {
     margin-right: 20%;
+  }
+  .footer-section-second .columns-2-cols ul li p:first-child{
+    padding-bottom: unset;
+  }
+  .footer-section-third .imgwithlink-wrapper .imgwithlink .image-href-mobile img{
+    height: 2.375rem;
+    width: 100%;
+  }
+  .footer-section-third {
+    flex-direction: column;
   }
 }

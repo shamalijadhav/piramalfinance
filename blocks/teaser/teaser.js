@@ -68,9 +68,11 @@ export function generateTeaserDOM(props, classes) {
           <div class='cta'>${decorateButtons(firstCta, secondCta)}</div>
         </div>
         <div class='spacer'></div>
-        <div class="cta-image">${ctaImageAnchor ? ctaImageAnchor.outerHTML : ""}</div>
-        <div class="cta-image">${ctaImageAnchor2 ? ctaImageAnchor2.outerHTML : ""}</div>
-        <div class="cta-image">${ctaImageAnchor3 ? ctaImageAnchor3.outerHTML : ""}</div>
+        <div class='cta-image-wrapper'>
+          <div class="cta-image">${ctaImageAnchor ? ctaImageAnchor.outerHTML : ""}</div>
+          <div class="cta-image">${ctaImageAnchor2 ? ctaImageAnchor2.outerHTML : ""}</div>
+          <div class="cta-image">${ctaImageAnchor3 ? ctaImageAnchor3.outerHTML : ""}</div>
+        </div>
       </div>
   ` 
   );

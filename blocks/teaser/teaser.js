@@ -39,6 +39,7 @@ export function generateTeaserDOM(props, classes) {
     ctaImage3,
     ctaImageAlt3,
     ctaImageUrl3,
+    mobileImage,
   ] = props;
   
   const bgPicture = pictureBgContainer.querySelector("picture");
@@ -53,6 +54,7 @@ export function generateTeaserDOM(props, classes) {
   ctaImageAnchor2.innerHTML = ctaImage2.innerHTML;
   ctaImageAnchor3.innerHTML = ctaImage3.innerHTML;
   const bgPictureStyle = bgPicture?.querySelector('img').src || "";
+  const mobileImageStyle = mobileImage?.querySelector('img').src || "";
 
   const teaserDOM = document.createRange().createContextualFragment(
   `

@@ -155,6 +155,7 @@
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p>em {
   text-decoration: line-through;
+  font-style: normal;
 }
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p>strong {

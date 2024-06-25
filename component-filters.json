@@ -75,6 +75,18 @@
     ]
   },
   {
+    "id": "tab-container",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title",
+      "hero",
+      "teaser",
+      "detailed-teaser"
+    ]
+  },
+  {
     "id": "tab",
     "components": [
       "tab",

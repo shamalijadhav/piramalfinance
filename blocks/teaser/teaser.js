@@ -53,8 +53,8 @@ export function generateTeaserDOM(props, classes) {
   ctaImageAnchor.innerHTML = ctaImage.innerHTML;
   ctaImageAnchor2.innerHTML = ctaImage2.innerHTML;
   ctaImageAnchor3.innerHTML = ctaImage3.innerHTML;
-  const bgPictureStyle = bgPicture?.querySelector('img').src || "";
-  const mobileImageStyle = mobileImage?.querySelector('img').src || "";
+  const bgPictureStyle = bgPicture?.querySelector('img')?.src || "";
+  const mobileImageStyle = mobileImage?.querySelector('img')?.src || "";
 
   const teaserDOM = document.createRange().createContextualFragment(
   `

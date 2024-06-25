@@ -5,7 +5,7 @@
 }
 
 .section.metro-cities-wrapper .default-content-wrapper {
-    padding-top: 80px;
+    padding: 80px 0;
 }
 
 .section.metro-cities-wrapper .default-content-wrapper>h2 {
@@ -57,7 +57,7 @@
 
 @media screen and (max-width:768px) {
     .section.metro-cities-wrapper .default-content-wrapper {
-        padding-top: 40px;
+        padding: 40px 0;
     }
 
     .section.metro-cities-wrapper .default-content-wrapper>h2 {

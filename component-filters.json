@@ -27,8 +27,19 @@
       "imgwithlink",
       "carousel",
       "teaser",
+      "tab-container",
       "tabs",
-      "accordion-group"
+      "detailed-teaser",
+      "accordion-group",
+      "teaserv2",
+      "code",
+      "contentfragment",
+      "experiencefragment",
+      "wrappercreation",
+      "container",
+      "mycontainer",
+      "keyfeatures",
+      "embed"
     ]
   },
   {

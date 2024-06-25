@@ -1248,5 +1248,88 @@
       "component": "myContainer"
     }
   ]
+  },
+  {
+    "id": "keyfeatures",
+    "fields": [
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Main Href",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Inner text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Inner text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "reference",
+        "label": "Left-Side Image"
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Left-Side Image Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "reference",
+        "label": "Right-Side Image"
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Right-Side Image Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Right-Side Image Link",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Key Feature Title",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "reference",
+        "label": "Key Feature Image Plus"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "reference",
+        "label": "Key Feature Image Minus"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "reference",
+        "label": "Key Feature Inner Image"
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Key Feature Inner Text",
+        "valueType": "string"
+      }
+  ]
   }
 ]

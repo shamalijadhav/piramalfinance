@@ -1385,7 +1385,7 @@
     "id": "embed",
     "fields": [
       {
-        "component": "reference",
+        "component": "text",
         "valueType": "string",
         "name": "videourl",
         "label": "videourl"
@@ -1393,9 +1393,8 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "videolink",
-        "label": "videourl",
-        "value": "Video Url"
+        "name": "thumbnail",
+        "label": "thumbnail"
       }
     ]
   }

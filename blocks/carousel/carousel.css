@@ -216,7 +216,10 @@
   color: var(--orange);
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.--white > .background .foreground .text .title>h2 {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.--white > .background .foreground .text .title>h2,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven .background .foreground .text .title>h3,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven .background .foreground .text .eyebrow,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven > .background .foreground .text .long-description>p {
   color: var(--white);
 }
 
@@ -233,14 +236,18 @@
   bottom: 80px;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven > .background .foreground .cta-image>a img {
-  height: 58px;
-  width: 196px;
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven > .background .foreground .cta-image-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven > .background .foreground {
-  position: relative;
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven > .background .foreground .cta-image-wrapper>.cta-image>a img {
+  height: 58px;
+  width: 196px;
+  border-radius: 10px;
 }
+
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five > .background {
   background-color: var(--lilen);
@@ -251,7 +258,48 @@
 }
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven > .background {
-  background: linear-gradient(320.12deg, rgb(127, 76, 168) -0.41%, rgb(242, 104, 65) 101.64%);
+  background: url("url"), linear-gradient(320.12deg, rgb(127, 76, 168) -0.41%, rgb(242, 104, 65) 101.64%) !important;
+  background-size: 100% 100%;
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six > .background .foreground .text .short-description>ul>li {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six > .background .foreground .text .short-description>ul>li>p {
+  position: unset;
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six > .background .foreground .text .short-description>ul>li>p>a {
+  background: var(--orange);
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Nunito-Bold',sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  padding: 18px 2.16pc 18px 34.65px;
+  width: fit-content;
+  position: unset;
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six > .background .foreground .text .short-description>ul>li>ul>li {
+  color: #666;
+  font-family: 'Nunito-Regular',sans-serif;
+  font-size: 1pc;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six > .background .foreground .text .short-description>ul>li>ul>li>a {
+  color: #365069;
+  font-family: 'Nunito-Bold',sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-decoration: underline;
 }
 
 /* homepage top banner carousel css end */

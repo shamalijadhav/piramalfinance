@@ -285,35 +285,13 @@
     "id": "tab-container",
     "fields": [
       {
-        "component": "reference",
+        "component": "text",
         "valueType": "string",
-        "name": "previcon",
+        "name": "tab-container-name",
         "value": "",
-        "label": "Previous Icon"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "nexticon",
-        "value": "",
-        "label": "Next Icon"
-      },
-      {
-        "component": "select",
-        "name": "carouselshowtype",
-        "value": "primary",
-        "label": "Type",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          }
-        ]
+        "label": "Tab Name",
+        "description": "Sets the name of the tab.",
+        "multi": true
       }
     ]
   },
@@ -581,8 +559,8 @@
                 "value": "--submidorange"
               },
               {
-                "name":"Skyblue",
-                "value":"--skyblue"
+                "name": "Skyblue",
+                "value": "--skyblue"
               }
             ]
           },
@@ -1283,11 +1261,11 @@
     "id": "mycontainer",
     "fields": [
       {
-      "name": "content",
-      "label": "Content",
-      "component": "myContainer"
-    }
-  ]
+        "name": "content",
+        "label": "Content",
+        "component": "myContainer"
+      }
+    ]
   },
   {
     "id": "keyfeatures",
@@ -1388,6 +1366,6 @@
         "label": "Key Feature Inner Text",
         "valueType": "string"
       }
-  ]
+    ]
   }
 ]

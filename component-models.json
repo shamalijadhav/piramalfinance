@@ -543,6 +543,10 @@
               {
                 "name": "submidorange",
                 "value": "--submidorange"
+              },
+              {
+                "name":"Skyblue",
+                "value":"--skyblue"
               }
             ]
           },

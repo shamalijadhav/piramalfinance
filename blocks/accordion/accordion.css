@@ -127,6 +127,7 @@ ol .accordion ul {
 .shade-box .accordion-wrapper:first-child details {
     padding-top: 16px;
 }
+
 /* faq Accordion */
 
 .faq-accordion-css .accordion-group-wrapper {
@@ -193,7 +194,7 @@ ol .accordion ul {
 
 }
 
-.faq-accordion-css .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block summary::after{
+.faq-accordion-css .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block summary::after {
     content: "";
     display: inline-block;
     width: 20px;
@@ -226,13 +227,13 @@ ol .accordion ul {
 
 
 /* Faq Accordion With Orange Heading on Active */
-.faq-section-wrapper.faq-accordion-css-with-orange-heading{
+.faq-section-wrapper.faq-accordion-css-with-orange-heading {
     background-color: rgba(255, 244, 231, 0.3);
     padding-bottom: 72px;
     padding-top: 72px;
 }
 
-.faq-accordion-css-with-orange-heading .default-content-wrapper h2{
+.faq-accordion-css-with-orange-heading .default-content-wrapper h2 {
     color: #000;
     display: block;
     font-family: Nunito-Extrabold, sans-serif;
@@ -241,13 +242,15 @@ ol .accordion ul {
     line-height: 40px;
     padding-bottom: 8px;
 }
-.faq-accordion-css-with-orange-heading .default-content-wrapper,.faq-accordion-css-with-orange-heading .accordion-group-wrapper {
-   max-width: 1240px;
-   margin: auto;
+
+.faq-accordion-css-with-orange-heading .default-content-wrapper,
+.faq-accordion-css-with-orange-heading .accordion-group-wrapper {
+    max-width: 1240px;
+    margin: auto;
 }
 
 .faq-accordion-css-with-orange-heading .accordion-group-wrapper .accordion-group.block.shade-box {
-        background-color: unset; 
+    background-color: unset;
     padding: unset;
     border-radius: unset;
     margin-bottom: unset;
@@ -273,8 +276,9 @@ ol .accordion ul {
     padding-bottom: 24px;
     padding-left: unset;
 }
+
 .faq-accordion-css-with-orange-heading .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block details {
-padding: unset;
+    padding: unset;
 }
 
 .faq-accordion-css-with-orange-heading .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block {
@@ -334,7 +338,7 @@ padding: unset;
     padding-top: unset;
 }
 
-.faq-accordion-css-with-orange-heading .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block details>div  {
+.faq-accordion-css-with-orange-heading .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block details>div {
     color: #666;
     font-family: Nunito-Regular, sans-serif;
     font-size: 20px;
@@ -384,7 +388,7 @@ padding: unset;
     }
 
     /* accordion with orange heading */
-    .faq-accordion-css-with-orange-heading .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block details>div  {
+    .faq-accordion-css-with-orange-heading .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block details>div {
         font-size: 16px;
 
     }
@@ -398,9 +402,10 @@ padding: unset;
     }
 
 
-    .faq-accordion-css-with-orange-heading .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block details h3{
-        width: 83% ;
+    .faq-accordion-css-with-orange-heading .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block details h3 {
+        width: 83%;
     }
+
     /* .faq-accordion-css-with-orange-heading .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block summary:first-child{
         padding-top: unset;
     } */
@@ -411,13 +416,10 @@ padding: unset;
         font-size: 16px;
     }
 
-    .faq-accordion-css-with-orange-heading .default-content-wrapper h2{
+    .faq-accordion-css-with-orange-heading .default-content-wrapper h2 {
         font-size: 20px;
         line-height: 28px;
         /* padding-bottom: 4px;
         margin-bottom: 20px; */
     }
 }
-
-
-

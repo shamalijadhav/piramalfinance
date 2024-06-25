@@ -1253,19 +1253,19 @@
     "id": "keyfeatures",
     "fields": [
       {
-        "component": "text",
+        "component": "richtext",
         "name": "text",
         "label": "Main Href",
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "innerhref",
         "label": "Inner text",
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "innertext",
         "label": "Inner text",
         "valueType": "string"
@@ -1277,7 +1277,7 @@
         "label": "Left-Side Image"
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "leftsideimagealt",
         "label": "Left-Side Image Alt",
         "valueType": "string"
@@ -1289,19 +1289,19 @@
         "label": "Right-Side Image"
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "rightsideimagealt",
         "label": "Right-Side Image Alt",
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "rightsideimagelink",
         "label": "Right-Side Image Link",
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "keyfeaturetitle",
         "label": "Key Feature Title",
         "valueType": "string"
@@ -1325,7 +1325,7 @@
         "label": "Key Feature Inner Image"
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "keyfeatureinnertext",
         "label": "Key Feature Inner Text",
         "valueType": "string"

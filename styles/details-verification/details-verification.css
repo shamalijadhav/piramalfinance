@@ -31,10 +31,16 @@
     width: 100%;
 }
 
+.section.embed-wrapper .embed-wrapper .embed>div {
+    max-height: 458px;
+    max-width: 1022px;
+}
+
 .section.embed-wrapper .embed-wrapper .embed>div>iframe {
     border-radius: 24px;
     height: 458px;
     width: 100% !important;
+    max-height: 458px;
 }
 
 

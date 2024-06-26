@@ -1,7 +1,4 @@
-.section.eligibility-criteria-wrapper {
-    margin-bottom: 72px;
-}
-
+/* Eligiblity Criteria Start */
 .section.eligibility-criteria-wrapper .default-content-wrapper>h2 {
     color: #000;
     display: block;
@@ -60,3 +57,4 @@
         line-height: 24px;
     }
 }
+/* Eligiblity Criteria Start */

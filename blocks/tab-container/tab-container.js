@@ -21,12 +21,6 @@ export default function decorate(block) {
         const classesText = classList.textContent.trim();
         const classes = (classesText ? classesText.split(',') : []).map((c) => c && c.trim()).filter((c) => !!c);
         let blockType = 'teaser';
-        // const blockType = [...classes].includes('detailed-teaser') ? 'detailed-teaser' : 'teaser';
-        // check if we have to render teaser or a detailed teaser
-        // const teaserDOM = 
-        //   blockType === 'detailed-teaser'
-        //     ? generateDetailedTeaserDOM([imagebg, image, ...rest], classes)
-        //     : generateTeaserDOM([imagebg, image, ...rest], classes);
         let generateOtherComponent = null;
         classes.forEach(function (className) {
             if (carouselContainerMapping[className]) {
@@ -41,22 +35,6 @@ export default function decorate(block) {
         panel.dataset.panel = `panel_${i}`;
         panel.append(generateOtherComponent);
         panelContainer.append(panel);
-
-        if (panels.length > 1) {
-            // generate the button
-            const button = document.createElement('button');
-            buttonContainer.append(button);
-            button.title = `Slide ${i + 1}`;
-            button.dataset.panel = `panel_${i}`;
-            if (!i) button.classList.add('selected');
-
-            observer.observe(panel);
-
-            // add event listener to button
-            button.addEventListener('click', () => {
-                panelContainer.scrollTo({ top: 0, left: panel.offsetLeft - panel.parentNode.offsetLeft, behavior: 'smooth' });
-            });
-        }
     });
     block.textContent = '';
     block.append(panelContainer);

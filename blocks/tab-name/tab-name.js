@@ -12,9 +12,9 @@ export default function decorate(block) {
         const tabContainer = document.querySelector('[data-id=' + id + ']')
         if (tabContainer) {
             tabContainer.closest(".section").querySelectorAll(".tab-container").forEach(function (el) {
-                el.style.display = "none";
+                el.classList.add("dp-none");
             })
-            tabContainer.style.display = "block";
+            tabContainer.classList.remove("dp-none");
             console.log(e.target);
         }
     })

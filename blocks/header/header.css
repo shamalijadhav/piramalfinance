@@ -302,11 +302,11 @@ header nav .nav-sections .nav-drop::after{
 .header-wrapper .nav-wrapper nav {
   display: flex;
   justify-content: space-between;
-  max-width: 1320px;
+  max-width: 1240px;
   width: 100%;
   margin: 0 auto;
   gap: 0;
-  padding: 0 12px;
+  padding: 0;
 }
 
 .header-wrapper .nav-wrapper nav .nav-sections {

@@ -748,6 +748,15 @@
                 "value": "mob-col-12"
               }
             ]
+          },
+          {
+            "name": "block classes",
+            "children": [
+              {
+                "name": "gridcolumnfw",
+                "value": "card-full-width"
+              }
+            ]
           }
         ]
       },

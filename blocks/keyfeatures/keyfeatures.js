@@ -114,7 +114,7 @@ function generateFeatureHTML(props) {
     </div>
 </div>` */
 
-    const keyFeatureDiv = keyFeatureDiv ? ` 
+    const keyFeatureDiv = keyFeatureTitle ? ` 
     <div class="keyfeature-container">
         <div class="keyfeatures-info">
             <p class="heading">${keyFeatureTitle}</p>

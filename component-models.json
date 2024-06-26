@@ -600,6 +600,10 @@
               {
                 "name": "Skyblue",
                 "value": "--skyblue"
+              },
+              {
+                "name": "redgradient",
+                "value": "bg--linear-red"
               }
             ]
           },

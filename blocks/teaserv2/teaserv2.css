@@ -47,6 +47,7 @@ text-decoration: none;
         font-size: 14px;
         line-height: 20px;
         padding-left: unset;
+        width: 72%;
      
     }
 
@@ -54,5 +55,19 @@ text-decoration: none;
       padding: 0px 16px;
       margin-bottom: 40px;
       margin-top: 40px;
+    }
+
+    .personal-loan-green-banner .teaserv2.block a .bg-image{
+        
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: unset;
+    padding: 8px 16px;
+    }
+
+    .personal-loan-green-banner .teaserv2.block .description b,.personal-loan-green-banner .teaserv2.block .description strong{
+        font-size: 14px;
+        line-height: 20px;
     }
 }

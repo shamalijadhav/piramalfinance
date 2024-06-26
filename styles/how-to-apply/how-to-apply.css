@@ -1,0 +1,60 @@
+.section.embed-wrapper .default-content-wrapper h2{
+    color: #000;
+    display: block;
+    font-family: Nunito-Extrabold, sans-serif;
+    font-size: 2pc;
+    font-weight: 800;
+    line-height: 40px;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+}
+
+.section.embed-wrapper .embed-wrapper .embed {
+    margin: 0 auto;
+    max-height: 458px;
+    max-width: 1022px;
+    position: relative;
+    width: 100%;
+}
+
+.section.embed-wrapper .embed-wrapper .embed .embed-placeholder {
+    position: unset;
+}
+
+.section.embed-wrapper .embed-wrapper .embed .embed-placeholder > picture > img {
+    border-radius: 24px;
+    height: 100%;
+    max-width: 1022px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.section.embed-wrapper .embed-wrapper .embed > div > iframe {
+    border-radius: 24px;
+    height: 458px;
+    width: 100% !important;
+}
+
+
+@media screen and (max-width: 768px) {
+    .section.embed-wrapper .default-content-wrapper h2 {
+        font-size: 20px;
+        line-height: 28px;
+        padding-bottom: 4px;
+        margin-bottom: 20px;
+    }
+
+    .section.embed-wrapper .embed-wrapper .embed {
+        max-height: 204px;
+        max-width: 100%;
+    }
+
+    .section.embed-wrapper .embed-wrapper .embed .embed-placeholder > picture > img {
+        height: 204px;
+    }
+
+    .section.embed-wrapper .embed-wrapper .embed > div > iframe {
+        height: 204px;
+    }
+}

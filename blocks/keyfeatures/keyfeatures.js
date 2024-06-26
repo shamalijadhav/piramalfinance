@@ -6,7 +6,8 @@ export default function decorate(block) {
     block.innerHTML = '';
     block.append(newDivFeature);
     try {
-        featureDropDownClick()
+        featureDropDownClick();
+        document.querySelector('.home-loans-products-wrapper.view-more-less-js') ? viewLogic() : "";   
     } catch (error) {
         console.log(error)
     }
@@ -210,4 +211,34 @@ function featureDropDownClick() {
             });
         })
     })
+}
+
+function viewLogic() {
+    document.querySelectorAll('.home-loans-products-wrapper.view-more-less-js').forEach(each => {
+        const wrapper = each.querySelector('.wrappercreation-wrapper');
+        const keyFeatures = wrapper.querySelectorAll('.keyfeatures-wrapper');
+        
+        keyFeatures.forEach((eachFeature, index) => {
+            eachFeature.classList.toggle("dp-none", index > 2);
+        });
+        
+        const buttonContainer = wrapper.querySelector('.button-container');
+        if (buttonContainer) {
+            const buttonText = buttonContainer.querySelector('a').textContent.trim();
+            buttonContainer.innerHTML = buttonText;
+            viewMoreLogic(each);
+        }
+    });
+}
+
+function viewMoreLogic(each) {
+    const buttonContainer = each.querySelector('.wrappercreation-wrapper .button-container');
+    buttonContainer.addEventListener('click', function () {
+        const isViewMore = this.textContent.toLowerCase() === 'view more';
+        this.innerText = isViewMore ? "View Less" : "View More";
+        
+        each.querySelectorAll('.keyfeatures-wrapper').forEach((eachFeature, index) => {
+            eachFeature.classList.toggle("dp-none", !isViewMore && index > 2);
+        });
+    });
 }

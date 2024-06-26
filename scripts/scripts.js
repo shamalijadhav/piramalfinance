@@ -168,7 +168,11 @@ async function loadingCustomCss(){
     `${window.hlx.codeBasePath}/styles/reset.css`,
     `${window.hlx.codeBasePath}/styles/key-features/key-features.css`,
     `${window.hlx.codeBasePath}/styles/metro-cities/metro-cities.css`,
+<<<<<<< HEAD
      `${window.hlx.codeBasePath}/styles/how-to-apply/how-to-apply.css`
+=======
+    `${window.hlx.codeBasePath}/styles/elgibility-criteria/elgibility-criteria.css`
+>>>>>>> da8601d812583831975d27c6620d07c3a09c13c2
   ]
 
   loadCssArray.forEach( async (eachCss) => {

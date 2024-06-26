@@ -4,7 +4,7 @@
   color: #000;
   display: block;
   font-family: 'Nunito-Extrabold', sans-serif;
-  font-size: 2pc;
+  font-size: 32px;
   font-weight: 800;
   line-height: 40px;
   padding-bottom: 8px;
@@ -29,7 +29,7 @@
 
 .choose-us-css .columns-wrapper .columns>div {
   align-items: flex-start;
-  column-gap: 5pc;
+  column-gap: 80px;
 }
 
 .section.choose-us-css .columns-wrapper .columns>div:nth-child(2) {
@@ -56,13 +56,13 @@
   font-size: 20px;
   font-weight: 800;
   line-height: 28px;
-  padding: 1pc 0;
+  padding: 16px 0;
 }
 
 .section.choose-us-css .columns-wrapper .columns div div :nth-child(3) {
   color: #666;
   font-family: Nunito-Regular, sans-serif;
-  font-size: 1pc;
+  font-size: 16px;
   font-weight: 400;
   line-height: 24px;
 }
@@ -70,7 +70,7 @@
 /* home loan finance start */
 
 .section.home-loan-finance-wrapper .columns-wrapper .columns>div {
-  column-gap: 11pc;
+  column-gap: 176px;
 }
 
 .section.home-loan-finance-wrapper .columns-wrapper .columns>div:nth-child(3) {
@@ -100,27 +100,31 @@
     row-gap: 24px;
   }
 
+  .section.choose-us-css .columns-wrapper .columns>div:nth-child(2) {
+    padding-top: 24px;
+  }
+
   .section.choose-us-css .columns-wrapper .columns>div>div {
     width: 100%;
   }
 
   .section.choose-us-css .columns-wrapper .columns div div :nth-child(1) {
-    height: 3pc;
+    height: 48px;
     width: 40px;
   }
 
   .section.choose-us-css .columns-wrapper .columns div div>p>picture>img {
-    height: 3pc;
+    height: 48px;
     width: 40px;
   }
 
   .section.choose-us-css .columns-wrapper .columns div div :nth-child(2) {
     color: #333;
     font-family: Nunito-Bold, sans-serif;
-    font-size: 1pc;
+    font-size: 16px;
     font-weight: 700;
     line-height: 24px;
-    padding: 8px 0 9pt;
+    padding: 8px 0 12px;
   }
 
   .section.home-loan-finance-wrapper .columns-wrapper .columns>div:nth-child(2) {

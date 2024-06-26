@@ -75,7 +75,7 @@
     right: -8%;
     top: 42%;
 }
-.button-container a{
+.section.carousel-articles-wrapper .button-container a{
     color: #f26841;
     font-family: Nunito-Bold, sans-serif;
     font-size: 24px;
@@ -85,14 +85,14 @@
     margin-right: 8px;
     position: relative;
 }
-.button-container ::after{
+.section.carousel-articles-wrapper .button-container ::after{
    content: '';
    height: 14px;
    width: 7px;
    top: 0;
    position: absolute;
 }
-.long-description ul li a {
+.section.carousel-articles-wrapper .long-description ul li a {
     color: #333;
     display: inline-block;
     font-family: Nunito-Regular, sans-serif;
@@ -123,27 +123,27 @@
     content: '>';
     right: -13px;
 }
-.carousel.block .panel-container .teaser.block{
+.section.carousel-articles-wrapper .carousel.block .panel-container .teaser.block{
     width: 28%;
     padding: 8px;
     margin-right: 10px;
 }
-.panel-container{
+.section.carousel-articles-wrapper .panel-container{
     width: 100%;
     display: flex;
     align-items: center;
 }
-.foreground .text .long-description ul{
+.section.carousel-articles-wrapper .foreground .text .long-description ul{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
 }
-.foreground .text .long-description ul li:first-child{
+.section.carousel-articles-wrapper .foreground .text .long-description ul li:first-child{
     margin-bottom: 16px;
     grid-column: 1 / span 2;
     
 }
-.foreground .text .long-description ul li:nth-child(2),
-.foreground .text .long-description ul li:nth-child(3) {
+.section.carousel-articles-wrapper .foreground .text .long-description ul li:nth-child(2),
+.section.carousel-articles-wrapper .foreground .text .long-description ul li:nth-child(3) {
     grid-column: span 1;
     color: #999;
     font-family: Nunito-Regular, sans-serif;
@@ -155,7 +155,7 @@
         margin-top: 24px;
     }
     @media screen and (max-width: 767.99px) {
-        .carousel.block .panel-container .teaser.block{
+        .section.carousel-articles-wrapper .carousel.block .panel-container .teaser.block{
             width: 100%;
         }
         .section.carousel-articles-wrapper .carousel-wrapper .carousel .carousel-navigation-buttons .slide-prev,

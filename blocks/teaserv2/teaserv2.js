@@ -30,8 +30,8 @@ function renderTeaserHTMLFactory(props) {
   const frontImageDiv = createElement("div", "front-image");
   if (frontImagePic) frontImageDiv.append(frontImagePic);
 
-  const titleDiv = createElement("div", "title", title?.textContent.trim());
-  const descriptionDiv = createElement("div", "description", description?.textContent.trim()) ;
+  const titleDiv = createElement("div", "title", title?.innerHTML);
+  const descriptionDiv = createElement("div", "description", description?.innerHTML) ;
 
   const buttonHrefAnchor = buttonHref?.querySelector("a") || "";
   if (buttonHrefAnchor) buttonHrefAnchor.innerText = button?.textContent.trim() || "";

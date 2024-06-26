@@ -169,6 +169,10 @@ async function loadingCustomCss(){
     `${window.hlx.codeBasePath}/styles/key-features/key-features.css`,
     `${window.hlx.codeBasePath}/styles/metro-cities/metro-cities.css`,
     `${window.hlx.codeBasePath}/styles/articles-carousel/articles-carousel.css`
+     `${window.hlx.codeBasePath}/styles/details-verification/details-verification.css`,
+    `${window.hlx.codeBasePath}/styles/elgibility-criteria/elgibility-criteria.css`,
+    `${window.hlx.codeBasePath}/styles/table/table.css`,
+    `${window.hlx.codeBasePath}/styles/tab-with-cards/tab-with-cards.css`
   ]
 
   loadCssArray.forEach( async (eachCss) => {

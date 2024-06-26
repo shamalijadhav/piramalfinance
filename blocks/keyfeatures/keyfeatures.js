@@ -33,23 +33,23 @@ function generateFeatureHTML(props) {
     ]
         = props;
 
-    containerLink = containerLink.textContent.trim() || "";
-    cardDescription = cardDescription.querySelector('div > div') || "";
-    leftSideImage = leftSideImage.querySelector('div > picture > img').src || "";
-    leftSideImageAlt = leftSideImageAlt.textContent.trim() || "";
-    rightSideImage = rightSideImage.querySelector('div > picture > img').src || "";
-    rightSideImageAlt = rightSideImageAlt.textContent.trim() || "";
-    rightSideImageLink = rightSideImageLink.textContent.trim() || "";
-    keyFeatureTitle = keyFeatureTitle.innerHTML || "";
-    keyFeatureImagePlus = keyFeatureImagePlus.querySelector('div > picture > img').src || "";
-    keyFeatureImageMinus = keyFeatureImageMinus.querySelector('div > picture > img').src || "";
+    containerLink = containerLink?.textContent?.trim() || "";
+    cardDescription = cardDescription?.querySelector('div > div') || "";
+    leftSideImage = leftSideImage?.querySelector('div > picture > img')?.src || "";
+    leftSideImageAlt = leftSideImageAlt?.textContent.trim() || "";
+    rightSideImage = rightSideImage?.querySelector('div > picture > img')?.src || "";
+    rightSideImageAlt = rightSideImageAlt?.textContent?.trim() || "";
+    rightSideImageLink = rightSideImageLink?.textContent?.trim() || "";
+    keyFeatureTitle = keyFeatureTitle?.innerHTML || "";
+    keyFeatureImagePlus = keyFeatureImagePlus?.querySelector('div > picture > img')?.src || "";
+    keyFeatureImageMinus = keyFeatureImageMinus?.querySelector('div > picture > img')?.src || "";
 
-    keyFeatureInnerText1 = keyFeatureInnerText1.querySelector('div > div') || "";
-    keyFeatureInnerText2 = keyFeatureInnerText2.querySelector('div > div') || "";
-    keyFeatureInnerText3 = keyFeatureInnerText3.querySelector('div > div') || "";
-    keyFeatureInnerImage1 = keyFeatureInnerImage1.querySelector('div > picture > img').src || "";
-    keyFeatureInnerImage2 = keyFeatureInnerImage2.querySelector('div > picture > img').src || "";
-    keyFeatureInnerImage3 = keyFeatureInnerImage3.querySelector('div > picture > img').src || "";
+    keyFeatureInnerText1 = keyFeatureInnerText1?.querySelector('div > div') || "";
+    keyFeatureInnerText2 = keyFeatureInnerText2?.querySelector('div > div') || "";
+    keyFeatureInnerText3 = keyFeatureInnerText3?.querySelector('div > div') || "";
+    keyFeatureInnerImage1 = keyFeatureInnerImage1?.querySelector('div > picture > img')?.src || "";
+    keyFeatureInnerImage2 = keyFeatureInnerImage2?.querySelector('div > picture > img')?.src || "";
+    keyFeatureInnerImage3 = keyFeatureInnerImage3?.querySelector('div > picture > img')?.src || "";
 
     // Generate HTML
     /* const html = `<div class="homeloanteaser teaser">

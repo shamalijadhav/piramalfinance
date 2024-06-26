@@ -168,6 +168,21 @@
           }
         },
         {
+          "title": "Testimonial",
+          "id": "testimonial",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "testimonial",
+                  "model": "testimonial"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Carousel",
           "id": "carousel",
           "plugins": {

@@ -58,11 +58,13 @@
     }
 
     .section.embed-wrapper .embed-wrapper .embed .embed-placeholder>picture>img {
-        height: 204px;
+        height: 184px;
+        object-fit: unset;
     }
 
     .section.embed-wrapper .embed-wrapper .embed>div>iframe {
         height: 204px;
+        max-height: 204px;
     }
 }
 

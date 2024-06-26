@@ -40,7 +40,7 @@ function generateFeatureHTML(props) {
     rightSideImage = rightSideImage?.querySelector('div > picture > img')?.src || "";
     rightSideImageAlt = rightSideImageAlt?.textContent?.trim() || "";
     rightSideImageLink = rightSideImageLink?.textContent?.trim() || "";
-    keyFeatureTitle = keyFeatureTitle?.innerHTML || "";
+    keyFeatureTitle = keyFeatureTitle?.textContent?.trim() || "";
     keyFeatureImagePlus = keyFeatureImagePlus?.querySelector('div > picture > img')?.src || "";
     keyFeatureImageMinus = keyFeatureImageMinus?.querySelector('div > picture > img')?.src || "";
 
@@ -117,7 +117,7 @@ function generateFeatureHTML(props) {
     const keyFeatureDiv = keyFeatureTitle ? ` 
     <div class="keyfeature-container">
         <div class="keyfeatures-info">
-            <p class="heading">${keyFeatureTitle.outerHTML}</p>
+            <p class="heading">${keyFeatureTitle}</p>
             <img data-src="${keyFeatureImagePlus}" alt="plusicon"
                 class="plusicon lozad" src="${keyFeatureImagePlus}"
                 data-loaded="true" style="display: block;">

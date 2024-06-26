@@ -16,8 +16,10 @@ export default function decorate(block) {
             section.querySelectorAll(".tab-container").forEach(function (el, index) {
                 section.querySelector(".tab-name").children[index].classList.remove("active");
                 el.classList.add("dp-none");
+                el.classList.remove("active");
             })
             tabContainer.classList.remove("dp-none");
+            tabContainer.classList.add("active");
             currentEl.classList.add("active");
         }
     })

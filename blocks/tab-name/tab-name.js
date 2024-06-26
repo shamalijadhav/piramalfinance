@@ -8,14 +8,17 @@ export default function decorate(block) {
     });
     block.innerHTML = tabsTemplate;
     block.addEventListener("click", function (e) {
-        const id = e.target.id;
+        const currentEl = e.target;
+        const id = currentEl.id;
         const tabContainer = document.querySelector('[data-id=' + id + ']')
         if (tabContainer) {
-            tabContainer.closest(".section").querySelectorAll(".tab-container").forEach(function (el) {
+            const section = tabContainer.closest(".section");
+            section.querySelectorAll(".tab-container").forEach(function (el, index) {
+                section.querySelector(".tab-name").children[index].classList.remove("active");
                 el.classList.add("dp-none");
             })
             tabContainer.classList.remove("dp-none");
-            console.log(e.target);
+            currentEl.classList.add("active");
         }
     })
     console.log(block);

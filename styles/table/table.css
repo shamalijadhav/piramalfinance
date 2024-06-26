@@ -1,0 +1,98 @@
+/* fees and charges start */
+
+.section.fees-charges-wrapper .default-content-wrapper h2 {
+    color: #000;
+    display: block;
+    font-family: Nunito-Extrabold, sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 40px;
+    padding-bottom: 8px;
+} 
+
+.section.fees-charges-wrapper .default-content-wrapper p {
+    color: #666;
+    display: block;
+    font-family: Nunito-Regular, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    padding-bottom: 8px;
+}
+
+.section.fees-charges-wrapper .code-wrapper .code > div > table {
+    border: 1px solid #d7dce1;
+    border-collapse: unset;
+    border-radius: 10px;
+    margin-top: 24px;
+    width: 100%;
+}
+
+.section.fees-charges-wrapper .code-wrapper .code > div > table > tbody > tr > th {
+    background-color: #fef0ec;
+    border-bottom: 1px solid #d7dce1;
+    border-left: 1px solid #d7dce1;
+    color: #4d4d4d;
+    font-family: Nunito-Bold, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 24px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.section.fees-charges-wrapper .code-wrapper .code > div > table > tbody > tr :first-child {
+    border-left: unset;
+    border-radius: 10px 0 0 0;
+}
+
+.section.fees-charges-wrapper .code-wrapper .code > div > table > tbody > tr :nth-child(2) {
+    border-radius: 0 10px 0 0;
+}
+
+.section.fees-charges-wrapper .code-wrapper .code > div > table > tbody > tr:last-child td {
+    border-bottom: unset;
+}
+
+.section.fees-charges-wrapper .code-wrapper .code > div > table > tbody > tr > td {
+    border-bottom: 1px solid #d7dce1;
+    border-left: 1px solid #d7dce1;
+    color: #20303f;
+    font-family: Nunito-Regular, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 24px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+    .section.fees-charges-wrapper .default-content-wrapper h2 {
+        font-size: 20px;
+        line-height: 28px;
+        padding-bottom: 4px;
+    } 
+
+    .section.fees-charges-wrapper .default-content-wrapper p {
+        font-size: 14px;
+        line-height: 20px;
+        padding-bottom: 4px;
+    }
+
+    .section.fees-charges-wrapper .code-wrapper .code > div > table {
+        margin-top: 8px;
+    }
+
+    .section.fees-charges-wrapper .code-wrapper .code > div > table > tbody > tr > th {
+        padding: 24px 12px 24px 16px;
+    }
+
+    .section.fees-charges-wrapper .code-wrapper .code > div > table > tbody > tr > td {
+        font-size: 12px;
+        line-height: 16px;
+        padding: 24px 16px;
+    }
+}
+/* fees and charges end */

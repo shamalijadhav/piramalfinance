@@ -6,7 +6,8 @@ export default function decorate(block) {
     block.innerHTML = '';
     block.append(newDivFeature);
     try {
-        featureDropDownClick()
+        featureDropDownClick();
+        document.querySelector('.home-loans-products-wrapper.view-more-less-js') ? viewLogic() : "";   
     } catch (error) {
         console.log(error)
     }
@@ -33,23 +34,23 @@ function generateFeatureHTML(props) {
     ]
         = props;
 
-    containerLink = containerLink.textContent.trim();
-    cardDescription = cardDescription.querySelector('div > div');
-    leftSideImage = leftSideImage.querySelector('div > picture > img').src;
-    leftSideImageAlt = leftSideImageAlt.textContent.trim();
-    rightSideImage = rightSideImage.querySelector('div > picture > img').src;
-    rightSideImageAlt = rightSideImageAlt.textContent.trim();
-    rightSideImageLink = rightSideImageLink.textContent.trim();
-    keyFeatureTitle = keyFeatureTitle.textContent.trim();
-    keyFeatureImagePlus = keyFeatureImagePlus.querySelector('div > picture > img').src;
-    keyFeatureImageMinus = keyFeatureImageMinus.querySelector('div > picture > img').src;
+    containerLink = containerLink?.textContent?.trim() || "";
+    cardDescription = cardDescription?.querySelector('div > div') || "";
+    leftSideImage = leftSideImage?.querySelector('div > picture > img')?.src || "";
+    leftSideImageAlt = leftSideImageAlt?.textContent.trim() || "";
+    rightSideImage = rightSideImage?.querySelector('div > picture > img')?.src || "";
+    rightSideImageAlt = rightSideImageAlt?.textContent?.trim() || "";
+    rightSideImageLink = rightSideImageLink?.textContent?.trim() || "";
+    keyFeatureTitle = keyFeatureTitle?.textContent?.trim() || "";
+    keyFeatureImagePlus = keyFeatureImagePlus?.querySelector('div > picture > img')?.src || "";
+    keyFeatureImageMinus = keyFeatureImageMinus?.querySelector('div > picture > img')?.src || "";
 
-    keyFeatureInnerText1 = keyFeatureInnerText1.querySelector('div > div');
-    keyFeatureInnerText2 = keyFeatureInnerText2.querySelector('div > div');
-    keyFeatureInnerText3 = keyFeatureInnerText3.querySelector('div > div');
-    keyFeatureInnerImage1 = keyFeatureInnerImage1.querySelector('div > picture > img').src;
-    keyFeatureInnerImage2 = keyFeatureInnerImage2.querySelector('div > picture > img').src;
-    keyFeatureInnerImage3 = keyFeatureInnerImage3.querySelector('div > picture > img').src;
+    keyFeatureInnerText1 = keyFeatureInnerText1?.querySelector('div > div') || "";
+    keyFeatureInnerText2 = keyFeatureInnerText2?.querySelector('div > div') || "";
+    keyFeatureInnerText3 = keyFeatureInnerText3?.querySelector('div > div') || "";
+    keyFeatureInnerImage1 = keyFeatureInnerImage1?.querySelector('div > picture > img')?.src || "";
+    keyFeatureInnerImage2 = keyFeatureInnerImage2?.querySelector('div > picture > img')?.src || "";
+    keyFeatureInnerImage3 = keyFeatureInnerImage3?.querySelector('div > picture > img')?.src || "";
 
     // Generate HTML
     /* const html = `<div class="homeloanteaser teaser">
@@ -210,4 +211,34 @@ function featureDropDownClick() {
             });
         })
     })
+}
+
+function viewLogic() {
+    document.querySelectorAll('.home-loans-products-wrapper.view-more-less-js').forEach(each => {
+        const wrapper = each.querySelector('.wrappercreation-wrapper');
+        const keyFeatures = wrapper.querySelectorAll('.keyfeatures-wrapper');
+        
+        keyFeatures.forEach((eachFeature, index) => {
+            eachFeature.classList.toggle("dp-none", index > 2);
+        });
+        
+        const buttonContainer = wrapper.querySelector('.button-container');
+        if (buttonContainer) {
+            const buttonText = buttonContainer.querySelector('a').textContent.trim();
+            buttonContainer.innerHTML = buttonText;
+            viewMoreLogic(each);
+        }
+    });
+}
+
+function viewMoreLogic(each) {
+    const buttonContainer = each.querySelector('.wrappercreation-wrapper .button-container');
+    buttonContainer.addEventListener('click', function () {
+        const isViewMore = this.textContent.toLowerCase() === 'view more';
+        this.innerText = isViewMore ? "View Less" : "View More";
+        
+        each.querySelectorAll('.keyfeatures-wrapper').forEach((eachFeature, index) => {
+            eachFeature.classList.toggle("dp-none", !isViewMore && index > 2);
+        });
+    });
 }

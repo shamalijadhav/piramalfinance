@@ -291,6 +291,23 @@
         "value": "",
         "label": "Tab Container",
         "description": "Sets the id of the tab."
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "isactive",
+        "value": "dp-none",
+        "label": "Is Active",
+        "options": [
+          {
+            "name": "Hide",
+            "value": "dp-none"
+          },
+          {
+            "name": "Active",
+            "value": "active"
+          }
+        ]
       }
     ]
   },
@@ -628,6 +645,107 @@
               {
                 "name": "Teaser 9",
                 "value": "teaser-block-nine"
+              }
+            ]
+          },
+          {
+            "name": "Col To Add",
+            "children": [
+              {
+                "name": "col-1",
+                "value": "col-1"
+              },
+              {
+                "name": "col-2",
+                "value": "col-2"
+              },
+              {
+                "name": "col-3",
+                "value": "col-3"
+              },
+              {
+                "name": "col-4",
+                "value": "col-4"
+              },
+              {
+                "name": "col-5",
+                "value": "col-5"
+              },
+              {
+                "name": "col-6",
+                "value": "col-6"
+              },
+              {
+                "name": "col-7",
+                "value": "col-7"
+              },
+              {
+                "name": "col-8",
+                "value": "col-8"
+              },
+              {
+                "name": "col-9",
+                "value": "col-9"
+              },
+              {
+                "name": "col-10",
+                "value": "col-10"
+              },
+              {
+                "name": "col-11",
+                "value": "col-11"
+              },
+              {
+                "name": "col-12",
+                "value": "col-12"
+              },
+              {
+                "name": "mob-col-1",
+                "value": "mob-col-1"
+              },
+              {
+                "name": "mob-col-2",
+                "value": "mob-col-2"
+              },
+              {
+                "name": "mob-col-3",
+                "value": "mob-col-3"
+              },
+              {
+                "name": "mob-col-4",
+                "value": "mob-col-4"
+              },
+              {
+                "name": "mob-col-5",
+                "value": "mob-col-5"
+              },
+              {
+                "name": "mob-col-6",
+                "value": "mob-col-6"
+              },
+              {
+                "name": "mob-col-7",
+                "value": "mob-col-7"
+              },
+              {
+                "name": "mob-col-8",
+                "value": "mob-col-8"
+              },
+              {
+                "name": "mob-col-9",
+                "value": "mob-col-9"
+              },
+              {
+                "name": "mob-col-10",
+                "value": "mob-col-10"
+              },
+              {
+                "name": "mob-col-11",
+                "value": "mob-col-11"
+              },
+              {
+                "name": "mob-col-12",
+                "value": "mob-col-12"
               }
             ]
           }

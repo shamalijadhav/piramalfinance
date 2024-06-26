@@ -26,7 +26,7 @@
     justify-content: start;
     padding: 1pc 24px 40px;
     flex-direction: column-reverse;
-    min-height: 305px;
+    max-height: 280px;
     height: 100%;
 }
 
@@ -138,9 +138,7 @@
 .home-loans-products-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .keyfeatures-wrapper .keyfeatures div .homeloanteaser .cmp-teaser .cmp-teaser__link .cmp-teaser__image .cmp-image .cmp-image__image{
     width: 100%;
     max-width: 137px;
-    height: auto;
-}
-.view-more-less-js .default-content-wrapper{
+    height: 96px;
 }
 .view-more-less-js .default-content-wrapper .button-container{
     color: #f26841;

@@ -4,7 +4,7 @@
     color: #000;
     display: block;
     font-family: Nunito-Extrabold, sans-serif;
-    font-size: 2pc;
+    font-size: 32px;
     font-weight: 800;
     line-height: 40px;
     padding-bottom: 8px;
@@ -34,7 +34,7 @@
     border-left: 1px solid #d7dce1;
     color: #4d4d4d;
     font-family: Nunito-Bold, sans-serif;
-    font-size: 1pc;
+    font-size: 16px;
     font-weight: 700;
     line-height: 24px;
     padding: 24px;
@@ -60,7 +60,7 @@
     border-left: 1px solid #d7dce1;
     color: #20303f;
     font-family: Nunito-Regular, sans-serif;
-    font-size: 1pc;
+    font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     padding: 24px;
@@ -86,13 +86,13 @@
     }
 
     .section.fees-charges-wrapper .code-wrapper .code > div > table > tbody > tr > th {
-        padding: 24px 9pt 24px 1pc;
+        padding: 24px 12px 24px 16px;
     }
 
     .section.fees-charges-wrapper .code-wrapper .code > div > table > tbody > tr > td {
-        font-size: 9pt;
-        line-height: 1pc;
-        padding: 24px 1pc;
+        font-size: 12px;
+        line-height: 16px;
+        padding: 24px 16px;
     }
 }
 /* fees and charges end */

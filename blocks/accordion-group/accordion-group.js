@@ -14,36 +14,28 @@ export default function decorate(block) {
     accordion.classList.add("accordion", "block");
     accordion.append(accordionDOM);
   });
-  
+
   // use same styling as shade-box from /docs
   block.classList.add("shade-box");
-  openFunctionFAQ(block);
+  try {
+    openFunctionFAQ(block);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 function openFunctionFAQ(block) {
-  const titles = document.querySelectorAll('.faq-accordion-css-with-orange-heading .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block details summary');
+  const titles = block.querySelectorAll("details summary");
 
-  titles.forEach(function(title) {
-      title.addEventListener('click', function() {
-          const content = this.parentElement.querySelector('div'); // Assuming <div> is the container of the content
-          
-          // // Toggle display of content
-          // if (content.style.display === 'block') {
-          //     content.style.display = 'none';
-          // } else {
-          //     content.style.display = 'block';
-          // }
-  
-          // Toggle active class on title
-          this.classList.toggle('active');
-  
-          // Collapse other sections and remove active class
-          titles.forEach(function(otherTitle) {
-              if (otherTitle !== title) {
-                  // otherTitle.classList.remove('active');
-                  // otherTitle.parentElement.querySelector('div').style.display = 'none';
-              }
-          });
+  titles.forEach(function (title) {
+    title.addEventListener("click", function () {
+      
+      titles.forEach(function (title) {
+        title.closest("details").removeAttribute("open");
+        title.classList.remove("active");
       });
+
+      this.classList.toggle("active");
+    });
   });
 }

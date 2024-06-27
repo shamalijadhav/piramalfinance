@@ -30,29 +30,28 @@ function renderTeaserHTMLFactory(props) {
   if (bgImageSrc) bgImageDiv.style.backgroundImage = `url(${bgImageSrc})`;
   if (bgBannerColor) bgImageDiv.style.backgroundColor = bgBannerColor;
 
-
   const frontImagePic = frontImage?.querySelector("picture");
   const frontImageDiv = createElement("div", "front-image");
   if (frontImagePic) frontImageDiv.append(frontImagePic);
 
   const titleDiv = createElement("div", "title", title?.innerHTML);
-  const descriptionDiv = createElement("div", "description", description?.innerHTML) ;
+  const descriptionDiv = createElement("div", "description", description?.innerHTML);
 
   let newButtonTag = "";
   const buttonHrefAnchor = buttonHref?.querySelector("a") || "";
   if (buttonHrefAnchor) {
     buttonHrefAnchor.innerText = button?.textContent.trim() || "";
     newButtonTag = buttonHrefAnchor.outerHTML;
-  }else if(button){
+  } else if (button) {
     newButtonTag = createElement("div", "button-container-text", button?.textContent.trim() || "");
   }
 
   bgImageDiv.append(frontImageDiv, titleDiv, descriptionDiv, newButtonTag);
 
   const teaserv2AttrGet = teaserv2Attr?.textContent?.trim() || "";
-  teaserv2Attr.closest('.teaserv2-wrapper').setAttribute('data-teaserv2-xf', teaserv2AttrGet);
+  teaserv2Attr.closest(".teaserv2-wrapper").setAttribute("data-teaserv2-xf", teaserv2AttrGet);
 
-  if(container.tagName === 'A') {
+  if (container.tagName === "A") {
     container.append(bgImageDiv);
   }
 
@@ -60,13 +59,14 @@ function renderTeaserHTMLFactory(props) {
 }
 
 function calculatorCallXf() {
-  document.querySelectorAll('[data-teaserv2-xf]').forEach( (eachTeaserv2) => {
-      eachTeaserv2.addEventListener('click', function (e) {
-          e.stopImmediatePropagation();
-          const xfGetAttr = this.getAttribute('data-teaserv2-xf');
-          const findSectionXFShow = document.querySelector('.'+xfGetAttr);
-          findSectionXFShow.querySelector('.overlayDiv').classList.remove('overlayDiv');
+  document.querySelectorAll("[data-teaserv2-xf]").forEach((eachTeaserv2) => {
+    if (eachTeaserv2.getAttribute("data-teaserv2-xf") !== "") {
+      eachTeaserv2.addEventListener("click", function (e) {
+        e.stopImmediatePropagation();
+        const xfGetAttr = this.getAttribute("data-teaserv2-xf");
+        const findSectionXFShow = document.querySelector("." + xfGetAttr);
+        // findSectionXFShow.querySelector(".overlayDiv").classList.remove("overlayDiv");
       });
+    }
   });
-
 }

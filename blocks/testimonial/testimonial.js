@@ -1,10 +1,11 @@
-import { fetchAPI, renderHelper } from "../../scripts/scripts.js";
+import { fetchAPI, getProps, renderHelper } from "../../scripts/scripts.js";
 import { customerTemplate, customerCard } from "./template.js";
 
 export default async function decorate(block) {
-    const props = Array.from(block.children).map(function (el) {
-        return el.innerHTML.includes("picture") ? el.querySelector("img").src.trim() : el.innerText.trim();
-    })
+    // const props = Array.from(block.children).map(function (el) {
+    //     return el.innerHTML.includes("picture") ? el.querySelector("img").src.trim() : el.innerText.trim();
+    // })
+    const props = getProps(block);
     const [url, time, ribbononeimg, ribbontwoimg, ribbonthreeimg, ribbonfourimg, classess] = props;
     block.classList.add(classess);
     try {

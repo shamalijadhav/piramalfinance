@@ -1,4 +1,4 @@
-.section .default-content-wrapper h2 {
+.section.list-content-wrapper .default-content-wrapper h2 {
     color: #000;
     display: block;
     font-family: Nunito-Extrabold, sans-serif;
@@ -8,7 +8,7 @@
     margin-bottom: 8px;
 }
 
-.section .default-content-wrapper p {
+.section.list-content-wrapper .default-content-wrapper p {
     color: #000;
     font-family: Nunito-Regular, sans-serif;
     font-size: 18px;
@@ -16,13 +16,13 @@
     line-height: 24px;
 }
 
-.section .default-content-wrapper ul {
+.section.list-content-wrapper .default-content-wrapper ul {
     margin-left: 24px;
     margin-top: 16px;
     list-style: none;
 }
 
-.section .default-content-wrapper ul > li {
+.section.list-content-wrapper .default-content-wrapper ul > li {
     color: #000;
     font-family: Nunito-Regular, sans-serif;
     font-size: 18px;
@@ -32,17 +32,17 @@
 }
 
 @media screen and (max-width: 768px) {
-    .section .default-content-wrapper h2 {
+    .section.list-content-wrapper .default-content-wrapper h2 {
         font-size: 18px;
         line-height: 24px;
     }
 
-    .section .default-content-wrapper p {
+    .section.list-content-wrapper .default-content-wrapper p {
         font-size: 14px;
         line-height: 20px;
     }
 
-    .section .default-content-wrapper ul > li {
+    .section.list-content-wrapper .default-content-wrapper ul > li {
         font-size: 14px;
         line-height: 24px;
     }

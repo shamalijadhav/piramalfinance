@@ -65,8 +65,17 @@ function calculatorCallXf() {
           e.stopImmediatePropagation();
           const xfGetAttr = this.getAttribute('data-teaserv2-xf');
           const findSectionXFShow = document.querySelector('.'+xfGetAttr);
-          findSectionXFShow.querySelector('.overlayDiv').classList.remove('overlayDiv');
+          findSectionXFShow.querySelector('.overlayDiv').classList.add('show');
+          let body=document.querySelector('body')
+          body.classList.add('bodyBlur');
+          body.addEventListener("click",function(e){
+            if(!e.target.closest('.cmp-container--elgcaloverlay')){
+              if (findSectionXFShow.querySelector('.overlayDiv').classList.contains('show')) {
+                findSectionXFShow.querySelector('.overlayDiv').classList.remove('show');
+                body.classList.remove('bodyBlur');
+            }  
+            }
+          })
       });
   });
-
 }

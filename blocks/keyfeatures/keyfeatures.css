@@ -161,6 +161,12 @@
     border-radius: 2px;
     transform: rotate(45deg);
 }
+.view-more-less-js .wrappercreation-wrapper .default-content-wrapper{
+    grid-column: 2;
+    justify-self: center;
+    margin: 40px auto 0;
+    width: fit-content;
+}
 @media screen and (max-width: 767.99px) {
     .section.home-loans-products-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container{
         grid-template-columns: 1fr;

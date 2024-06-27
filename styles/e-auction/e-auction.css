@@ -1,0 +1,14 @@
+.section.e-auction-wrapper{
+    display: flex;
+    justify-content: center;
+    margin: 0 8px;
+    overflow: hidden;
+}
+.section.e-auction-wrapper .code-wrapper{
+    padding: 10px;
+    border: 1px solid #333;
+    width: 90%;
+}
+.section.e-auction-wrapper .code-wrapper .code.block > div table tbody tr{
+    border: 1px solid #c5c4c4;
+}

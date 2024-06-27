@@ -222,7 +222,8 @@ async function loadingCustomCss() {
     `${window.hlx.codeBasePath}/styles/elgibility-criteria/elgibility-criteria.css`,
     `${window.hlx.codeBasePath}/styles/table/table.css`,
     `${window.hlx.codeBasePath}/styles/tab-with-cards/tab-with-cards.css`,
-    `${window.hlx.codeBasePath}/styles/e-auction/e-auction.css`
+    `${window.hlx.codeBasePath}/styles/e-auction/e-auction.css`,
+    `${window.hlx.codeBasePath}/styles/list-content/list-content.css`
   ]
 
   loadCssArray.forEach(async (eachCss) => {

@@ -246,6 +246,59 @@
     ]
   },
   {
+    "id": "testimonial",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "testimonial",
+        "value": "",
+        "label": "Testimonial Path",
+        "description": "Sets the path of the testimonial."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rotation-time",
+        "value": "",
+        "label": "Rotation Time",
+        "description": "Sets the rotation time of the testimonial."
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "fileReference1",
+        "label": "Ribbon Image 1",
+        "description": "Sets the ribbon image of the testimonial.",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "fileReference2",
+        "label": "Ribbon Image 2",
+        "description": "Sets the ribbon image of the testimonial.",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "fileReference3",
+        "label": "Ribbon Image 3",
+        "description": "Sets the ribbon image of the testimonial.",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "fileReference4",
+        "label": "Ribbon Image 4",
+        "description": "Sets the ribbon image of the testimonial.",
+        "multi": false
+      }
+    ]
+  },
+  {
     "id": "carousel",
     "fields": [
       {
@@ -1335,6 +1388,14 @@
         "value": "",
         "label": "Background Color Code",
         "description": "Background Color Code"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "teaserv2Attribute",
+        "value": "",
+        "label": "teaserv2 Attribute",
+        "description": "Set TeaserV2 Attribute"
       }
     ]
   },

@@ -85,6 +85,8 @@
 
 .section.banner-carousel-wrapper .carousel-wrapper .carousel.block {
   position: relative;
+  margin-top: unset;
+  margin-bottom: unset;
 }
 
 .banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser .foreground {

@@ -13,6 +13,9 @@ export default async function decorate(blocks) {
         xfDiv.innerHTML = xfResponseawait;
         blocks.innerHTML = ''
         blocks.append(xfDiv);
+        /* document.querySelectorAll('.overlayDiv') && document.querySelectorAll('.overlayDiv').forEach(function (eachOverlay) {
+            eachOverlay.classList.remove('overlayDiv');
+        }); */
         setTimeout(function () {
             xfDiv.querySelectorAll("script").forEach(function (script) {
                 const newscript = document.createElement("script");

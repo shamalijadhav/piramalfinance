@@ -69,9 +69,9 @@
     border-radius: 8px;
     color: #fff;
     font-family: "Nunito-Bold", sans-serif;
-    font-size: 9pt;
+    font-size: 12px;
     font-weight: 700;
-    line-height: 1pc;
+    line-height: 16px;
     padding: 8px 15px;
     bottom: 75px;
     left: 40px;
@@ -117,7 +117,7 @@
   font-family: "Nunito-Regular", sans-serif;
   font-size: 24px;
   font-weight: 400;
-  line-height: 2pc;
+  line-height: 32px;
 }
 
 .section.download-piramal-wrapper div:nth-child(3),
@@ -137,7 +137,7 @@
 .section.download-piramal-wrapper div:nth-child(3)>.imgwithlink>.image-href-desktop>a>picture>img,
 .section.download-piramal-wrapper div:nth-child(4)>.imgwithlink>.image-href-desktop>a>picture>img {
   height: 52px;
-  width: 11pc;
+  width: 176px;
   display: block;
 }
 

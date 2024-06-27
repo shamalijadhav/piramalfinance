@@ -60,7 +60,7 @@ export default async function decorate(block) {
         console.log(data);
 
         // Set initial display to none for all subAccordianContent elements
-        var subAccordianContents = document.querySelectorAll('.subAccordianContent');
+        var subAccordianContents = block.querySelectorAll('.subAccordianContent');
         subAccordianContents.forEach(function (content) {
             content.style.display = 'none';
         });
@@ -93,7 +93,7 @@ export default async function decorate(block) {
 
 
         // Event listeners for main accordion titles
-        var mainAccordionTitles = document.querySelectorAll('.subAccordianTitle');
+        var mainAccordionTitles = block.querySelectorAll('.subAccordianTitle');
         mainAccordionTitles.forEach(function (title) {
             title.addEventListener('click', handleMainAccordionClick);
         });
@@ -101,7 +101,7 @@ export default async function decorate(block) {
 
 
         // Event listeners for inner accordion titles
-        var innerAccordionTitles = document.querySelectorAll('.innersubAccordianTitle');
+        var innerAccordionTitles = block.querySelectorAll('.innersubAccordianTitle');
         innerAccordionTitles.forEach(function (title) {
             title.addEventListener('click', handleInnerAccordionClick);
         });

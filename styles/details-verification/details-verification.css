@@ -1,4 +1,8 @@
 /* Embedd Wrapper Start */
+.section.embed-wrapper .default-content-wrapper {
+    margin-bottom: 24px;
+}
+
 .section.embed-wrapper .default-content-wrapper h2 {
     color: #000;
     display: block;
@@ -7,7 +11,6 @@
     font-weight: 800;
     line-height: 40px;
     padding-bottom: 8px;
-    margin-bottom: 24px;
 }
 
 .section.embed-wrapper .embed-wrapper .embed {
@@ -29,6 +32,20 @@
     position: absolute;
     top: 0;
     width: 100%;
+}
+
+.section.embed-wrapper .embed-wrapper .embed .embed-placeholder .embed-placeholder-play>button {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.section.embed-wrapper .embed-wrapper .embed .embed-placeholder .embed-placeholder-play>button::before {
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 9px solid;
+    top: 3px;
+    left: 6px;
+    color: #f26841;
 }
 
 .section.embed-wrapper .embed-wrapper .embed>div {
@@ -53,18 +70,46 @@
     }
 
     .section.embed-wrapper .embed-wrapper .embed {
+        min-height: 204px;
         max-height: 204px;
         max-width: 100%;
     }
 
+    .section.embed-wrapper .embed-wrapper .embed>div {
+        min-height: 204px;
+    }
+
+    .section.embed-wrapper .embed-wrapper .embed .embed-placeholder {
+        min-height: 204px;
+    }
+
     .section.embed-wrapper .embed-wrapper .embed .embed-placeholder>picture>img {
-        height: 184px;
         object-fit: unset;
     }
 
     .section.embed-wrapper .embed-wrapper .embed>div>iframe {
         height: 204px;
         max-height: 204px;
+        object-fit: unset;
+    }
+
+    .section.embed-wrapper .embed-wrapper .embed .embed-placeholder .embed-placeholder-play>button {
+        width: 11px;
+        height: 11px;
+    }
+
+    .section.embed-wrapper .embed-wrapper .embed .embed-placeholder .embed-placeholder-play>button::before {
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        border-left: 4px solid;
+        top: 1.5px;
+        left: 2.5px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .section.embed-wrapper .embed-wrapper .embed .embed-placeholder>picture>img {
+        object-fit: unset;
     }
 }
 
@@ -161,39 +206,47 @@
         align-items: unset;
         flex-direction: column;
     }
-    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image::after{
+
+    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image::after {
         bottom: -9px;
         height: 16px;
         width: 16px;
     }
-    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .front-image{
+
+    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .front-image {
         margin: 0;
         position: absolute;
         top: 16px;
     }
-    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .title{
+
+    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .title {
         padding: 4px 4px 16px 47px;
         width: 100%;
     }
-    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .title>p{
+
+    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .title>p {
         font-size: 16px;
         line-height: 24px;
     }
-    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .front-image picture img{
+
+    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .front-image picture img {
         height: 31px;
-        width: 31px;    
+        width: 31px;
     }
-    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .description{
+
+    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .description {
         border-left: 0;
         border-top: 2px solid #e5e7eb;
         flex-basis: 100%;
         padding-top: 16px;
         width: 100%;
     }
-    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .description>ul{
+
+    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .description>ul {
         padding-left: 40px;
     }
-    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .description>ul>li{
+
+    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .description>ul>li {
         font-size: 12px;
         line-height: 20px;
     }

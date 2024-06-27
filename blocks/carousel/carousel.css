@@ -421,6 +421,13 @@
   }
 }
 
+/* @media screen and (min-width:768px) and (max-width:1024px) {
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background {
+    padding: 0 16px;
+    background-color: red;
+  }
+} */
+
 /* homepage top banner carousel css end */
 
 /* ----- TABLET ----- */

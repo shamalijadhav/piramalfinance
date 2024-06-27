@@ -523,6 +523,9 @@
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-one>.background .foreground .text .long-description>p{
     margin-top: 20px;
   }
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-two>.background .front-picture {
+    bottom: 0;
+  }
 }
 
 /* @media screen and (min-width:768px) and (max-width:1024px) {

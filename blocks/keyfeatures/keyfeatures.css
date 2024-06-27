@@ -26,7 +26,8 @@
     padding: 16px 24px;
     /* padding: 16px 24px 40px; */
     flex-direction: column-reverse;
-    height: 251px;
+    height: 220px;
+    row-gap: 10px;
 }
 
 .section.home-loans-products-wrapper .homeloanteaser a:nth-child(2) img{
@@ -236,16 +237,16 @@
         line-height: 28px;
     }
     .view-more-less-js .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .keyfeatures-wrapper:nth-child(n+4) {
-        margin-top: 20px;
-      }
-      .view-more-less-js .default-content-wrapper p strong{
-        font-size: 18px;
-        line-height: 24px;
-      }
-      .view-more-less-js .default-content-wrapper p {
-        font-size: 14px;
-        line-height: 20px;
-      }
+        margin-top: unset;
+    }
+    .view-more-less-js .default-content-wrapper p strong{
+    font-size: 18px;
+    line-height: 24px;
+    }
+    .view-more-less-js .default-content-wrapper p {
+    font-size: 14px;
+    line-height: 20px;
+    }
 }
 
 @media screen and (max-width: 1023.99px) {

@@ -1,7 +1,7 @@
 {
   "mappings": [
     "/content/piramalfinance-edge/:/", 
-    "/content/piramalfinance-edge/in/cf/happy-customer:/happy-customer.json"
+    "/content/piramalfinance-edge/happy-customer:/happy-customer.json"
   ],
   "includes": ["/content/piramalfinance-edge/"]
 }

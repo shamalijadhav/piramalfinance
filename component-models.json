@@ -1305,25 +1305,7 @@
   },
   {
     "id": "accordion-group",
-    "fields": [
-      {
-        "component": "Select",
-        "name": "type",
-        "value": "primary",
-        "label": "Type",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Single Item",
-            "value": "primary"
-          },
-          {
-            "name": "Multiple Items",
-            "value": "secondary"
-          }
-        ]
-      }
-    ]
+    "fields": []
   },
   {
     "id": "accordion",

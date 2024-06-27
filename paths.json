@@ -1,9 +1,5 @@
 {
   "mappings": [
-    "/content/piramalfinance-edge/:/",
-    "/content/piramalfinance-edge/in/cf/happy-customer.json:/happy-customer.json",
-    "/content/piramalfinance-edge/index/price-list:/auto-price-list.json",
-    "/content/piramalfinance-edge/in/cf:/happy-customer.json",
-    "/content/piramalfinance-edge/metadata:/metadata.json"
+    "/content/piramalfinance-edge/:/"
   ]
 }

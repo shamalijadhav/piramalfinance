@@ -295,6 +295,23 @@
         "label": "Ribbon Image 4",
         "description": "Sets the ribbon image of the testimonial.",
         "multi": false
+      },
+      {
+        "component": "select",
+        "name": "carouselshowtype",
+        "value": "primary",
+        "label": "Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
       }
     ]
   },

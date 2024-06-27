@@ -598,6 +598,12 @@ header nav .nav-sections .nav-drop::after{
   }
 }
 
+@media screen and (max-width: 1400px) {
+  .header-wrapper .nav-wrapper nav {
+    max-width: 76.1% !important;
+  }
+}
+
 /* header custom css */
 
 

@@ -1,33 +1,19 @@
-import { renderHelper } from "../../scripts/scripts.js";
+import { fetchAPI, renderHelper } from "../../scripts/scripts.js";
+import { customerTemplate, customerCard } from "./template.js";
 
-export default function decorate(block) {
-    console.log("testimonial :: ", block);
-    const [url , ] = block.children;
-    // fetch()
+export default async function decorate(block) {
+    const props = Array.from(block.children).map(function (el) {
+        return el.innerHTML.includes("picture") ? el.querySelector("img").src.trim() : el.innerText.trim();
+    })
+    const [url, time, ribbononeimg, ribbontwoimg, ribbonthreeimg, ribbonfourimg] = props;
+    try {
+        const resp = await fetchAPI("GET", url)
+        console.log(resp);
+    } catch (error) {
+        console.error(error);
+    }
 
-    const template = `
-<div class="forName">
-    <div class="customer-info {customerClass}" id="{customerId}">
-        <div class="card-images">
-            <img src="{customerImage}" alt="cutomer img" class="personimg">
-        </div>
-        <div class="zoom-circleone"></div>
-        <div class="zoom-circletwo"></div>
-        <div class="zoom-circlethree"></div>
-        <div class="customer-comments">
-            <div class="arrowup"></div>
-            <div class="comments">
-                <p>
-                    <span class="{customerDetailsClass} custinfo">{customerDetails.plaintext}</span>
-                    <span class="{customerNameClass} custname">{customerName}</span>
-                    <span class="{customerProfessionClass} custprofession">{customerProfession}</span>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-`
-    block.innerHTML = renderHelper([
+    const cards = renderHelper([
         {
             ":path": "https://publish-p133703-e1305981.adobeaemcloud.com/content/piramalfinance-edge/cf/happy-customer/jcr:content/row",
             "customerImage": "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/homepage/testimonials/ch-maruthi-prasad.webp",
@@ -38,7 +24,7 @@ export default function decorate(block) {
             "customerProfession": "VT Engineering, Indore",
             "customerProfessionClass": "",
             "customerId": "customer5",
-            "customerClass": ""
+            "customerClass": "customerclassfive"
         },
         {
             ":path": "https://publish-p133703-e1305981.adobeaemcloud.com/content/piramalfinance-edge/cf/happy-customer/jcr:content/row_1912225365",
@@ -88,7 +74,13 @@ export default function decorate(block) {
             "customerId": "customer1",
             "customerClass": "customerclassone"
         }
-    ], template)
+    ], customerCard)
+
+    block.innerHTML = renderHelper([
+        {
+            ribbononeimg, ribbontwoimg, ribbonthreeimg, ribbonfourimg, cards
+        }
+    ], customerTemplate);
 
     function rotateData() {
         const customerDivs = document.querySelectorAll('.customer-info');
@@ -101,21 +93,17 @@ export default function decorate(block) {
                 description: div.querySelector('.comments .custinfo').textContent,
                 name: div.querySelector('.comments .custname').textContent,
                 custprofession: div.querySelector('.comments .custprofession').textContent,
-
-
             };
             customerDataArray.push(customerData);
         })
         rotateCustomerDataArray(customerDataArray);
-
     }
-    // var time = 200;
     if (time) {
-        var timevalue = time.value;
+        // var timevalue = time;
         setInterval(() => {
+            console.log("Rora");
             rotateData();
-
-        }, timevalue);
+        }, time);
     }
 
 

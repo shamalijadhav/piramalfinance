@@ -33,6 +33,7 @@ export function moveAttributes(from, to, attributes) {
   });
 }
 
+/* helper script start */
 export function renderHelper(data, template, callBack) {
   var dom = document.createElement("div");
   dom.innerHTML = template;
@@ -69,6 +70,17 @@ export function renderHelper(data, template, callBack) {
   return dom.innerHTML;
 }
 
+export function fetchAPI(method, url, data) {
+  return new Promise(async function (resolve, reject) {
+    try {
+      const resp = await fetch(url);
+      resolve(resp);
+    } catch (error) {
+      reject(error);
+    }
+  })
+}
+/* helper script end */
 
 /**
  * Move instrumentation attributes from a given element to another given element.

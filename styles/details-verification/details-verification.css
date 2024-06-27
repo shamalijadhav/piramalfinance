@@ -3,7 +3,7 @@
     color: #000;
     display: block;
     font-family: Nunito-Extrabold, sans-serif;
-    font-size: 2pc;
+    font-size: 32px;
     font-weight: 800;
     line-height: 40px;
     padding-bottom: 8px;
@@ -93,7 +93,7 @@
     padding: 16px 32px;
     position: relative;
     border: 1px solid #fac3b3;
-    border-radius: 1pc;
+    border-radius: 16px;
 }
 
 .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image::after {
@@ -123,11 +123,14 @@
 .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .title {
     color: #333;
     flex-basis: 36.4%;
-    font-family: Nunito-Extrabold, sans-serif;
+    padding: 0 5px 0 16px;
+}
+
+.section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .title>p {
+    font-family: 'Nunito-Extrabold', sans-serif;
     font-size: 20px;
     font-weight: 800;
     line-height: 30px;
-    padding: 0 5px 0 1pc;
 }
 
 .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .description {
@@ -143,7 +146,7 @@
     list-style-type: disc;
     color: #333;
     font-family: Nunito-Regular, sans-serif;
-    font-size: 1pc;
+    font-size: 16px;
     font-weight: 400;
     line-height: 40px;
 }
@@ -166,13 +169,15 @@
     .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .front-image{
         margin: 0;
         position: absolute;
-        top: 20px;
+        top: 16px;
     }
     .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .title{
+        padding: 4px 4px 16px 47px;
+        width: 100%;
+    }
+    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .title>p{
         font-size: 16px;
         line-height: 24px;
-        padding: 4px 4px 1pc 47px;
-        width: 100%;
     }
     .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .front-image picture img{
         height: 31px;
@@ -182,14 +187,14 @@
         border-left: 0;
         border-top: 2px solid #e5e7eb;
         flex-basis: 100%;
-        padding-top: 1pc;
+        padding-top: 16px;
         width: 100%;
     }
     .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .description>ul{
         padding-left: 40px;
     }
     .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .description>ul>li{
-        font-size: 9pt;
+        font-size: 12px;
         line-height: 20px;
     }
 }

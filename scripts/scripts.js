@@ -33,6 +33,43 @@ export function moveAttributes(from, to, attributes) {
   });
 }
 
+export function renderHelper(data, template, callBack) {
+  var dom = document.createElement("div");
+  dom.innerHTML = template;
+  var loopEl = dom.getElementsByClassName("forName");
+  Array.prototype.slice.call(loopEl).forEach(function (eachLoop) {
+    var templates = '';
+    var localtemplate = eachLoop.innerHTML;
+    for (var key in data) {
+      if (Object.hasOwnProperty.call(data, key)) {
+        var element = data[key];
+        // data.forEach(function (element, index) {
+        var dataItem = callBack ? callBack(element, key) : element;
+        var keys = Object.keys(dataItem);
+        var copyTemplate = localtemplate;
+        copyTemplate.split("{").forEach(function (ecahKey) {
+          var key = ecahKey.split("}")[0];
+          var keys = key.split(".");
+          var value = dataItem;
+          keys.forEach(function (key) {
+            if (value && value.hasOwnProperty(key)) {
+              value = value[key];
+            } else {
+              value = "";
+            }
+          });
+          copyTemplate = copyTemplate.replace("{" + key + "}", value);
+        });
+        templates += copyTemplate;
+        // });
+      }
+    }
+    eachLoop.outerHTML = templates;
+  });
+  return dom.innerHTML;
+}
+
+
 /**
  * Move instrumentation attributes from a given element to another given element.
  * @param {Element} from the element to copy attributes from
@@ -149,13 +186,13 @@ async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
-  await loadingCustomCss(); 
+  await loadingCustomCss();
 }
 
 loadPage();
 
 
-async function loadingCustomCss(){
+async function loadingCustomCss() {
   // load custom css files
   var loadCssArray = [
     `${window.hlx.codeBasePath}/styles/loanproducts/loanproducts.css`,
@@ -175,8 +212,8 @@ async function loadingCustomCss(){
     `${window.hlx.codeBasePath}/styles/tab-with-cards/tab-with-cards.css`
   ]
 
-  loadCssArray.forEach( async (eachCss) => {
-      await loadCSS(eachCss);
+  loadCssArray.forEach(async (eachCss) => {
+    await loadCSS(eachCss);
   });
 
 }

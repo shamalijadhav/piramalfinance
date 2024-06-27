@@ -6,9 +6,14 @@ carouselContainerMapping["detailed-teaser"] = generateDetailedTeaserDOM;
 carouselContainerMapping["ss-teaser"] = generateDetailedTeaserDOM;
 
 export default function decorate(block) {
-    const tabid = block.children[0].innerText;
-    const tabclass = block.children[1].innerText.trim();
+    const tabid = block.children[0].innerText.trim();
+    const tabclass = block.children[1].innerText.trim() || "dp-none";
+    const section = block.closest(".section");
+    const tabName = section.querySelector("#" + tabid);
     block.classList.add(tabclass);
+    if (tabclass === "active") {
+        tabName.classList.add("active");
+    }
     const panelContainer = document.createElement('div');
     panelContainer.classList.add('panel-container');
     block.dataset.id = tabid.trim().replace(/ /g, '-');

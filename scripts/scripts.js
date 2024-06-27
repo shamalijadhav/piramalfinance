@@ -80,6 +80,16 @@ export function fetchAPI(method, url, data) {
     }
   })
 }
+
+export function getProps(block, config) {
+  return Array.from(block.children).map(function (el) {
+    if (config?.isPictureObject) {
+      return el.innerHTML.includes("picture") ? el.querySelector("picture").parent : el.innerText.trim();
+    } else {
+      return el.innerHTML.includes("picture") ? el.querySelector("img").src.trim() : el.innerText.trim();
+    }
+  })
+}
 /* helper script end */
 
 /**
@@ -222,7 +232,8 @@ async function loadingCustomCss() {
     `${window.hlx.codeBasePath}/styles/elgibility-criteria/elgibility-criteria.css`,
     `${window.hlx.codeBasePath}/styles/table/table.css`,
     `${window.hlx.codeBasePath}/styles/tab-with-cards/tab-with-cards.css`,
-    `${window.hlx.codeBasePath}/styles/e-auction/e-auction.css`
+    `${window.hlx.codeBasePath}/styles/e-auction/e-auction.css`,
+    `${window.hlx.codeBasePath}/styles/list-content/list-content.css`
   ]
 
   loadCssArray.forEach(async (eachCss) => {

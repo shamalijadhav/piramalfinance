@@ -6,7 +6,7 @@ export default async function decorate(block) {
     const props = Array.from(block.children).map(function (el) {
         return el.innerHTML.includes("picture") ? el.querySelector("img").src.trim() : el.innerText.trim();
     })
-    const [url, rotationTime, ribbononeimg, ribbontwoimg, ribbonthreeimg, ribbonfourimg] = props;
+    const [url, time, ribbononeimg, ribbontwoimg, ribbonthreeimg, ribbonfourimg] = props;
     try {
         const resp = await fetchAPI("GET", url)
         console.log(resp.json());
@@ -14,6 +14,7 @@ export default async function decorate(block) {
         console.error(error);
     }
 
+    
     block.innerHTML = renderHelper([
         {
             ":path": "https://publish-p133703-e1305981.adobeaemcloud.com/content/piramalfinance-edge/cf/happy-customer/jcr:content/row",

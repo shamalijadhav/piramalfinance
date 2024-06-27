@@ -22,7 +22,7 @@ footer.footer-wrapper {
 /* Footer max Width Container */
 footer.footer-wrapper .footer {
   margin: 0 auto;
-  max-width: 1320px;
+  max-width: 1240px;
   padding: 2rem 0.75rem;
 }
 .footer-wrapper p {
@@ -285,5 +285,18 @@ color: #F58667;
   }
   .footer-section-third {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  footer.footer-wrapper .footer {
+    max-width: 76.1%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  footer.footer-wrapper .footer {
+      max-width: 100% ;
+      padding: 0 16px;
   }
 }

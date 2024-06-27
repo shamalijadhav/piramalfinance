@@ -5,7 +5,8 @@ export default async function decorate(block) {
     const props = Array.from(block.children).map(function (el) {
         return el.innerHTML.includes("picture") ? el.querySelector("img").src.trim() : el.innerText.trim();
     })
-    const [url, time, ribbononeimg, ribbontwoimg, ribbonthreeimg, ribbonfourimg] = props;
+    const [url, time, ribbononeimg, ribbontwoimg, ribbonthreeimg, ribbonfourimg , classess] = props;
+    block.classList.add(classess);
     try {
         const resp = await fetchAPI("GET", url)
         console.log(resp);

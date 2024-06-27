@@ -414,7 +414,7 @@ header nav .nav-sections .nav-drop::after{
   content: '';
   display: inline-block;
   position: absolute;
-  top: 9px;
+  top: 12px;
   right: -15px;
   transform: rotate(135deg);
   width: 8px;
@@ -423,6 +423,10 @@ header nav .nav-sections .nav-drop::after{
   border: 2px solid currentcolor;
   border-radius: 0 1px 0 0;
   border-width: 2px 2px 0 0;
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li.nav-drop>p:last-child::after{
+    top: 30px;
 }
 
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li.nav-drop[aria-expanded="true"]>p::after {

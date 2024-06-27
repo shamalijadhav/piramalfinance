@@ -68,7 +68,7 @@
     vertical-align: middle;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .section.fees-charges-wrapper .default-content-wrapper h2 {
         font-size: 20px;
         line-height: 28px;
@@ -95,4 +95,5 @@
         padding: 24px 16px;
     }
 }
+
 /* fees and charges end */

@@ -16,13 +16,13 @@ export default async function decorate(blocks) {
         /* document.querySelectorAll('.overlayDiv') && document.querySelectorAll('.overlayDiv').forEach(function (eachOverlay) {
             eachOverlay.classList.remove('overlayDiv');
         }); */
-        setTimeout(function () {
+        /* setTimeout(function () {
             xfDiv.querySelectorAll("script").forEach(function (script) {
                 const newscript = document.createElement("script");
                 newscript.src = script.src;
                 blocks.append(newscript);
             })
-        }, 1000)
+        }, 1000) */
     } catch (error) {
         console.error(error);
     }

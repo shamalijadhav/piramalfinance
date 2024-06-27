@@ -13,7 +13,7 @@
     display: grid;
     grid-template-rows: auto 1fr;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    column-gap: 20px;
 }
 .section.home-loans-products-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .keyfeatures-wrapper {
     position: relative;
@@ -22,11 +22,10 @@
     background: #fff9f2;
     border-radius: 9pt 9pt 0 0;
     display: flex;
-    gap: 24px;
     justify-content: start;
     padding: 1pc 24px 40px;
     flex-direction: column-reverse;
-    max-height: 280px;
+    min-height: 230px;
     height: 100%;
 }
 
@@ -162,11 +161,28 @@
     transform: rotate(45deg);
 }
 .view-more-less-js .wrappercreation-wrapper .default-content-wrapper{
-    grid-column: 2;
+    /* grid-column: 2;
     justify-self: center;
     margin: 40px auto 0;
-    width: fit-content;
+    width: fit-content; */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
+.view-more-less-js .wrappercreation-wrapper .wrappercreation .wrapper-creation-container{
+    position: relative;
+    padding-bottom: 50px;
+}
+/* .view-more-less-js .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .keyfeatures-wrapper{
+    margin-top: 20px;
+} */
+.view-more-less-js .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .keyfeatures-wrapper:nth-child(n+4) {
+    margin-top: 20px;
+  }
+/* .view-more-less-js .wrappercreation-wrapper .wrappercreation .wrapper-creation-container{
+    column-gap: 20px;
+  } */
 @media screen and (max-width: 767.99px) {
     .section.home-loans-products-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container{
         grid-template-columns: 1fr;

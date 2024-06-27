@@ -85,13 +85,6 @@
     margin-right: 8px;
     position: relative;
 }
-.section.carousel-articles-wrapper .button-container ::after{
-   content: '';
-   height: 14px;
-   width: 7px;
-   top: 0;
-   position: absolute;
-}
 .section.carousel-articles-wrapper .long-description ul li a {
     color: #333;
     display: inline-block;
@@ -104,6 +97,7 @@
 }
 .section.carousel-articles-wrapper .default-content-wrapper .button-container{
     text-align: center;
+    position: relative;
 }
 
 .section.carousel-articles-wrapper .default-content-wrapper .button-container a {
@@ -120,8 +114,18 @@
     overflow: unset;
 }
 .section.carousel-articles-wrapper .default-content-wrapper .button-container ::after{
-    content: '>';
-    right: -13px;
+    content: '';
+    position: absolute;
+    border: solid #f26841;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    top: 11px;
+    height: 3px;
+    width: 3px;
+    right: -16px;
+    border-radius: 2px;
+    transform: rotate(-45deg);
 }
 .section.carousel-articles-wrapper .carousel.block .panel-container .teaser.block{
     width: 28%;
@@ -154,63 +158,63 @@
     .section.carousel-articles-wrapper .default-content-wrapper .button-container{
         margin-top: 24px;
     }
-    @media screen and (max-width: 767.99px) {
-        .section.carousel-articles-wrapper .carousel.block .panel-container .teaser.block{
-            width: 100%;
-        }
-        .section.carousel-articles-wrapper .carousel-wrapper .carousel .carousel-navigation-buttons .slide-prev,
-        .section.carousel-articles-wrapper .carousel-wrapper .carousel .carousel-navigation-buttons .slide-next{
-            display: none;
-        }
-        .section.carousel-articles-wrapper .carousel-wrapper .carousel .button-container button{
-            height: 4px;
-            width: 4px;
-            margin: 0 4px;
-            background: var(--swiper-pagination-bullet-inactive-color, #000);
-            opacity: var(--swiper-pagination-bullet-inactive-opacity, .2);
-        }
-        .section.carousel-articles-wrapper .carousel .button-container button.selected{
-            background-color: #000;
-            border-radius: 4px;
-            height: 4px;
-            width: 16px;
-            opacity: 1;
-        }
-        .section.carousel-articles-wrapper .carousel-wrapper .carousel .button-container{
-            display: flex;
-            padding-top: 45px;
-        }
-        .section.carousel-articles-wrapper .carousel-wrapper .carousel .panel-container .teaser .background .front-picture picture img{
-            display: block;
-        }
-        .section.carousel-articles-wrapper .default-content-wrapper #recommended-articles{
-            font-size: 20px;
-            line-height: 28px;
-            padding-bottom: 4px;
-        }
-        .section.carousel-articles-wrapper .carousel-wrapper .carousel{
-            margin-top: unset;
-        }
-        .section.carousel-articles-wrapper .default-content-wrapper .button-container a{
-            font-size: 18px;
-            line-height: 28px;
-        }
-        .section.carousel-articles-wrapper .default-content-wrapper .button-container{
-            margin-top: 24px;
-        }
-        .section.carousel-articles-wrapper .default-content-wrapper p{
-            display: none;
-        }
-        .section.carousel-articles-wrapper .default-content-wrapper .button-container{
-            display: block;
-        }
-        .section.carousel-articles-wrapper .carousel-wrapper .carousel{
-            margin: unset;
-        }
-        .section.carousel-articles-wrapper .default-content-wrapper{
-            padding: unset;
-        }
-        .section.carousel-articles-wrapper .default-content-wrapper .button-container ::after{
-            top: -1px;
-        }
+@media screen and (max-width: 767.99px) {
+    .section.carousel-articles-wrapper .carousel.block .panel-container .teaser.block{
+        width: 100%;
     }
+    .section.carousel-articles-wrapper .carousel-wrapper .carousel .carousel-navigation-buttons .slide-prev,
+    .section.carousel-articles-wrapper .carousel-wrapper .carousel .carousel-navigation-buttons .slide-next{
+        display: none;
+    }
+    .section.carousel-articles-wrapper .carousel-wrapper .carousel .button-container button{
+        height: 4px;
+        width: 4px;
+        margin: 0 4px;
+        background: var(--swiper-pagination-bullet-inactive-color, #000);
+        opacity: var(--swiper-pagination-bullet-inactive-opacity, .2);
+    }
+    .section.carousel-articles-wrapper .carousel .button-container button.selected{
+        background-color: #000;
+        border-radius: 4px;
+        height: 4px;
+        width: 16px;
+        opacity: 1;
+    }
+    .section.carousel-articles-wrapper .carousel-wrapper .carousel .button-container{
+        display: flex;
+        padding-top: 45px;
+    }
+    .section.carousel-articles-wrapper .carousel-wrapper .carousel .panel-container .teaser .background .front-picture picture img{
+        display: block;
+    }
+    .section.carousel-articles-wrapper .default-content-wrapper #recommended-articles{
+        font-size: 20px;
+        line-height: 28px;
+        padding-bottom: 4px;
+    }
+    .section.carousel-articles-wrapper .carousel-wrapper .carousel{
+        margin-top: unset;
+    }
+    .section.carousel-articles-wrapper .default-content-wrapper .button-container a{
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .section.carousel-articles-wrapper .default-content-wrapper .button-container{
+        margin-top: 24px;
+    }
+    .section.carousel-articles-wrapper .default-content-wrapper p{
+        display: none;
+    }
+    .section.carousel-articles-wrapper .default-content-wrapper .button-container{
+        display: block;
+    }
+    .section.carousel-articles-wrapper .carousel-wrapper .carousel{
+        margin: unset;
+    }
+    .section.carousel-articles-wrapper .default-content-wrapper{
+        padding: unset;
+    }
+    .section.carousel-articles-wrapper .default-content-wrapper .button-container ::after{
+        top: -1px;
+    }
+}

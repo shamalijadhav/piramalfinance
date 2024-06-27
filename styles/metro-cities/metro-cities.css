@@ -12,7 +12,7 @@
     color: #000;
     display: block;
     font-family: 'Nunito-Extrabold', sans-serif;
-    font-size: 2pc;
+    font-size: 32px;
     font-weight: 800;
     line-height: 40px;
     padding-bottom: 8px;
@@ -50,9 +50,12 @@
 .section.metro-cities-wrapper .default-content-wrapper>ul li a {
     color: #333;
     font-family: 'Nunito-Regular', sans-serif;
-    font-size: 1pc;
+    font-size: 16px;
     font-weight: 700;
     line-height: 24px;
+}
+.section.metro-cities-wrapper .default-content-wrapper>ul li a:hover{
+    color: #f26841
 }
 
 @media screen and (max-width:768px) {

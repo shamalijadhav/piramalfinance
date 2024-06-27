@@ -1388,6 +1388,14 @@
         "value": "",
         "label": "Background Color Code",
         "description": "Background Color Code"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "teaserv2Attribute",
+        "value": "",
+        "label": "teaserv2 Attribute",
+        "description": "Set TeaserV2 Attribute"
       }
     ]
   },

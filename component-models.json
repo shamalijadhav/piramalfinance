@@ -316,6 +316,36 @@
     ]
   },
   {
+    "id": "financialreports",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "financialreports",
+        "value": "",
+        "label": "Financial Reports Path",
+        "description": "Sets the path of the financial reports."
+      },
+      {
+        "component": "select",
+        "name": "financialreportsshowtype",
+        "value": "primary",
+        "label": "Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "carousel",
     "fields": [
       {

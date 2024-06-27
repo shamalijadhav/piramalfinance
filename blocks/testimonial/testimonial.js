@@ -24,7 +24,7 @@ export default async function decorate(block) {
             "customerProfession": "VT Engineering, Indore",
             "customerProfessionClass": "",
             "customerId": "customer5",
-            "customerClass": ""
+            "customerClass": "customerclassfive"
         },
         {
             ":path": "https://publish-p133703-e1305981.adobeaemcloud.com/content/piramalfinance-edge/cf/happy-customer/jcr:content/row_1912225365",
@@ -100,7 +100,7 @@ export default async function decorate(block) {
     }
     if (time) {
         // var timevalue = time;
-        setTimeout(() => {
+        setInterval(() => {
             console.log("Rora");
             rotateData();
         }, time);

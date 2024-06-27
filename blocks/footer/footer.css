@@ -289,7 +289,14 @@ color: #F58667;
 }
 
 @media screen and (max-width: 1400px) {
-  .footer.footer-wrapper .footer {
+  footer.footer-wrapper .footer {
     max-width: 76.1%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  footer.footer-wrapper .footer {
+      max-width: 100% ;
+      padding: 0 16px;
   }
 }

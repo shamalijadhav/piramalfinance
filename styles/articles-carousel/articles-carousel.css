@@ -72,8 +72,8 @@
     padding: unset;
     margin: unset;
     position: absolute;
-    right: -8%;
-    top: 42%;
+    right: -9%;
+    top: 43%;
 }
 .section.carousel-articles-wrapper .button-container a{
     color: #f26841;
@@ -128,7 +128,7 @@
     transform: rotate(-45deg);
 }
 .section.carousel-articles-wrapper .carousel.block .panel-container .teaser.block{
-    width: 28%;
+    width: 27%;
     padding: 8px;
     margin-right: 10px;
 }

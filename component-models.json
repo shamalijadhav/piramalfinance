@@ -346,6 +346,69 @@
     ]
   },
   {
+    "id": "offer-documents",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "offer-documents-title",
+        "value": "",
+        "label": "Offer documents title",
+        "description": "Sets the title of the documents."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "documents-disclaimer-title",
+        "value": "",
+        "label": "Documents disclaimer title",
+        "description": "Sets the disclaimer title of the documents."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "documents-disclaimer-subtitle",
+        "value": "",
+        "label": "Documents disclaimer sub title",
+        "description": "Sets the disclaimer sub title of the documents."
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "documents-disclaimer-content",
+        "value": "",
+        "label": "Documents disclaimer content",
+        "raw": true,
+        "description": "Sets the disclaimer content of the documents."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "documents-url",
+        "value": "",
+        "label": "Documents URL",
+        "description": "Sets the url of the documents."
+      },
+      {
+        "component": "select",
+        "name": "disclaimershowtype",
+        "value": "primary",
+        "label": "Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "carousel",
     "fields": [
       {

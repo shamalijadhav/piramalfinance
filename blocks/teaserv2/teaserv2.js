@@ -59,14 +59,22 @@ function renderTeaserHTMLFactory(props) {
 }
 
 function calculatorCallXf() {
-  document.querySelectorAll("[data-teaserv2-xf]").forEach((eachTeaserv2) => {
-    if (eachTeaserv2.getAttribute("data-teaserv2-xf") !== "") {
-      eachTeaserv2.addEventListener("click", function (e) {
-        e.stopImmediatePropagation();
-        const xfGetAttr = this.getAttribute("data-teaserv2-xf");
-        const findSectionXFShow = document.querySelector("." + xfGetAttr);
-        // findSectionXFShow.querySelector(".overlayDiv").classList.remove("overlayDiv");
-      });
-    }
-  });
-}
+  document.querySelectorAll('[data-teaserv2-xf]').forEach( (eachTeaserv2) => {
+      eachTeaserv2.addEventListener('click', function (e) {
+          e.stopImmediatePropagation();
+          const xfGetAttr = this.getAttribute('data-teaserv2-xf');
+          const findSectionXFShow = document.querySelector('.'+xfGetAttr);
+          findSectionXFShow.querySelector('.overlayDiv').classList.add('show');
+          let body=document.querySelector('body')
+          body.classList.add('bodyBlur');
+          body.addEventListener("click",function(e){
+            if(!e.target.closest('.cmp-container--elgcaloverlay')){
+              if (findSectionXFShow.querySelector('.overlayDiv').classList.contains('show')) {
+                findSectionXFShow.querySelector('.overlayDiv').classList.remove('show');
+                body.classList.remove('bodyBlur');
+            }  
+            }
+          })
+      })
+    })
+  }

@@ -384,6 +384,14 @@
       {
         "component": "text",
         "valueType": "string",
+        "name": "documents-btn-text",
+        "value": "I Agree",
+        "label": "Documents Button Text",
+        "description": "Sets the text of the button."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
         "name": "documents-url",
         "value": "",
         "label": "Documents URL",

@@ -3,10 +3,15 @@ export default function decorate(block) {
   const renderTeaserHTML = renderTeaserHTMLFactory(props);
   block.innerHTML = "";
   block.append(renderTeaserHTML);
+  // try {
+  //   calculatorCallXf(block);
+  // } catch (error) {
+    
+  // }
 }
 
 function renderTeaserHTMLFactory(props) {
-  const [mainHref, bgImage, frontImage, title, description, mobileDescription, button, buttonHref, bgColor] = props;
+  const [mainHref, bgImage, frontImage, title, description, mobileDescription, button, buttonHref, bgColor, teaserv2Attr] = props;
 
   const createElement = (tag, className, content) => {
     const element = document.createElement(tag);
@@ -46,3 +51,9 @@ function renderTeaserHTMLFactory(props) {
 
   return container;
 }
+
+// function calculatorCallXf(block) {
+//   debugger;
+
+
+// }

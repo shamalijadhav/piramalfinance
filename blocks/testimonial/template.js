@@ -1,4 +1,5 @@
 export const customerTemplate = `
+<div class="forName">
 <div class="happy-customer">
     <div class="info-card">
         <img src="{ribbononeimg}" alt="{ribbononealt}" class="left-top">
@@ -6,12 +7,14 @@ export const customerTemplate = `
         <img src="{ribbonthreeimg}" alt="{ribbonthreealt}" class="left-bottom">
         <img src="{ribbonfourimg}" alt="{ribbonfouralt}" class="right-bottom">
         <input type="hidden" id="settime" value="{rotationtime}">
-        {card}
+        {cards}
     </div>
+</div>
 </div>
 `
 export const customerCard =
     `
+<div class="forName">
 <div class="customer-info {customerClass}" id="{customerId}">
     <div class="card-images">
         <img src="{customerImage}" alt="cutomer img" class="personimg">
@@ -29,6 +32,7 @@ export const customerCard =
             </p>
         </div>
     </div>
+</div>
 </div>
 `
 

@@ -2,20 +2,18 @@ import { fetchAPI, renderHelper } from "../../scripts/scripts.js";
 import { customerTemplate, customerCard } from "./template.js";
 
 export default async function decorate(block) {
-    console.log("testimonial :: ", block);
     const props = Array.from(block.children).map(function (el) {
         return el.innerHTML.includes("picture") ? el.querySelector("img").src.trim() : el.innerText.trim();
     })
     const [url, time, ribbononeimg, ribbontwoimg, ribbonthreeimg, ribbonfourimg] = props;
     try {
         const resp = await fetchAPI("GET", url)
-        console.log(resp.json());
+        console.log(resp);
     } catch (error) {
         console.error(error);
     }
 
-    
-    block.innerHTML = renderHelper([
+    const cards = renderHelper([
         {
             ":path": "https://publish-p133703-e1305981.adobeaemcloud.com/content/piramalfinance-edge/cf/happy-customer/jcr:content/row",
             "customerImage": "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/homepage/testimonials/ch-maruthi-prasad.webp",
@@ -76,7 +74,13 @@ export default async function decorate(block) {
             "customerId": "customer1",
             "customerClass": "customerclassone"
         }
-    ], customerTemplate)
+    ], customerCard)
+
+    block.innerHTML = renderHelper([
+        {
+            ribbononeimg, ribbontwoimg, ribbonthreeimg, ribbonfourimg, cards
+        }
+    ], customerTemplate);
 
     function rotateData() {
         const customerDivs = document.querySelectorAll('.customer-info');
@@ -93,15 +97,13 @@ export default async function decorate(block) {
             customerDataArray.push(customerData);
         })
         rotateCustomerDataArray(customerDataArray);
-
     }
-    // var time = 200;
     if (time) {
-        var timevalue = time.value;
-        setInterval(() => {
+        // var timevalue = time;
+        setTimeout(() => {
+            console.log("Rora");
             rotateData();
-
-        }, timevalue);
+        }, time);
     }
 
 

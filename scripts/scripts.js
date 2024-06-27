@@ -80,6 +80,16 @@ export function fetchAPI(method, url, data) {
     }
   })
 }
+
+export function getProps(block, config) {
+  return Array.from(block.children).map(function (el) {
+    if (config?.isPictureObject) {
+      return el.innerHTML.includes("picture") ? el.querySelector("picture").parent : el.innerText.trim();
+    } else {
+      return el.innerHTML.includes("picture") ? el.querySelector("img").src.trim() : el.innerText.trim();
+    }
+  })
+}
 /* helper script end */
 
 /**

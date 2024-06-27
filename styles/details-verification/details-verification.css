@@ -85,7 +85,7 @@
     height: 100%;
 }
 
-.section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image {
+.section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image {
     display: flex;
     align-items: center;
     width: 100%;
@@ -96,7 +96,7 @@
     border-radius: 16px;
 }
 
-.section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image::after {
+.section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image::after {
     background: #fff;
     border-bottom: 1px solid #fac3b3;
     border-right: 1px solid #fac3b3;
@@ -110,39 +110,39 @@
     width: 28px;
 }
 
-.section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .front-image {
+.section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image .front-image {
     margin: 0 15px;
 }
 
-.section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .front-image picture img {
+.section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image .front-image picture img {
     display: block;
     height: 68px;
     width: 68px;
 }
 
-.section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .title {
+.section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image .title {
     color: #333;
     flex-basis: 36.4%;
     padding: 0 5px 0 16px;
 }
 
-.section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .title>p {
+.section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image .title>p {
     font-family: 'Nunito-Extrabold', sans-serif;
     font-size: 20px;
     font-weight: 800;
     line-height: 30px;
 }
 
-.section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .description {
+.section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image .description {
     width: 58.5%;
     border-left: 2px solid #e5e7eb;
 }
 
-.section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .description>ul {
+.section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image .description>ul {
     padding-left: 48px;
 }
 
-.section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .description>ul>li {
+.section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image .description>ul>li {
     list-style-type: disc;
     color: #333;
     font-family: Nunito-Regular, sans-serif;
@@ -151,49 +151,53 @@
     line-height: 40px;
 }
 
+.section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a:hover {
+    text-decoration: none;
+}
+
 @media screen and (max-width:768px) {
     .section.details-verification-wrapper {
         row-gap: 11px;
     }
 
-    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image {
+    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image {
         padding: 16px;
         align-items: unset;
         flex-direction: column;
     }
-    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image::after{
+    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image::after{
         bottom: -9px;
         height: 16px;
         width: 16px;
     }
-    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .front-image{
+    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image .front-image{
         margin: 0;
         position: absolute;
         top: 16px;
     }
-    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .title{
+    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image .title{
         padding: 4px 4px 16px 47px;
         width: 100%;
     }
-    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .title>p{
+    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image .title>p{
         font-size: 16px;
         line-height: 24px;
     }
-    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .front-image picture img{
+    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image .front-image picture img{
         height: 31px;
         width: 31px;    
     }
-    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .description{
+    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image .description{
         border-left: 0;
         border-top: 2px solid #e5e7eb;
         flex-basis: 100%;
         padding-top: 16px;
         width: 100%;
     }
-    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .description>ul{
+    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image .description>ul{
         padding-left: 40px;
     }
-    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2>div .bg-image .description>ul>li{
+    .section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image .description>ul>li{
         font-size: 12px;
         line-height: 20px;
     }

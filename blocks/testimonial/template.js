@@ -26,7 +26,7 @@ export const customerCard =
         <div class="arrowup"></div>
         <div class="comments">
             <p>
-                <span class="{customerDetailsClass} custinfo">{customerDetails['plaintext']}</span>
+                <span class="{customerDetailsClass} custinfo">{customerDetails}</span>
                 <span class="{customerNameClass} custname">{customerName}</span>
                 <span class="{customerProfessionClass} custprofession">{customerProfession}</span>
             </p>

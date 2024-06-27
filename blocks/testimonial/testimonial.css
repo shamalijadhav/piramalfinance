@@ -703,7 +703,7 @@
     }
 }
 
-.happy-customer .info-card .customerclasstwo .card-images,
+/* .happy-customer .info-card .customerclasstwo .card-images,
 .happy-customer .info-card .customerclassthree .card-images,
 .happy-customer .info-card .customerclassfour .card-images,
 .happy-customer .info-card .customerclassfive .card-images {
@@ -715,4 +715,11 @@
 .happy-customer .info-card .customerclassfour .card-images,
 .happy-customer .info-card .customerclassfive .card-images {
     display: none;
-}
+} */
+
+.testimonial.block.secondary .happy-customer .info-card .customerclasstwo .card-images,
+.testimonial.block.secondary .happy-customer .info-card .customerclassthree .card-images,
+.testimonial.block.secondary .happy-customer .info-card .customerclassfour .card-images,
+.testimonial.block.secondary .happy-customer .info-card .customerclassfive .card-images {
+    display: none;
+} 

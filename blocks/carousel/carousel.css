@@ -94,7 +94,7 @@
 }
 
 .banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser .foreground .long-description {
-  margin-top: 1rem;
+  margin-top: 16px;
 }
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .front-picture {
@@ -136,9 +136,9 @@
   margin: unset;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p,
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p>em,
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p>strong,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .long-description>p,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .long-description>p>em,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .long-description>p>strong,
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .long-description>p,
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-one>.background .foreground .text .long-description>p,
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .text .long-description>p {
@@ -148,19 +148,18 @@
   font-weight: 400;
   line-height: 2pc;
   margin: unset;
-  display: inline;
 }
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground {
   width: 45%;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p>em {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .long-description>p>em {
   text-decoration: line-through;
   font-style: normal;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p>strong {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .long-description>p>strong {
   color: var(--orange);
 }
 
@@ -182,7 +181,8 @@
   margin-top: 2rem;
 }
 
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .cta>a {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .cta>a,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li>p>a {
   background: var(--orange);
   border-radius: 8px;
   color: #fff;
@@ -193,6 +193,7 @@
   padding: 18px 2.16pc 18px 34.65px;
   width: fit-content;
   position: unset;
+  margin: 0;
 }
 
 .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container {
@@ -206,6 +207,7 @@
   width: 8px;
   background-color: var(--black);
   opacity: .2;
+  border: unset;
 }
 
 .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container>button.selected {
@@ -251,40 +253,14 @@
   display: block;
 }
 
-
-/* .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background {
-  background-color: var(--lilen);
-}
-
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background {
-  background-color: var(--rosewhite);
-}
-
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background {
-  background: url("url"), linear-gradient(320.12deg, rgb(127, 76, 168) -0.41%, rgb(242, 104, 65) 101.64%) !important;
-  background-size: 100% 100%;
-} */
-
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li {
   display: flex;
   align-items: center;
   gap: 32px;
+  margin-top: 32px;
 }
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li>p {
-  position: unset;
-}
-
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li>p>a {
-  background: var(--orange);
-  border-radius: 8px;
-  color: #fff;
-  font-family: 'Nunito-Bold', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 28px;
-  padding: 18px 2.16pc 18px 34.65px;
-  width: fit-content;
   position: unset;
 }
 
@@ -303,6 +279,10 @@
   font-weight: 700;
   line-height: 28px;
   text-decoration: underline;
+}
+
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-one>.background .foreground .text .long-description>p{
+  color: var(--black);
 }
 
 @media screen and (max-width:768px) {
@@ -334,14 +314,18 @@
     line-height: 32px;
   }
 
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p,
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p>em,
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p>strong,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .long-description>p,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .long-description>p>em,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .long-description>p>strong,
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .long-description>p,
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-one>.background .foreground .text .long-description>p,
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .text .long-description>p {
     font-size: .875rem;
     line-height: 1rem;
+  }
+
+  .banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser .foreground .long-description {
+    margin-top: 12px;
   }
 
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .cta>a,
@@ -350,6 +334,10 @@
     line-height: 1.25rem;
     padding: 14px 16px;
     margin: 0;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .cta {
+    margin-top: 24px;
   }
 
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .long-description {
@@ -374,7 +362,7 @@
   }
 
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text {
-    padding-top: 24px;
+    padding-top: 40px;
   }
 
   .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container {
@@ -395,6 +383,7 @@
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-two>.background .foreground .text .eyebrow {
     font-size: .875rem;
     line-height: 1rem;
+    margin-bottom: 12px;
   }
 
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .front-picture img {
@@ -418,6 +407,121 @@
     height: 30px;
     width: 100px;
     border-radius: 2px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-one>.background .foreground .text .long-description>p{
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+  .section.banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser {
+    height: 440px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background {
+    padding: 0 16px;
+    padding-top: 40px;
+    align-items: start;
+    background-size: cover;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .front-picture img {
+    max-height: 170px;
+    max-width: 200px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .front-picture {
+    right: 16px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .title>h2, 
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .eyebrow, 
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five .background .foreground .text .title>h3, 
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five .background .foreground .text .eyebrow, 
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six .background .foreground .text .title>h3, 
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six .background .foreground .text .eyebrow, 
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven .background .foreground .text .title>h3, 
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven .background .foreground .text .eyebrow {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p, 
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .long-description>p>em, 
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .long-description>p>strong, 
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .long-description>p, 
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-one>.background .foreground .text .long-description>p, 
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .text .long-description>p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser .foreground .long-description {
+    margin-top: 12px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .cta {
+    margin-top: 24px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .cta>a,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li>p>a {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 14px 16px;
+    margin: unset;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container {
+    left: 16px;
+    bottom: 70px;
+    gap: 8px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container>button {
+    height: 5px;
+    width: 5px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container>button.selected {
+    width: 13px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li {
+    align-items: start;
+    gap: 20px;
+    flex-direction: column;
+    margin-top: 24px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li>ul>li {
+    font-size: .75rem;
+    line-height: 1rem;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li>ul>li>a {
+    font-size: .875rem;
+    line-height: 1.25rem;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-two>.background .foreground .text .eyebrow {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 12px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .cta-image-wrapper {
+    gap: 12px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .cta-image-wrapper>.cta-image>a img {
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+  }
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-one>.background .foreground .text .long-description>p{
+    margin-top: 20px;
   }
 }
 

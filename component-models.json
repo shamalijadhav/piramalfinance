@@ -502,6 +502,46 @@
         "label": "Tab Id",
         "description": "Sets the id of the tab.",
         "multi": true
+      },
+      {
+        "component": "select",
+        "name": "tabshowtype",
+        "value": "normal",
+        "label": "Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "normal",
+            "value": "normal"
+          },
+          {
+            "name": "carousel",
+            "value": "carousel"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "tabpictureprev",
+        "value": "",
+        "label": "Set previous icon on tab carousel"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "tabpicturenext",
+        "value": "",
+        "label": "Set next icon on tab carousel"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tab-image",
+        "value": "",
+        "label": "Tab Image",
+        "description": "Sets the path of the image on the tab.",
+        "multi": true
       }
     ]
   },

@@ -1780,7 +1780,7 @@
         "fields": [
           {
             "component": "aem-content-fragment",
-            "name": "contentfragmentcalulator",
+            "name": "homeloancalculator",
             "label": "Content Fragment Picker",
             "valueType": "string",
             "variationName": "contentfragmentcalulator"

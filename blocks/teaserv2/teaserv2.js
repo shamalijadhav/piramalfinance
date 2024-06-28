@@ -69,10 +69,10 @@ function calculatorCallXf() {
           body.classList.add('bodyBlur');
           body.addEventListener("click",function(e){
             if(!e.target.closest('.cmp-container--elgcaloverlay')){
-              if (findSectionXFShow.querySelector('.overlayDiv').classList.contains('show')) {
+            //   if (findSectionXFShow.querySelector('.overlayDiv').classList.contains('show')) {
                 findSectionXFShow.querySelector('.overlayDiv').classList.remove('show');
                 body.classList.remove('bodyBlur');
-            }  
+            // }  
             }
           })
       })

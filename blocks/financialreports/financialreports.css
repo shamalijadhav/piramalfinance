@@ -1,0 +1,227 @@
+/*--------------accordianpdf CSS Starts----------------*/
+.accordianpdf {
+    margin-top: 16px;
+
+    .created-date {
+        font-size: 12px;
+        font-family: nunito-regular;
+        line-height: 24px;
+        margin-bottom: 4px;
+        display: block;
+    }
+}
+
+// .accordianpdf .accordianBox{ display: none;}
+.accordianpdf .subAccordianBox {
+    padding: 0px;
+    margin-bottom: 16px;
+}
+
+.accordianpdf .subAccordianWrap .subAccordianContent {
+    position: relative;
+    display: none;
+}
+
+.accordianpdf .publicDisclosuresWrap ul {
+    border-color: #cccccc;
+    border-style: solid;
+    border-width: 1px 1px 0px 1px;
+}
+
+.accordianpdf .publicDisclosuresWrap ul li {
+    background: #ffffff;
+    border-bottom: 1px solid #cccccc;
+    position: relative;
+}
+
+.accordianpdf .publicDisclosuresWrap ul li a {
+    padding: 12px 40px;
+    position: relative;
+    display: block;
+    font-family: nunito-regular;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+
+    @include lowerTablet() {
+        font-size: 12px;
+        line-height: 18px;
+        padding: 12px 25px;
+    }
+
+    &::after {
+        content: "\f1c1";
+        font-family: "FontAwesome";
+        position: absolute;
+        right: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &:hover {
+        color: #f26841;
+    }
+}
+
+
+@media (max-width:1300px) {
+    .accordianpdf {
+        padding-top: 20px;
+    }
+
+    .accordianpdf .accordianContent {
+        // padding-top: 35px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .accordianpdf .accordianContent {
+        // padding-top: 45px;
+    }
+
+    .accordianpdf {
+        padding-top: 0px;
+    }
+
+    .accordianpdf .publicDisclosuresWrap ul li a {
+        padding: 20px 60px 20px 40px;
+
+        @include lowerTablet() {
+            padding: 12px 50px 12px 18px;
+        }
+    }
+
+    .accordianpdf .publicDisclosuresWrap ul li a:before {
+        left: 5px;
+    }
+}
+
+/*--------------accordianpdf CSS End----------------*/
+
+.innersubAccordianContent {
+    padding-left: 18px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+
+    @include lowerTablet() {
+        padding-left: 10px;
+    }
+}
+
+.innerSubAccordianData {
+    display: none;
+}
+
+.accordianpdf {
+    .subAccordianBox {
+
+        .subAccordianTitle,
+        .subAccordianLink,
+        .innersubAccordianTitle {
+            font-family: nunito-regular;
+            font-size: 16px;
+            line-height: 24px;
+            color: darkcharcoal;
+            display: block;
+            position: relative;
+            background: #f8f8f8;
+            padding: 20px 50px 20px 16px;
+            border-radius: 4px;
+
+            @include lowerTablet() {
+                padding: 20px 50px 20px 16px;
+            }
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .subAccordianTitle,
+        .innersubAccordianTitle {
+            &:after {
+                position: absolute;
+                content: '+';
+                font-family: nunito-extrabold;
+                font-size: 28px;
+                font-weight: 800;
+                right: 24px;
+                width: 12px;
+                height: 2px;
+                color: black;
+            }
+        }
+
+        .innersubAccordianTitle {
+            padding: 16px 50px 16px 18px;
+        }
+
+        .subAccordianLink {
+            &::after {
+                content: "\f1c1";
+                font-family: "FontAwesome";
+                position: absolute;
+                right: 24px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &:hover {
+                background: #f26841;
+                color: #fff;
+            }
+        }
+
+        .innerSubAccordianData {
+            a {
+                font-family: nunito-regular;
+                font-size: 16px;
+                line-height: 24px;
+                cursor: pointer;
+
+                @include lowerTablet() {
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+
+                &::after {
+                    content: "\f1c1";
+                    font-family: "FontAwesome";
+                    position: absolute;
+                    right: 24px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                &:hover {
+                    color: #f26841;
+                }
+            }
+        }
+    }
+
+    .subAccordianBox.active {
+
+        .subAccordianTitle,
+        .innersubAccordianContent.active .innersubAccordianTitle {
+            background: #f26841;
+            color: #fff;
+
+            &::after {
+                content: "-";
+                color: #fff;
+            }
+        }
+    }
+}
+
+.accordianpdf-null-data {
+    display: none;
+}
+
+.accordianpdf .publicDisclosuresWrap ul.grey-border {
+    border: 1px solid #cccccc;
+}

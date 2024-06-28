@@ -6,7 +6,9 @@
     height: 100vh;
     margin: 0;
 } */
-
+.normal .carousel-control{
+    display: none;
+}
 .carousel {
     position: relative;
     /* width: 80%; */
@@ -16,12 +18,12 @@
     border-radius: 10px;
 }
 
-.carousel-inner {
+.carousel .carousel-inner {
     display: flex;
     transition: transform 0.5s ease;
 }
 
-.carousel-item {
+.carousel .carousel-item {
     min-width: 100%;
     box-sizing: border-box;
     padding: 20px;
@@ -29,7 +31,7 @@
     background-color: #f0f0f0;
 }
 
-.carousel-control {
+.carousel .carousel-control {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -40,10 +42,14 @@
     cursor: pointer;
 }
 
-.carousel-control.prev {
+.carousel .carousel-control.prev {
     left: 10px;
 }
 
-.carousel-control.next {
+.carousel .carousel-control.next {
     right: 10px;
+}
+
+.teaser.block{
+    overflow: visible;;
 }

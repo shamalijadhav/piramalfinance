@@ -5,12 +5,13 @@ function createButton(text) {
     return button;
 }
 export default function decorate(block) {
-    const [name, id] = block.children;
+    const [name, id, type] = block.children;
     const names = name.innerText.split(",");
     const ids = id.innerText.split(",");
+    const classes = type.innerText.trim();
     let tabsTemplate = '';
     block.innerHTML = '';
-    block.classList.add("carousel");
+    block.classList.add(classes ? classes : "normal");
     const carouselInner = document.createElement("div");
     carouselInner.classList.add("carousel-inner");
     carouselInner.id = "carouselInner";

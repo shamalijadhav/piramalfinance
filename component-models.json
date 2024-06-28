@@ -523,9 +523,25 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "tabpicture",
+        "name": "tabpictureprev",
         "value": "",
-        "label": "Picture on tab"
+        "label": "Set previous icon on tab carousel"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "tabpicturenext",
+        "value": "",
+        "label": "Set next icon on tab carousel"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tab-image",
+        "value": "",
+        "label": "Tab Image",
+        "description": "Sets the path of the image on the tab.",
+        "multi": true
       }
     ]
   },

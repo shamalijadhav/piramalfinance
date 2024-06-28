@@ -212,7 +212,16 @@ color: #F58667;
 }
 .footer-section-third{
   display: grid;
-  grid-template-columns: 13% 13% 44% 1fr;
+  grid-template-columns: 13% 13% 42% 1fr;
+}
+.footer-section-third .default-content-wrapper p a{
+  color: #f58667;
+  font-family: Nunito-Regular, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-left: 16px;
+  text-decoration: none;
 }
 @media screen and (max-width: 767.99px) {
   .footer-wrapper .footer {

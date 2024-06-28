@@ -1,3 +1,6 @@
+.section.corporate-financing-banner-wrapper .teaserv2-wrapper .teaserv2>a{
+    text-decoration: none;
+}
 .section.corporate-financing-banner-wrapper .teaserv2-wrapper .teaserv2>a .bg-image {
     display: block;
     object-fit: cover;

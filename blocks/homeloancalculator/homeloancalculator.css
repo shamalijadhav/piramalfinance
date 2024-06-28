@@ -1,0 +1,382 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./node_modules/glob-import-loader/index.js??ruleSet[1].rules[1].use[4]!./src/main/webpack/clientlibs/homepage/overlaycalculator/css/overlaycalculator.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+  .overlayDiv {
+    -webkit-transition: -webkit-transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    transition: -webkit-transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms, -webkit-transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #ffffff;
+    overflow-y: scroll;
+    top: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    height: 100%;
+    display: flex;
+    outline: 0;
+    z-index: 1200;
+    position: fixed;
+    overflow-y: auto;
+    flex-direction: column;
+    -webkit-overflow-scrolling: touch;
+  }
+  @media screen and (max-width: 1024px) {
+    .overlayDiv {
+      -webkit-transform: translateY(100%);
+              transform: translateY(100%);
+      height: 90%;
+      width: 100%;
+      border-radius: 16px 16px 0px 0px;
+      top: auto;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      /* height: auto; */
+      max-height: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+  }
+  .overlayDiv > .cmp-container .home-loan-title {
+    background-color: #ffffff;
+    padding: 32px 5px 16px 32px;
+  }
+  @media screen and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .home-loan-title {
+      padding: 38px 16px 16px 16px;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .home-loan-title .cmp-title {
+      text-align: center;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .home-loan-title .cmp-title {
+      text-align: start;
+    }
+  }
+  .overlayDiv > .cmp-container .home-loan-title .cmp-title .cmp-title__text {
+    margin-bottom: unset;
+    font-family: "Nunito-Extrabold", sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 36px;
+    color: #333333;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .home-loan-title .cmp-title .cmp-title__text {
+      margin-left: 16px;
+    }
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .home-loan-calculator-parent .hlc-subparent {
+    max-width: 100%;
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .home-loan-calculator-parent .hlc-subparent .firsttab {
+    padding: 16px 24px 0px;
+  }
+  @media screen and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .homeloancalculator .home-loan-calculator-parent .hlc-subparent .firsttab {
+      padding: 16px 16px 0px;
+    }
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .home-loan-calculator-parent .hlc-subparent .firsttab .customecheck {
+    margin-right: unset;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .homeloancalculator .home-loan-calculator-parent .hlc-subparent .firsttab .customecheck {
+      gap: 40px;
+    }
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .home-loan-calculator-parent .hlc-subparent .firsttab .customecheck .salary-parent input:checked ~ label {
+    font-size: 12px;
+    line-height: 32px;
+  }
+  @media screen and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .homeloancalculator .home-loan-calculator-parent .hlc-subparent .firsttab .customecheck .salary-parent input:checked ~ label {
+      font-size: 12px;
+      line-height: 32px;
+      width: 76%;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .homeloancalculator .home-loan-calculator-parent .hlc-subparent .firsttab .customecheck .salary-parent input:checked ~ label {
+      width: 81%;
+    }
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .home-loan-calculator-parent .hlc-subparent .firsttab .customecheck .salary-parent label {
+    width: 81%;
+    font-size: 12px;
+    line-height: 32px;
+  }
+  @media screen and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .homeloancalculator .home-loan-calculator-parent .hlc-subparent .firsttab .customecheck .salary-parent label {
+      font-size: 12px;
+      line-height: 32px;
+    }
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .home-loan-calculator-parent .hlc-subparent .firsttab .customecheck .customimage {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .homeloancalculator .home-loan-calculator-parent .hlc-subparent .firsttab .customecheck .customimage {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .home-loan-calculator-parent .hlc-subparent .firsttab .customecheck .customimage img {
+    width: 145px;
+    height: 97px;
+  }
+  @media screen and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .homeloancalculator .home-loan-calculator-parent .hlc-subparent .firsttab .customecheck .customimage img {
+      width: 94px;
+      height: 64px;
+    }
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .home-loan-calculator-parent .hlc-subparent .secondtab .customecheck {
+    margin-left: unset;
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child {
+    padding: 12px 16px;
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child {
+    max-width: 100%;
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .mainheading p {
+    font-family: "Nunito-Bold", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+  }
+  @media screen and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .mainheading p {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .headingtabs {
+    margin-top: 16px;
+  }
+  @media screen and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .headingtabs {
+      margin-top: 12px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .headingtabs {
+      margin-top: 16px;
+    }
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .headingtabs .headul {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .headingtabs .headul .tab-common {
+    padding: 8px 12px;
+    border: 1px solid #333333;
+    border-radius: 50px;
+    margin-right: 8px;
+  }
+  @media screen and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .headingtabs .headul .tab-common {
+      -webkit-box-flex: 0;
+          -ms-flex: none;
+              flex: none;
+    }
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .headingtabs .headul .tab-common p {
+    font-family: "Nunito-Regular", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #333333;
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .headingtabs .headul .active {
+    background: #365069;
+    border-bottom: unset;
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .headingtabs .headul .active p {
+    color: #ffffff;
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi {
+    margin-top: 62px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 8px;
+  }
+  @media screen and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi {
+      margin-top: 40px;
+    }
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .inputDiv {
+    width: 100%;
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv {
+    width: 100%;
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  @media screen and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent .mainoutput {
+    max-width: 450px;
+    min-height: 132px;
+    margin-bottom: unset;
+    width: 100%;
+    position: relative;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    padding: 18px;
+  }
+  @media screen and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent .mainoutput {
+      padding: 10px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent .mainoutput {
+      max-width: 100%;
+    }
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent .mainoutput .outputimg {
+    display: none;
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent .mainoutput .outputimg2 {
+    position: absolute;
+    top: -18px;
+    display: block;
+    width: 94px;
+    height: 53px;
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent .mainoutput .outputdes {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 8px;
+  }
+  @media screen and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent .mainoutput .outputdes {
+      margin-top: 40px;
+    }
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent .mainoutput .outputans {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent .amountdiv {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 32px;
+  }
+  @media screen and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent .amountdiv {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi {
+      margin-bottom: 24px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi {
+      margin-bottom: 32px;
+    }
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent .amountdiv {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 12px;
+    padding-bottom: unset;
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent .amountdiv .firstamout, .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent .amountdiv .secondamount {
+    text-align: end;
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent .amountdiv .firstamout p, .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent .amountdiv .secondamount p {
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.8705882353);
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent .amountdiv .firstamout .amount, .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent .amountdiv .secondamount .amount {
+    font-family: "Nunito-Bold", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent .amountdiv .firstamout .amount span, .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .calctabs .commoncalculator .parent-emi .outputdiv .output-parent .amountdiv .secondamount .amount span {
+    font-family: "Nunito-Bold", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.8705882353);
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .calculator-parent .calculator-parent-child .cp-child .customerbuttons {
+    padding-top: 8px;
+  }
+  .overlayDiv > .cmp-container .homeloancalculator .homepagemobiledesign {
+    display: none;
+  }
+  @media screen and (max-width: 767px) {
+    .overlayDiv > .cmp-container .homeloancalculator .homepagemobiledesign {
+      display: block;
+      border-radius: 6px;
+      background-color: #C4C4C4;
+      width: 30px;
+      height: 6px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      margin-top: 8px;
+      left: 50%;
+      -webkit-transform: translate(-50%);
+              transform: translate(-50%);
+    }
+  }
+  
+  .overlayDiv.show {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  

@@ -11,11 +11,12 @@ export default function decorate(block) {
     // const names = name.innerText.split(",");
     // const ids = id.innerText.split(",");
     // const classes = type.innerText.trim();
-    const [name, id, classes, prev, next] = getProps(block, {
+    const [name, id, classes, prev, next, imageSrc] = getProps(block, {
         picture: true
     });
     const names = name.split(",");
     const ids = id.split(",");
+    const imagesSrc = imageSrc.split(",");
 
     let tabsTemplate = '';
     block.innerHTML = '';
@@ -25,10 +26,13 @@ export default function decorate(block) {
     carouselInner.id = "carouselInner";
     names.forEach(function (eachName, index) {
         const div = document.createElement("div");
+        const img = document.createElement("img");
+        img.src = imagesSrc[index];
+        img.alt = eachName;
         div.id = ids[index].trim().replace(/ /g, '-');
         div.classList.add(index ? "carousel-item" : ("carousel-item", "active"));
         div.innerText = eachName.trim();
-        carouselInner.append(div);
+        carouselInner.append(imagesSrc[index] ? img : div);
         // observer.observe(div);
         // tabsTemplate += `<div id="${ids[index].trim().replace(/ /g, '-')}">${eachName.trim()}</div>`
     });

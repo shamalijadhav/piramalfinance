@@ -35,7 +35,6 @@ function renderTeaserHTMLFactory(props) {
   if (frontImagePic) frontImageDiv.append(frontImagePic);
 
   const titleDiv = createElement("div", "title", title?.textContent.trim() || "");
-  debugger;
   const descriptionDiv = createElement("div", "description", description?.textContent.trim() || "");
 
   let newButtonTag = "";

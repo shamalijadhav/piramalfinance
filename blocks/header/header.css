@@ -441,7 +441,7 @@ header nav .nav-sections .nav-drop::after{
 
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li.nav-drop[aria-expanded="true"]>p::after {
   top: unset;
-  bottom: 9px;
+  bottom: 13px;
   transform: rotate(315deg);
 }
 
@@ -510,6 +510,21 @@ header nav .nav-sections .nav-drop::after{
   top: 6px;
   right: 7px;
 } 
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li:last-child[aria-expanded="true"]>p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  width: calc(100% + 15px);
+  height: 2px;
+  background-color: #f26841;
+  transition: all ease 0.3s;
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li:nth-child(5)[aria-expanded="true"]>ul>li:hover {
+  color: var(--orange);
+}
 
 @media screen and (max-width: 767.99px) {
   .header-wrapper .nav-wrapper nav{

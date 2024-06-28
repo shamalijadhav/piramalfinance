@@ -156,7 +156,7 @@ export default async function decorate(block) {
   try {
     clickToBlurHeader()
   } catch (error) {
-      console.log(error)
+      console.warn(error)
   }
 }
 

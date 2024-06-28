@@ -508,6 +508,7 @@
         "name": "tabactive",
         "value": "tab-inactive",
         "label": "Type",
+        "multi": true,
         "valueType": "string",
         "options": [
           {

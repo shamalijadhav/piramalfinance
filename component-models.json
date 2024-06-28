@@ -486,31 +486,11 @@
     "id": "tab-link",
     "fields": [
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "tab-name",
-        "value": "",
-        "label": "Tab Name",
-        "description": "Sets the name of the tab.",
-        "multi": true
-      },
-      {
-        "component": "text",
-        "valueType": "string",
+        "component": "richtext",
         "name": "tab-link",
-        "value": "",
-        "label": "Tab Link",
-        "description": "Sets the link of the tab.",
-        "multi": true
-      },
-      {
-        "component": "text",
+        "label": "Rich-Text Field",
         "valueType": "string",
-        "name": "tab-active-index",
-        "value": "",
-        "label": "Tab Active Index",
-        "description": "Sets the index to make the tab active.",
-        "multi": false
+        "raw": true
       }
     ]
   },

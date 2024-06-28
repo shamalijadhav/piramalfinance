@@ -24,7 +24,6 @@
     display: flex;
     justify-content: start;
     padding: 16px 24px;
-    /* padding: 16px 24px 40px; */
     flex-direction: column-reverse;
     height: 220px;
     row-gap: 10px;
@@ -200,12 +199,13 @@
         grid-template-columns: 1fr;
     }
     .section.home-loans-products-wrapper .wrappercreation-wrapper .wrappercreation{
-        margin-top: 16px;
+        margin-top: unset;
     }
     .section.home-loans-products-wrapper .default-content-wrapper #more-home-loan-products{
         font-size: 20px;
         line-height: 28px;
         padding-bottom: 4px;
+        margin-bottom: 0;
     }
     .section.home-loans-products-wrapper .homeloanteaser .keyfeature-container .keyfeatures .feature .feature-details div p:last-child strong{
         font-size: 16px;
@@ -228,9 +228,11 @@
         max-height: 207px;
         height: 100%;
     }
+    .section.home-loans-products-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .keyfeatures-wrapper{
+        margin-top: 20px;
+    }
     .view-more-less-js .wrappercreation-wrapper .wrappercreation .wrapper-creation-container{
         padding-bottom: 40px;
-        row-gap: 20px;
     }
     .view-more-less-js .default-content-wrapper .button-container{
         font-size: 18px;

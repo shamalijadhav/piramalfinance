@@ -502,6 +502,30 @@
         "label": "Tab Id",
         "description": "Sets the id of the tab.",
         "multi": true
+      },
+      {
+        "component": "select",
+        "name": "tabshowtype",
+        "value": "normal",
+        "label": "Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "normal",
+            "value": "normal"
+          },
+          {
+            "name": "carousel",
+            "value": "carousel"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "tabpicture",
+        "value": "",
+        "label": "Picture on tab"
       }
     ]
   },

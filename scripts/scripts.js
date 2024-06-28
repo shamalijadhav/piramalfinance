@@ -82,9 +82,11 @@ export function fetchAPI(method, url, data) {
 }
 
 export function getProps(block, config) {
-  return Array.from(block.children).map(function (el) {
+  return Array.from(block.children).map(function (el, index) {
     if (config?.isPictureObject) {
       return el.innerHTML.includes("picture") ? el.querySelector("picture").parent : el.innerText.trim();
+    } else if (config?.index && config?.index.includes(index)) {
+      return el;
     } else {
       return el.innerHTML.includes("picture") ? el.querySelector("img").src.trim() : el.innerText.trim();
     }

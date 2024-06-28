@@ -23,7 +23,7 @@ footer.footer-wrapper {
 footer.footer-wrapper .footer {
   margin: 0 auto;
   max-width: 1240px;
-  padding: 2rem 0.75rem;
+  padding: 48px 12px;
 }
 .footer-wrapper p {
   color: #fff;
@@ -128,13 +128,18 @@ color: #F58667;
   font-family: "Nunito-Regular";
 }
 .footer-section-four .default-content-wrapper p {
-  font-size: 1rem;
+  color: #afb9c3;
+  font-family: Nunito-Regular, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 6px;
   text-align: center;
-  color: rgb(175 185 195);
-  font-family: "Nunito-Regular";
 }
 .footer-section-four .default-content-wrapper p:first-child{
   font-family: "Nunito-bold";
+  font-size: 16px;
+  margin-bottom: 26px;
+  line-height: 32px;
 }
 
 .footer-section-second .columns > div {
@@ -176,8 +181,6 @@ color: #F58667;
 .footer-section-four.columns-container{
   flex-direction: column;
     display: flex;
-    /* row-gap: 48px; */
-    margin-top: 3.125rem;
 }
 .footer-section-four .columns-wrapper .columns-3-cols{
   margin-top: 24px;
@@ -189,10 +192,27 @@ color: #F58667;
 .footer-section-four .default-content-wrapper{
   display: flex;
   flex-direction: column;
-  gap: 32px;
 }
-.footer-section-four .columns-img-col{
+/* .footer-section-four .columns-img-col{
   margin: 0 32px;
+} */
+.footer-section-four.columns-container .columns-wrapper .columns-6-cols div{
+  align-items: center;
+  column-gap: 96px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 32px;
+}
+.footer-section-four.columns-container .default-content-wrapper{
+  padding-top: 48px;
+}
+.footer-section-four.columns-container  .columns > div > div {
+  flex: unset;
+}
+.footer-section-third{
+  display: grid;
+  grid-template-columns: 13% 13% 44% 1fr;
 }
 @media screen and (max-width: 767.99px) {
   .footer-wrapper .footer {

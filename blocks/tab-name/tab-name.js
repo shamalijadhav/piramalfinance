@@ -1,14 +1,23 @@
-function createButton(text) {
+import { getProps } from "../../scripts/scripts.js";
+
+function createButton(text, picture) {
     const button = document.createElement("button");
     button.classList.add("carousel-control", text);
-    button.innerText = (text)
+    button.innerHTML = (picture)
     return button;
 }
 export default function decorate(block) {
-    const [name, id, type] = block.children;
-    const names = name.innerText.split(",");
-    const ids = id.innerText.split(",");
-    const classes = type.innerText.trim();
+    // const [name, id, type] = block.children;
+    // const names = name.innerText.split(",");
+    // const ids = id.innerText.split(",");
+    // const classes = type.innerText.trim();
+    const [name, id, classes, prev, next, imageSrc] = getProps(block, {
+        picture: true
+    });
+    const names = name.split(",");
+    const ids = id.split(",");
+    const imagesSrc = imageSrc.split(",");
+
     let tabsTemplate = '';
     block.innerHTML = '';
     block.classList.add(classes ? classes : "normal");
@@ -17,16 +26,21 @@ export default function decorate(block) {
     carouselInner.id = "carouselInner";
     names.forEach(function (eachName, index) {
         const div = document.createElement("div");
+        const img = document.createElement("img");
+        img.src = imagesSrc[index];
+        img.alt = eachName;
         div.id = ids[index].trim().replace(/ /g, '-');
         div.classList.add(index ? "carousel-item" : ("carousel-item", "active"));
         div.innerText = eachName.trim();
-        carouselInner.append(div);
+        carouselInner.append(imagesSrc[index] ? img : div);
         // observer.observe(div);
         // tabsTemplate += `<div id="${ids[index].trim().replace(/ /g, '-')}">${eachName.trim()}</div>`
     });
 
-    const prevButton = createButton("prev");
-    const nextButton = createButton("next");
+    const prevButton = createButton("prev", prev?.outerHTML);
+    const nextButton = createButton("next", next?.outerHTML);
+    prevButton.classList.add(classes === "normal" ? "dp-none" : "dp-normal");
+    nextButton.classList.add(classes === "normal" ? "dp-none" : "dp-normal");
     prevButton.addEventListener("click", prevSlide);
     nextButton.addEventListener("click", nextSlide);
     // <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
@@ -116,7 +130,7 @@ export default function decorate(block) {
     block.addEventListener("click", function (e) {
         const currentEl = e.target;
         const id = currentEl.id;
-        const tabContainer = document.querySelector('[data-id=' + id + ']')
+        const tabContainer = id && document.querySelector('[data-id=' + id + ']')
         if (tabContainer) {
             const section = tabContainer.closest(".section");
             section.querySelectorAll(".tab-container").forEach(function (el, index) {

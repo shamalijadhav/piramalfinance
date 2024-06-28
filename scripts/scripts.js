@@ -83,8 +83,8 @@ export function fetchAPI(method, url, data) {
 
 export function getProps(block, config) {
   return Array.from(block.children).map(function (el, index) {
-    if (config?.isPictureObject) {
-      return el.innerHTML.includes("picture") ? el.querySelector("picture").parent : el.innerText.trim();
+    if (config?.picture) {
+      return el.innerHTML.includes("picture") ? el.querySelector("picture") : el.innerText.trim();
     } else if (config?.index && config?.index.includes(index)) {
       return el;
     } else {
@@ -235,7 +235,10 @@ async function loadingCustomCss() {
     `${window.hlx.codeBasePath}/styles/table/table.css`,
     `${window.hlx.codeBasePath}/styles/tab-with-cards/tab-with-cards.css`,
     `${window.hlx.codeBasePath}/styles/e-auction/e-auction.css`,
-    `${window.hlx.codeBasePath}/styles/list-content/list-content.css`
+    `${window.hlx.codeBasePath}/styles/list-content/list-content.css`,
+    `${window.hlx.codeBasePath}/styles/real-estate-banner/real-estate-banner.css`,
+    `${window.hlx.codeBasePath}/styles/rte-wrapper/rte-wrapper.css`,
+    `${window.hlx.codeBasePath}/styles/partnerships-cards/partnerships-cards.css`
   ]
 
   loadCssArray.forEach(async (eachCss) => {

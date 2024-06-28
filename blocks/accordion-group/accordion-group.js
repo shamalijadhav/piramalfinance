@@ -28,16 +28,24 @@ export default function decorate(block) {
 function openFunctionFAQ(block) {
   const titles = block.querySelectorAll("details summary");
 
-  titles.forEach(function (title) {
-    title.addEventListener("click", function () {
-      titles.forEach(function (title) {
-        title.closest("details").removeAttribute("open");
-        title.classList.remove("active");
+    titles.forEach(function (title) {
+      title.addEventListener("click", function () {
+        if(this.classList.contains('active')){
+          setTimeout(() => {
+            this.closest("details").removeAttribute("open");
+          }, 1000);
+          this.classList.remove("active");
+        }else{
+          titles.forEach(function (title) {
+            title.closest("details").removeAttribute("open");
+            title.classList.remove("active");
+          });
+    
+          this.classList.toggle("active");
+        }
       });
-
-      this.classList.toggle("active");
     });
-  });
+
 }
 
 function viewMoreLogicFAQ() {
@@ -61,7 +69,6 @@ function viewMoreLogicFAQ() {
 }
 function viewMoreFAQ(eachs) {
   const faqButtonContainer = eachs.querySelector(".faq-section-wrapper .button-container");
-  debugger;
   faqButtonContainer.addEventListener("click", function () {
     const isViewMoreFAQ = this.textContent.toLowerCase() === "view more";
     this.innerText = isViewMoreFAQ ? "View Less" : "View More";

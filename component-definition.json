@@ -520,24 +520,6 @@
               }
             }
           }
-        },
-        {
-          "title": "Modal Overlay",
-          "id": "modeloverlay",
-          "components": [
-            {
-              "title": "ModalOverlay",
-              "id": "modeloverlay",
-              "plugins": {
-                "xwalk": {
-                  "page": {
-                    "resourceType": "core/franklin/components/section/v1/section",
-                    "template": {}
-                  }
-                }
-              }
-            }
-          ]
         }
       ]
     }

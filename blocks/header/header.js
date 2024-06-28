@@ -152,6 +152,12 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+  
+  try {
+    clickToBlurHeader()
+  } catch (error) {
+      console.log(error)
+  }
 }
 
 
@@ -159,5 +165,23 @@ export default async function decorate(block) {
 function toggleAllNavMobile(sections, expanded = false) {
   sections.querySelectorAll('.nav-sections .default-content-wrapper > ul > li').forEach((section) => {
     section.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+  });
+}
+
+function clickToBlurHeader() {
+  var headerDropDownList = document.querySelectorAll('.header-wrapper .section.nav-sections .default-content-wrapper ul:first-child > .nav-drop');
+  headerDropDownList.forEach(function (eachHeaderdrop) {
+    eachHeaderdrop.addEventListener('click', function (e) {
+      const siblings = document.querySelectorAll('.header-wrapper .section.nav-sections .default-content-wrapper ul:first-child > li')
+      siblings.forEach(function (params) {
+        if (params.classList.contains('navigation-level-inactive')) {
+          params.classList.remove('navigation-level-inactive')
+        } else {
+          params.classList.add('navigation-level-inactive')
+        }
+      })
+      this.classList.remove('navigation-level-inactive');
+      this.classList.add('navigation-level-active');
+    });
   });
 }

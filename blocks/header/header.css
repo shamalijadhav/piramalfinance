@@ -510,7 +510,12 @@ header nav .nav-sections .nav-drop::after{
   top: 6px;
   right: 7px;
 } 
-
+.navigation-level-active p{
+  color: #333 !important;
+}
+.navigation-level-inactive p{
+  color: #ccc !important;
+}
 @media screen and (max-width: 767.99px) {
   .header-wrapper .nav-wrapper nav{
     min-height: unset !important;

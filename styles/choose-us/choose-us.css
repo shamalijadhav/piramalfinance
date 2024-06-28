@@ -13,7 +13,7 @@
 
 .section.choose-us-css .default-content-wrapper p {
   margin-bottom: 24px;
-  color: rgb(51 51 51 / var(--tw-text-opacity));
+  color: var(--gradient-gray);
   display: block;
   font-family: 'Nunito-Regular', sans-serif;
   font-size: 20px;
@@ -75,6 +75,14 @@
 
 .section.home-loan-finance-wrapper .columns-wrapper .columns>div:nth-child(3) {
   padding-top: 40px;
+}
+
+.section.home-loan-finance-card-fw .columns-wrapper .columns.block>div:last-child>div {
+  column-gap: 0;
+}
+
+.section.home-loan-finance-card-fw .columns-wrapper .columns.block>div:last-child {
+  flex: auto;
 }
 
 /* home loan finance end */

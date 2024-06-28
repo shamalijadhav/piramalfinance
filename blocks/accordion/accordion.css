@@ -218,14 +218,6 @@ ol .accordion ul {
 }
 
 
-
-
-
-
-
-
-
-
 /* Faq Accordion With Orange Heading on Active */
 .faq-section-wrapper.faq-accordion-css-with-orange-heading {
     background-color: rgba(255, 244, 231, 0.3);
@@ -255,9 +247,6 @@ ol .accordion ul {
     border-radius: unset;
     margin-bottom: unset;
 }
-
-
-
 
 .faq-accordion-css-with-orange-heading .accordion-group-wrapper {
     background-color: unset;
@@ -315,10 +304,6 @@ ol .accordion ul {
     content: unset
 }
 
-/* .faq-accordion-css-with-orange-heading .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block:last-child {
-    border-bottom: unset;
-} */
-
 .faq-accordion-css-with-orange-heading .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block details h3,
 .faq-accordion-css-with-orange-heading .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block summary {
     margin-top: unset;
@@ -353,6 +338,15 @@ ol .accordion ul {
     color: #f26841;
     font-weight: 700;
 }
+
+/* .faq-accordion-css-with-orange-heading .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block details>div>article>div,
+.faq-accordion-css-with-orange-heading .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block details>div>article>div>article>div {
+    margin: 0;
+}
+
+.faq-accordion-css-with-orange-heading .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block details>div>article>div>article>div>p {
+    margin: 0;
+} */
 
 /* End */
 
@@ -406,10 +400,6 @@ ol .accordion ul {
         width: 83%;
     }
 
-    /* .faq-accordion-css-with-orange-heading .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block summary:first-child{
-        padding-top: unset;
-    } */
-
     .faq-accordion-css-with-orange-heading .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block summary.active h3,
     .faq-accordion-css-with-orange-heading .accordion-group-wrapper .accordion-group.block.shade-box .accordion.block summary.active {
         color: #f26841;
@@ -419,7 +409,5 @@ ol .accordion ul {
     .faq-accordion-css-with-orange-heading .default-content-wrapper h2 {
         font-size: 20px;
         line-height: 28px;
-        /* padding-bottom: 4px;
-        margin-bottom: 20px; */
     }
 }

@@ -215,7 +215,7 @@
         /* padding: unset; */
     }
     .section.carousel-articles-wrapper .default-content-wrapper .button-container ::after{
-        top: -1px;
+        top: 8px;
     }
 }
 @media (min-width: 768px) and (max-width: 1024px) {

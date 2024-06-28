@@ -483,6 +483,46 @@
     ]
   },
   {
+    "id": "tab-link",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tab-name",
+        "value": "",
+        "label": "Tab Name",
+        "description": "Sets the name of the tab.",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tab-link",
+        "value": "",
+        "label": "Tab Link",
+        "description": "Sets the link of the tab.",
+        "multi": true
+      },
+      {
+        "component": "select",
+        "name": "tabactive",
+        "value": "tab-inactive",
+        "label": "Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "inactive",
+            "value": "tab-inactive"
+          },
+          {
+            "name": "active",
+            "value": "tab-active"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "tab-name",
     "fields": [
       {
@@ -1774,14 +1814,14 @@
   },
   {
     "id": "homeloancalculator",
-    "fields":[
-          {
-            "component": "aem-content-fragment",
-            "name": "picker",
-            "label": "Content Fragment Picker",
-            "valueType": "string",
-            "variationName": "contentFragmentVariation"
-          }
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "picker",
+        "label": "Content Fragment Picker",
+        "valueType": "string",
+        "variationName": "contentFragmentVariation"
+      }
     ]
   }
 ]

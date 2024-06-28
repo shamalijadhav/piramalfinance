@@ -22,7 +22,7 @@ export default async function decorate(blocks) {
                 newscript.src = script.src;
                 blocks.append(newscript);
             })
-        }, 1000) */
+        }, 1000); */
     } catch (error) {
         console.error(error);
     }

@@ -152,11 +152,10 @@
 
 /* eligibility calculator show Start */
 
-.bodyBlur{
-    position: relative;
+.modal-overlay{
     position: fixed;
 }
-.bodyBlur::before{
+.modal-overlay{
     content: "";
     width: 100%;
     height: 100%;

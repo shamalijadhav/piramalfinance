@@ -1756,5 +1756,9 @@
         "label": "thumbnail"
       }
     ]
+  },
+  {
+    "id": "modeloverlay",
+    "fields": []
   }
 ]

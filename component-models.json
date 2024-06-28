@@ -1756,5 +1756,22 @@
         "label": "thumbnail"
       }
     ]
+  },
+  {
+    "id": "homeloancalculator",
+    "fields":[
+      {
+        "id": "aem-content-fragment",
+        "fields": [
+          {
+            "component": "aem-content-fragment",
+            "name": "contentfragmentcalulator",
+            "label": "Content Fragment Picker",
+            "valueType": "string",
+            "variationName": "contentfragmentcalulator"
+          }
+        ]
+      }
+    ]
   }
 ]

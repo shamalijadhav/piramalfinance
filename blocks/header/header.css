@@ -510,6 +510,12 @@ header nav .nav-sections .nav-drop::after{
   top: 6px;
   right: 7px;
 } 
+.navigation-level-active p{
+  color: #333 !important;
+}
+.navigation-level-inactive p{
+  color: #ccc !important;
+}
 
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li:last-child[aria-expanded="true"]>p::before {
   content: "";

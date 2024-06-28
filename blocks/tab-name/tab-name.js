@@ -1,36 +1,117 @@
-// callback for touch based scrolling event
-function updateButtons(entries) {
-    entries.forEach((entry) => {
-        // if panel has become > 60% visible
-        if (entry.isIntersecting) {
-            // get the buttons
-            // const carouselButtons = entry.target.parentNode.parentNode.querySelector('.button-container');
-            // const carouselButtons = entry.target.parentNode.parentNode.lastChild;
-            // remove selected state from whatever button has it
-            // [...carouselButtons.querySelectorAll(':scope button')].forEach((b) => b.classList.remove('selected'));
-            // // add selected state to proper button
-            // carouselButtons
-            //     .querySelector(`:scope button[data-panel='${entry.target.dataset.panel}']`)
-            //     .classList.add('selected');
-        }
-    });
+function createButton(text) {
+    const button = document.createElement("button");
+    button.classList.add("carousel-control", text);
+    button.innerText = (text)
+    return button;
 }
-const observer = new IntersectionObserver(updateButtons, { threshold: 0.6, rootMargin: '500px 0px' });
-
 export default function decorate(block) {
-    const [name, id] = block.children;
+    const [name, id, type] = block.children;
     const names = name.innerText.split(",");
     const ids = id.innerText.split(",");
+    const classes = type.innerText.trim();
     let tabsTemplate = '';
     block.innerHTML = '';
+    block.classList.add(classes ? classes : "normal");
+    const carouselInner = document.createElement("div");
+    carouselInner.classList.add("carousel-inner");
+    carouselInner.id = "carouselInner";
     names.forEach(function (eachName, index) {
         const div = document.createElement("div");
         div.id = ids[index].trim().replace(/ /g, '-');
+        div.classList.add(index ? "carousel-item" : ("carousel-item", "active"));
         div.innerText = eachName.trim();
-        block.append(div);
-        observer.observe(div);
+        carouselInner.append(div);
+        // observer.observe(div);
         // tabsTemplate += `<div id="${ids[index].trim().replace(/ /g, '-')}">${eachName.trim()}</div>`
     });
+
+    const prevButton = createButton("prev");
+    const nextButton = createButton("next");
+    prevButton.addEventListener("click", prevSlide);
+    nextButton.addEventListener("click", nextSlide);
+    // <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+    // <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+    block.append(carouselInner);
+    block.append(prevButton);
+    block.append(nextButton);
+
+    let currentSlide = 0;
+    let isDragging = false;
+    let startPos = 0;
+    let currentTranslate = 0;
+    let prevTranslate = 0;
+    // block = document.getElementById('carousel');
+    const slides = document.querySelectorAll('.carousel-item');
+
+    block.addEventListener('mousedown', dragStart);
+    block.addEventListener('mouseup', dragEnd);
+    block.addEventListener('mouseleave', dragEnd);
+    block.addEventListener('mousemove', drag);
+
+    block.addEventListener('touchstart', dragStart);
+    block.addEventListener('touchend', dragEnd);
+    block.addEventListener('touchmove', drag);
+
+    function dragStart(event) {
+        isDragging = true;
+        startPos = getPositionX(event);
+        carouselInner.style.transition = 'none';
+    }
+
+    function dragEnd() {
+        isDragging = false;
+        const movedBy = currentTranslate - prevTranslate;
+
+        if (movedBy < -100) {
+            nextSlide();
+        } else if (movedBy > 100) {
+            prevSlide();
+        } else {
+            setPositionByIndex();
+        }
+    }
+
+    function drag(event) {
+        if (isDragging) {
+            const currentPosition = getPositionX(event);
+            currentTranslate = prevTranslate + currentPosition - startPos;
+            carouselInner.style.transform = `translateX(${currentTranslate}px)`;
+        }
+    }
+
+    function getPositionX(event) {
+        return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+    }
+
+    function showSlide(index) {
+        if (index >= slides.length) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = slides.length - 1;
+        } else {
+            currentSlide = index;
+        }
+
+        setPositionByIndex();
+    }
+
+    function setPositionByIndex() {
+        currentTranslate = currentSlide * -carouselInner.clientWidth;
+        prevTranslate = currentTranslate;
+        carouselInner.style.transition = 'transform 0.5s ease';
+        carouselInner.style.transform = `translateX(${currentTranslate}px)`;
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    // Initialize the carousel
+    showSlide(currentSlide);
 
     block.addEventListener("click", function (e) {
         const currentEl = e.target;
@@ -39,7 +120,7 @@ export default function decorate(block) {
         if (tabContainer) {
             const section = tabContainer.closest(".section");
             section.querySelectorAll(".tab-container").forEach(function (el, index) {
-                section.querySelector(".tab-name").children[index].classList.remove("active");
+                section.querySelector(".tab-name").children[0].children[index].classList.remove("active");
                 el.classList.add("dp-none");
                 el.classList.remove("active");
             })

@@ -6,7 +6,8 @@
       "title",
       "tab-name",
       "tab-container",
-      "container"
+      "container",
+      "modeloverlay"
     ]
   },
   {
@@ -56,6 +57,7 @@
       "imgwithlink",
       "testimonial",
       "financialreports",
+      "offer-documents",
       "carousel",
       "teaser",
       "tab-name",

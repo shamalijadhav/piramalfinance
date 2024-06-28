@@ -34,8 +34,8 @@ function renderTeaserHTMLFactory(props) {
   const frontImageDiv = createElement("div", "front-image");
   if (frontImagePic) frontImageDiv.append(frontImagePic);
 
-  const titleDiv = createElement("div", "title", title?.innerHTML);
-  const descriptionDiv = createElement("div", "description", description?.innerHTML);
+  const titleDiv = createElement("div", "title", title?.textContent.trim() || "");
+  const descriptionDiv = createElement("div", "description", description?.textContent.trim() || "");
 
   let newButtonTag = "";
   const buttonHrefAnchor = buttonHref?.querySelector("a") || "";
@@ -66,13 +66,13 @@ function calculatorCallXf() {
           const findSectionXFShow = document.querySelector('.'+xfGetAttr);
           findSectionXFShow.querySelector('.overlayDiv').classList.add('show');
           let body=document.querySelector('body')
-          body.classList.add('bodyBlur');
+          body.classList.add('modal-overlay');
           body.addEventListener("click",function(e){
             if(!e.target.closest('.cmp-container--elgcaloverlay')){
-              if (findSectionXFShow.querySelector('.overlayDiv').classList.contains('show')) {
+            //   if (findSectionXFShow.querySelector('.overlayDiv').classList.contains('show')) {
                 findSectionXFShow.querySelector('.overlayDiv').classList.remove('show');
-                body.classList.remove('bodyBlur');
-            }  
+                body.classList.remove('modal-overlay');
+            // }  
             }
           })
       })

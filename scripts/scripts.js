@@ -235,7 +235,10 @@ async function loadingCustomCss() {
     `${window.hlx.codeBasePath}/styles/table/table.css`,
     `${window.hlx.codeBasePath}/styles/tab-with-cards/tab-with-cards.css`,
     `${window.hlx.codeBasePath}/styles/e-auction/e-auction.css`,
-    `${window.hlx.codeBasePath}/styles/list-content/list-content.css`
+    `${window.hlx.codeBasePath}/styles/list-content/list-content.css`,
+    `${window.hlx.codeBasePath}/styles/real-estate-banner/real-estate-banner.css`,
+    `${window.hlx.codeBasePath}/styles/rte-wrapper/rte-wrapper.css`
+
   ]
 
   loadCssArray.forEach(async (eachCss) => {

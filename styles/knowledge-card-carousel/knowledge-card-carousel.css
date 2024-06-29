@@ -121,4 +121,10 @@
     .carousel-wrapper .carousel .carousel-navigation-buttons .slide-prev{
         display: none;
     }
+    .section.knowledge-card-carousel .default-content-wrapper #piramal-values{
+        font-size: 20px;
+        line-height: 28px;
+        padding-bottom: 4px;
+        margin: 20px 0;
+    }
 }

@@ -242,6 +242,8 @@ async function loadingCustomCss() {
     `${window.hlx.codeBasePath}/styles/knowledge-card-carousel/knowledge-card-carousel.css`,
     `${window.hlx.codeBasePath}/styles/board-of-directors/board-of-directors.css`,
     `${window.hlx.codeBasePath}/styles/ratings-card/ratings-card.css`,
+    `${window.hlx.codeBasePath}/styles/partnership-cards-tab/partnership-cards-tab.css`,
+    `${window.hlx.codeBasePath}/styles/company-details/company-details.css`,
   ]
 
   loadCssArray.forEach(async (eachCss) => {

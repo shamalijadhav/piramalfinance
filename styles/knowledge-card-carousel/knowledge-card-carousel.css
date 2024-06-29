@@ -117,4 +117,8 @@
         width: 16px;
         opacity: 1;
     }
+    .carousel-wrapper .carousel .carousel-navigation-buttons .slide-next,
+    .carousel-wrapper .carousel .carousel-navigation-buttons .slide-prev{
+        display: none;
+    }
 }

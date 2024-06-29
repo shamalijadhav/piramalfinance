@@ -1,7 +1,6 @@
 import { getProps } from "../../scripts/scripts.js";
 
 export default function decorate(block) {
-    console.log("offer-documents :: ", block);
     const [mainTitle, title, subTitle, content, button, buttonURL, type] = getProps(block, {
         index: [3]
     });

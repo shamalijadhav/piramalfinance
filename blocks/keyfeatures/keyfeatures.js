@@ -9,7 +9,7 @@ export default function decorate(block) {
         featureDropDownClick();
         document.querySelector('.home-loans-products-wrapper.view-more-less-js') ? viewLogic() : "";   
     } catch (error) {
-        console.log(error)
+        console.warn(error)
     }
 }
 

@@ -165,7 +165,7 @@ function setup() {
       }
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.log(error);
+      console.warn(error);
     }
   }
 }
@@ -653,7 +653,7 @@ async function loadBlock(block) {
             }
           } catch (error) {
             // eslint-disable-next-line no-console
-            console.log(`failed to load module for ${blockName}`, error);
+            console.warn(`failed to load module for ${blockName}`, error);
           }
           resolve();
         })();
@@ -661,7 +661,7 @@ async function loadBlock(block) {
       await Promise.all([cssLoaded, decorationComplete]);
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.log(`failed to load block ${blockName}`, error);
+      console.warn(`failed to load block ${blockName}`, error);
     }
     block.dataset.blockStatus = 'loaded';
   }

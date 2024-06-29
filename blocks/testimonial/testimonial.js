@@ -10,9 +10,8 @@ export default async function decorate(block) {
     block.classList.add(classess);
     try {
         const resp = await fetchAPI("GET", url)
-        console.log(resp);
     } catch (error) {
-        console.error(error);
+        console.warn(error);
     }
 
     const cards = renderHelper([
@@ -106,7 +105,6 @@ export default async function decorate(block) {
             time = parseInt(time)
         }
         setInterval(() => {
-            console.log("Rora");
             rotateData();
         }, time);
     }

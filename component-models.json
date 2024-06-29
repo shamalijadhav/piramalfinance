@@ -483,6 +483,18 @@
     ]
   },
   {
+    "id": "tab-link",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "tab-link-2",
+        "label": "Rich-Text Field",
+        "valueType": "string",
+        "raw": true
+      }
+    ]
+  },
+  {
     "id": "tab-name",
     "fields": [
       {
@@ -1774,14 +1786,14 @@
   },
   {
     "id": "homeloancalculator",
-    "fields":[
-          {
-            "component": "aem-content-fragment",
-            "name": "picker",
-            "label": "Content Fragment Picker",
-            "valueType": "string",
-            "variationName": "contentFragmentVariation"
-          }
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "picker",
+        "label": "Content Fragment Picker",
+        "valueType": "string",
+        "variationName": "contentFragmentVariation"
+      }
     ]
   }
 ]

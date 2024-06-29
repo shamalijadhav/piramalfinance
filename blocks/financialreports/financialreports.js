@@ -1,9 +1,7 @@
 import { fetchAPI, getProps, renderHelper } from "../../scripts/scripts.js";
 
 export default async function decorate(block) {
-    console.log("financialreports :: ", block);
     const props = getProps(block);
-    console.log(props);
     const [url, type] = props;
     block.innerHTML = "";
     try {
@@ -11,11 +9,9 @@ export default async function decorate(block) {
         const data = await resp.json();
         const years = data.result[0];
         Object.keys(years).forEach(function (year) {
-            console.log(year);
             const months = years[year][0];
             let monthsli = '';
             Object.keys(months).forEach(function (month) {
-                console.log(months[month]);
                 monthsli += `  
                                 <div class="subAccordianContent" style="display: nona;">
                                     <div class="publicDisclosuresWrap">
@@ -57,7 +53,6 @@ export default async function decorate(block) {
                         </section>
                     `
         })
-        console.log(data);
 
         // Set initial display to none for all subAccordianContent elements
         var subAccordianContents = block.querySelectorAll('.subAccordianContent');

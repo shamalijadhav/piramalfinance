@@ -12,7 +12,7 @@ export default function decorate(block) {
     // const ids = id.innerText.split(",");
     // const classes = type.innerText.trim();
     const [name, id, classes, prev, next, imageSrc] = getProps(block, {
-        picture: true
+        index: [3, 4]
     });
     const names = name.split(",");
     const ids = id.split(",");
@@ -29,6 +29,7 @@ export default function decorate(block) {
         const img = document.createElement("img");
         img.src = imagesSrc[index];
         img.alt = eachName;
+        img.id = ids[index].trim().replace(/ /g, '-');
         div.id = ids[index].trim().replace(/ /g, '-');
         div.classList.add(index ? "carousel-item" : ("carousel-item", "active"));
         div.innerText = eachName.trim();

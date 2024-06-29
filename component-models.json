@@ -535,13 +535,28 @@
         "label": "Set next icon on tab carousel"
       },
       {
-        "component": "text",
+        "component": "reference",
         "valueType": "string",
-        "name": "tab-image",
+        "name": "tab-image-1",
         "value": "",
-        "label": "Tab Image",
-        "description": "Sets the path of the image on the tab.",
-        "multi": true
+        "label": "Tab Image 1",
+        "description": "Sets the path of the image on the tab."
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "tab-image-2",
+        "value": "",
+        "label": "Tab Image 2",
+        "description": "Sets the path of the image on the tab."
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "tab-image-3",
+        "value": "",
+        "label": "Tab Image 3",
+        "description": "Sets the path of the image on the tab."
       }
     ]
   },
@@ -1755,6 +1770,18 @@
         "name": "thumbnail",
         "label": "thumbnail"
       }
+    ]
+  },
+  {
+    "id": "homeloancalculator",
+    "fields":[
+          {
+            "component": "aem-content-fragment",
+            "name": "picker",
+            "label": "Content Fragment Picker",
+            "valueType": "string",
+            "variationName": "contentFragmentVariation"
+          }
     ]
   }
 ]

@@ -357,6 +357,14 @@
         "description": "Sets the title of the documents."
       },
       {
+        "component": "reference",
+        "valueType": "string",
+        "name": "offer-documents-image",
+        "value": "",
+        "label": "Offer documents image",
+        "description": "Sets the image of the documents."
+      },
+      {
         "component": "text",
         "valueType": "string",
         "name": "documents-disclaimer-title",

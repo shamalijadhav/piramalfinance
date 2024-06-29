@@ -1,0 +1,14 @@
+.section.company-details-wrapper .tab-link-wrapper .tab-link.block {
+    margin: 32px 0 56px;
+}
+
+.section.company-details-wrapper .tab-link-wrapper .tab-link.block>div>div>p {
+    display: none;
+}
+
+.section.company-details-wrapper .tab-link-wrapper .tab-link.block>div>div>ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 54px;
+    overflow-x: hidden;
+}

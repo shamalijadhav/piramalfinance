@@ -136,6 +136,9 @@
     line-height: 26px;
     padding-top: 4px;
 }
+.section.home-loans-products-wrapper.loan-product-two-cards .wrappercreation-wrapper .wrappercreation .wrapper-creation-container {
+    grid-template-columns: repeat(2, 1fr);
+}
 .section.home-loans-products-wrapper .keyfeature-container .keyfeatures-info .keyfeatures{
     padding: 0 24px 16px;
 }
@@ -229,6 +232,9 @@
         padding: 16px 24px;
         max-height: 207px;
         height: 100%;
+    }
+    .section.home-loans-products-wrapper.loan-product-two-cards .wrappercreation-wrapper .wrappercreation .wrapper-creation-container {
+        grid-template-columns: 1fr
     }
     
     .view-more-less-js .wrappercreation-wrapper .wrappercreation .wrapper-creation-container{

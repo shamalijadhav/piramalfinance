@@ -105,7 +105,7 @@ export default function decorate(block) {
 
   block.innerHTML = CalcHTM(callJson);
   try {
-    emiOverlay = document.querySelector(".cmp-container--emicaloverlay");
+    emiOverlay = document.querySelector(".cmp-container--caloverlay");
     overlay = document.querySelector(".modal-overlay");
     homeLoancalculatorCallXf();
     homeLoanCalcFunc();

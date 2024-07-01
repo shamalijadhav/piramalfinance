@@ -105,9 +105,9 @@ export default function decorate(block) {
 
   block.innerHTML = CalcHTM(callJson);;
   try {
+    elgCalDiv = document.querySelector(".homepage-eligibility-calculator-call-xf");
     elgOverlay = document.querySelector(".cmp-container--caloverlay");
     overlay = document.querySelector(".modal-overlay");
-    debugger;
     eligibilityCalculatorCallXf();
     homeLoanCalcFunc();
   } catch (error) {

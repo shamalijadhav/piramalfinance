@@ -17,7 +17,7 @@ export default async function decorate(block) {
                                     <div class="publicDisclosuresWrap">
                                         <div class="innersubAccordianContent">
                                             <a href="javascript:;" class="innersubAccordianTitle">${month}</a>
-                                            <div class="publicDisclosuresWrap innerSubAccordianData">
+                                            <div class="publicDisclosuresWrap innerSubAccordianData" style="display: none;">
                                                 <ul> ${renderHelper(months[month], `
                                                     <div class="forName">    
                                                         <li>
@@ -40,11 +40,13 @@ export default async function decorate(block) {
                                 <div class="accordianContent">
                                     <div class="accordianBox">
                                         <div class="subAccordianWrap">
-                                            <div class="subAccordianBox active">
+                                            <div class="subAccordianBox">
                                                 <a href="javascript:;" class="subAccordianTitle"
                                                     data-accordianpdf-folderpath="/content/dam/piramalfinance/pdf/stakeholder/financial-reports/2024"
                                                     data-accordianpdf-folderdepth="2">${year}</a>
+                                                    <div class="grey-border" style="display: none;">
                                                 ${monthsli}
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -74,6 +76,7 @@ export default async function decorate(block) {
             var content = parent.querySelectorAll('.subAccordianContent');
             content.forEach(function (el) {
                 var computedStyle = window.getComputedStyle(el);
+                el.parentElement.style.display = computedStyle.getPropertyValue('display') === 'none' ? 'block' : 'none';
                 el.style.display = computedStyle.getPropertyValue('display') === 'none' ? 'block' : 'none';
             })
 

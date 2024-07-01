@@ -31,9 +31,14 @@ export default function decorate(block) {
         img.alt = eachName;
         img.id = ids[index].trim().replace(/ /g, '-');
         div.id = ids[index].trim().replace(/ /g, '-');
-        div.classList.add(index ? "carousel-item" : ("carousel-item", "active"));
-        div.innerText = eachName.trim();
-        carouselInner.append(imagesSrc[index] ? img : div);
+        if (index) {
+            div.classList.add("carousel-item");
+        } else {
+            div.classList.add("carousel-item", "active");
+        }
+        div.append(imagesSrc[index] ? img : eachName.trim());
+        carouselInner.append(div);
+        // carouselInner.append(imagesSrc[index] ? img : div);
         // observer.observe(div);
         // tabsTemplate += `<div id="${ids[index].trim().replace(/ /g, '-')}">${eachName.trim()}</div>`
     });
@@ -45,7 +50,7 @@ export default function decorate(block) {
     // <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
     // <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
     block.append(carouselInner);
-    
+
     if (classes === "carousel") {
         block.append(prevButton);
         block.append(nextButton);
@@ -138,6 +143,7 @@ export default function decorate(block) {
         if (tabContainer) {
             const section = tabContainer.closest(".section");
             section.querySelectorAll(".tab-container").forEach(function (el, index) {
+                // section.querySelector(".tab-name").children[0].children[index].classList.remove("active");
                 section.querySelector(".tab-name").children[0].children[index].classList.remove("active");
                 el.classList.add("dp-none");
                 el.classList.remove("active");
@@ -145,6 +151,7 @@ export default function decorate(block) {
             tabContainer.classList.remove("dp-none");
             tabContainer.classList.add("active");
             currentEl.classList.add("active");
+            currentEl.closest(".carousel-item")?.classList.add("active");
         }
     })
 }

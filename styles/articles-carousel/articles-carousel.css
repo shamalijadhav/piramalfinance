@@ -211,9 +211,6 @@
     .section.carousel-articles-wrapper .carousel-wrapper .carousel{
         margin: unset;
     }
-    .section.carousel-articles-wrapper .default-content-wrapper{
-        /* padding: unset; */
-    }
     .section.carousel-articles-wrapper .default-content-wrapper .button-container ::after{
         top: 8px;
     }

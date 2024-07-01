@@ -385,18 +385,8 @@ color: #F58667;
     flex-direction: column;
     gap: 8px;
   }
-  /* .footer-section-second ul > li > ul > li{
-    color: #fff;
-    font-family: Nunito-Regular, sans-serif;
-    font-size: 16px;
-    margin-top: unset;
-  } */
-  /* .footer-section-second{
-    display: grid;
-    gap: 2px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .footer-section-four .columns-wrapper .columns .columns-img-col picture img{
+    height: 25px;
+    width: 25px;
   }
-  .footer-section-second .columns-wrapper:first-child{
-    grid-column: span 3 / span 3;
-  } */
 }

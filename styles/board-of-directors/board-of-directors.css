@@ -1,0 +1,144 @@
+.section.board-of-directors-wrapper .default-content-wrapper #board-of-directors{
+    font-family: Nunito-Extrabold, sans-serif;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 40px;
+}
+.section.board-of-directors-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .teaserv2-wrapper .teaserv2 {
+    position: relative;
+}
+.section.board-of-directors-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .teaserv2-wrapper .teaserv2:hover::after {
+    display: block;
+}
+.section.board-of-directors-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .teaserv2-wrapper .teaserv2::after{
+    content: '';
+    position: absolute;
+    display: none;
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    background-position: center;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/MoreButton.png');
+}
+.section.board-of-directors-wrapper .teaserv2-wrapper .teaserv2 a .bg-image{
+    background-repeat:  no-repeat;
+    display: block;
+    height: 227px;
+    width: 227px;
+    background-size: 100%;
+    background-position: 100% 100%;
+}
+.section.board-of-directors-wrapper .teaserv2-wrapper .teaserv2 .front-image picture img{
+   display: none;
+}
+.section.board-of-directors-wrapper .teaserv2-wrapper .teaserv2:hover .front-image picture img{
+    display: block;
+    text-decoration: none;
+    object-fit: contain;
+    background-size: 100%;
+    background-position: 100% 100%;
+    background-repeat:  no-repeat;
+
+}
+.section.board-of-directors-wrapper .wrapper-creation-container{
+    display: grid;
+    gap: 24px;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+}
+.section.board-of-directors-wrapper .title{
+    position: absolute;
+    bottom: -31px;
+    color: #000;
+    font-family: Nunito-Bold, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+}
+.section.board-of-directors-wrapper .description{
+    text-decoration: none;
+    color: #000;
+    font-family: Nunito-regular, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    position: absolute;
+    bottom: -54px;
+}
+.section.board-of-directors-wrapper .carousel-wrapper .carousel .carousel-navigation-buttons .slide-prev  div div picture img,
+.section.board-of-directors-wrapper .carousel-wrapper .carousel .carousel-navigation-buttons .slide-next div div picture img{
+    border: 1px solid #365069;
+    border-radius: 50%;
+    bottom: 50%;
+    color: #365069;
+    height: 40px;
+    margin-top: unset;
+    right: -60px !important;
+    top: 50%;
+    width: 40px;
+}
+.section.board-of-directors-wrapper .carousel-wrapper .carousel .carousel-navigation-buttons .slide-prev,
+.section.board-of-directors-wrapper .carousel-wrapper .carousel .carousel-navigation-buttons .slide-next{
+    background: unset;
+}
+.section.board-of-directors-wrapper .carousel-wrapper .carousel{
+    position: relative;
+    margin-top: 24px;
+    margin: 0 38px;
+}
+.section.carousel-articles-wrapper .carousel-wrapper .carousel .carousel-navigation-buttons .slide-prev{
+    padding: unset;
+    margin: unset;
+    position: absolute;
+    left: -8%;
+    top: 42%;
+}
+.section.carousel-articles-wrapper .carousel-wrapper .carousel .carousel-navigation-buttons .slide-next{
+    padding: unset;
+    margin: unset;
+    position: absolute;
+    right: -9%;
+    top: 43%;
+} .carousel-wrapper .carousel .carousel-navigation-buttons .slide-prev{
+    padding: unset;
+    margin: unset;
+    position: absolute;
+    left: -8%;
+    top: 42%;
+}
+.section.carousel-articles-wrapper .carousel-wrapper .carousel .carousel-navigation-buttons .slide-prev{
+    padding: unset;
+    margin: unset;
+    position: absolute;
+    left: -8%;
+    top: 42%;
+}
+.section.carousel-articles-wrapper .carousel-wrapper .carousel .carousel-navigation-buttons .slide-next{
+    padding: unset;
+    margin: unset;
+    position: absolute;
+    right: -9%;
+    top: 43%;
+} .carousel-wrapper .carousel .carousel-navigation-buttons .slide-next{
+    padding: unset;
+    margin: unset;
+    position: absolute;
+    right: -9%;
+    top: 43%;
+}
+@media (max-width: 786px) {
+    .section.board-of-directors-wrapper .wrapper-creation-container{
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-around;
+    }
+    .section.board-of-directors-wrapper .description{
+        font-size: 14px;
+        line-height: 20px;
+        left: 6%;
+        bottom: -34px;
+    }
+    .section.board-of-directors-wrapper .teaserv2-wrapper .teaserv2 a .bg-image{
+
+    }
+}

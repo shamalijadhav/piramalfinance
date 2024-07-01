@@ -92,6 +92,23 @@ export function getProps(block, config) {
     }
   })
 }
+
+export function currenyCommaSeperation(x) {
+  if (typeof x === "number") {
+      x = x.toString();
+  }
+
+  // Split the number into integral and decimal parts
+  const parts = x.split(".");
+  let integralPart = parts[0];
+  const decimalPart = parts[1] ? `.${parts[1]}` : '';
+
+  // Add commas after every two digits from the right in the integral part
+  integralPart = integralPart.replace(/\d(?=(\d{2})+\d$)/g, '$&,');
+  
+  return integralPart + decimalPart;
+}
+
 /* helper script end */
 
 /**

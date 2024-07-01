@@ -1796,12 +1796,15 @@
     "id": "homeloancalculator",
     "fields": [
       {
-        "component": "aem-content-fragment",
-        "name": "picker",
-        "label": "Content Fragment Picker",
-        "valueType": "string",
-        "variationName": "contentFragmentVariation"
+        "component": "text-input",
+        "label": "URL of Content Fragment",
+        "name": "text",
+        "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "emiandeligiblitycalc",
+    "fields": []
   }
 ]

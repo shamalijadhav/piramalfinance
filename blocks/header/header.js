@@ -156,7 +156,7 @@ export default async function decorate(block) {
   try {
     clickToBlurHeader()
   } catch (error) {
-      console.warn(error)
+      console.log(error)
   }
 }
 
@@ -173,11 +173,11 @@ function clickToBlurHeader() {
   headerDropDownList.forEach(function (eachHeaderdrop) {
     eachHeaderdrop.addEventListener('click', function (e) {
       const siblings = document.querySelectorAll('.header-wrapper .section.nav-sections .default-content-wrapper ul:first-child > li')
-      siblings.forEach(function (params) {
-        if (params.classList.contains('navigation-level-inactive')) {
-          params.classList.remove('navigation-level-inactive')
+      siblings.forEach(function (eachSibling) {
+        if (eachSibling.classList.contains('navigation-level-inactive')) {
+          eachSibling.classList.remove('navigation-level-inactive')
         } else {
-          params.classList.add('navigation-level-inactive')
+          eachSibling.classList.add('navigation-level-inactive')
         }
       })
       this.classList.remove('navigation-level-inactive');

@@ -243,11 +243,11 @@
     margin-bottom: 16px;
 }
 
-.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox a {
+.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .innersubAccordianTitle {
     text-decoration: none;
 }
 
-.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox.active .subAccordianTitle {
+.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianTitle {
     background: var(--whitesmoke);
     border-radius: 4px;
     color: #333;
@@ -257,10 +257,21 @@
     line-height: 24px;
     padding: 20px 50px 20px 16px;
     position: relative;
+    text-decoration: none;
+}
+
+.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox.active .subAccordianTitle {
+    background: #f26841;
+    color: #fff;
 }
 
 .section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox.active .subAccordianTitle::after {
-    color: var(--text-color);
+    color: white;
+}
+
+
+.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianTitle::after {
+    color: #000;
     content: "+";
     font-family: Nunito-Extrabold, sans-serif;
     font-size: 28px;
@@ -271,60 +282,100 @@
     width: 12px;
 }
 
-.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap .innersubAccordianContent {
-    border: 1px solid var(--dark-color);
-    border-bottom: 2px solid var(--dark-color);
-}
-
-.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianTitle {
-    display: block;
-    background: var(--orange);
-    color: var(--background-color);
-    font-family: Nunito-Regular, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    padding: 20px 50px 20px 16px;
-    border-radius: 4px;
-}
-
-.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianTitle::after {
-    color: var(--background-color);
+.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox.active .subAccordianTitle::after {
+    color: #fff;
     content: "-";
+}
+
+/* .section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap {
+    border: 1px solid #ccc;
+} */
+
+.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap .innersubAccordianContent {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 18px;
+}
+
+.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap .innersubAccordianContent .innersubAccordianTitle {
+    background: #f8f8f8;
+    border-radius: 4px;
+    color: #333;
+    display: block;
+    font-family: Nunito-Regular, sans-serif;
+    font-size: 1pc;
+    line-height: 24px;
+    position: relative;
+    padding: 1pc 50px 1pc 18px;
+}
+
+.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap .innersubAccordianContent.active .innersubAccordianTitle {
+    background: #f26841;
+    color: #fff;
+}
+
+.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap .innersubAccordianContent .innersubAccordianTitle::after {
+    color: #000;
+    content: "+";
     font-family: Nunito-Extrabold, sans-serif;
     font-size: 28px;
     font-weight: 800;
+    width: 12px;
     height: 2px;
     position: absolute;
     right: 24px;
-    width: 12px;
 }
 
-.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap .innersubAccordianContent {
+.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap .innersubAccordianContent.active .innersubAccordianTitle::after {
+    color: #fff;
+    content: "-";
+}
+
+.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap.innerSubAccordianData {
+    position: relative;
+    border: solid #ccc;
+    border-width: 1px 1px 0;
+}
+
+.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap.innerSubAccordianData>ul>li {
+    padding: 9pt 40px;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+}
+
+.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap.innerSubAccordianData>ul>li>a {
+    position: relative;
     cursor: pointer;
-    display: block;
     font-family: Nunito-Regular, sans-serif;
     font-size: 16px;
     line-height: 24px;
-    padding: 12px 40px;
-    position: relative;
+    color: #000;
 }
 
-.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap .innersubAccordianContent a{
-   text-decoration: none;
-   color: var(--text-color);
-}
-
-.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap .innersubAccordianContent a::after{
+.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap.innerSubAccordianData>ul>li::after {
     content: "";
     font-family: FontAwesome;
     position: absolute;
     right: 24px;
-    top: 50%;
-    transform: translateY(-50%);
- }
+    top: 25%;
 
+}
 
- @media screen and (max-width: 768px) {
+.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap.innerSubAccordianData>ul>li>a:hover {
+    color: #f26841;
+    text-decoration: none;
+}
+
+.section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .grey-border {
+    border: 1px solid #ccc;
+    display: none;
+}
+
+.dsp_block {
+    display: block !important;
+}
+
+@media screen and (max-width: 768px) {
     .section.financial-report-content-wrap .default-content-wrapper h2 {
         font-size: 18px;
         line-height: 27px;
@@ -332,11 +383,18 @@
     }
 
     .section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap .innersubAccordianContent {
+        padding-left: 10px;
+    }
+
+    .section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap.innerSubAccordianData>ul>li {
+        padding: 12px 50px 9pt 18px;
+    }
+
+    .section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap.innerSubAccordianData>ul>li>a {
         font-size: 12px;
         line-height: 18px;
-        padding: 12px 50px 12px 18px;
     }
- }
+}
 
 
 /* financial reports end */

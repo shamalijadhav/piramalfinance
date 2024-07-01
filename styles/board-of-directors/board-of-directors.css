@@ -87,7 +87,7 @@
     margin-top: 24px;
     margin: 0 38px;
 }
-.section.carousel-articles-wrapper .carousel-wrapper .carousel .carousel-navigation-buttons .slide-prev{
+.section.board-of-directors-wrapper .carousel-wrapper .carousel .carousel-navigation-buttons .slide-prev{
     padding: unset;
     margin: unset;
     position: absolute;
@@ -100,33 +100,7 @@
     position: absolute;
     right: -9%;
     top: 43%;
-} .carousel-wrapper .carousel .carousel-navigation-buttons .slide-prev{
-    padding: unset;
-    margin: unset;
-    position: absolute;
-    left: -8%;
-    top: 42%;
-}
-.section.carousel-articles-wrapper .carousel-wrapper .carousel .carousel-navigation-buttons .slide-prev{
-    padding: unset;
-    margin: unset;
-    position: absolute;
-    left: -8%;
-    top: 42%;
-}
-.section.carousel-articles-wrapper .carousel-wrapper .carousel .carousel-navigation-buttons .slide-next{
-    padding: unset;
-    margin: unset;
-    position: absolute;
-    right: -9%;
-    top: 43%;
-} .carousel-wrapper .carousel .carousel-navigation-buttons .slide-next{
-    padding: unset;
-    margin: unset;
-    position: absolute;
-    right: -9%;
-    top: 43%;
-}
+} 
 @media (max-width: 786px) {
     .section.board-of-directors-wrapper .wrapper-creation-container{
         grid-template-columns: 1fr 1fr;
@@ -147,7 +121,7 @@
         height: 152px;
         width: 152px;
     }
-    .wrapper-creation-container .teaserv2-wrapper{
+    .section.board-of-directors-wrapper .wrapper-creation-container .teaserv2-wrapper{
         min-height: 208px;
     }
     .section.board-of-directors-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .teaserv2-wrapper .teaserv2:hover::after{

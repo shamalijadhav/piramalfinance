@@ -16,9 +16,29 @@ export default function decorate(block) {
             </div>`
     block.insertBefore(div, block.children[0]);
     const model = block.children[1];
-    model.classList.add("model-mob-hide");
+    model.classList.add("compony-details");
     div.querySelector(".active-tab-name").addEventListener('click', function (e) {
-        if (e.currentTarget.classList)
+        // if (e.currentTarget.classList) {
+        //     model.classList.add("model-mob-hide");
+        // } else {
+        //     model.classList.remove("model-mob-hide");
+        // }
+        if (model.classList.contains("model-mob-hide")) {
+            model.classList.remove("model-mob-hide");
+            document.body.classList.remove("overlay-active");
+        } else {
             model.classList.add("model-mob-hide");
+            document.body.classList.add("overlay-active");
+        }
     })
+
+    // Add a click event to the overlay to close the modal
+    const overlay = document.createElement("div");
+    overlay.classList.add("body-overlay");
+    document.body.appendChild(overlay);
+
+    overlay.addEventListener('click', function () {
+        model.classList.remove("model-mob-hide");
+        document.body.classList.remove("overlay-active");
+    });
 } 

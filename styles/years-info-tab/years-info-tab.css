@@ -1,0 +1,89 @@
+.section.years-info-tab-wrapper .tab-name.block {
+    margin: 28px 0 ;
+    border: unset;
+}
+
+.section.years-info-tab-wrapper .tab-name.block .carousel-item {
+    min-width: 22%;
+    padding: 20px;
+    background-color: var(--white);
+    text-align: right;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: "Nunito-Bold";
+    cursor: pointer;
+}
+
+.section.years-info-tab-wrapper .tab-name.block .carousel-item.active,
+.section.years-info-tab-wrapper .tab-name.block .carousel-item:hover {
+    color: var(--orange);
+}
+
+.section.years-info-tab-wrapper .tab-name.block .carousel-control {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.section.years-info-tab-wrapper .tab-name.block .carousel-control picture>img {
+    width: 30px;
+    height: 30px;
+}
+
+.section.years-info-tab-wrapper .tab-container-wrapper .tab-container.block .teaser.block .background{
+    position: unset;
+}
+
+.section.years-info-tab-wrapper .tab-container-wrapper .tab-container.block .teaser.block .background .foreground {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0px 4px 12px #33333314;
+}
+
+.section.years-info-tab-wrapper .tab-container-wrapper .tab-container.block .teaser.block .background .foreground .text .title>h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: "Nunito-Extrabold";
+    color: var(--orange);
+    margin-bottom: 16px;
+}
+
+.section.years-info-tab-wrapper .tab-container-wrapper .tab-container.block .teaser.block .background .foreground .text .long-description>p {
+    font-family: "Nunito-Regular";
+    font-size: 16px;
+    color: var(--gradient-gray);
+}
+
+@media screen and (max-width:768px) {
+    .section.years-info-tab-wrapper .tab-name.block {
+        margin: 10px 0;
+    }
+
+    .section.years-info-tab-wrapper .tab-name.block .carousel-item {
+        min-width: 30%;
+    }
+
+    .section.years-info-tab-wrapper .tab-name.block .carousel-control picture>img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .section.years-info-tab-wrapper .tab-name.block .carousel-control.prev {
+        left: 0;
+    }
+
+    .section.years-info-tab-wrapper .tab-container-wrapper .tab-container.block .teaser.block .background .foreground {
+        padding: 1rem;
+    }
+
+    .section.years-info-tab-wrapper .tab-container-wrapper .tab-container.block .teaser.block .background .foreground .text .title>h3 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .section.years-info-tab-wrapper .tab-container-wrapper .tab-container.block .teaser.block .background .foreground .text .long-description>p {
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
+}

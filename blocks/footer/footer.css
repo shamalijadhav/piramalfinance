@@ -62,6 +62,25 @@ footer.footer-wrapper .footer {
   color: #fff;
   text-align: right;
   margin-right: 20%;
+  position: relative;
+}
+.footer-section-first .columns-wrapper p sup{
+  background-color: #41C672;
+  color: #fff;
+  font-size: 12px;
+  font-family: 'Nunito-Bold';
+  padding: 4px 10px;
+  min-height: 24px;
+  width: 50px;
+  line-height: 12px;
+  display: flex;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 4px;
+  margin-right: 6px;
+  right: 23%;
+  text-align: center;
+  justify-content: center;
 }
 
 /* .footer-section-third .columns-2-cols > div > div{

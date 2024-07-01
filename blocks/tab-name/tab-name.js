@@ -61,17 +61,20 @@ export default function decorate(block) {
         let startPos = 0;
         let currentTranslate = 0;
         let prevTranslate = 0;
-        // block = document.getElementById('carousel');
-        const slides = document.querySelectorAll('.carousel-item');
+        const carousel = block;
+        const carouselInner = block.querySelector('#carouselInner');
+        const slides = block.querySelectorAll('.carousel-item');
+        const totalSlides = slides.length;
+        const visibleSlides = 4; // Number of slides visible in the viewport
 
-        block.addEventListener('mousedown', dragStart);
-        block.addEventListener('mouseup', dragEnd);
-        block.addEventListener('mouseleave', dragEnd);
-        block.addEventListener('mousemove', drag);
+        carousel.addEventListener('mousedown', dragStart);
+        carousel.addEventListener('mouseup', dragEnd);
+        carousel.addEventListener('mouseleave', dragEnd);
+        carousel.addEventListener('mousemove', drag);
 
-        block.addEventListener('touchstart', dragStart);
-        block.addEventListener('touchend', dragEnd);
-        block.addEventListener('touchmove', drag);
+        carousel.addEventListener('touchstart', dragStart);
+        carousel.addEventListener('touchend', dragEnd);
+        carousel.addEventListener('touchmove', drag);
 
         function dragStart(event) {
             isDragging = true;
@@ -105,19 +108,13 @@ export default function decorate(block) {
         }
 
         function showSlide(index) {
-            if (index >= slides.length) {
-                currentSlide = 0;
-            } else if (index < 0) {
-                currentSlide = slides.length - 1;
-            } else {
-                currentSlide = index;
-            }
-
+            // Ensure the slide index does not go below 0 or exceed the last possible start index
+            currentSlide = Math.max(0, Math.min(index, totalSlides - visibleSlides));
             setPositionByIndex();
         }
 
         function setPositionByIndex() {
-            currentTranslate = currentSlide * -carouselInner.clientWidth;
+            currentTranslate = currentSlide * -carouselInner.clientWidth / visibleSlides;
             prevTranslate = currentTranslate;
             carouselInner.style.transition = 'transform 0.5s ease';
             carouselInner.style.transform = `translateX(${currentTranslate}px)`;
@@ -125,14 +122,38 @@ export default function decorate(block) {
 
         function nextSlide() {
             showSlide(currentSlide + 1);
+            checkLastChildVisibility();
         }
 
         function prevSlide() {
             showSlide(currentSlide - 1);
+            checkLastChildVisibility();
         }
 
         // Initialize the carousel
         showSlide(currentSlide);
+
+        // Check if the last child is visible in the viewport
+        function checkLastChildVisibility() {
+            const lastChild = carouselInner.lastElementChild;
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        console.log('Last child is visible in the viewport');
+                    } else {
+                        console.log('Last child is not visible in the viewport');
+                    }
+                });
+            }, {
+                root: carousel,
+                threshold: 0.1
+            });
+
+            observer.observe(lastChild);
+        }
+
+        // Initialize the observer for the first time
+        checkLastChildVisibility();
 
     }
 

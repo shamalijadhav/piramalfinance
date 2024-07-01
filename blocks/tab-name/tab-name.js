@@ -52,8 +52,8 @@ export default function decorate(block) {
     block.append(carouselInner);
 
     if (classes === "carousel") {
-        block.append(prevButton);
-        block.append(nextButton);
+        block.parentElement.append(prevButton);
+        block.parentElement.append(nextButton);
         prevButton.addEventListener("click", prevSlide);
         nextButton.addEventListener("click", nextSlide);
         let currentSlide = 0;

@@ -131,11 +131,11 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
   transform: rotate(-45deg);
 }
 
+header nav .nav-hamburger {
+  display: none;
+  visibility: hidden;
+}
 @media (width >= 900px) {
-  header nav .nav-hamburger {
-    display: none;
-    visibility: hidden;
-  }
 }
 
 /* brand */
@@ -383,7 +383,7 @@ header nav .nav-sections .nav-drop::after{
 }
 
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>ul>li {
-  width: 20%;
+  width: 25%;
   display: flex;
   flex-wrap: wrap;
   padding-left: 8px;
@@ -488,13 +488,14 @@ header nav .nav-sections .nav-drop::after{
 } */
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li:last-child p{
   align-items: center;
-    color: #333;
-    cursor: pointer;
-    font-family: Nunito-Bold, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    text-decoration: none;
-    padding: 9px 6px;
+  color: #333;
+  cursor: pointer;
+  font-family: Nunito-Bold, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-decoration: none;
+  padding: 9px 6px;
 }
 .login-button-wrapper .default-content-wrapper {
   position: relative;
@@ -545,6 +546,14 @@ header nav .nav-sections .nav-drop::after{
   color: var(--orange);
 }
 
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li:last-child ul>li {
+  width: 12%;
+}
+
+header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
+  content: none;
+}
+
 @media screen and (max-width: 767.99px) {
   .header-wrapper .nav-wrapper nav{
     min-height: unset !important;
@@ -559,6 +568,8 @@ header nav .nav-sections .nav-drop::after{
     height: 30px;
     width: 30px;
     right: 1rem;
+    display: block;
+    visibility: visible;
   }
 
   .header-wrapper .nav-wrapper .nav-hamburger button {
@@ -731,6 +742,12 @@ header nav .nav-sections .nav-drop::after{
   .header-wrapper .nav-wrapper nav {
       max-width: 100%;
       padding: 0 16px;
+  }
+}
+
+@media screen and (max-width:1366px) {
+  .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>ul {
+    padding: 0 13%;
   }
 }
 

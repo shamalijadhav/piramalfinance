@@ -1,10 +1,11 @@
 .section.years-info-tab-wrapper .tab-name.block {
-    margin: 28px 0 ;
+    margin: 28px auto;
     border: unset;
+    width: 80%;
 }
 
 .section.years-info-tab-wrapper .tab-name.block .carousel-item {
-    min-width: 22%;
+    min-width: 25%;
     padding: 20px;
     background-color: var(--white);
     text-align: right;
@@ -12,6 +13,7 @@
     line-height: 1.5rem;
     font-family: "Nunito-Bold";
     cursor: pointer;
+    text-align: center;
 }
 
 .section.years-info-tab-wrapper .tab-name.block .carousel-item.active,
@@ -19,15 +21,8 @@
     color: var(--orange);
 }
 
-.section.years-info-tab-wrapper .tab-name.block .carousel-control {
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-}
-
-.section.years-info-tab-wrapper .tab-name.block .carousel-control picture>img {
-    width: 30px;
-    height: 30px;
+.section.years-info-tab-wrapper .tab-name-wrapper {
+    position: relative;
 }
 
 .section.years-info-tab-wrapper .tab-container-wrapper .tab-container.block .teaser.block .background{
@@ -55,22 +50,36 @@
     color: var(--gradient-gray);
 }
 
+.section.years-info-tab-wrapper .tab-name-wrapper .carousel-control {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+}
+
+.section.years-info-tab-wrapper .tab-name-wrapper .carousel-control picture>img {
+    width: 30px;
+    height: 30px;
+}
+
+.section.years-info-tab-wrapper .tab-name-wrapper .carousel-control.prev {
+    left: 7%;
+    top: 23%;
+}
+
+.section.years-info-tab-wrapper .tab-name-wrapper .carousel-control.next {
+    right: 7%;
+    top: 23%;
+}
+
 @media screen and (max-width:768px) {
     .section.years-info-tab-wrapper .tab-name.block {
-        margin: 10px 0;
+        margin: 10px auto;
+        width: 75%;
     }
 
     .section.years-info-tab-wrapper .tab-name.block .carousel-item {
-        min-width: 30%;
-    }
-
-    .section.years-info-tab-wrapper .tab-name.block .carousel-control picture>img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .section.years-info-tab-wrapper .tab-name.block .carousel-control.prev {
-        left: 0;
+        min-width: 50%;
     }
 
     .section.years-info-tab-wrapper .tab-container-wrapper .tab-container.block .teaser.block .background .foreground {
@@ -85,5 +94,18 @@
     .section.years-info-tab-wrapper .tab-container-wrapper .tab-container.block .teaser.block .background .foreground .text .long-description>p {
         font-size: 0.75rem;
         line-height: 1rem;
+    }
+
+    .section.years-info-tab-wrapper .tab-name-wrapper .carousel-control picture>img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .section.years-info-tab-wrapper .tab-name-wrapper .carousel-control.prev {
+        left: 6%;
+    }
+
+    .section.years-info-tab-wrapper .tab-name-wrapper .carousel-control.next {
+        right: 6%;
     }
 }

@@ -3,11 +3,6 @@ export default function decorate(block) {
   const renderTeaserHTML = renderTeaserHTMLFactory(props);
   block.innerHTML = "";
   block.append(renderTeaserHTML);
-  try {
-    calculatorCallXf();
-  } catch (error) {
-    console.error(error);
-  }
 }
 
 function renderTeaserHTMLFactory(props) {
@@ -58,27 +53,4 @@ function renderTeaserHTMLFactory(props) {
   return container;
 }
 
-function calculatorCallXf() {
-  document.querySelectorAll("[data-teaserv2-xf]").forEach((eachTeaserv2) => {
-    eachTeaserv2.addEventListener("click", function (e) {
-      e.stopImmediatePropagation();
-      const xfGetAttr = this.getAttribute("data-teaserv2-xf");
-      const findSectionXFShow = document.querySelector("." + xfGetAttr);
-      findSectionXFShow.querySelector(".overlayDiv").classList.add("show");
-      xfShowHideBodyClick(findSectionXFShow);
-    });
-  });
-}
 
-function xfShowHideBodyClick(findSectionXFShow) {
-  let body = document.querySelector("body");
-  body.classList.add("bodyBlur");
-  body.addEventListener("click", function (e) {
-    if (!e.target.closest(".show")) {
-      //   if (findSectionXFShow.querySelector('.overlayDiv').classList.contains('show')) {
-      findSectionXFShow.querySelector(".overlayDiv").classList.remove("show");
-      body.classList.remove("bodyBlur");
-      // }
-    }
-  });
-}

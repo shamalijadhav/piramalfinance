@@ -19,13 +19,13 @@
     margin-bottom: 8px;
 }
 
-.section.tab-with-cards-wrapper .tab-name-wrapper .tab-name.block {
+.section.tab-with-cards-wrapper .tab-name-wrapper .tab-name.block .carousel-inner {
     display: flex;
     align-items: center;
     margin-top: 24px;
 }
 
-.section.tab-with-cards-wrapper .tab-name-wrapper .tab-name.block>div {
+.section.tab-with-cards-wrapper .tab-name-wrapper .tab-name.block .carousel-inner>div {
     border-bottom: unset;
     border-right: 1px solid #afb9c3;
     color: var(--black);
@@ -36,12 +36,15 @@
     padding: 0 24px;
     cursor: pointer;
 }
+.section.tab-with-cards-wrapper .tab-name-wrapper .tab-name.block .carousel-inner>div:last-child{
+    border-right: none;
+}
 
-.section.tab-with-cards-wrapper .tab-name-wrapper .tab-name.block div:first-child {
+.section.tab-with-cards-wrapper .tab-name-wrapper .tab-name.block .carousel-inner div:first-child {
     padding-left: 0;
 }
 
-.section.tab-with-cards-wrapper .tab-name-wrapper .tab-name.block>div.active {
+.section.tab-with-cards-wrapper .tab-name-wrapper .tab-name.block .carousel-inner>div.active {
     color: var(--orange);
 }
 
@@ -107,7 +110,7 @@
         margin-bottom: 20px;
     }
 
-    .section.tab-with-cards-wrapper .tab-name-wrapper .tab-name.block>div {
+    .section.tab-with-cards-wrapper .tab-name-wrapper .tab-name.block .carousel-inner>div {
         padding: 0 12px;
     }
 

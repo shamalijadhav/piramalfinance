@@ -20,11 +20,12 @@
     margin-bottom: 40px;
 }
 .section.rupee-cards-wrapper .bg-image{
-    background-size: 100%;
-    background-position: 100%;
-    object-fit: contain;
-    height: 36px;
-    width: 40px;
+    width: 100%;
+    display: block;
+}
+.section.rupee-cards-wrapper .bg-image .front-image picture img{
+    position: absolute;
+    bottom: 28px;
 }
 .section.rupee-cards-wrapper .wrapper-creation-container{
     display: grid;
@@ -46,16 +47,16 @@
     text-decoration: none;
     padding-left: 40px;
 }
-.section.rupee-cards-wrapper .teaser-wrapper .teaser{
+.section.rupee-cards-wrapper .wrapper-creation-container .teaserv2-wrapper .teaser{
     min-height: 120px;
 }
-.section.rupee-cards-wrapper .teaser-wrapper .teaser a{
+.section.rupee-cards-wrapper .teaserv2-wrapper .teaserv2 a{
     text-decoration: none;
 }
 .section.rupee-cards-wrapper .teaser.block .background{
     padding: 24px;
 }
-.teaser-wrapper .teaser .background .front-picture picture img {
+.teaserv2-wrapper .teaserv2 a .bg-image .front-picture picture img {
     height: 36px;
     width: 40px;
     position: absolute;
@@ -75,7 +76,7 @@
     font-weight: 400;
     line-height: 24px;
 }
-.section.rupee-cards-wrapper .wrappercreation .wrapper-creation-container .teaser-wrapper{
+.section.rupee-cards-wrapper .wrappercreation .wrapper-creation-container .teaserv2-wrapper{
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, .1), 0 8px 10px -6px rgba(0, 0, 0, .1);
     cursor: pointer;
     margin: 10px;
@@ -86,7 +87,7 @@
 .section.rupee-cards-wrapper p strong{
     padding-left: 40px;
 }
-.long-description p:nth-child(1){
+.section.rupee-cards-wrapper .long-description p:nth-child(1){
     color: #333;
     font-family: Nunito-Regular, sans-serif;
     font-size: 16px;
@@ -108,10 +109,10 @@
     .section.rupee-cards-wrapper .wrapper-creation-container{
         grid-template-columns: 1fr;
     }
-    .section.rupee-cards-wrapper .teaser-wrapper .teaser{
+    .section.rupee-cards-wrapper .teaserv2-wrapper .teaser{
         min-height: 100px;
     }
-    .teaser-wrapper .teaser .background .front-picture picture img{
+    .teaserv2-wrapper .teaserv2 a .bg-image .front-picture picture img{
         bottom: 21px;
         left: 16px;
         height: 32px;
@@ -138,14 +139,14 @@
         margin-top: 8px;
         padding-left: 44px;
     }
-    .teaser-wrapper .teaser .background .front-picture picture img{
+    .teaserv2-wrapper .teaserv2 a .bg-image .front-picture picture img{
         display: block;
         height: 32px;
         width: 36px;
         left: 15px;
         bottom: 20px;
     }
-    .section.rupee-cards-wrapper .teaser-wrapper .teaser{
+    .section.rupee-cards-wrapper .teaserv2-wrapper .teaser{
         padding: 16px;
         min-height: 100px;
     }

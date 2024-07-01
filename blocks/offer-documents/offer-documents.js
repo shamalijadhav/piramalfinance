@@ -52,11 +52,17 @@ export default function decorate(block) {
                 </div>
             </div>    
     `
-
-        block.addEventListener("click", function (e) {
-            e.currentTarget.querySelector(".stake-pop-up")?.classList.remove("dp-none");
+    block.addEventListener("click", function (e) {
+        e.stopPropagation();
+        e.currentTarget.querySelector(".stake-pop-up")?.classList.add("dp-block");
+    })
+    block.querySelectorAll(".stake-pop-up .text.popupText .cmp-text .cross-container img").forEach(function (ele) {
+        ele.addEventListener("click", function (currentEle) {
+            currentEle.stopImmediatePropagation();
+            currentEle.target.closest('.stake-pop-up').classList.remove('dp-block')
         })
-    }
+    })
+}
 
 //     block.addEventListener("click", function (e) {
 //         document.body.classList.add("popup-active");

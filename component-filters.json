@@ -53,6 +53,7 @@
       "cards",
       "columns",
       "rte",
+      "city-list",
       "imgwithlink",
       "testimonial",
       "financialreports",
@@ -75,7 +76,8 @@
       "keyfeatures",
       "embed",
       "homeloancalculator",
-      "emiandeligiblitycalc"
+      "emiandeligiblitycalc",
+      "eligibilitycalculator"
     ]
   },
   {

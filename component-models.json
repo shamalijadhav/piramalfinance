@@ -199,6 +199,19 @@
     ]
   },
   {
+    "id": "city-list",
+    "fields": [
+      {
+        "component": "text",
+        "name": "city-list",
+        "label": "City List Path",
+        "description": "Set city list api path",
+        "valueType": "string",
+        "raw": false
+      }
+    ]
+  },
+  {
     "id": "imgwithlink",
     "fields": [
       {
@@ -1794,6 +1807,17 @@
   },
   {
     "id": "homeloancalculator",
+    "fields": [
+      {
+        "component": "text-input",
+        "label": "URL of Content Fragment",
+        "name": "text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "eligibilitycalculator",
     "fields": [
       {
         "component": "text-input",

@@ -199,6 +199,19 @@
     ]
   },
   {
+    "id": "city-list",
+    "fields": [
+      {
+        "component": "text",
+        "name": "city-list",
+        "label": "City List Path",
+        "description": "Set city list api path",
+        "valueType": "string",
+        "raw": false
+      }
+    ]
+  },
+  {
     "id": "imgwithlink",
     "fields": [
       {

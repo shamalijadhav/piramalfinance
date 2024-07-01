@@ -1,10 +1,9 @@
 import { getProps } from "../../scripts/scripts.js";
 
 export default function decorate(block) {
-    const [mainTitle, title, subTitle, content, button, buttonURL, type] = getProps(block, {
-        index: [3]
+    const [mainTitle, title, subTitle, content, button, buttonURL, type, image] = getProps(block, {
+        index: [3, 7]
     });
-
 
     if (type === "secondary") {
         block.innerHTML = `
@@ -21,7 +20,7 @@ export default function decorate(block) {
     block.innerHTML = `
             <div class="richtext text boxContainer stakeholder-container popup-rich-text modal-cta">
                 <div  class="cmp-text">
-                    <p>${mainTitle}</p>
+                    <p>${image.outerHTML.includes("picture") ? image.outerHTML : mainTitle}</p>
                 </div>
                 <div class="stake-pop-up dp-none">
                     <div class="popup stake-document-popup">

@@ -1,11 +1,12 @@
-import { currenyCommaSeperation } from "../homeloancalculator/jshelpers.js";
+import { currenyCommaSeperation } from "../../scripts/scripts.js";
 import { resetCalculator } from "./resetCalculator.js";
 
-document.addEventListener("DOMContentLoaded", function () {
+/* document.addEventListener("DOMContentLoaded", function () {
   homeLoanCalcFunc();
-});
+}); */
 
-export default function homeLoanCalcFunc() {
+export function homeLoanCalcFunc() {
+
   var salariedDivs = document.querySelectorAll(".onetab");
   var businessDivs = document.querySelectorAll(".twotab");
 

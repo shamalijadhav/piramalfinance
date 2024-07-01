@@ -1804,6 +1804,17 @@
     ]
   },
   {
+    "id": "eligibilitycalculator",
+    "fields": [
+      {
+        "component": "text-input",
+        "label": "URL of Content Fragment",
+        "name": "text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "emiandeligiblitycalc",
     "fields": []
   }

@@ -364,21 +364,6 @@ header nav .nav-sections .nav-drop::after{
   position: absolute;
   bottom: 32px;
 }
-.footer-section-first .columns-wrapper p sup{
-  background-color: #41c672;
-  color: #fff;
-  font-size: 10px;
-  font-family: 'Nunito-Bold';
-  padding: 2px 4px;
-  height: 18px;
-  width: 33px;
-  line-height: 12px;
-  display: flex;
-  align-items: center;
-  border-radius: 4px;
-  position: absolute;
-  bottom: 32px;
-}
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li.nav-drop {
   position: unset;
 }

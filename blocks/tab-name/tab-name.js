@@ -62,8 +62,8 @@ export default function decorate(block) {
         let currentTranslate = 0;
         let prevTranslate = 0;
         const carousel = block;
-        const carouselInner = block.querySelector('#carouselInner');
-        const slides = block.querySelectorAll('.carousel-item');
+        const carouselInner = document.querySelector('#carouselInner');
+        const slides = document.querySelectorAll('.carousel-item');
         const totalSlides = slides.length;
         const visibleSlides = 4; // Number of slides visible in the viewport
 
@@ -75,6 +75,8 @@ export default function decorate(block) {
         carousel.addEventListener('touchstart', dragStart);
         carousel.addEventListener('touchend', dragEnd);
         carousel.addEventListener('touchmove', drag);
+
+        carousel.addEventListener('wheel', scrollEvent); // Add scroll event listener
 
         function dragStart(event) {
             isDragging = true;
@@ -108,7 +110,6 @@ export default function decorate(block) {
         }
 
         function showSlide(index) {
-            // Ensure the slide index does not go below 0 or exceed the last possible start index
             currentSlide = Math.max(0, Math.min(index, totalSlides - visibleSlides));
             setPositionByIndex();
         }
@@ -128,6 +129,15 @@ export default function decorate(block) {
         function prevSlide() {
             showSlide(currentSlide - 1);
             checkLastChildVisibility();
+        }
+
+        function scrollEvent(event) {
+            if (event.deltaY < 0) {
+                prevSlide();
+            } else {
+                nextSlide();
+            }
+            event.preventDefault();
         }
 
         // Initialize the carousel
@@ -154,7 +164,6 @@ export default function decorate(block) {
 
         // Initialize the observer for the first time
         checkLastChildVisibility();
-
     }
 
     block.addEventListener("click", function (e) {

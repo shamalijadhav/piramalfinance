@@ -601,11 +601,6 @@ header nav .nav-sections .nav-drop::after{
     width: 100%;
   }
 
-  .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>p {
-    margin-right: 0;
-    padding: 16px 12px;
-  }
-
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li {
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     padding-bottom: 0;
@@ -615,6 +610,12 @@ header nav .nav-sections .nav-drop::after{
     padding: 0;
     padding: 16px 12px 0 12px;
     padding-bottom: 16px;
+    margin-right: 0;
+    padding: 16px 12px;
+  }
+  .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li:first-child>p {
+    padding-left: 19%;
+
   }
 
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li.nav-drop {
@@ -695,6 +696,28 @@ header nav .nav-sections .nav-drop::after{
   }
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li:last-child p {
     padding: 16px 12px;
+  }
+  .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>p sup{
+    bottom: 17px;
+    left: 12px;
+    padding: 4px 10px 4px 8px;
+    font-size: 12px;
+    width: 47px;
+    background-color: #41C672;
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Nunito-Bold';
+    padding: 6px 10px;
+    min-height: 24px;
+    width: 50px;
+    line-height: 12px;
+    display: flex;
+    border-radius: 4px;
+    position: absolute;
+    margin-right: 6px;
+    text-align: center;
+    justify-content: center;
+    right: 77px;
   }
 }
 

@@ -1,14 +1,14 @@
 import { renderCalculatorData } from "../emiandeligiblitycalc/renderhpcal.js";
 import { homeLoanCalcFunc } from "../emiandeligiblitycalc/homeloancalculators.js";
-import { CalcHTM } from "../emiandeligiblitycalc/templatehtml.js";
+import { eligibilityCalculatorHTM } from "./templatehtml.js";
 import {xfShowHideBodyClick, firstTabActive } from "../emiandeligiblitycalc/commonfile.js";
- 
-let calculatorType,emiOverlay, elgOverlay, overlay;
+
+let calculatorType, emiCalDiv, elgCalDiv, emiOverlay, elgOverlay, overlay;
 
 export default function decorate(block) {
   let cfURL = block.querySelector("a")?.textContent.trim();
   // const cfRepsonse = CFApiCall(cfURL);
-  
+
   const callJson = {
     total: 1,
     offset: 0,
@@ -103,11 +103,12 @@ export default function decorate(block) {
     ":type": "sheet",
   };
 
-  block.innerHTML = CalcHTM(callJson);
+  block.innerHTML = CalcHTM(callJson);;
   try {
-    emiOverlay = document.querySelector(".cmp-container--emicaloverlay");
+    elgOverlay = document.querySelector(".cmp-container--caloverlay");
     overlay = document.querySelector(".modal-overlay");
-    homeLoancalculatorCallXf();
+    debugger;
+    eligibilityCalculatorCallXf();
     homeLoanCalcFunc();
   } catch (error) {
     console.warn(error);
@@ -121,18 +122,18 @@ export async function CFApiCall(cfurl) {
   return responseJson;
 }
 
-export function homeLoancalculatorCallXf() {
-  document.querySelectorAll("[data-teaserv2-xf='home-page-calculator-call-xf']") &&
-    document.querySelectorAll("[data-teaserv2-xf='home-page-calculator-call-xf']").forEach((eachTeaserv2) => {
+export function eligibilityCalculatorCallXf() {
+  document.querySelectorAll("[data-teaserv2-xf='homepage-eligibility-calculator-call-xf']") &&
+    document.querySelectorAll("[data-teaserv2-xf='homepage-eligibility-calculator-call-xf']").forEach((eachTeaserv2) => {
       eachTeaserv2.addEventListener("click", function (e) {
         e.stopImmediatePropagation();
         const xfGetAttr = this.getAttribute("data-teaserv2-xf");
         const findSectionXFShow = document.querySelector("." + xfGetAttr);
         findSectionXFShow.querySelector(".overlayDiv").classList.add("show");
-        if (xfGetAttr == "home-page-calculator-call-xf") {
-          findSectionXFShow.classList.remove("dp-none"); // look
-          calculatorType = "emi";
-          emiOverlay.classList.add("show");
+        if(xfGetAttr == "homepage-eligibility-calculator-call-xf"){
+          findSectionXFShow.classList.remove("dp-none"); 
+          calculatorType = "eligibility";
+          elgOverlay.classList.add("show");
           overlay.classList.add("show");
           document.body.style.overflow = "hidden";
           renderCalculatorData(calculatorType);
@@ -142,4 +143,3 @@ export function homeLoancalculatorCallXf() {
       });
     });
 }
-

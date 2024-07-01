@@ -413,6 +413,14 @@
             "value": "secondary"
           }
         ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "offer-documents-image",
+        "value": "",
+        "label": "Offer documents image",
+        "description": "Sets the image of the documents."
       }
     ]
   },

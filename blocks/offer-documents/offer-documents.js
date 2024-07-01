@@ -1,11 +1,13 @@
 import { getProps } from "../../scripts/scripts.js";
 
 export default function decorate(block) {
-    const [mainTitle, title, subTitle, content, button, buttonURL, type] = getProps(block, {
-        index: [3]
+    const [mainTitle, title, subTitle, content, button, buttonURL, type, image] = getProps(block, {
+        index: [1, 3]
     });
 
+    if (image) {
 
+    }
     if (type === "secondary") {
         block.innerHTML = `
             <div class="richtext text boxContainer stakeholder-container popup-rich-text">

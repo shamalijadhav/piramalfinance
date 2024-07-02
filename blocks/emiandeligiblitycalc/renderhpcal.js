@@ -1,25 +1,32 @@
 import { workflowHomeLoanCalculation } from "../emiandeligiblitycalc/calhelpers.js";
 
-export function renderCalculatorData(calType) {
-  let calculators = document.querySelector(".overlayDiv.show .homeloancalculator .calctabs").children;
+export function renderCalculatorData(currentEle, calType) {
+ /*  let calculators;
+  if(calType == "eligibility"){
+    calculators = document.querySelector(".eligibilitycalculator-wrapper .overlayDiv.show .homeloancalculator .calctabs").children;
+  }else if(calType == "emi"){
+    calculators = document.querySelector(".homeloancalculator-wrapper .overlayDiv.show .homeloancalculator .calctabs").children;
+  } */
+  let calculators = currentEle.querySelector(".overlayDiv.show .homeloancalculator .calctabs").children;
+
   let currentCalculator = Array.from(calculators).filter((element) => element.style.display != "none")[0];
   if (currentCalculator == null) return;
 
   workflowHomeLoanCalculation(currentCalculator, calType);
-  trackCalTabClick(currentCalculator, calType);
-  onInputCalculate(currentCalculator, calType);
-  innerTabClick(calType);
+  trackCalTabClick(currentEle, calType);
+  onInputCalculate(currentEle, calType);
+  innerTabClick(currentEle, calType);
 }
 
-function trackCalTabClick(currentCalculator, calType) {
-  let mainComponent = document.querySelector(".overlayDiv.show .homeloancalculator");
+function trackCalTabClick(currentEle, calType) {
+  let mainComponent = currentEle.querySelector(".overlayDiv.show .homeloancalculator");
   let calTabs = mainComponent.querySelectorAll(".onetab, .twotab");
 
   if (mainComponent.dataset.calTabClickEvent == null) {
     mainComponent.dataset.calTabClickEvent = true;
     calTabs.forEach((element) =>
       element.addEventListener("click", function () {
-        let calculators = document.querySelector(".overlayDiv.show .homeloancalculator .calctabs").children;
+        let calculators = currentEle.querySelector(".overlayDiv.show .homeloancalculator .calctabs").children;
         let currentCalculator = Array.from(calculators).filter((element) => element.style.display != "none")[0];
         if (currentCalculator == null) return;
         workflowHomeLoanCalculation(currentCalculator, calType);
@@ -28,8 +35,8 @@ function trackCalTabClick(currentCalculator, calType) {
   }
 }
 
-function onInputCalculate(currentCalculator, calType) {
-  let mainComponent = document.querySelector(".overlayDiv.show .homeloancalculator");
+function onInputCalculate(currentEle, calType) {
+  let mainComponent = currentEle.querySelector(".overlayDiv.show .homeloancalculator");
 
   if (mainComponent.dataset.calInputEvent == null) {
     mainComponent.dataset.calInputEvent = true;
@@ -41,8 +48,8 @@ function onInputCalculate(currentCalculator, calType) {
   }
 }
 
-function innerTabClick(calType) {
-  let mainComponent = document.querySelector(".overlayDiv.show .homeloancalculator");
+function innerTabClick(currentEle, calType) {
+  let mainComponent = currentEle.querySelector(".overlayDiv.show .homeloancalculator");
   let tabs = mainComponent.querySelectorAll(".tab-common");
   if (mainComponent.dataset.innerTabClick) return;
   mainComponent.dataset.innerTabClick = true;

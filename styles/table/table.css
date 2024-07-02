@@ -1,14 +1,14 @@
 /* fees and charges start */
 
 .section.fees-charges-wrapper .default-content-wrapper h2 {
-    color: #000;
+    color: var(--black);
     display: block;
     font-family: 'Nunito-Extrabold', sans-serif;
     font-size: 32px;
     font-weight: 800;
     line-height: 40px;
     padding-bottom: 8px;
-} 
+}
 
 .section.fees-charges-wrapper .default-content-wrapper p {
     color: #666;
@@ -30,7 +30,7 @@
     padding-bottom: 0;
 }
 
-.section.fees-charges-wrapper .code-wrapper .code > div > table {
+.section.fees-charges-wrapper .code-wrapper .code>div>table {
     border: 1px solid #d7dce1;
     border-collapse: unset;
     border-radius: 10px;
@@ -38,8 +38,8 @@
     width: 100%;
 }
 
-.section.fees-charges-wrapper .code-wrapper .code > div > table > tbody > tr > th {
-    background-color: #fef0ec;
+.section.fees-charges-wrapper .code-wrapper .code>div>table>tbody>tr>th {
+    background-color: var(--rosewhite);
     border-bottom: 1px solid #d7dce1;
     border-left: 1px solid #d7dce1;
     color: #4d4d4d;
@@ -52,20 +52,20 @@
     vertical-align: middle;
 }
 
-.section.fees-charges-wrapper .code-wrapper .code > div > table > tbody > tr :first-child {
+.section.fees-charges-wrapper .code-wrapper .code>div>table>tbody>tr :first-child {
     border-left: unset;
     border-radius: 10px 0 0 0;
 }
 
-.section.fees-charges-wrapper .code-wrapper .code > div > table > tbody > tr :nth-child(2) {
+.section.fees-charges-wrapper .code-wrapper .code>div>table>tbody>tr :nth-child(2) {
     border-radius: 0 10px 0 0;
 }
 
-.section.fees-charges-wrapper .code-wrapper .code > div > table > tbody > tr:last-child td {
+.section.fees-charges-wrapper .code-wrapper .code>div>table>tbody>tr:last-child td {
     border-bottom: unset;
 }
 
-.section.fees-charges-wrapper .code-wrapper .code > div > table > tbody > tr > td {
+.section.fees-charges-wrapper .code-wrapper .code>div>table>tbody>tr>td {
     border-bottom: 1px solid #d7dce1;
     border-left: 1px solid #d7dce1;
     color: #20303f;
@@ -102,7 +102,7 @@
         font-size: 20px;
         line-height: 28px;
         padding-bottom: 4px;
-    } 
+    }
 
     .section.fees-charges-wrapper .default-content-wrapper p {
         font-size: 14px;
@@ -110,15 +110,15 @@
         padding-bottom: 4px;
     }
 
-    .section.fees-charges-wrapper .code-wrapper .code > div > table {
+    .section.fees-charges-wrapper .code-wrapper .code>div>table {
         margin-top: 8px;
     }
 
-    .section.fees-charges-wrapper .code-wrapper .code > div > table > tbody > tr > th {
+    .section.fees-charges-wrapper .code-wrapper .code>div>table>tbody>tr>th {
         padding: 24px 12px 24px 16px;
     }
 
-    .section.fees-charges-wrapper .code-wrapper .code > div > table > tbody > tr > td {
+    .section.fees-charges-wrapper .code-wrapper .code>div>table>tbody>tr>td {
         font-size: 12px;
         line-height: 16px;
         padding: 24px 16px;
@@ -148,3 +148,61 @@
 }
 
 /* fees and charges end */
+
+
+/* microfinance loans table start */
+
+.section.microfinance-loan-wrapper .default-content-wrapper h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+.section.microfinance-loan-wrapper .code-wrapper .code>div>table {
+    border-radius: unset;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0;
+}
+
+.section.microfinance-loan-wrapper .code-wrapper .code>div>table>tbody>tr :nth-child(2) {
+    border-radius: unset;
+}
+
+.section.microfinance-loan-wrapper .code-wrapper .code>div>table>tbody>tr:first-child td {
+    background-color: var(--greyishblue);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 20px 5px;
+    text-align: center;
+    border-radius: unset;
+    width: 25%;
+    border: 1px solid var(--dark-color)
+}
+
+.section.microfinance-loan-wrapper .code-wrapper .code>div>table>tbody>tr>td {
+    border: 1px solid var(--dark-color);
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 20px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.section.microfinance-loan-wrapper .code-wrapper .code>div>table>tbody>tr :first-child {
+    border-radius: unset;
+}
+
+@media screen and (max-width: 767px) {
+    .section.microfinance-loan-wrapper .default-content-wrapper h2 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .section.microfinance-loan-wrapper .code-wrapper .code>div>table>tbody>tr:first-child td {
+        padding: 20px 0;
+    }
+}
+/* microfinance loans table end */

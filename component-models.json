@@ -1830,5 +1830,16 @@
   {
     "id": "emiandeligiblitycalc",
     "fields": []
+  },
+  {
+    "id": "applyloanform",
+    "fields": [
+      {
+        "component": "text-input",
+        "label": "URL of Content Fragment",
+        "name": "text",
+        "valueType": "string"
+      }
+    ]
   }
 ]

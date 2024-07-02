@@ -112,20 +112,3 @@ export default function decorate(block) {
 // overlay.addEventListener('click', function () {
 //     document.body.classList.remove('popup-active');
 // });
-
-
-
-document.querySelector("body").addEventListener("click", function (e) {
-    if (!e.target.closest('.stake-pop-up')) {
-        document.querySelectorAll(".stake-pop-up").forEach((ele) => {
-            ele.classList.remove('dp-block');
-            ele.classList.add('dp-none');
-            document.body.style.overflow = "auto";
-
-        });
-        var overlay = document.querySelector('.overlay');
-        if (overlay) {
-            document.body.removeChild(overlay);
-        }
-    }
-});

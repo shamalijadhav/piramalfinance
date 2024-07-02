@@ -403,6 +403,7 @@ header nav .nav-sections .nav-drop::after{
   line-height: 24px;
   margin-left: 10px;
   height: max-content;
+  position: relative;
 }
 
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>ul>li>ul {
@@ -554,8 +555,67 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   content: none;
 }
 
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(2) > ul > li:nth-child(1) > p::before,
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(2) > ul > li:nth-child(2) > p::before,
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(2) > ul > li:nth-child(3) > p::before,
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(2) > ul > li:nth-child(4) > p::before,
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(1) > p::before,
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(2) > p::before,
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(3) > p::before {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  left: -30px;
+  top: 2px;
+  background-size: 100% 100%;
+}
+
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(2) > ul > li:nth-child(1) > p::before {
-  content: url('https://publish-p133703-e1305981.adobeaemcloud.com…nt/dam/piramalfinance/header-images/home-loan.svg');
+  background-image: url("https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/home-loan.svg");
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(2) > ul > li:nth-child(2) > p::before {
+  background-image: url("https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/business-loan.svg");
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(2) > ul > li:nth-child(3) > p::before {
+  background-image: url("https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/other-products.svg");
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(2) > ul > li:nth-child(4) > p::before {
+  background-image: url("https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/corporate-financing.svg");
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(1) > p::before {
+  background-image: url("https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/help-support.svg");
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(2) > p::before {
+  background-image: url("https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/existing-customer.svg");
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(3) > p::before {
+  background-image: url("https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/resources.svg");
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(1) > ul>li:nth-child(5) {
+  position: relative;
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(1) > ul>li:nth-child(5)::after {
+  content: "New";
+  position: absolute;
+  right: 30%;
+  background-color: #41c66e;
+  border-radius: 4px;
+  color: #fff;
+  font-family: 'Nunito-Bold',sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 4px 10px;
 }
 
 @media screen and (max-width: 767.99px) {

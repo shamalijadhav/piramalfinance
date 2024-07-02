@@ -768,7 +768,18 @@ main .section.highlight {
 .dp-none {
   display: none;
 }
-
+.dp-block{
+  display: block;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, .4);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1111;
+}
 @media screen and (max-width: 1400px) {
   .section.page-container>div {
     max-width: 76.1% !important;

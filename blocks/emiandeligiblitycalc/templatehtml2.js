@@ -1,4 +1,4 @@
-export function CalcHTM(callJson) {
+export function CalcHTM2(callJson) {
   const salaried = callJson.data[0].salaried.salariedcheck
     ? `
 <li id="salaryTab" class="firsttab onetab" style="display: block; background: rgb(255, 255, 255);">
@@ -50,10 +50,40 @@ export function CalcHTM(callJson) {
 </li> `
     : "";
 
-  let emiinputdiv = "";
+let emiinputdiv = "";
   callJson.data[0]["chechboxemiobj"]["chechboxemi"] &&
     callJson.data[0]["chechboxemiobj"].loanamout.forEach(function (each, index) {
       emiinputdiv += `<div class="loanamount">
+          <div class="data">
+              <label class="description">${each.label}</label>
+              <!-- add class yearstext for displaying textvalue -->
+              <div class="inputdivs ">
+      
+                  <span class="rupee">${each.rupeesign}</span>
+      
+                  <label for="calcemi-${index}" aria-label="calculateemi"></label>
+                  <input type="text" class="inputvalue slider-value" value=""
+                      id="calcemi-${index}" data-slider="${each.dataslider}" data-cal-input="${each.dataattr}">
+      
+                  <span class="textvalue">${each.labelyearsvalue}</span>
+      
+              </div>
+          </div>
+          <div class="rangediv">
+              <input type="range" min="${each.rangeminvalue}" step="${each.rangestep}" max="${each.rangemaxvalue}"
+                  value="${each.displayvalue}" id="${each.dataslider}" class="range-slider__range">
+              <div class="values">
+                  <span class="text">${each.minvaluetext}</span>
+                  <span class="text">${each.maxvaluetext}</span>
+              </div>
+          </div>
+      </div>`;
+    });
+
+let eligibilityinputdiv = "";
+  callJson.data[0]["chechboxelibilityobj"]["chechboxemi"] &&
+    callJson.data[0]["chechboxelibilityobj"].loanamout.forEach(function (each, index) {
+        eligibilityinputdiv += `<div class="loanamount">
           <div class="data">
               <label class="description">${each.label}</label>
               <!-- add class yearstext for displaying textvalue -->
@@ -129,6 +159,39 @@ export function CalcHTM(callJson) {
 </div>`
     : "";
 
+
+const eligibilitydiv = callJson.data[0].chechboxelibilityobj.chechboxemi
+    ? `
+<div class="eligibilitycalculator calculator commoncalculator">
+    <div class="parent-emi parent-eligibility" id="emic">
+        <div class="inputDiv">
+            ${eligibilityinputdiv}
+        </div>
+        <div class="outputdiv">
+            <div class="output-parent">
+                <div class="mainoutput">
+                    <img data-src="${callJson.data[0].calendarbox}"
+                        class="outputimg lozad" alt="calendar">
+                    <img data-src="${callJson.data[0].calendarmobile}"
+                        class="outputimg2 lozad" alt="calendar"
+                        src="${callJson.data[0].calendarmobile}"
+                        data-loaded="true">
+
+                    <p class="outputdes">
+                        ${callJson.data[0].outputtext}
+                    </p>
+                    <div class="outputans" data-cal-result="resultAmt">₹34,438/-</div>
+
+                </div>
+
+                ${rightSideAmount}
+
+            </div>
+        </div>
+    </div>
+</div>`
+    : "";
+
   return `
  <div class="container responsivegrid overlayDiv cmp-container--caloverlay show">
       <div id="container-7dfdb51cd4" class="cmp-container">
@@ -181,6 +244,7 @@ export function CalcHTM(callJson) {
 
 
                                 ${emidiv}
+                                ${eligibilitydiv}
   
                           </div>
   

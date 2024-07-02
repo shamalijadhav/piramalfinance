@@ -5,13 +5,13 @@ import { resetCalculator } from "./resetCalculator.js";
   homeLoanCalcFunc();
 }); */
 
-export function homeLoanCalcFunc() {
+export function homeLoanCalcFunc(currentSection) {
 
-  var salariedDivs = document.querySelectorAll(".onetab");
-  var businessDivs = document.querySelectorAll(".twotab");
+  var salariedDivs = currentSection.querySelectorAll(".onetab");
+  var businessDivs = currentSection.querySelectorAll(".twotab");
 
-  var salariedRadios = document.querySelectorAll(".input_salary_checkbox");
-  var businessRadios = document.querySelectorAll(".input_business_checkbox");
+  var salariedRadios = currentSection.querySelectorAll(".input_salary_checkbox");
+  var businessRadios = currentSection.querySelectorAll(".input_business_checkbox");
 
   // just below heading tabs color changes and input click  code start
   salariedDivs.forEach(function (salariedDiv, index) {
@@ -29,9 +29,9 @@ export function homeLoanCalcFunc() {
     var backgroundDiv = tabDiv.closest(".home-loan-calculator-parent");
     var calculatorDiv = tabDiv.parentElement.closest(".home-loan-calculator-parent ").nextElementSibling;
     var radioInput = isSalaried ? salariedRadios[index] : businessRadios[index];
-    var docRequiredBackground = document.querySelector("#document-required-container");
-    var docSalaries = document.querySelectorAll(".cmp-text--doc-salary");
-    var docBusinesses = document.querySelectorAll(".cmp-text--doc-business");
+    var docRequiredBackground = currentSection.querySelector("#document-required-container");
+    var docSalaries = currentSection.querySelectorAll(".cmp-text--doc-salary");
+    var docBusinesses = currentSection.querySelectorAll(".cmp-text--doc-business");
 
     radioInput.checked = true;
     tabDiv.style.background = isSalaried ? "#fff7f4" : "#eef3ff";
@@ -77,14 +77,16 @@ export function homeLoanCalcFunc() {
   //     }
 
   // this for emi and elg calculator click
-  const emiTabs = document.querySelectorAll(".tab-emi-calc");
-  const elgTabs = document.querySelectorAll(".tab-eligibility-calc");
-  const emiDivs = document.querySelectorAll(".emicalculator");
-  const emiCalDiv = document.querySelector(".home-page-calculator-call-xf");
-  const elgDivs = document.querySelectorAll(".eligibilitycalculator");
-  const firstHead = document.querySelector(".first-head");
-  const secondHead = document.querySelector(".second-head");
-  const gstBtn = document.querySelector(".gst-third-tab");
+
+  const emiTabs = currentSection.querySelectorAll(".tab-emi-calc");
+  const elgTabs = currentSection.querySelectorAll(".tab-eligibility-calc");
+  const emiDivs = currentSection.querySelectorAll(".emicalculator.commoncalculator");
+  const elgDivs = currentSection.querySelectorAll(".eligibilitycalculator.commoncalculator");
+  // const emiCalDiv = document.querySelector(".home-page-calculator-call-xf .homeloancalculator-wrapper");
+  // const elgDivs = document.querySelectorAll(".home-page-calculator-call-xf .eligibilitycalculator");
+  const firstHead = currentSection.querySelector(".first-head");
+  const secondHead = currentSection.querySelector(".second-head");
+  const gstBtn = currentSection.querySelector(".gst-third-tab");
 
   // Function to handle click on emi tabs
   function handleEmiTabClick(index) {
@@ -130,12 +132,12 @@ export function homeLoanCalcFunc() {
   }
 
   function handleSalaryTabClickNone(index) {
-    var salariedDivs = document.querySelectorAll(".onetab");
+    var salariedDivs = currentSection.querySelectorAll(".onetab");
 
     salariedDivs[index].style.display = "none";
   }
   function handleSalaryTabClickBlock(index) {
-    var salariedDivs = document.querySelectorAll(".onetab");
+    var salariedDivs = currentSection.querySelectorAll(".onetab");
 
     salariedDivs[index].style.display = "block";
   }
@@ -185,11 +187,11 @@ export function homeLoanCalcFunc() {
   }
 
   //  Slider linear gradient and slider value and input value code start
-  var sliderValues = document.querySelectorAll(".slider-value");
+  var sliderValues = currentSection.querySelectorAll(".slider-value");
 
   sliderValues.forEach(function (sliderValue) {
     var sliderId = sliderValue.dataset.slider;
-    var myRangeSlider = document.getElementById(sliderId);
+    var myRangeSlider = currentSection.querySelector("#"+sliderId);
     var calInput = myRangeSlider.dataset.calInput;
 
     sliderValue.value = formatIndianNumber(myRangeSlider.value);

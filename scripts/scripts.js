@@ -1,17 +1,4 @@
-import {
-  sampleRUM,
-  loadHeader,
-  loadFooter,
-  decorateButtons,
-  decorateIcons,
-  decorateSections,
-  decorateBlocks,
-  decorateTemplateAndTheme,
-  waitForLCP,
-  loadBlocks,
-  loadCSS,
-} from './aem.js';
-
+import { sampleRUM, loadHeader, loadFooter, decorateButtons, decorateIcons, decorateSections, decorateBlocks, decorateTemplateAndTheme, waitForLCP, loadBlocks, loadCSS } from "./aem.js";
 const LCP_BLOCKS = []; // add your LCP blocks to the list
 
 /**
@@ -34,12 +21,16 @@ export function moveAttributes(from, to, attributes) {
 }
 
 /* helper script start */
+export let targetObject = {
+  model: null,
+};
+
 export function renderHelper(data, template, callBack) {
   var dom = document.createElement("div");
   dom.innerHTML = template;
   var loopEl = dom.getElementsByClassName("forName");
   Array.prototype.slice.call(loopEl).forEach(function (eachLoop) {
-    var templates = '';
+    var templates = "";
     var localtemplate = eachLoop.innerHTML;
     for (var key in data) {
       if (Object.hasOwnProperty.call(data, key)) {
@@ -78,7 +69,7 @@ export function fetchAPI(method, url, data) {
     } catch (error) {
       reject(error);
     }
-  })
+  });
 }
 
 export function getProps(block, config) {
@@ -90,25 +81,164 @@ export function getProps(block, config) {
     } else {
       return el.innerHTML.includes("picture") ? el.querySelector("img").src.trim() : el.innerText.trim();
     }
-  })
+  });
 }
 
 export function currenyCommaSeperation(x) {
   if (typeof x === "number") {
-      x = x.toString();
+    x = x.toString();
   }
 
   // Split the number into integral and decimal parts
   const parts = x.split(".");
   let integralPart = parts[0];
-  const decimalPart = parts[1] ? `.${parts[1]}` : '';
+  const decimalPart = parts[1] ? `.${parts[1]}` : "";
 
   // Add commas after every two digits from the right in the integral part
-  integralPart = integralPart.replace(/\d(?=(\d{2})+\d$)/g, '$&,');
-  
+  integralPart = integralPart.replace(/\d(?=(\d{2})+\d$)/g, "$&,");
+
   return integralPart + decimalPart;
 }
 
+export function createCarousle(block, prevButton, nextButton) {
+  block.parentElement.append(prevButton);
+  block.parentElement.append(nextButton);
+  prevButton.addEventListener("click", prevSlide);
+  nextButton.addEventListener("click", nextSlide);
+  let currentSlide = 0;
+  let isDragging = false;
+  let startPos = 0;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
+  const carousel = block;
+  const carouselInner = block.querySelector("#carouselInner");
+  const slides = block.querySelectorAll(".carousel-item");
+  const totalSlides = slides.length;
+
+  let visibleSlides = getVisibleSlides(); // Get initial number of visible slides
+
+  carousel.addEventListener("mousedown", dragStart);
+  carousel.addEventListener("mouseup", dragEnd);
+  carousel.addEventListener("mouseleave", dragEnd);
+  carousel.addEventListener("mousemove", drag);
+
+  carousel.addEventListener("touchstart", dragStart);
+  carousel.addEventListener("touchend", dragEnd);
+  carousel.addEventListener("touchmove", drag);
+
+  carousel.addEventListener("wheel", scrollEvent); // Add scroll event listener
+  window.addEventListener("resize", () => {
+    visibleSlides = getVisibleSlides();
+    setPositionByIndex();
+  });
+
+  function dragStart(event) {
+    isDragging = true;
+    startPos = getPositionX(event);
+    carouselInner.style.transition = "none";
+  }
+
+  function dragEnd() {
+    isDragging = false;
+    const movedBy = currentTranslate - prevTranslate;
+
+    if (movedBy < -100) {
+      nextSlide();
+    } else if (movedBy > 100) {
+      prevSlide();
+    } else {
+      setPositionByIndex();
+    }
+  }
+
+  function drag(event) {
+    if (isDragging) {
+      const currentPosition = getPositionX(event);
+      currentTranslate = prevTranslate + currentPosition - startPos;
+      carouselInner.style.transform = `translateX(${currentTranslate}px)`;
+    }
+  }
+
+  function getPositionX(event) {
+    return event.type.includes("mouse") ? event.pageX : event.touches[0].clientX;
+  }
+
+  function getVisibleSlides() {
+    return window.innerWidth <= 600 ? 2 : 4;
+  }
+
+  function showSlide(index) {
+    if (index >= slides.length) {
+      // currentSlide = 0;
+    } else if (index < 0) {
+      // currentSlide = slides.length - 1;
+    } else {
+    }
+    currentSlide = Math.max(0, Math.min(index, totalSlides - visibleSlides));
+    setPositionByIndex();
+  }
+
+  function setPositionByIndex() {
+    currentTranslate = (currentSlide * -carouselInner.clientWidth) / visibleSlides;
+    prevTranslate = currentTranslate;
+    carouselInner.style.transition = "transform 0.5s ease";
+    carouselInner.style.transform = `translateX(${currentTranslate}px)`;
+  }
+
+  function nextSlide() {
+    showSlide(currentSlide + 1);
+    checkLastChildVisibility();
+  }
+
+  function prevSlide() {
+    showSlide(currentSlide - 1);
+    checkLastChildVisibility();
+  }
+
+  function scrollEvent(event) {
+    if (event.deltaY < 0) {
+      prevSlide();
+    } else {
+      nextSlide();
+    }
+    event.preventDefault();
+  }
+
+  // Initialize the carousel
+  showSlide(currentSlide);
+
+  // Check if the last child is visible in the viewport
+  function checkLastChildVisibility() {
+    const lastChild = carouselInner.lastElementChild;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log("Last child is visible in the viewport - new");
+          } else {
+            console.log("Last child is not visible in the viewport - new ");
+          }
+        });
+      },
+      {
+        root: carousel,
+        threshold: 0.1,
+      }
+    );
+
+    observer.observe(lastChild);
+  }
+
+  // Initialize the observer for the first time
+  checkLastChildVisibility();
+}
+
+export function createButton(text, picture) {
+  const button = document.createElement("button");
+  button.classList.add("carousel-control", text);
+  button.innerHTML = (picture)
+  return button;
+}
 /* helper script end */
 
 /**
@@ -120,9 +250,7 @@ export function moveInstrumentation(from, to) {
   moveAttributes(
     from,
     to,
-    [...from.attributes]
-      .map(({ nodeName }) => nodeName)
-      .filter((attr) => attr.startsWith('data-aue-') || attr.startsWith('data-richtext-')),
+    [...from.attributes].map(({ nodeName }) => nodeName).filter((attr) => attr.startsWith("data-aue-") || attr.startsWith("data-richtext-"))
   );
 }
 
@@ -132,7 +260,7 @@ export function moveInstrumentation(from, to) {
 async function loadFonts() {
   await loadCSS(`${window.hlx.codeBasePath}/styles/fonts.css`);
   try {
-    if (!window.location.hostname.includes('localhost')) sessionStorage.setItem('fonts-loaded', 'true');
+    if (!window.location.hostname.includes("localhost")) sessionStorage.setItem("fonts-loaded", "true");
   } catch (e) {
     // do nothing
   }
@@ -147,7 +275,7 @@ function buildAutoBlocks() {
     // TODO: add auto block, if needed
   } catch (error) {
     // eslint-disable-next-line no-console
-    console.error('Auto Blocking failed', error);
+    console.error("Auto Blocking failed", error);
   }
 }
 
@@ -170,18 +298,18 @@ export function decorateMain(main) {
  * @param {Element} doc The container element
  */
 async function loadEager(doc) {
-  document.documentElement.lang = 'en';
+  document.documentElement.lang = "en";
   decorateTemplateAndTheme();
-  const main = doc.querySelector('main');
+  const main = doc.querySelector("main");
   if (main) {
     decorateMain(main);
-    document.body.classList.add('appear');
+    document.body.classList.add("appear");
     await waitForLCP(LCP_BLOCKS);
   }
 
   try {
     /* if desktop (proxy for fast connection) or fonts already loaded, load fonts.css */
-    if (window.innerWidth >= 900 || sessionStorage.getItem('fonts-loaded')) {
+    if (window.innerWidth >= 900 || sessionStorage.getItem("fonts-loaded")) {
       loadFonts();
     }
   } catch (e) {
@@ -194,22 +322,22 @@ async function loadEager(doc) {
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
-  const main = doc.querySelector('main');
+  const main = doc.querySelector("main");
   await loadBlocks(main);
 
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();
 
-  loadHeader(doc.querySelector('header'));
-  loadFooter(doc.querySelector('footer'));
+  loadHeader(doc.querySelector("header"));
+  loadFooter(doc.querySelector("footer"));
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
 
-  sampleRUM('lazy');
-  sampleRUM.observe(main.querySelectorAll('div[data-block-name]'));
-  sampleRUM.observe(main.querySelectorAll('picture > img'));
+  sampleRUM("lazy");
+  sampleRUM.observe(main.querySelectorAll("div[data-block-name]"));
+  sampleRUM.observe(main.querySelectorAll("picture > img"));
 }
 
 /**
@@ -218,9 +346,9 @@ async function loadLazy(doc) {
  */
 function loadDelayed() {
   // eslint-disable-next-line import/no-cycle
-  window.setTimeout(() => import('./delayed.js'), 3000);
+  window.setTimeout(() => import("./delayed.js"), 3000);
   // load anything that can be postponed to the latest here
-  import('./sidekick.js').then(({ initSidekick }) => initSidekick());
+  import("./sidekick.js").then(({ initSidekick }) => initSidekick());
 }
 
 async function loadPage() {
@@ -231,7 +359,6 @@ async function loadPage() {
 }
 
 loadPage();
-
 
 async function loadingCustomCss() {
   // load custom css files
@@ -265,15 +392,21 @@ async function loadingCustomCss() {
     `${window.hlx.codeBasePath}/styles/media/media.css`,
     `${window.hlx.codeBasePath}/styles/partnership/partnership.css`,
     `${window.hlx.codeBasePath}/styles/rupee-cards/rupee-card.css`,
-  ]
+  ];
 
   loadCssArray.forEach(async (eachCss) => {
     await loadCSS(eachCss);
   });
-
 }
 
-document.querySelector("body").addEventListener("click", function(e){
+let body = document.querySelector("body");
+body?.addEventListener("click", function (e) {
   e.stopImmediatePropagation();
-  e.currentTarget.querySelector(".stake-pop-up.dp-block")?.classList.remove("dp-block"); 
-})
+  body.classList.add("overlay-active");
+  if (!e.target.closest(".show") && targetObject.model) {
+    targetObject.model?.querySelector(".overlayDiv").classList.remove("show");
+    document.body.style.overflow = "scroll";
+    body.classList.remove("overlay-active");
+  }
+  e.currentTarget.querySelector(".stake-pop-up.dp-block")?.classList.remove("dp-block");
+});

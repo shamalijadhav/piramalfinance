@@ -4,7 +4,7 @@ import { generateTabName } from '../tab-name/tab-name.js';
 
 const carouselContainerMapping = {}
 carouselContainerMapping["detailed-teaser"] = generateDetailedTeaserDOM;
-carouselContainerMapping["ss-teaser"] = generateDetailedTeaserDOM;
+carouselContainerMapping["teaser"] = generateDetailedTeaserDOM;
 carouselContainerMapping["tab-name"] = generateTabName;
 
 export default function decorate(block) {

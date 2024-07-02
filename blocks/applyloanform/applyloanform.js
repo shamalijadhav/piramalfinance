@@ -1,11 +1,14 @@
 import { appplyLoanTemplate } from "./applyloantemplate.js";
 import { applyLoanFormClick } from "./applyloanforms.js";
-// import { createPopper } from "../datepickerlib/popper.js";
 import { applyLoanPopper } from "./applyloanpopper.js";
 import { loanutmForm } from "./loanutm.js";
 import { stateMasterApi } from "./statemasterapi.js";
+import { validationJSFunc } from "./validation.js";
 import AirDatepicker from "./datepickertest.js";
 import Popper from "../datepickerlib/popper.js";
+import { loanFromBtn, loanOtpInput } from "./loanformdom.js";
+import { workFlow } from "./loanformapi.js";
+// import { buttonCLick } from "./loanformapi.js";
 
 export default function decorate(block) {
   let cfURL = block.querySelector("a")?.textContent.trim();
@@ -18,7 +21,15 @@ export default function decorate(block) {
     loanutmForm();
     stateMasterApi();
     validationJSFunc();
-    createPopper();
+    // buttonCLick();
+    let loanStatus = "Rejected";
+
+    loanFromBtn().addEventListener("click", function ({ currentTarget }) {
+      // debugger;
+      currentTarget.closest(".loan-form-button-container").classList.add("loader-initialized");
+      loanOtpInput().value = "";
+      workFlow();
+    });
   } catch (error) {
     console.warn(error);
   }

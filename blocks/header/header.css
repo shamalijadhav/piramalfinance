@@ -544,6 +544,9 @@ header nav .nav-sections .nav-drop::after{
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li:nth-child(5)[aria-expanded="true"]>ul>li:hover {
   color: var(--orange);
 }
+.mobile-view-header{
+  display: none;
+}
 
 @media screen and (max-width: 767.99px) {
   .header-wrapper .nav-wrapper nav{
@@ -738,3 +741,252 @@ header nav .nav-sections .nav-drop::after{
 
 
 
+
+/* header mobile */
+@media screen and (max-width: 1024px) {
+  .section.mobile-view-header {
+    display: block;
+  }
+
+  .section.mobile-view-header .code-wrapper .code div div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(1) {
+    display: flex;
+    font-family: Nunito-Bold, sans-serif;
+    font-size: 1pc;
+    font-weight: 700;
+    line-height: 24px;
+    text-decoration: none;
+    color: #212529;
+    padding: 16px 0;
+    width: 100%;
+  }
+
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(2) ul:nth-child(1) li,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(3) ul:nth-child(1) li,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(4) ul:nth-child(1) li,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(5) ul:nth-child(1) li {
+    color: #212529;
+    padding: 16px 0;
+    align-items: start;
+    cursor: pointer;
+    display: flex;
+    font-family: Nunito-Bold, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none;
+    margin-bottom: 0;
+    position: relative;
+    width: 100%;
+    padding-left: 8px;
+  }
+
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(2) ul:nth-child(1) li::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(3) ul:nth-child(1) li::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(4) ul:nth-child(1) li::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(5) ul:nth-child(1) li::after {
+    position: absolute;
+    content: '';
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3.5px;
+    margin-top: -3px;
+    transform: rotate(45deg);
+    right: 3px;
+    top: 24px;
+  }
+
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(2) ul:nth-child(2) li:nth-child(1) {
+    padding: unset;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  .section.mobile-view-header .code-wrapper .code div ul li:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section.mobile-view-header .code-wrapper .code div ul li:nth-child(2) ul:nth-child(1) {
+    display: flex;
+    align-items: center;
+  }
+
+  .section.mobile-view-header .code-wrapper .code div ul li:nth-child(2) ul li {
+    margin-bottom: 12px;
+  }
+
+  .section.mobile-view-header .code-wrapper .code div ul li:nth-child(3) ul:nth-child(1) {
+    display: flex;
+  }
+
+  .section.mobile-view-header .code-wrapper .code div ul li:nth-child(4) ul:nth-child(1) {
+    display: flex;
+  }
+
+  .section.mobile-view-header .code-wrapper .code div ul li:nth-child(5) ul:nth-child(1) {
+    display: flex;
+  }
+
+  .section.mobile-view-header .code-wrapper .code div ul:nth-child(2) li:nth-child(4) ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .section.mobile-view-header .code-wrapper .code div ul li:nth-child(2) ul li a {
+    cursor: pointer;
+    font-family: Nunito-Regular, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-decoration: none;
+    color: #212529;
+  }
+  .section.mobile-view-header .code-wrapper .code div ul li:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+  }
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(2) ul li::after,
+  .section.mobile-view-header .code-wrapper .code div ul:nth-child(2) li:nth-child(2) ul li::after,
+  .section.mobile-view-header .code-wrapper .code div ul li:nth-child(3) ul:nth-child(1) li::after,
+  .section.mobile-view-header .code-wrapper .code div ul li:nth-child(4) ul:nth-child(1) li::after,
+  .section.mobile-view-header .code-wrapper .code div ul li:nth-child(5) ul:nth-child(1) li::after {
+    position: absolute;
+    content: '';
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3.5px;
+    margin-top: -3px;
+    transform: rotate(45deg);
+    right: 3px;
+    top: 24px;
+
+  }
+  .section.mobile-view-header .code-wrapper .code div ul li:nth-child(3) ul:nth-child(1) li,
+  .section.mobile-view-header .code-wrapper .code div ul li:nth-child(4) ul:nth-child(1) li,
+  .section.mobile-view-header .code-wrapper .code div ul li:nth-child(5) ul:nth-child(1) li {
+    padding: 16px 0;
+    align-items: start;
+    color: #212529;
+    cursor: pointer;
+    display: flex;
+    font-family: Nunito-Bold, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none;
+    margin-bottom: 0;
+    position: relative;
+    width: 100%;
+    padding-left: 8px;
+  }
+
+  .section.mobile-view-header .code-wrapper .code div ul li:nth-child(3) ul:nth-child(2),
+  .section.mobile-view-header .code-wrapper .code div ul li:nth-child(2) ul:nth-child(2){
+    display: none;
+  }
+  .section.mobile-view-header .code-wrapper .code div ul li:nth-child(2) ul:nth-child(2) {
+    padding-left: 24px;
+  }
+
+  .section.mobile-view-header .code-wrapper .code div ul li:nth-child(2) ul:nth-child(1) img {
+    display: block;
+    height: 16px;
+    width: 16px;
+  }
+
+  /* 2nd ul */
+
+  .section.mobile-view-header .code-wrapper .code div ul:nth-child(2) li:nth-child(1) {
+    align-items: center;
+    color: #212529;
+    padding: 16px 0;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    font-family: Nunito-Bold, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #212529;
+    padding: 16px 0;
+    width: 100%;
+  }
+
+  .section.mobile-view-header .code-wrapper .code div ul:nth-child(2) li:nth-child(2) ul li {
+    cursor: pointer;
+    display: flex;
+    font-family: Nunito-Bold, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #212529;
+    padding: 16px 0;
+    width: 100%;
+    margin-bottom: 0;
+    padding-left: 8px;
+    position: relative;
+    
+  }
+
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(5) ul:nth-child(2),
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(4) ul:nth-child(2),
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(3) ul:nth-child(2),
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(4) ul:nth-child(2),
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(4) ul:nth-child(2),
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(3) ul:nth-child(2),
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(5) ul:nth-child(2) {
+    display: none;
+  }
+
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(1) {
+    align-items: center;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    font-family: Nunito-Bold, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #212529;
+    padding: 16px 0;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(2) ul img {
+    display: block;
+    height: 16px;
+    width: 16px;
+  }
+
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(2) ul:nth-child(1) li {
+    color: #212529;
+    padding-left: 8px;
+    font-family: Nunito-Bold, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    padding-left: 12px;
+    width: 100%;
+    padding: 16px 0;
+    margin-bottom: 0;
+    padding-left: 8px;
+    position: relative;
+  }
+  .section.mobile-view-header .code-wrapper .code div ul:nth-child(1) li:nth-child(3) ul:nth-child(1),
+  .section.mobile-view-header .code-wrapper .code div ul:nth-child(1) li:nth-child(4) ul:nth-child(1),
+  .section.mobile-view-header .code-wrapper .code div ul:nth-child(1) li:nth-child(5) ul:nth-child(1),
+  .section.mobile-view-header .code-wrapper .code div ul:nth-child(2) li:nth-child(3) ul:nth-child(1),
+  .section.mobile-view-header .code-wrapper .code div ul:nth-child(2) li:nth-child(4) ul:nth-child(1),
+  .section.mobile-view-header .code-wrapper .code div ul:nth-child(2) li:nth-child(5) ul:nth-child(1),
+  .section.mobile-view-header .code-wrapper .code div ul:nth-child(3) li:nth-child(3) ul:nth-child(1),
+  .section.mobile-view-header .code-wrapper .code div ul:nth-child(3) li:nth-child(4) ul:nth-child(1),
+  .section.mobile-view-header .code-wrapper .code div ul:nth-child(3) li:nth-child(5) ul:nth-child(1),
+  .section.mobile-view-header .code-wrapper .code div ul li:nth-child(2) ul:nth-child(1),
+  .section.mobile-view-header .code-wrapper .code div ul li:nth-child(2) ul:nth-child(1){
+    border-bottom: 1px solid #e6e6e6;
+  }
+}

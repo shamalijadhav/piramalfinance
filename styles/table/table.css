@@ -1,7 +1,7 @@
 /* fees and charges start */
 
 .section.fees-charges-wrapper .default-content-wrapper h2 {
-    color: #000;
+    color: var(--black);
     display: block;
     font-family: 'Nunito-Extrabold', sans-serif;
     font-size: 32px;
@@ -152,8 +152,17 @@
 
 /* microfinance loans table start */
 
+.section.microfinance-loan-wrapper .default-content-wrapper h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
 .section.microfinance-loan-wrapper .code-wrapper .code>div>table {
     border-radius: unset;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0;
 }
 
 .section.microfinance-loan-wrapper .code-wrapper .code>div>table>tbody>tr :nth-child(2) {
@@ -166,25 +175,30 @@
     font-size: 14px;
     font-weight: 700;
     line-height: 20px;
-    padding: 20px 0;
+    padding: 20px 5px;
     text-align: center;
     border-radius: unset;
+    width: 25%;
+    border: 1px solid var(--dark-color)
 }
 
 .section.microfinance-loan-wrapper .code-wrapper .code>div>table>tbody>tr>td {
     border: 1px solid var(--dark-color);
     color: var(--text-color);
-    font-family: Nunito-Regular, sans-serif;
     font-size: 14px;
-    font-weight: 400;
     line-height: 20px;
     padding: 20px 0;
     text-align: center;
-    border: unset;
 }
 
 .section.microfinance-loan-wrapper .code-wrapper .code>div>table>tbody>tr :first-child {
     border-radius: unset;
 }
 
+@media screen and (max-width: 767px) {
+    .section.microfinance-loan-wrapper .default-content-wrapper h2 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
 /* microfinance loans table end */

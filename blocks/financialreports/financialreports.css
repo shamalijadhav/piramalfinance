@@ -261,17 +261,17 @@
 }
 
 .section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox.active .subAccordianTitle {
-    background: #f26841;
-    color: #fff;
+    background: var(--orange);
+    color: var(--background-color);
 }
 
 .section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox.active .subAccordianTitle::after {
-    color: white;
+    color: var(--background-color);
 }
 
 
 .section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianTitle::after {
-    color: #000;
+    color: var(--text-color);
     content: "+";
     font-family: Nunito-Extrabold, sans-serif;
     font-size: 28px;
@@ -283,13 +283,9 @@
 }
 
 .section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox.active .subAccordianTitle::after {
-    color: #fff;
+    color: var(--background-color);
     content: "-";
 }
-
-/* .section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap {
-    border: 1px solid #ccc;
-} */
 
 .section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap .innersubAccordianContent {
     margin-top: 10px;
@@ -298,7 +294,7 @@
 }
 
 .section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap .innersubAccordianContent .innersubAccordianTitle {
-    background: #f8f8f8;
+    background: var(--whitesmoke);
     border-radius: 4px;
     color: #333;
     display: block;
@@ -310,12 +306,12 @@
 }
 
 .section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap .innersubAccordianContent.active .innersubAccordianTitle {
-    background: #f26841;
-    color: #fff;
+    background: var(--orange);
+    color: var(--background-color);
 }
 
 .section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap .innersubAccordianContent .innersubAccordianTitle::after {
-    color: #000;
+    color: var(--text-color);
     content: "+";
     font-family: Nunito-Extrabold, sans-serif;
     font-size: 28px;
@@ -327,13 +323,13 @@
 }
 
 .section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap .innersubAccordianContent.active .innersubAccordianTitle::after {
-    color: #fff;
+    color: var(--background-color);
     content: "-";
 }
 
 .section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap.innerSubAccordianData {
     position: relative;
-    border: solid #ccc;
+    border: solid var(--dark-color);
     border-width: 1px 1px 0;
 }
 
@@ -362,7 +358,7 @@
 }
 
 .section.financial-report-content-wrap .financialreports-wrapper .financialreports .accordianpdf-section .container .accordianContent .accordianBox .subAccordianWrap .subAccordianBox .subAccordianContent .publicDisclosuresWrap.innerSubAccordianData>ul>li>a:hover {
-    color: #f26841;
+    color: var(--orange);
     text-decoration: none;
 }
 

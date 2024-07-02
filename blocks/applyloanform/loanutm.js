@@ -1,14 +1,33 @@
 
-window.addEventListener("DOMContentLoaded", function() {
+export function loanutmForm(){
+    const isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+      };
+      let utmBtns = document.querySelectorAll(".loan-form-utm");
 
-    let utmBtns = document.querySelectorAll(".loan-form-utm");
-
-    if(utmBtns.length) {
-        utmBtns.forEach(btn => {
-            btn.addEventListener("click", loanFormUTM);
-        });
-    }
-});
+      if(utmBtns.length) {
+          utmBtns.forEach(btn => {
+              btn.addEventListener("click", loanFormUTM);
+          });
+      }
+}
 
 
 export function loanFormUTM() {
@@ -20,26 +39,7 @@ export function loanFormUTM() {
     window.open(redirectionLink, "_self");
 }
 
-const isMobile = {
-    Android: function() {
-        return navigator.userAgent.match(/Android/i);
-    },
-    BlackBerry: function() {
-        return navigator.userAgent.match(/BlackBerry/i);
-    },
-    iOS: function() {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    },
-    Opera: function() {
-        return navigator.userAgent.match(/Opera Mini/i);
-    },
-    Windows: function() {
-        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
-    },
-    any: function() {
-        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-    }
-  };
+
 
 
 export function loginFormUTM() {

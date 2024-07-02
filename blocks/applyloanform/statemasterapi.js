@@ -1,6 +1,6 @@
 import { workFlowStatemaster } from "./statemasterbiz.js";
 
-window.addEventListener("DOMContentLoaded", function () {
+export function stateMasterApi() {
     let loaninnerform=document.querySelector(".loan-form-sub-parent");
     let applyLaonFormOpenBtns = [];
     let buttonExpert = document.querySelectorAll(".expert");
@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-});
+}
 
 function statemasterGetStatesApi() {
     return new Promise((resolve, reject) => {

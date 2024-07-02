@@ -813,16 +813,8 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     right: 77px;
   }
 
-  /* .header-wrapper .nav-wrapper .nav-hamburger button[aria-label="close"] .nav-hamburger-icon::after {
+  .header-wrapper .nav-wrapper .nav-hamburger button[aria-label="Close"] .nav-hamburger-icon::after {
     top: 2.5px;
-  } */
-
-  /* header .nav-wrapper nav[aria-expanded='true']>.nav-hamburger>button>.nav-hamburger-icon::after {
-    top: 2.5px;
-  }  */
-
-  header nav[aria-expanded='true'] .nav-hamburger-icon::after {
-    top: 2.5px
   }
 }
 

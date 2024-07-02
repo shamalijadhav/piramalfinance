@@ -200,5 +200,9 @@
         font-size: 16px;
         line-height: 24px;
     }
+
+    .section.microfinance-loan-wrapper .code-wrapper .code>div>table>tbody>tr:first-child td {
+        padding: 20px 0;
+    }
 }
 /* microfinance loans table end */

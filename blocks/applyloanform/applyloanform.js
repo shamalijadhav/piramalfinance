@@ -4,6 +4,7 @@ import { createPopper } from "../datepickerlib/popper.js";
 import { applyLoanPopper } from "./applyloanpopper.js";
 import { loanutmForm } from "./loanutm.js";
 import { stateMasterApi } from "./statemasterapi.js";
+import AirDatepicker from "./datepickertest.js";
 import { validationJSFunc } from "./validation.js";
 
 export default function decorate(block) {
@@ -12,12 +13,12 @@ export default function decorate(block) {
 
   block.innerHTML = appplyLoanTemplate();
   try {
-    createPopper();
     applyLoanFormClick();
     applyLoanPopper();
     loanutmForm();
     stateMasterApi();
     validationJSFunc();
+    createPopper();
   } catch (error) {
     console.warn(error);
   }

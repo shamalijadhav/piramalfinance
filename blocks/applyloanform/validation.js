@@ -2,41 +2,56 @@ import { dpObj } from "./applyloanpopper.js";
 import { branchInput, cutomerIncome, cutomerName, cutomerNo, formDobInput, formLoanAmt, formTc, loanFormContainer, loanFormOtpBtn, loanFromBtn, loanOtpInput, loanProduct, stateInput } from "./loanformdom.js";
 
 
-let checkNumberFor = [cutomerNo()];
-let checkEmptyFor = [loanProduct(), formLoanAmt(), cutomerName(), cutomerIncome(), stateInput(), branchInput(), formTc()];
-let checkDateFor = [formDobInput()];
-let checkValidPlaceFor = [stateInput(), branchInput()];
+export function validationJSFunc(){
 
-loanFormContainer().addEventListener("input", function({target}) {
-    if(target.tagName != "INPUT") return;
+    let checkNumberFor = [cutomerNo()];
+    let checkEmptyFor = [loanProduct(), formLoanAmt(), cutomerName(), cutomerIncome(), stateInput(), branchInput(), formTc()];
+    let checkDateFor = [formDobInput()];
+    let checkValidPlaceFor = [stateInput(), branchInput()];
+    
+    loanFormContainer().addEventListener("input", function({target}) {
+        if(target.tagName != "INPUT") return;
+    
+        if(target.dataset.valueType == "money") {
+            let inputValue = target.value;
+            inputValue = inputValue.replace(/^0|\D/g, '');
+            target.value =  currenyCommaSeperation(inputValue);
+    
+            return false;
+        }
+    
+        if(target.dataset.valueType == "name") {
+            target.value = target.value.replace(/[^a-zA-Z ]+/g, '');
+        }
+    
+        if(target.dataset.valueType == "date") {
+            target.value = target.value.replace(/\D/g, '');
+        }
+    
+        let isEmptyValidations = checkEmptyFor.every(isEmpty);
+        let isNUmberValidations = checkNumberFor.every((input) => isValidNumber(input, target));
+        let isPlaceValidations = checkValidPlaceFor.every((input) => isValidPlace(input, target));
+        let isDateValidations = checkDateFor.every((input) => validateAndFormatDate(input, target));
+    
+        if(isEmptyValidations && isNUmberValidations && isPlaceValidations && isDateValidations) {
+            loanFromBtn().classList.add("loan-form-button-active");
+        } else {
+            loanFromBtn().classList.remove("loan-form-button-active");
+        }
+    });
 
-    if(target.dataset.valueType == "money") {
-        let inputValue = target.value;
-        inputValue = inputValue.replace(/^0|\D/g, '');
-        target.value =  currenyCommaSeperation(inputValue);
-
-        return false;
-    }
-
-    if(target.dataset.valueType == "name") {
-        target.value = target.value.replace(/[^a-zA-Z ]+/g, '');
-    }
-
-    if(target.dataset.valueType == "date") {
-        target.value = target.value.replace(/\D/g, '');
-    }
-
-    let isEmptyValidations = checkEmptyFor.every(isEmpty);
-    let isNUmberValidations = checkNumberFor.every((input) => isValidNumber(input, target));
-    let isPlaceValidations = checkValidPlaceFor.every((input) => isValidPlace(input, target));
-    let isDateValidations = checkDateFor.every((input) => validateAndFormatDate(input, target));
-
-    if(isEmptyValidations && isNUmberValidations && isPlaceValidations && isDateValidations) {
-        loanFromBtn().classList.add("loan-form-button-active");
-    } else {
-        loanFromBtn().classList.remove("loan-form-button-active");
-    }
-});
+    loanOtpInput().addEventListener("input", function({currentTarget}) {
+        let inputValue = currentTarget.value.trim();
+        currentTarget.value = inputValue.replace(/\D/g, '');
+        document.querySelector("#otp-digits").textContent = currentTarget.value.length + "/4 Digits";
+        
+        if(currentTarget.value.length == 4) {
+            loanFormOtpBtn().classList.add("loan-form-button-active");
+        } else {
+            loanFormOtpBtn().classList.remove("loan-form-button-active");
+        }
+    });
+}
 
 
 function isEmpty(input) {
@@ -169,14 +184,3 @@ function currenyCommaSeperation(x) {
     return integralPart + decimalPart;
 }
 
-loanOtpInput().addEventListener("input", function({currentTarget}) {
-    let inputValue = currentTarget.value.trim();
-    currentTarget.value = inputValue.replace(/\D/g, '');
-    document.querySelector("#otp-digits").textContent = currentTarget.value.length + "/4 Digits";
-    
-    if(currentTarget.value.length == 4) {
-        loanFormOtpBtn().classList.add("loan-form-button-active");
-    } else {
-        loanFormOtpBtn().classList.remove("loan-form-button-active");
-    }
-});

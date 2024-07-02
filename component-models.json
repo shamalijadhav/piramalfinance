@@ -512,6 +512,37 @@
         "label": "Rich-Text Field",
         "valueType": "string",
         "raw": true
+      },
+      {
+        "component": "select",
+        "name": "tabshowtype",
+        "value": "normal",
+        "label": "Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "normal",
+            "value": "normal"
+          },
+          {
+            "name": "carousel",
+            "value": "carousel"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "tabpictureprev",
+        "value": "",
+        "label": "Set previous icon on tab carousel"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "tabpicturenext",
+        "value": "",
+        "label": "Set next icon on tab carousel"
       }
     ]
   },
@@ -1833,6 +1864,17 @@
   },
   {
     "id": "applyloanform",
+    "fields": [
+      {
+        "component": "text-input",
+        "label": "URL of Content Fragment",
+        "name": "text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "datepickerlib",
     "fields": [
       {
         "component": "text-input",

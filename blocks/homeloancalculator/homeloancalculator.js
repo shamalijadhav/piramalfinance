@@ -1,7 +1,7 @@
 import { renderCalculatorData } from "../emiandeligiblitycalc/renderhpcal.js";
 import { homeLoanCalcFunc } from "../emiandeligiblitycalc/homeloancalculators.js";
 import { CalcHTM } from "../emiandeligiblitycalc/templatehtml1.js";
-import {xfShowHideBodyClick, firstTabActive } from "../emiandeligiblitycalc/commonfile.js";
+import {firstTabActive } from "../emiandeligiblitycalc/commonfile.js";
 import { targetObject } from "../../scripts/scripts.js";
  
 let calculatorType, emiCalDiv, emiOverlay, overlay;

@@ -802,8 +802,8 @@ main .section.highlight {
   /* width: 80%; */
   /* max-width: 600px; */
   overflow: hidden;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  /* border: 1px solid #ddd; */
+  /* border-radius: 10px; */
 }
 
 .carousel .carousel-inner {

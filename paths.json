@@ -2,6 +2,7 @@
   "mappings": [
     "/content/piramalfinance-edge/:/", 
     "/content/piramalfinance-edge/redirects:/redirects.json",
-    "/content/piramalfinance-edge/happy-customer.json:/happy-customer.json"
+    "/content/piramalfinance-edge/happy-customer.json:/happy-customer.json",
+    "/content/piramalfinance-edge/test:/test.json"
   ]
 }

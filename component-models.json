@@ -1841,5 +1841,16 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "datepickerlib",
+    "fields": [
+      {
+        "component": "text-input",
+        "label": "URL of Content Fragment",
+        "name": "text",
+        "valueType": "string"
+      }
+    ]
   }
 ]

@@ -6,7 +6,7 @@ function createButton(text, picture) {
     button.innerHTML = (picture)
     return button;
 }
-export default function decorate(block) {
+export function generateTabName(block) {
     // const [name, id, type] = block.children;
     // const names = name.innerText.split(",");
     // const ids = id.innerText.split(",");
@@ -73,4 +73,8 @@ export default function decorate(block) {
             currentEl.closest(".carousel-item")?.classList.add("active");
         }
     })
+}
+
+export default function decorate(block) {
+    generateTabName(block);
 }

@@ -569,6 +569,23 @@
       },
       {
         "component": "select",
+        "name": "rendertype",
+        "value": "",
+        "label": "Render Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "normal",
+            "value": "normal"
+          },
+          {
+            "name": "tab-name",
+            "value": "tab-name"
+          }
+        ]
+      },
+      {
+        "component": "select",
         "name": "tabshowtype",
         "value": "normal",
         "label": "Type",

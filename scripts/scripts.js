@@ -120,8 +120,8 @@ export function createCarousle(block, prevButton, nextButton) {
   let currentTranslate = 0;
   let prevTranslate = 0;
   const carousel = block;
-  const carouselInner = document.querySelector('#carouselInner');
-  const slides = document.querySelectorAll('.carousel-item');
+  const carouselInner = block.querySelector('#carouselInner');
+  const slides = block.querySelectorAll('.carousel-item');
   const totalSlides = slides.length;
 
   let visibleSlides = getVisibleSlides(); // Get initial number of visible slides
@@ -237,6 +237,13 @@ export function createCarousle(block, prevButton, nextButton) {
 
   // Initialize the observer for the first time
   checkLastChildVisibility();
+}
+
+export function createButton(text, picture) {
+  const button = document.createElement("button");
+  button.classList.add("carousel-control", text);
+  button.innerHTML = (picture)
+  return button;
 }
 /* helper script end */
 

@@ -845,6 +845,17 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
 
 
 @media screen and (max-width: 1024px) {
+  .section.mobile-view-header {
+    display: block;
+    position: absolute;
+    top: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100vh - 35px);
+    left: 0;
+    background-color: rgb(250 250 250);
+    width: 100%;
+  }
   .section.mobile-view-header .code-wrapper .code div div h2{
     align-items: center;
     color: #333;
@@ -858,10 +869,12 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     line-height: 24px;
     text-decoration: none;
     color: #212529;
-        padding: 1pc 0;
-        width: 100%;
+    padding: 1pc 0;
+    width: 100%;
   }
-  
+  .section.mobile-view-header .code-wrapper .code div div h2{
+
+  }
 }
 
 

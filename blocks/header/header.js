@@ -3,6 +3,7 @@ import { loadFragment } from '../fragment/fragment.js';
 
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
+const isMobile = window.matchMedia('(max-width: 768px)');
 
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
@@ -124,6 +125,11 @@ export default async function decorate(block) {
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
           toggleAllNavSections(navSections);
           navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        }else if(isMobile.matches){
+          // Custom Event Function 
+          const expanded = navSection.getAttribute('aria-expanded') === 'true';
+          toggleAllNavMobile(navSections);
+          navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
         }
       });
     });
@@ -146,4 +152,36 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+  
+  try {
+    clickToBlurHeader()
+  } catch (error) {
+      console.log(error)
+  }
+}
+
+
+// Custom Event
+function toggleAllNavMobile(sections, expanded = false) {
+  sections.querySelectorAll('.nav-sections .default-content-wrapper > ul > li').forEach((section) => {
+    section.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+  });
+}
+
+function clickToBlurHeader() {
+  var headerDropDownList = document.querySelectorAll('.header-wrapper .section.nav-sections .default-content-wrapper ul:first-child > .nav-drop');
+  headerDropDownList.forEach(function (eachHeaderdrop) {
+    eachHeaderdrop.addEventListener('click', function (e) {
+      const siblings = document.querySelectorAll('.header-wrapper .section.nav-sections .default-content-wrapper ul:first-child > li')
+      siblings.forEach(function (eachSibling) {
+        if (eachSibling.classList.contains('navigation-level-inactive')) {
+          eachSibling.classList.remove('navigation-level-inactive')
+        } else {
+          eachSibling.classList.add('navigation-level-inactive')
+        }
+      })
+      this.classList.remove('navigation-level-inactive');
+      this.classList.add('navigation-level-active');
+    });
+  });
 }

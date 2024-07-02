@@ -33,6 +33,213 @@ export function moveAttributes(from, to, attributes) {
   });
 }
 
+/* helper script start */
+export function renderHelper(data, template, callBack) {
+  var dom = document.createElement("div");
+  dom.innerHTML = template;
+  var loopEl = dom.getElementsByClassName("forName");
+  Array.prototype.slice.call(loopEl).forEach(function (eachLoop) {
+    var templates = '';
+    var localtemplate = eachLoop.innerHTML;
+    for (var key in data) {
+      if (Object.hasOwnProperty.call(data, key)) {
+        var element = data[key];
+        // data.forEach(function (element, index) {
+        var dataItem = callBack ? callBack(element, key) : element;
+        var keys = Object.keys(dataItem);
+        var copyTemplate = localtemplate;
+        copyTemplate.split("{").forEach(function (ecahKey) {
+          var key = ecahKey.split("}")[0];
+          var keys = key.split(".");
+          var value = dataItem;
+          keys.forEach(function (key) {
+            if (value && value.hasOwnProperty(key)) {
+              value = value[key];
+            } else {
+              value = "";
+            }
+          });
+          copyTemplate = copyTemplate.replace("{" + key + "}", value);
+        });
+        templates += copyTemplate;
+        // });
+      }
+    }
+    eachLoop.outerHTML = templates;
+  });
+  return dom.innerHTML;
+}
+
+export function fetchAPI(method, url, data) {
+  return new Promise(async function (resolve, reject) {
+    try {
+      const resp = await fetch(url);
+      resolve(resp);
+    } catch (error) {
+      reject(error);
+    }
+  })
+}
+
+export function getProps(block, config) {
+  return Array.from(block.children).map(function (el, index) {
+    if (config?.picture) {
+      return el.innerHTML.includes("picture") ? el.querySelector("picture") : el.innerText.trim();
+    } else if (config?.index && config?.index.includes(index)) {
+      return el;
+    } else {
+      return el.innerHTML.includes("picture") ? el.querySelector("img").src.trim() : el.innerText.trim();
+    }
+  })
+}
+
+export function currenyCommaSeperation(x) {
+  if (typeof x === "number") {
+    x = x.toString();
+  }
+
+  // Split the number into integral and decimal parts
+  const parts = x.split(".");
+  let integralPart = parts[0];
+  const decimalPart = parts[1] ? `.${parts[1]}` : '';
+
+  // Add commas after every two digits from the right in the integral part
+  integralPart = integralPart.replace(/\d(?=(\d{2})+\d$)/g, '$&,');
+
+  return integralPart + decimalPart;
+}
+
+export function createCarousle(block, prevButton, nextButton) {
+  block.parentElement.append(prevButton);
+  block.parentElement.append(nextButton);
+  prevButton.addEventListener("click", prevSlide);
+  nextButton.addEventListener("click", nextSlide);
+  let currentSlide = 0;
+  let isDragging = false;
+  let startPos = 0;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
+  const carousel = block;
+  const carouselInner = document.querySelector('#carouselInner');
+  const slides = document.querySelectorAll('.carousel-item');
+  const totalSlides = slides.length;
+
+  let visibleSlides = getVisibleSlides(); // Get initial number of visible slides
+
+  carousel.addEventListener('mousedown', dragStart);
+  carousel.addEventListener('mouseup', dragEnd);
+  carousel.addEventListener('mouseleave', dragEnd);
+  carousel.addEventListener('mousemove', drag);
+
+  carousel.addEventListener('touchstart', dragStart);
+  carousel.addEventListener('touchend', dragEnd);
+  carousel.addEventListener('touchmove', drag);
+
+  carousel.addEventListener('wheel', scrollEvent); // Add scroll event listener
+  window.addEventListener('resize', () => {
+    visibleSlides = getVisibleSlides();
+    setPositionByIndex();
+  });
+
+  function dragStart(event) {
+    isDragging = true;
+    startPos = getPositionX(event);
+    carouselInner.style.transition = 'none';
+  }
+
+  function dragEnd() {
+    isDragging = false;
+    const movedBy = currentTranslate - prevTranslate;
+
+    if (movedBy < -100) {
+      nextSlide();
+    } else if (movedBy > 100) {
+      prevSlide();
+    } else {
+      setPositionByIndex();
+    }
+  }
+
+  function drag(event) {
+    if (isDragging) {
+      const currentPosition = getPositionX(event);
+      currentTranslate = prevTranslate + currentPosition - startPos;
+      carouselInner.style.transform = `translateX(${currentTranslate}px)`;
+    }
+  }
+
+  function getPositionX(event) {
+    return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+  }
+
+  function getVisibleSlides() {
+    return window.innerWidth <= 600 ? 2 : 4;
+  }
+
+  function showSlide(index) {
+    if (index >= slides.length) {
+      // currentSlide = 0;
+    } else if (index < 0) {
+      // currentSlide = slides.length - 1;
+    } else {
+    }
+    currentSlide = Math.max(0, Math.min(index, totalSlides - visibleSlides));
+    setPositionByIndex();
+  }
+
+  function setPositionByIndex() {
+    currentTranslate = currentSlide * -carouselInner.clientWidth / visibleSlides;
+    prevTranslate = currentTranslate;
+    carouselInner.style.transition = 'transform 0.5s ease';
+    carouselInner.style.transform = `translateX(${currentTranslate}px)`;
+  }
+
+  function nextSlide() {
+    showSlide(currentSlide + 1);
+    checkLastChildVisibility();
+  }
+
+  function prevSlide() {
+    showSlide(currentSlide - 1);
+    checkLastChildVisibility();
+  }
+
+  function scrollEvent(event) {
+    if (event.deltaY < 0) {
+      prevSlide();
+    } else {
+      nextSlide();
+    }
+    event.preventDefault();
+  }
+
+  // Initialize the carousel
+  showSlide(currentSlide);
+
+  // Check if the last child is visible in the viewport
+  function checkLastChildVisibility() {
+    const lastChild = carouselInner.lastElementChild;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          console.log('Last child is visible in the viewport - new');
+        } else {
+          console.log('Last child is not visible in the viewport - new ');
+        }
+      });
+    }, {
+      root: carousel,
+      threshold: 0.1
+    });
+
+    observer.observe(lastChild);
+  }
+
+  // Initialize the observer for the first time
+  checkLastChildVisibility();
+}
+/* helper script end */
+
 /**
  * Move instrumentation attributes from a given element to another given element.
  * @param {Element} from the element to copy attributes from
@@ -149,6 +356,53 @@ async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
+  await loadingCustomCss();
 }
 
 loadPage();
+
+
+async function loadingCustomCss() {
+  // load custom css files
+  var loadCssArray = [
+    `${window.hlx.codeBasePath}/styles/loanproducts/loanproducts.css`,
+    `${window.hlx.codeBasePath}/styles/calculator/calculator.css`,
+    `${window.hlx.codeBasePath}/styles/choose-us/choose-us.css`,
+    `${window.hlx.codeBasePath}/styles/download-piramal/download-piramal.css`,
+    `${window.hlx.codeBasePath}/styles/our-media/our-media.css`,
+    `${window.hlx.codeBasePath}/styles/piramal-since/piramal-since.css`,
+    `${window.hlx.codeBasePath}/styles/about-us-company/about-us-company.css`,
+    `${window.hlx.codeBasePath}/styles/reset.css`,
+    `${window.hlx.codeBasePath}/styles/key-features/key-features.css`,
+    `${window.hlx.codeBasePath}/styles/metro-cities/metro-cities.css`,
+    `${window.hlx.codeBasePath}/styles/articles-carousel/articles-carousel.css`,
+    `${window.hlx.codeBasePath}/styles/details-verification/details-verification.css`,
+    `${window.hlx.codeBasePath}/styles/elgibility-criteria/elgibility-criteria.css`,
+    `${window.hlx.codeBasePath}/styles/table/table.css`,
+    `${window.hlx.codeBasePath}/styles/tab-with-cards/tab-with-cards.css`,
+    `${window.hlx.codeBasePath}/styles/e-auction/e-auction.css`,
+    `${window.hlx.codeBasePath}/styles/list-content/list-content.css`,
+    `${window.hlx.codeBasePath}/styles/real-estate-banner/real-estate-banner.css`,
+    `${window.hlx.codeBasePath}/styles/rte-wrapper/rte-wrapper.css`,
+    `${window.hlx.codeBasePath}/styles/partnerships-cards/partnerships-cards.css`,
+    `${window.hlx.codeBasePath}/styles/knowledge-card-carousel/knowledge-card-carousel.css`,
+    `${window.hlx.codeBasePath}/styles/board-of-directors/board-of-directors.css`,
+    `${window.hlx.codeBasePath}/styles/ratings-card/ratings-card.css`,
+    `${window.hlx.codeBasePath}/styles/partnership-cards-tab/partnership-cards-tab.css`,
+    `${window.hlx.codeBasePath}/styles/company-details/company-details.css`,
+    `${window.hlx.codeBasePath}/styles/years-info-tab/years-info-tab.css`,
+    `${window.hlx.codeBasePath}/styles/media/media.css`,
+    `${window.hlx.codeBasePath}/styles/partnership/partnership.css`,
+    `${window.hlx.codeBasePath}/styles/rupee-cards/rupee-card.css`,
+  ]
+
+  loadCssArray.forEach(async (eachCss) => {
+    await loadCSS(eachCss);
+  });
+
+}
+
+document.querySelector("body").addEventListener("click", function (e) {
+  e.stopImmediatePropagation();
+  e.currentTarget.querySelector(".stake-pop-up.dp-block")?.classList.remove("dp-block");
+})

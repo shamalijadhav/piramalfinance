@@ -1,0 +1,43 @@
+.section.e-auction-wrapper{
+    display: flex;
+    justify-content: center;
+    margin: 0 8px;
+    overflow: hidden;
+}
+.section.e-auction-wrapper .code-wrapper{
+    padding: 10px;
+    border: 1px solid #333;
+    width: 90%;
+}
+.section.e-auction-wrapper .code-wrapper .code.block > div table tbody tr{
+    border: 1px solid #c5c4c4;
+}
+.section.e-auction-wrapper .code-wrapper .code.block > div table tbody tr :nth-child(5){
+    width: 200px;
+}
+.section.e-auction-wrapper .code-wrapper .code.block > div table tbody tr:first-child td{
+    background-color: #fa4616;
+    color: #fff;
+    padding: 2px;
+    font-size: 13px;
+    text-align: center;
+    font-family: nunito-bold;
+    border-style: none;
+}
+.section.e-auction-wrapper .code-wrapper .code.block > div table tbody tr td{
+    border: 1px solid #c5c4c4;
+    padding: 2px;
+    font-size: 12px;
+    font-family: nunito-regular;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 767.99px){
+    .section.e-auction-wrapper .code-wrapper .code{
+        overflow-x: scroll;
+    }
+    .section.e-auction-wrapper .code-wrapper {
+        padding: 20px;
+        width: 100%;
+    }
+}

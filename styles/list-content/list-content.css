@@ -1,0 +1,75 @@
+/* list content common css start  */
+.section.list-content-wrapper .default-content-wrapper h2,
+.section.types-of-interest-rates-wrapper .default-content-wrapper h2 {
+    color: var(--black);
+    display: block;
+    font-family: 'Nunito-Extrabold', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 40px;
+    margin-bottom: 8px;
+}
+
+.section.list-content-wrapper .default-content-wrapper p,
+.section.types-of-interest-rates-wrapper .default-content-wrapper p {
+    color: var(--black);
+    font-family: 'Nunito-Regular', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.section.list-content-wrapper .default-content-wrapper ul {
+    margin-left: 24px;
+    margin-top: 16px;
+    list-style: none;
+}
+
+.section.list-content-wrapper .default-content-wrapper ul > li {
+    color: var(--black);
+    font-family: 'Nunito-Regular', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    list-style-type: disc;
+}
+
+.section.list-content-wrapper .default-content-wrapper p>a,
+.section.list-content-wrapper .default-content-wrapper ul>li>a {
+    color: var(--orange);
+}
+
+/* heading sub heading common css start  */
+.section.types-of-interest-rates-wrapper .default-content-wrapper h3 {
+    color: var(--black);
+    display: block;
+    font-family: 'Nunito-Extrabold',sans-serif;
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 768px) {
+/* list content common css start  */
+    .section.list-content-wrapper .default-content-wrapper h2,
+    .section.types-of-interest-rates-wrapper .default-content-wrapper h2 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .section.list-content-wrapper .default-content-wrapper p,
+    .section.types-of-interest-rates-wrapper .default-content-wrapper p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .section.list-content-wrapper .default-content-wrapper ul > li {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    
+    .section.types-of-interest-rates-wrapper .default-content-wrapper h3 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}

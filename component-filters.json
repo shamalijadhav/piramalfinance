@@ -2,7 +2,11 @@
   {
     "id": "main",
     "components": [
-      "section"
+      "section",
+      "title",
+      "tab-name",
+      "tab-container",
+      "container"
     ]
   },
   {
@@ -15,7 +19,27 @@
       "text",
       "image",
       "button",
-      "title"
+      "title",
+      "hero",
+      "cards",
+      "columns",
+      "rte",
+      "imgwithlink",
+      "carousel",
+      "teaser",
+      "tab-container",
+      "tabs",
+      "detailed-teaser",
+      "accordion-group",
+      "teaserv2",
+      "code",
+      "contentfragment",
+      "experiencefragment",
+      "wrappercreation",
+      "container",
+      "mycontainer",
+      "keyfeatures",
+      "embed"
     ]
   },
   {
@@ -27,7 +51,33 @@
       "title",
       "hero",
       "cards",
-      "columns"
+      "columns",
+      "rte",
+      "city-list",
+      "imgwithlink",
+      "testimonial",
+      "financialreports",
+      "offer-documents",
+      "carousel",
+      "teaser",
+      "tab-link",
+      "tab-name",
+      "tab-container",
+      "tabs",
+      "detailed-teaser",
+      "accordion-group",
+      "teaserv2",
+      "code",
+      "contentfragment",
+      "experiencefragment",
+      "wrappercreation",
+      "container",
+      "mycontainer",
+      "keyfeatures",
+      "embed",
+      "homeloancalculator",
+      "emiandeligiblitycalc",
+      "eligibilitycalculator"
     ]
   },
   {
@@ -35,5 +85,82 @@
     "components": [
       "card"
     ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title",
+      "hero",
+      "teaser",
+      "detailed-teaser"
+    ]
+  },
+  {
+    "id": "tab-container",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title",
+      "hero",
+      "teaser",
+      "detailed-teaser"
+    ]
+  },
+  {
+    "id": "tab-name",
+    "components": [
+      "tab-container"
+    ]
+  },
+  {
+    "id": "tab",
+    "components": [
+      "tab",
+      "tabs",
+      "text",
+      "image",
+      "button",
+      "title",
+      "hero",
+      "teaser",
+      "columns",
+      "container"
+  ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tabs", "tab", "container"
+  ]
+  },
+  {
+    "id": "accordion",
+    "components": ["accordion"]
+  },
+  {
+    "id": "text",
+    "rte": {
+      "format": ["bold", "italic", "underline", "strikethrough"],
+      "alignment": ["left", "center", "right"],
+      "indentation": ["indent", "outdent"],
+      "sr_script": ["superscript", "subscript"],
+      "list": ["bullist", "numlist"],
+      "insert": ["link", "image", "table"],
+      "advanced": [],
+      "extensions": [],
+      "editor": ["removeformat"]
+    }
+  },
+  { 
+  "id" : "div",
+  "components": null
+  },
+  {
+    "id":"container",
+    "components" : []
   }
 ]

@@ -1,6 +1,7 @@
 {
   "mappings": [
-    "/content/aem-boilerplate/:/",
-    "/content/aem-boilerplate/configuration:/.helix/config.json"
+    "/content/piramalfinance-edge/:/", 
+    "/content/piramalfinance-edge/redirects:/redirects.json",
+    "/content/piramalfinance-edge/happy-customer.json:/happy-customer.json"
   ]
 }

@@ -1,0 +1,42 @@
+.our-media-wrapper .default-content-wrapper h4 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  text-align: center;
+  color: var(--gradient-gray);
+  margin-bottom: 2rem;
+}
+
+.our-media-wrapper .columns-wrapper .columns div {
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.our-media-wrapper .columns-wrapper .columns .columns-img-col {
+  display: flex;
+  padding: 0;
+}
+
+.our-media-wrapper .columns-wrapper .columns div div > picture > img {
+  max-width: 100%;
+  width: fit-content;
+  height: 1.3rem;
+}
+
+.our-media-wrapper .columns-wrapper .columns div {
+  gap: 4.5rem;
+  padding: 0 9.5rem;
+}
+
+@media screen and (max-width: 767.99px) {
+  .our-media-wrapper .columns-wrapper .columns div {
+    gap: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .our-media-wrapper .columns-wrapper .columns .columns-img-col {
+    width: 45%;
+  }
+}

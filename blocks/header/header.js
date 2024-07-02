@@ -158,6 +158,11 @@ export default async function decorate(block) {
   } catch (error) {
       console.log(error)
   }
+  try {
+    clickToShowMobileNavDropDown()
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 
@@ -184,4 +189,28 @@ function clickToBlurHeader() {
       this.classList.add('navigation-level-active');
     });
   });
+}
+
+function clickToShowMobileNavDropDown(){
+    // Select the element to be clicked
+    var elementToClick = document.querySelector('.section.mobile-view-header .code-wrapper .code div ul li:nth-child(2) ul:nth-child(1)');
+  
+    // Add click event listener to toggle display of another element
+    elementToClick.addEventListener('click', function() {
+      // Select the element whose display you want to toggle
+      var elementToToggle = document.querySelector('.section.mobile-view-header .code-wrapper .code div ul li:nth-child(2) ul:nth-child(2)');
+      var afterArrow = document.querySelector('.section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(2) ul:nth-child(1) li::after')
+
+      if (elementToToggle.style.display === 'none') {
+        elementToToggle.style.display = 'block';
+        var borderbtm = document.querySelector('.section.mobile-view-header .code-wrapper .code div ul li:nth-child(2) ul:nth-child(1)');
+        borderbtm.style.borderBottom = 'unset';
+        afterArrow.style.transform = 'rotate(225deg)';
+      } else {
+        elementToToggle.style.display = 'none';
+        var borderbtm = document.querySelector('.section.mobile-view-header .code-wrapper .code div ul li:nth-child(2) ul:nth-child(1)');
+        borderbtm.style.borderBottom = '1px solid #e6e6e6';
+        afterArrow.style.transform = 'rotate(45deg)';
+      }
+    });
 }

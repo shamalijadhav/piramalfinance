@@ -1,0 +1,90 @@
+.section.interest-rates-accordian-wrapper .default-content-wrapper h2 {
+    font-family: Nunito-Extrabold, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 30px;
+    margin-top: 40px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group  {
+    padding: 0;
+}
+
+
+.section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion > details {
+    padding: 0;
+}
+
+.section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion {
+    margin-bottom: 16px;
+}
+
+.section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion > details > summary {
+    background: #f8f8f8;
+    border-radius: 4px;
+    color: #333;
+    display: block;
+    font-family: Nunito-Regular, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 20px 50px 20px 16px;
+    position: relative;
+}
+
+.section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion > details > summary::after{
+    color: #000;
+    content: "+";
+    font-family: Nunito-Extrabold, sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    height: 2px;
+    position: absolute;
+    right: 24px;
+    width: 9pt;
+}
+
+.section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion > details > summary.active {
+    background: #f26841;
+    color: #fff;
+}
+
+.section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion > details > summary.active::after {
+    color: #fff;
+    content: "-";
+}
+
+.section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion > details > div {
+    margin: 0;
+}
+
+.section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion > details > div > ul {
+    border: solid #ccc;
+    border-width: 1px 1px 0;
+    list-style: none;
+    margin: 0;
+}
+
+.section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion > details > div > ul > li{
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    margin: 0;
+}
+
+.section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion > details > div > ul > li > a{
+    cursor: pointer;
+    display: block;
+    font-family: Nunito-Regular, sans-serif;
+    color: #000;
+    font-size: 1pc;
+    line-height: 24px;
+    padding: 9pt 40px;
+    position: relative;
+    text-decoration: none;
+}
+
+.section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion > details > div > ul > li > a:hover{
+    color: #f26841;
+}

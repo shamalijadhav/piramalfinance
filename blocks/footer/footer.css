@@ -378,7 +378,7 @@ color: #F58667;
     font-size: 14px;
   }
   .footer-section-four.columns-container .default-content-wrapper{
-    padding-top: 24px;
+    padding-top: 18px;
   }
   .footer-section-third{
     grid-template-columns: 1fr;
@@ -393,6 +393,7 @@ color: #F58667;
   }
   .footer-section-second{
     padding-top: unset;
+    padding-bottom: 24px;
   }
   .footer-section-first .columns > div > .columns-img-col{
     margin-bottom: unset;
@@ -452,5 +453,8 @@ color: #F58667;
   .footer-section-four .columns-wrapper .columns .columns-img-col picture img{
     height: 25px;
     width: 25px;
+  }
+  .footer-section-first .columns-wrapper p sup{
+    right: 27%;
   }
 }

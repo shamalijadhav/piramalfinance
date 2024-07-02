@@ -1,7 +1,7 @@
 // import { ProductLogics } from "./loadformlogic";
-import { otpPopupFailureFun, removeLoader } from "../../../../clientlibs/support/otppopup/js/otppopup";
-import { accessToken, accessTokenURL, generateOTP, generateOTPURL, leadAPIURL, otpTokenURL, resendOTPUrl, smsURL, verifyOTPURL } from "./loanformapiurls";
-import { cutomerEmployment, cutomerNo, loanFromBtn, loanOtpInput, loanProduct } from "./loanformdom";
+// import { otpPopupFailureFun, removeLoader } from "../../../../clientlibs/support/otppopup/js/otppopup";
+import { accessToken, accessTokenURL, generateOTP, generateOTPURL, leadAPIURL, otpTokenURL, resendOTPUrl, smsURL, verifyOTPURL } from "./loanformapiurls.js";
+import { cutomerEmployment, cutomerNo, loanFromBtn, loanOtpInput, loanProduct } from "./loanformdom.js";
 import { ProductLogics } from "./loanformlogic";
 
 

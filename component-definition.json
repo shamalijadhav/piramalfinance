@@ -613,7 +613,7 @@
         },
         {
           "title": "Date picker Lib",
-          "id": "applyloanform",
+          "id": "datepickerlib",
           "plugins": {
             "xwalk": {
               "page": {

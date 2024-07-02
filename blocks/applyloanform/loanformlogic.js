@@ -1,4 +1,4 @@
-import { cutomerIncome, formDobInput, formLoanAmt } from "./loanformdom";
+import { cutomerIncome, formDobInput, formLoanAmt } from "./loanformdom.js";
 
 const getIncome = () =>  cutomerIncome()?.value.replaceAll(",", "");
 const getDob = () => formDobInput()?.value;

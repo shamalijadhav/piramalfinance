@@ -18,9 +18,9 @@
 }
 
 .our-media-wrapper .columns-wrapper .columns div div > picture > img {
-  max-width: 100%;
-  width: fit-content;
-  height: 1.3rem;
+  height: 100%;
+  max-height: 30px;
+  width: 215px;
 }
 
 .our-media-wrapper .columns-wrapper .columns div {

@@ -1,4 +1,4 @@
-import { loanFormUTM } from "../../../common/js/loanutm";
+import { loanFormUTM } from "./loanutm.js";
 
 export function loanTypeDropdownSelect() {
   let loanTypeInput = document.querySelector("#form-loan-type");

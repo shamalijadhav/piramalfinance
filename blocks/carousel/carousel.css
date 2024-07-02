@@ -90,7 +90,7 @@
 }
 
 .banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser .foreground {
-  width: 60%;
+  width: 62%;
 }
 
 .banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser .foreground .long-description {
@@ -109,7 +109,7 @@
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  padding: 0 150px;
+  padding: 0 150px 0 160px;
 }
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .front-picture img {
@@ -152,7 +152,7 @@
 }
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground {
-  width: 45%;
+  width: 50%;
 }
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .long-description>p>em {
@@ -199,7 +199,7 @@
 
 .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container {
   position: absolute;
-  left: 150px;
+  left: 160px;
   bottom: 60px;
 }
 
@@ -284,6 +284,22 @@
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-one>.background .foreground .text .long-description>p{
   color: var(--black);
+}
+
+.banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser.teaser-block-two .foreground {
+  width: 66%;
+}
+
+@media screen and (max-width:1366px) {
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .front-picture img {
+    width: 312px;
+    height: 265px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-two >.background .front-picture img {
+    width: 312px;
+    height: 325px;
+  }
 }
 
 @media screen and (max-width:768px) {

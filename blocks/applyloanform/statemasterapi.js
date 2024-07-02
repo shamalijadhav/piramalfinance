@@ -1,4 +1,4 @@
-import { workFlowStatemaster } from "./statemaster/statemasterbiz";
+import { workFlowStatemaster } from "./statemasterbiz.js";
 
 window.addEventListener("DOMContentLoaded", function () {
     let loaninnerform=document.querySelector(".loan-form-sub-parent");

@@ -1,5 +1,5 @@
-import { dpObj } from "./applyloanpopper";
-import { branchInput, cutomerIncome, cutomerName, cutomerNo, formDobInput, formLoanAmt, formTc, loanFormContainer, loanFormOtpBtn, loanFromBtn, loanOtpInput, loanProduct, stateInput } from "./loanformdom";
+import { dpObj } from "./applyloanpopper.js";
+import { branchInput, cutomerIncome, cutomerName, cutomerNo, formDobInput, formLoanAmt, formTc, loanFormContainer, loanFormOtpBtn, loanFromBtn, loanOtpInput, loanProduct, stateInput } from "./loanformdom.js";
 
 
 let checkNumberFor = [cutomerNo()];

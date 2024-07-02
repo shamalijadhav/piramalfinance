@@ -2,10 +2,14 @@ import { createButton, createCarousle, getProps } from "../../scripts/scripts.js
 
 export default function decorate(block) {
     console.log("tab link block");
-    block.classList.add("carousel")
-    const isCarosuel = true;
-    const classes = "ss";
-    if (isCarosuel) {
+    const [, classes, prev, next] = getProps(block, {
+        picture: true
+    })
+    if (classes === "carousel") {
+        block.children[3].remove();
+        block.children[2].remove();
+        block.children[1].remove();
+        block.classList.add(classes);
         block.querySelectorAll("ul").forEach(el => {
             el.classList.add("carousel-inner");
             el.id = ("carouselInner");
@@ -13,8 +17,8 @@ export default function decorate(block) {
         block.querySelectorAll("li").forEach((el, index) => {
             el.classList.add("carousel-item");
         });
-        const prevButton = createButton("prev", "prev?.outerHTML");
-        const nextButton = createButton("next", "next?.outerHTML");
+        const prevButton = createButton("prev", prev?.outerHTML);
+        const nextButton = createButton("next", next?.outerHTML);
         prevButton.classList.add(classes === "normal" ? "dp-none" : "dp-normal");
         nextButton.classList.add(classes === "normal" ? "dp-none" : "dp-normal");
         createCarousle(block, prevButton, nextButton);

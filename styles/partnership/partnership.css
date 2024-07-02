@@ -59,7 +59,7 @@
     transform: translate(-50%, -50%);
     width: calc(100% - 4pc);
     max-width: 600px;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .section.partnership-image-popup .wrappercreation-wrapper .offer-documents-wrapper .offer-documents.block .richtext.text>.cmp-text div picture>img {
@@ -79,7 +79,7 @@
     width: calc(100% - 4pc);
     z-index: 1;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     overflow: hidden;
 }
 

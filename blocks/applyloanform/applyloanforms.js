@@ -1,7 +1,7 @@
 import { branchInput, cutomerEmployment, cutomerIncome, cutomerName, cutomerNo, formDobInput, formLoanAmt, formTc, loanFormContainer, loanFormOtpBtn, loanOtpInput, loanProduct, otpNumChange, otpPhoneNum, stateInput } from "./loanformdom.js";
 import { loanTypeDropdownSelect } from "./utm.js";
-// export { formOpen };  
-// document.addEventListener("DOMContentLoaded", function () {
+
+
 export function applyLoanFormClick(){
   let loaninnerform=document.querySelector(".loan-form-sub-parent");
   if(loaninnerform){

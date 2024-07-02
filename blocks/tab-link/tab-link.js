@@ -48,7 +48,7 @@ export default function decorate(block) {
             document.body.classList.remove("overlay-active");
         } else {
             model.classList.add("model-mob-hide");
-            document.body.classList.add("overlay-active");
+            document.querySelector("body").classList.add("overlay-active");
         }
     })
 

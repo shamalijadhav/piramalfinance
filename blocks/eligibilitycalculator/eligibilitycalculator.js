@@ -202,6 +202,7 @@ export function eligibilityCalculatorCallXf() {
         findSectionXFShow.querySelector(".eligibilitycalculator-wrapper").querySelector(".overlayDiv").classList.add("show");
         if (xfGetAttr == "homepage-eligibility-calculator-call-xf") {
           findSectionXFShow.classList.remove("dp-none");
+          document.querySelector("body").classList.add("overlay-active");
           calculatorType = "eligibility";
           elgOverlay.classList.add("show");
           //   overlay.classList.add("show");

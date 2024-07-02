@@ -392,7 +392,8 @@ async function loadingCustomCss() {
     `${window.hlx.codeBasePath}/styles/media/media.css`,
     `${window.hlx.codeBasePath}/styles/partnership/partnership.css`,
     `${window.hlx.codeBasePath}/styles/rupee-cards/rupee-card.css`,
-  ];
+    `${window.hlx.codeBasePath}/styles/interest-rates-disclosure/interest-rates-disclosure.css`,
+  ]
 
   loadCssArray.forEach(async (eachCss) => {
     await loadCSS(eachCss);
@@ -402,13 +403,12 @@ async function loadingCustomCss() {
 let body = document.querySelector("body");
 body?.addEventListener("click", function (e) {
   e.stopImmediatePropagation();
-  body.classList.add("overlay-active");
   if (!e.target.closest(".show") && targetObject.model) {
     targetObject.model?.querySelector(".overlayDiv").classList.remove("show");
     document.body.style.overflow = "scroll";
     body.classList.remove("overlay-active");
   }
-  else  if (!e.target.closest('.stake-pop-up')) {
+  else if (!e.target.closest('.stake-pop-up')) {
     document.querySelectorAll(".stake-pop-up").forEach((ele) => {
         ele.classList.remove('dp-block');
         ele.classList.add('dp-none');

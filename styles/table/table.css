@@ -189,6 +189,7 @@
     line-height: 20px;
     padding: 20px 0;
     text-align: center;
+    vertical-align: middle;
 }
 
 .section.microfinance-loan-wrapper .code-wrapper .code>div>table>tbody>tr :first-child {
@@ -206,3 +207,65 @@
     }
 }
 /* microfinance loans table end */
+
+
+/* csr committee table start */
+
+.section.csr-commitee-wrapper .default-content-wrapper h2 {
+    font-family: Nunito-Extrabold, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 30px;
+    margin-top: 40px;
+    color: var(--gradient-gray);
+    margin-bottom: 16px;
+}
+
+.section.csr-commitee-wrapper .code-wrapper .code>div>table>tbody>tr th {
+    background-color: var(--greyishblue);
+    border: 1px solid var(--dark-color);
+    color: var(--background-color);
+    font-family: Nunito-Bold, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    padding: 16px 4px;
+    text-align: center;
+}
+
+.section.csr-commitee-wrapper .code-wrapper .code>div>table>tbody>tr>td {
+    line-height: 21px;
+    padding: 8px;
+}
+
+.section.csr-commitee-wrapper .code-wrapper .code>div>table>tbody>tr:nth-child(odd){
+    background-color: var(--lightgrey);
+}
+/* csr committee table end */
+
+
+/* offer document table start */
+.section.offer-document-wrapper .default-content-wrapper h2 {
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.section.offer-document-wrapper .code-wrapper .code>div>table>tbody>tr>td>u>a {
+    color: var(--orange);
+    text-decoration: underline;
+    text-decoration-color: var(--orange);
+}
+
+.section.offer-document-wrapper .code-wrapper .code>div>table>tbody>tr>td>ul>li>a {
+    color: var(--orange);
+    text-decoration: underline;
+    text-decoration-color: var(--orange);
+}
+
+@media screen and (max-width: 767px) {
+    .section.offer-document-wrapper .default-content-wrapper h2 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+/* offer document table end */

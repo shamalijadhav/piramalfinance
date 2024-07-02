@@ -152,6 +152,21 @@
           }
         },
         {
+          "title": "City List",
+          "id": "city-list",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "city-list",
+                  "model": "city-list"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Image With Link",
           "id": "imgwithlink",
           "plugins": {
@@ -235,6 +250,21 @@
                       "left"
                     ]
                   }
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Tab Link",
+          "id": "tab-link",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Tab Link",
+                  "model": "tab-link"
                 }
               }
             }
@@ -516,6 +546,51 @@
                 "template": {
                   "name": "keyfeatures",
                   "model": "keyfeatures"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Home Loan Calculator",
+          "id": "homeloancalculator",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "homeloancalculator",
+                  "model": "homeloancalculator"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Eligibility Calculator",
+          "id": "eligibilitycalculator",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "eligibilitycalculator",
+                  "model": "eligibilitycalculator"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Emi & Eligibilty Calculator",
+          "id": "emiandeligiblitycalc",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "emiandeligiblitycalc",
+                  "model": "emiandeligiblitycalc"
                 }
               }
             }

@@ -11,12 +11,12 @@ export default function decorate(block) {
     // const names = name.innerText.split(",");
     // const ids = id.innerText.split(",");
     // const classes = type.innerText.trim();
-    const [name, id, classes, prev, next, imageSrc] = getProps(block, {
-        picture: true
+    const [name, id, classes, prev, next, ...imageSrc] = getProps(block, {
+        index: [3, 4]
     });
     const names = name.split(",");
     const ids = id.split(",");
-    const imagesSrc = imageSrc.split(",");
+    const imagesSrc = [...imageSrc];
 
     let tabsTemplate = '';
     block.innerHTML = '';
@@ -29,10 +29,16 @@ export default function decorate(block) {
         const img = document.createElement("img");
         img.src = imagesSrc[index];
         img.alt = eachName;
+        img.id = ids[index].trim().replace(/ /g, '-');
         div.id = ids[index].trim().replace(/ /g, '-');
-        div.classList.add(index ? "carousel-item" : ("carousel-item", "active"));
-        div.innerText = eachName.trim();
-        carouselInner.append(imagesSrc[index] ? img : div);
+        if (index) {
+            div.classList.add("carousel-item");
+        } else {
+            div.classList.add("carousel-item", "active");
+        }
+        div.append(imagesSrc[index] ? img : eachName.trim());
+        carouselInner.append(div);
+        // carouselInner.append(imagesSrc[index] ? img : div);
         // observer.observe(div);
         // tabsTemplate += `<div id="${ids[index].trim().replace(/ /g, '-')}">${eachName.trim()}</div>`
     });
@@ -41,91 +47,124 @@ export default function decorate(block) {
     const nextButton = createButton("next", next?.outerHTML);
     prevButton.classList.add(classes === "normal" ? "dp-none" : "dp-normal");
     nextButton.classList.add(classes === "normal" ? "dp-none" : "dp-normal");
-    prevButton.addEventListener("click", prevSlide);
-    nextButton.addEventListener("click", nextSlide);
     // <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
     // <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
     block.append(carouselInner);
-    block.append(prevButton);
-    block.append(nextButton);
 
-    let currentSlide = 0;
-    let isDragging = false;
-    let startPos = 0;
-    let currentTranslate = 0;
-    let prevTranslate = 0;
-    // block = document.getElementById('carousel');
-    const slides = document.querySelectorAll('.carousel-item');
+    if (classes === "carousel") {
+        block.parentElement.append(prevButton);
+        block.parentElement.append(nextButton);
+        prevButton.addEventListener("click", prevSlide);
+        nextButton.addEventListener("click", nextSlide);
+        let currentSlide = 0;
+        let isDragging = false;
+        let startPos = 0;
+        let currentTranslate = 0;
+        let prevTranslate = 0;
+        const carousel = block;
+        const carouselInner = document.querySelector('#carouselInner');
+        const slides = document.querySelectorAll('.carousel-item');
+        const totalSlides = slides.length;
+        const visibleSlides = 4; // Number of slides visible in the viewport
 
-    block.addEventListener('mousedown', dragStart);
-    block.addEventListener('mouseup', dragEnd);
-    block.addEventListener('mouseleave', dragEnd);
-    block.addEventListener('mousemove', drag);
+        carousel.addEventListener('mousedown', dragStart);
+        carousel.addEventListener('mouseup', dragEnd);
+        carousel.addEventListener('mouseleave', dragEnd);
+        carousel.addEventListener('mousemove', drag);
 
-    block.addEventListener('touchstart', dragStart);
-    block.addEventListener('touchend', dragEnd);
-    block.addEventListener('touchmove', drag);
+        carousel.addEventListener('touchstart', dragStart);
+        carousel.addEventListener('touchend', dragEnd);
+        carousel.addEventListener('touchmove', drag);
 
-    function dragStart(event) {
-        isDragging = true;
-        startPos = getPositionX(event);
-        carouselInner.style.transition = 'none';
-    }
+        carousel.addEventListener('wheel', scrollEvent); // Add scroll event listener
 
-    function dragEnd() {
-        isDragging = false;
-        const movedBy = currentTranslate - prevTranslate;
+        function dragStart(event) {
+            isDragging = true;
+            startPos = getPositionX(event);
+            carouselInner.style.transition = 'none';
+        }
 
-        if (movedBy < -100) {
-            nextSlide();
-        } else if (movedBy > 100) {
-            prevSlide();
-        } else {
+        function dragEnd() {
+            isDragging = false;
+            const movedBy = currentTranslate - prevTranslate;
+
+            if (movedBy < -100) {
+                nextSlide();
+            } else if (movedBy > 100) {
+                prevSlide();
+            } else {
+                setPositionByIndex();
+            }
+        }
+
+        function drag(event) {
+            if (isDragging) {
+                const currentPosition = getPositionX(event);
+                currentTranslate = prevTranslate + currentPosition - startPos;
+                carouselInner.style.transform = `translateX(${currentTranslate}px)`;
+            }
+        }
+
+        function getPositionX(event) {
+            return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+        }
+
+        function showSlide(index) {
+            currentSlide = Math.max(0, Math.min(index, totalSlides - visibleSlides));
             setPositionByIndex();
         }
-    }
 
-    function drag(event) {
-        if (isDragging) {
-            const currentPosition = getPositionX(event);
-            currentTranslate = prevTranslate + currentPosition - startPos;
+        function setPositionByIndex() {
+            currentTranslate = currentSlide * -carouselInner.clientWidth / visibleSlides;
+            prevTranslate = currentTranslate;
+            carouselInner.style.transition = 'transform 0.5s ease';
             carouselInner.style.transform = `translateX(${currentTranslate}px)`;
         }
-    }
 
-    function getPositionX(event) {
-        return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
-    }
-
-    function showSlide(index) {
-        if (index >= slides.length) {
-            currentSlide = 0;
-        } else if (index < 0) {
-            currentSlide = slides.length - 1;
-        } else {
-            currentSlide = index;
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+            checkLastChildVisibility();
         }
 
-        setPositionByIndex();
-    }
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+            checkLastChildVisibility();
+        }
 
-    function setPositionByIndex() {
-        currentTranslate = currentSlide * -carouselInner.clientWidth;
-        prevTranslate = currentTranslate;
-        carouselInner.style.transition = 'transform 0.5s ease';
-        carouselInner.style.transform = `translateX(${currentTranslate}px)`;
-    }
+        function scrollEvent(event) {
+            if (event.deltaY < 0) {
+                prevSlide();
+            } else {
+                nextSlide();
+            }
+            event.preventDefault();
+        }
 
-    function nextSlide() {
-        showSlide(currentSlide + 1);
-    }
+        // Initialize the carousel
+        showSlide(currentSlide);
 
-    function prevSlide() {
-        showSlide(currentSlide - 1);
-    }
+        // Check if the last child is visible in the viewport
+        function checkLastChildVisibility() {
+            const lastChild = carouselInner.lastElementChild;
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        console.log('Last child is visible in the viewport');
+                    } else {
+                        console.log('Last child is not visible in the viewport');
+                    }
+                });
+            }, {
+                root: carousel,
+                threshold: 0.1
+            });
 
-    // Initialize the carousel
-    showSlide(currentSlide);
+            observer.observe(lastChild);
+        }
+
+        // Initialize the observer for the first time
+        checkLastChildVisibility();
+    }
 
     block.addEventListener("click", function (e) {
         const currentEl = e.target;
@@ -134,6 +173,7 @@ export default function decorate(block) {
         if (tabContainer) {
             const section = tabContainer.closest(".section");
             section.querySelectorAll(".tab-container").forEach(function (el, index) {
+                // section.querySelector(".tab-name").children[0].children[index].classList.remove("active");
                 section.querySelector(".tab-name").children[0].children[index].classList.remove("active");
                 el.classList.add("dp-none");
                 el.classList.remove("active");
@@ -141,7 +181,7 @@ export default function decorate(block) {
             tabContainer.classList.remove("dp-none");
             tabContainer.classList.add("active");
             currentEl.classList.add("active");
+            currentEl.closest(".carousel-item")?.classList.add("active");
         }
     })
-    console.log(block);
 }

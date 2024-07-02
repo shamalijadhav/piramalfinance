@@ -1,9 +1,7 @@
 import { fetchAPI, getProps, renderHelper } from "../../scripts/scripts.js";
 
 export default async function decorate(block) {
-    console.log("financialreports :: ", block);
     const props = getProps(block);
-    console.log(props);
     const [url, type] = props;
     block.innerHTML = "";
     try {
@@ -11,17 +9,15 @@ export default async function decorate(block) {
         const data = await resp.json();
         const years = data.result[0];
         Object.keys(years).forEach(function (year) {
-            console.log(year);
             const months = years[year][0];
             let monthsli = '';
             Object.keys(months).forEach(function (month) {
-                console.log(months[month]);
                 monthsli += `  
                                 <div class="subAccordianContent" style="display: nona;">
                                     <div class="publicDisclosuresWrap">
                                         <div class="innersubAccordianContent">
                                             <a href="javascript:;" class="innersubAccordianTitle">${month}</a>
-                                            <div class="publicDisclosuresWrap innerSubAccordianData">
+                                            <div class="publicDisclosuresWrap innerSubAccordianData" style="display: none;">
                                                 <ul> ${renderHelper(months[month], `
                                                     <div class="forName">    
                                                         <li>
@@ -44,11 +40,13 @@ export default async function decorate(block) {
                                 <div class="accordianContent">
                                     <div class="accordianBox">
                                         <div class="subAccordianWrap">
-                                            <div class="subAccordianBox active">
+                                            <div class="subAccordianBox">
                                                 <a href="javascript:;" class="subAccordianTitle"
                                                     data-accordianpdf-folderpath="/content/dam/piramalfinance/pdf/stakeholder/financial-reports/2024"
                                                     data-accordianpdf-folderdepth="2">${year}</a>
+                                                    <div class="grey-border" style="display: none;">
                                                 ${monthsli}
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -57,7 +55,6 @@ export default async function decorate(block) {
                         </section>
                     `
         })
-        console.log(data);
 
         // Set initial display to none for all subAccordianContent elements
         var subAccordianContents = block.querySelectorAll('.subAccordianContent');
@@ -79,6 +76,7 @@ export default async function decorate(block) {
             var content = parent.querySelectorAll('.subAccordianContent');
             content.forEach(function (el) {
                 var computedStyle = window.getComputedStyle(el);
+                el.parentElement.style.display = computedStyle.getPropertyValue('display') === 'none' ? 'block' : 'none';
                 el.style.display = computedStyle.getPropertyValue('display') === 'none' ? 'block' : 'none';
             })
 

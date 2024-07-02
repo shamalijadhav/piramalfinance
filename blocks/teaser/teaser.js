@@ -44,7 +44,6 @@ export function generateTeaserDOM(props, classes) {
   
   const bgPicture = pictureBgContainer.querySelector("picture");
   const picture = pictureContainer.querySelector("picture");
-  console.log(bgPicture, picture);
   const hasShortDescr = shortDescr.textContent.trim() !== "";
   // Build DOM
   const ctaImageAnchor = ctaImageUrl.querySelector("a") || createAnchor(ctaImageUrl);

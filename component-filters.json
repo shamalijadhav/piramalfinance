@@ -53,12 +53,14 @@
       "cards",
       "columns",
       "rte",
+      "city-list",
       "imgwithlink",
       "testimonial",
       "financialreports",
       "offer-documents",
       "carousel",
       "teaser",
+      "tab-link",
       "tab-name",
       "tab-container",
       "tabs",
@@ -72,7 +74,10 @@
       "container",
       "mycontainer",
       "keyfeatures",
-      "embed"
+      "embed",
+      "homeloancalculator",
+      "emiandeligiblitycalc",
+      "eligibilitycalculator"
     ]
   },
   {

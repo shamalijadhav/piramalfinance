@@ -199,6 +199,19 @@
     ]
   },
   {
+    "id": "city-list",
+    "fields": [
+      {
+        "component": "text",
+        "name": "city-list",
+        "label": "City List Path",
+        "description": "Set city list api path",
+        "valueType": "string",
+        "raw": false
+      }
+    ]
+  },
+  {
     "id": "imgwithlink",
     "fields": [
       {
@@ -413,6 +426,14 @@
             "value": "secondary"
           }
         ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "offer-documents-image",
+        "value": "",
+        "label": "Offer documents image",
+        "description": "Sets the image of the documents."
       }
     ]
   },
@@ -483,6 +504,18 @@
     ]
   },
   {
+    "id": "tab-link",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "tab-link-2",
+        "label": "Rich-Text Field",
+        "valueType": "string",
+        "raw": true
+      }
+    ]
+  },
+  {
     "id": "tab-name",
     "fields": [
       {
@@ -535,13 +568,28 @@
         "label": "Set next icon on tab carousel"
       },
       {
-        "component": "text",
+        "component": "reference",
         "valueType": "string",
-        "name": "tab-image",
+        "name": "tab-image-1",
         "value": "",
-        "label": "Tab Image",
-        "description": "Sets the path of the image on the tab.",
-        "multi": true
+        "label": "Tab Image 1",
+        "description": "Sets the path of the image on the tab."
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "tab-image-2",
+        "value": "",
+        "label": "Tab Image 2",
+        "description": "Sets the path of the image on the tab."
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "tab-image-3",
+        "value": "",
+        "label": "Tab Image 3",
+        "description": "Sets the path of the image on the tab."
       }
     ]
   },
@@ -1756,5 +1804,31 @@
         "label": "thumbnail"
       }
     ]
+  },
+  {
+    "id": "homeloancalculator",
+    "fields": [
+      {
+        "component": "text-input",
+        "label": "URL of Content Fragment",
+        "name": "text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "eligibilitycalculator",
+    "fields": [
+      {
+        "component": "text-input",
+        "label": "URL of Content Fragment",
+        "name": "text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "emiandeligiblitycalc",
+    "fields": []
   }
 ]

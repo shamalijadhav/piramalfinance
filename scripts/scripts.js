@@ -92,6 +92,23 @@ export function getProps(block, config) {
     }
   })
 }
+
+export function currenyCommaSeperation(x) {
+  if (typeof x === "number") {
+      x = x.toString();
+  }
+
+  // Split the number into integral and decimal parts
+  const parts = x.split(".");
+  let integralPart = parts[0];
+  const decimalPart = parts[1] ? `.${parts[1]}` : '';
+
+  // Add commas after every two digits from the right in the integral part
+  integralPart = integralPart.replace(/\d(?=(\d{2})+\d$)/g, '$&,');
+  
+  return integralPart + decimalPart;
+}
+
 /* helper script end */
 
 /**
@@ -238,7 +255,16 @@ async function loadingCustomCss() {
     `${window.hlx.codeBasePath}/styles/list-content/list-content.css`,
     `${window.hlx.codeBasePath}/styles/real-estate-banner/real-estate-banner.css`,
     `${window.hlx.codeBasePath}/styles/rte-wrapper/rte-wrapper.css`,
-    `${window.hlx.codeBasePath}/styles/partnerships-cards/partnerships-cards.css`
+    `${window.hlx.codeBasePath}/styles/partnerships-cards/partnerships-cards.css`,
+    `${window.hlx.codeBasePath}/styles/knowledge-card-carousel/knowledge-card-carousel.css`,
+    `${window.hlx.codeBasePath}/styles/board-of-directors/board-of-directors.css`,
+    `${window.hlx.codeBasePath}/styles/ratings-card/ratings-card.css`,
+    `${window.hlx.codeBasePath}/styles/partnership-cards-tab/partnership-cards-tab.css`,
+    `${window.hlx.codeBasePath}/styles/company-details/company-details.css`,
+    `${window.hlx.codeBasePath}/styles/years-info-tab/years-info-tab.css`,
+    `${window.hlx.codeBasePath}/styles/media/media.css`,
+    `${window.hlx.codeBasePath}/styles/partnership/partnership.css`,
+    `${window.hlx.codeBasePath}/styles/rupee-cards/rupee-card.css`,
   ]
 
   loadCssArray.forEach(async (eachCss) => {
@@ -247,3 +273,7 @@ async function loadingCustomCss() {
 
 }
 
+document.querySelector("body").addEventListener("click", function(e){
+  e.stopImmediatePropagation();
+  e.currentTarget.querySelector(".stake-pop-up.dp-block")?.classList.remove("dp-block"); 
+})

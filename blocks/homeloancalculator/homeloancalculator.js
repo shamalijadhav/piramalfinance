@@ -2,6 +2,7 @@ import { renderCalculatorData } from "../emiandeligiblitycalc/renderhpcal.js";
 import { homeLoanCalcFunc } from "../emiandeligiblitycalc/homeloancalculators.js";
 import { CalcHTM } from "../emiandeligiblitycalc/templatehtml1.js";
 import {xfShowHideBodyClick, firstTabActive } from "../emiandeligiblitycalc/commonfile.js";
+import { targetObject } from "../../scripts/scripts.js";
  
 let calculatorType, emiCalDiv, emiOverlay, overlay;
 
@@ -153,7 +154,6 @@ export default function decorate(block) {
     emiOverlay = emiCalDiv.querySelector(".cmp-container--caloverlay");
     // overlay = emiCalDiv.querySelector(".modal-overlay");
     homeLoancalculatorCallXf();
-    homeLoanCalcFunc();
   } catch (error) {
     console.warn(error);
   }
@@ -173,6 +173,7 @@ export function homeLoancalculatorCallXf() {
         e.stopImmediatePropagation();
         const xfGetAttr = this.getAttribute("data-teaserv2-xf");
         const findSectionXFShow = document.querySelector("." + xfGetAttr);
+        const currentSection = document.querySelector(".home-page-calculator-call-xf .homeloancalculator-wrapper");
         findSectionXFShow.querySelector(".overlayDiv").classList.add("show");
         if (xfGetAttr == "home-page-calculator-call-xf") {
           findSectionXFShow.classList.remove("dp-none"); // look
@@ -180,10 +181,12 @@ export function homeLoancalculatorCallXf() {
           emiOverlay.classList.add("show");
           // overlay.classList.add("show");
           document.body.style.overflow = "hidden";
-          renderCalculatorData(findSectionXFShow, calculatorType);
-          firstTabActive(findSectionXFShow);
+          homeLoanCalcFunc(currentSection);
+          renderCalculatorData(currentSection, calculatorType);
+          firstTabActive(currentSection);
         }
-        xfShowHideBodyClick(findSectionXFShow);
+        targetObject.model = currentSection;
+        // xfShowHideBodyClick(currentSection);
       });
     });
 }

@@ -1,9 +1,11 @@
 import { renderCalculatorData } from "../emiandeligiblitycalc/renderhpcal.js";
 import { homeLoanCalcFunc } from "../emiandeligiblitycalc/homeloancalculators.js";
 import { CalcHTM } from "../emiandeligiblitycalc/templatehtml1.js";
-import {xfShowHideBodyClick, firstTabActive } from "../emiandeligiblitycalc/commonfile.js";
+import { xfShowHideBodyClick, firstTabActive } from "../emiandeligiblitycalc/commonfile.js";
+import { targetObject } from "../../scripts/scripts.js";
 
 let calculatorType, elgCalDiv, elgOverlay, overlay;
+
 
 export default function decorate(block) {
   let cfURL = block.querySelector("a")?.textContent.trim();
@@ -177,7 +179,6 @@ export default function decorate(block) {
     elgOverlay = elgCalDiv.querySelector(".cmp-container--caloverlay");
     // overlay = elgCalDiv.querySelector(".modal-overlay");
     eligibilityCalculatorCallXf();
-    homeLoanCalcFunc();
   } catch (error) {
     console.warn(error);
   }
@@ -198,17 +199,19 @@ export function eligibilityCalculatorCallXf() {
         const xfGetAttr = this.getAttribute("data-teaserv2-xf");
         const findSectionXFShow = document.querySelector(".home-page-calculator-call-xf");
         const currentSection = document.querySelector(".home-page-calculator-call-xf .eligibilitycalculator-wrapper");
-        findSectionXFShow.querySelector('.eligibilitycalculator-wrapper').querySelector(".overlayDiv").classList.add("show");
-        if(xfGetAttr == "homepage-eligibility-calculator-call-xf"){
-          findSectionXFShow.classList.remove("dp-none"); 
+        findSectionXFShow.querySelector(".eligibilitycalculator-wrapper").querySelector(".overlayDiv").classList.add("show");
+        if (xfGetAttr == "homepage-eligibility-calculator-call-xf") {
+          findSectionXFShow.classList.remove("dp-none");
           calculatorType = "eligibility";
           elgOverlay.classList.add("show");
-        //   overlay.classList.add("show");
+          //   overlay.classList.add("show");
           document.body.style.overflow = "hidden";
-          renderCalculatorData(currentSection , calculatorType);
+          renderCalculatorData(currentSection, calculatorType);
+          homeLoanCalcFunc(currentSection);
           firstTabActive(currentSection);
         }
-        xfShowHideBodyClick(currentSection);
+        targetObject.model = currentSection;
+        // xfShowHideBodyClick(currentSection);
       });
     });
-} 
+}

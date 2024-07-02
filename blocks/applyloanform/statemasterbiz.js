@@ -1,6 +1,6 @@
 
-import { brachDropDownUl, branchInput, loanProduct, stateDropDownUL, stateInput } from "../loanformdom";
-import { statemasterDataMap } from "../statemasterDataMapping";
+import { brachDropDownUl, branchInput, loanProduct, stateDropDownUL, stateInput } from "./loanformdom.js";
+import { statemasterDataMap } from "./statemasterDataMapping.js";
 
 let statemasterGlobal = statemasterDataMap.get("statemasterGlobal") || {};
 let productStatemaster = {};

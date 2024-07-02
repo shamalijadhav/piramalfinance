@@ -1,13 +1,14 @@
 import { appplyLoanTemplate } from "./applyloantemplate.js";
+import { applyLoanFormClick } from "./applyloanforms.js";
 
-export function decorate(blocks){
-    debugger;
-    let cfURL = blocks.querySelector("a")?.textContent.trim();
+export default function decorate(block) {
+
+    let cfURL = block.querySelector("a")?.textContent.trim();
     // const cfRepsonse = CFApiCall(cfURL);
 
-  blocks.innerHTML = appplyLoanTemplate();
+    block.innerHTML = appplyLoanTemplate();
   try {
-    
+    applyLoanFormClick()
   } catch (error) {
     console.warn(error);
   }

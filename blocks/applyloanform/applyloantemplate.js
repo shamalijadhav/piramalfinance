@@ -68,29 +68,30 @@ export function appplyLoanTemplate() {
   };
 
   function createLoanTypeDropDown() {
-    let container = document.getElementById("loanTypesContainer");
-    let ul = document.createElement("ul");
+    let container = document.createElement("div");
 
     properties.options.forEach((category) => {
+      let ul = document.createElement("ul");
       for (let [key, value] of Object.entries(category)) {
         let liCategory = document.createElement("li");
-        liCategory.className = "subpoints";
-        liCategory.dataset.getInput = "form-loan-type";
         liCategory.textContent = key;
+        liCategory.setAttribute("data-get-input","form-loan-type");
+        liCategory.classList.add("subpoints");
         ul.appendChild(liCategory);
 
         value.forEach((item) => {
           let liItem = document.createElement("li");
-          liItem.className = "subpoints";
-          liItem.dataset.loanType = item.loantype;
-          liItem.dataset.getInput = "form-loan-type";
           liItem.textContent = item.litext;
+          liItem.setAttribute("data-loan-type", item.loantype);
+          liItem.setAttribute("data-get-input","form-loan-type");
+          liItem.classList.add("subpoints");
           ul.appendChild(liItem);
         });
       }
+      container.appendChild(ul);
     });
-    container.appendChild(ul);
-    return container;
+
+    return container.innerHTML;
   }
 
   let listofLoanTypes = createLoanTypeDropDown();

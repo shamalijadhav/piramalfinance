@@ -1,4 +1,4 @@
-import { formDobInput } from "./loanformdom";
+import { formDobInput } from "./loanformdom.js";
 
 document.addEventListener("DOMContentLoaded", function () {
 

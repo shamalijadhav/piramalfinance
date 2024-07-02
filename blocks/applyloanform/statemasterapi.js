@@ -1,4 +1,5 @@
 import { workFlowStatemaster } from "./statemasterbiz.js";
+import { fetchAPI } from "../../scripts/scripts.js";
 
 export function stateMasterApi() {
     let loaninnerform=document.querySelector(".loan-form-sub-parent");
@@ -33,11 +34,11 @@ export function stateMasterApi() {
 
 function statemasterGetStatesApi() {
     return new Promise((resolve, reject) => {
-        let url = "/graphql/execute.json/piramalfinance/State%20City%20Master";
+        let url = "https://publish-p133703-e1305981.adobeaemcloud.com/graphql/execute.json/piramalfinance/State%20City%20Master";
 
         // let stateMasterGraphQLQuery = "query MyQuery { statemasterList { items { state, data } } }";
 
-        callGetAPI(url)
+        fetchAPI("GET", url)
             .then(function (response) {
                 workFlowStatemaster(response.responseJson.data.statemasterList.items);
             })

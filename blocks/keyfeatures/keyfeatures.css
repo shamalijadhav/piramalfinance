@@ -82,7 +82,7 @@
 .section.home-loans-products-wrapper .homeloanteaser .cmp-teaser .keyfeature-container .keyfeatures-info {
     position: relative;
     background-color: #fff4e7;
-    border-radius: 8px;
+    border-radius: 0 0 8px 8px;
     height: 100%;
     position: relative;
     z-index: 20;

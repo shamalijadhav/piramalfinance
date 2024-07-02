@@ -1,26 +1,7 @@
-.dp-block{
-    display: block;
-}
-/* .blur-body{
-    position: relative;
-    position: fixed;
-
-
-}
-.blur-body::before{
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .4);
-    z-index: 1;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-} */
 .section.partnership-tab-content .default-content-wrapper>h2 {
     color: var(--black);
     display: block;
-    font-family: 'Nunito-Extrabold',sans-serif;
+    font-family: 'Nunito-Extrabold', sans-serif;
     font-size: 32px;
     line-height: 40px;
     padding-bottom: 8px;
@@ -34,10 +15,10 @@
     column-gap: 40px;
 }
 
-.section.partnership-tab-content .rte-wrapper .rte.block ul>li a{
-    font-family: 'Nunito-Regular',sans-serif;
+.section.partnership-tab-content .rte-wrapper .rte.block ul>li a {
+    font-family: 'Nunito-Regular', sans-serif;
     font-size: 24px;
-    line-height: 32px;  
+    line-height: 32px;
     padding: unset;
     color: var(--black);
     text-decoration: none;
@@ -55,7 +36,7 @@
     margin: 24px 0;
 }
 
-.section.partnership-image-popup .wrappercreation-wrapper .offer-documents-wrapper .offer-documents.block .richtext.text>.cmp-text{
+.section.partnership-image-popup .wrappercreation-wrapper .offer-documents-wrapper .offer-documents.block .richtext.text>.cmp-text {
     align-items: center;
     border-radius: 16px;
     cursor: pointer;
@@ -66,40 +47,53 @@
     width: 100%;
     box-shadow: 0 4px 9pt rgba(51, 51, 51, .078);
 }
+
 .section.partnership-image-popup .wrappercreation-wrapper .offer-documents-wrapper .offer-documents.block .richtext.text .stake-pop-up {
     inset: 0;
     position: fixed;
     z-index: 9999;
+    left: 50%;
+    max-height: calc(100% - 4pc);
+    max-width: 600px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 4pc);
+    max-width: 600px;
+    /* height: 100%; */
 }
+
 .section.partnership-image-popup .wrappercreation-wrapper .offer-documents-wrapper .offer-documents.block .richtext.text>.cmp-text div picture>img {
     width: 206px;
     height: 86px;
 }
-.section.partnership-image-popup .wrappercreation-wrapper .offer-documents-wrapper .offer-documents.block .richtext.text .stake-pop-up .popup{
+
+.section.partnership-image-popup .wrappercreation-wrapper .offer-documents-wrapper .offer-documents.block .richtext.text .stake-pop-up .popup {
     background-color: #fff;
     border-radius: 9pt;
     box-shadow: 0 11px 15px -7px rgba(0, 0, 0, .2), 0 24px 38px 3px rgba(0, 0, 0, .14), 0 9px 46px 8px rgba(0, 0, 0, .12);
     color: rgba(0, 0, 0, .87);
-    display: flex !important;
     left: 50%;
-    max-height: calc(100% - 4pc);
-    max-width: 600px;
     position: relative;
     top: 50%;
     transform: translate(-50%, -50%);
     width: calc(100% - 4pc);
     z-index: 1;
+    width: 100%;
+    /* height: 100%; */
     overflow: hidden;
 }
-.section.partnership-image-popup .wrappercreation-wrapper .offer-documents-wrapper .offer-documents.block .richtext.text .stake-pop-up .popup .popupText .cmp-text .cpm-sub-text{
+
+.section.partnership-image-popup .wrappercreation-wrapper .offer-documents-wrapper .offer-documents.block .richtext.text .stake-pop-up .popup .popupText .cmp-text .cpm-sub-text {
     display: block;
     margin: 0 2pc;
     padding: 73px 24px 1pc;
 }
-.section.partnership-image-popup .wrappercreation-wrapper .offer-documents-wrapper .offer-documents.block .richtext.text .stake-pop-up .popup .popupText .cmp-text .cpm-sub-text >p{
+
+.section.partnership-image-popup .wrappercreation-wrapper .offer-documents-wrapper .offer-documents.block .richtext.text .stake-pop-up .popup .popupText .cmp-text .cpm-sub-text>p {
     text-align: center;
 }
-.section.partnership-image-popup .wrappercreation-wrapper .offer-documents-wrapper .offer-documents.block .richtext.text .stake-pop-up .popup .popupText .cmp-text .cpm-sub-text >p >.title{
+
+.section.partnership-image-popup .wrappercreation-wrapper .offer-documents-wrapper .offer-documents.block .richtext.text .stake-pop-up .popup .popupText .cmp-text .cpm-sub-text>p>.title {
     color: #f26841;
     font-family: Nunito-Extrabold, sans-serif;
     font-size: 24px;
@@ -107,6 +101,7 @@
     letter-spacing: .12px;
     line-height: 32px;
 }
+
 .section.partnership-image-popup .wrappercreation-wrapper .offer-documents-wrapper .offer-documents.block .richtext.text .stake-pop-up .text.popupText .cmp-text {
     /* padding: 73px 32px 32px;
     max-width: 600px;
@@ -119,7 +114,7 @@
 
 .section.partnership-image-popup .wrappercreation-wrapper .offer-documents-wrapper .offer-documents.block .richtext.text .stake-pop-up .text.popupText .cmp-text>p>span {
     color: var(--orange);
-    font-family: 'Nunito-Extrabold',sans-serif;
+    font-family: 'Nunito-Extrabold', sans-serif;
     font-size: 24px;
     letter-spacing: .12px;
     line-height: 32px;
@@ -139,91 +134,67 @@
     margin-top: 56px;
     max-height: 350px;
     height: 100%;
-    overflow-y: scroll;
     display: block;
     height: 100%;
     margin: 0 2pc 2pc;
-    /* overflow-y: auto; */
+    overflow-y: auto;
     padding: 8px 24px;
 }
 
 .section.partnership-image-popup .wrappercreation-wrapper .offer-documents-wrapper .offer-documents.block .richtext.text .stake-pop-up .text.popupText .cmp-text .popup-parent-cont .popupContainer div p,
-.section.partnership-image-popup .wrappercreation-wrapper .offer-documents-wrapper .offer-documents.block .richtext.text .stake-pop-up .text.popupText .cmp-text .popup-parent-cont .popupContainer div p a {    
-    color: rgba(0,0,0,.871);
-    font-family: 'Nunito-Regular',sans-serif;
+.section.partnership-image-popup .wrappercreation-wrapper .offer-documents-wrapper .offer-documents.block .richtext.text .stake-pop-up .text.popupText .cmp-text .popup-parent-cont .popupContainer div p a {
+    color: rgba(0, 0, 0, .871);
+    font-family: 'Nunito-Regular', sans-serif;
     font-size: 16px;
     line-height: 24px;
     text-decoration: none;
 }
 
+.section.partnership-image-popup .wrappercreation-wrapper .offer-documents-wrapper .offer-documents.block .richtext.text .stake-pop-up .text.popupText .cmp-text .popup-parent-cont .popupContainer div ul {
+    list-style: unset;
+    margin-left: 15px;
+}
+
 .section.partnership-image-popup .wrappercreation-wrapper .offer-documents-wrapper .offer-documents.block .richtext.text .stake-pop-up .text.popupText .cmp-text .popup-parent-cont .popupContainer div p>strong {
-    color: rgba(0,0,0,.871);
-    font-family: 'Nunito-Extrabold',sans-serif;
+    color: rgba(0, 0, 0, .871);
+    font-family: 'Nunito-Extrabold', sans-serif;
     font-size: 16px;
     line-height: 24px;
 }
 
-/* Add these styles to your CSS file */
+@media screen and (min-width:768px) and (max-width:1024px) {
 
-/* Overlay style */
-/* .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 9998;
-    display: none; 
-  } */
-  
-  /* Popup style */
-  /* .stake-pop-up {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    display: none;
-    background: white;
-    padding: 73px 32px 32px;
-    max-width: 600px;
-    width: 100%;
-    max-height: 350px;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 15px;
-  } */
-  
-  /* Show the popup and overlay when active */
-  /* .popup-active .overlay,
-  .popup-active .stake-pop-up {
-    display: block;
-  } */
-
-
-  @media screen and (min-width:768px) and (max-width:1024px ) {
     .section.partnership-tab-content .rte-wrapper .rte.block ul {
         column-gap: 16px;
     }
+
     .section.partnership-tab-content .rte-wrapper .rte.block ul>li a {
         font-size: 16px;
         line-height: 24px;
     }
-  }
 
-  @media screen and (max-width:768px) {
+    .section.partnership-image-popup .wrappercreation-wrapper .wrapper-creation-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width:768px) {
     .section.partnership-tab-content .rte-wrapper .rte.block ul>li a {
         font-size: 1pc;
         line-height: 24px;
     }
+
     .section.partnership-tab-content .rte-wrapper .rte.block ul {
         flex-wrap: nowrap;
         column-gap: 16px;
     }
+
     .section.partnership-tab-content .rte-wrapper .rte.block ul>li>strong>a {
         color: var(--orange);
         border-bottom: unset;
     }
-  }
-  
+
+    .section.partnership-image-popup .wrappercreation-wrapper .wrapper-creation-container {
+        grid-template-columns: 1fr;
+    }
+}

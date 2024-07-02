@@ -272,8 +272,3 @@ async function loadingCustomCss() {
   });
 
 }
-
-document.querySelector("body").addEventListener("click", function(e){
-  e.stopImmediatePropagation();
-  e.currentTarget.querySelector(".stake-pop-up.dp-block")?.classList.remove("dp-block"); 
-})

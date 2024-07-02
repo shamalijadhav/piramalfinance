@@ -812,6 +812,18 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     justify-content: center;
     right: 77px;
   }
+
+  /* .header-wrapper .nav-wrapper .nav-hamburger button[aria-label="close"] .nav-hamburger-icon::after {
+    top: 2.5px;
+  } */
+
+  /* header .nav-wrapper nav[aria-expanded='true']>.nav-hamburger>button>.nav-hamburger-icon::after {
+    top: 2.5px;
+  }  */
+
+  header nav[aria-expanded='true'] .nav-hamburger-icon::after {
+    top: 2.5px
+  }
 }
 
 @media screen and (max-width: 1400px) {

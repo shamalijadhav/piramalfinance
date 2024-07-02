@@ -95,7 +95,8 @@
     padding-bottom: 4px;
   }
 
-  .section.choose-us-css .default-content-wrapper p {
+  .section.choose-us-css .default-content-wrapper p,
+  .section.choose-us-css .columns-wrapper .columns div div :nth-child(3) {
     font-size: 14px;
     line-height: 20px;
     padding-bottom: 4px;

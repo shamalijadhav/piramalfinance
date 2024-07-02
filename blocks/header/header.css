@@ -131,11 +131,11 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
   transform: rotate(-45deg);
 }
 
+header nav .nav-hamburger {
+  display: none;
+  visibility: hidden;
+}
 @media (width >= 900px) {
-  header nav .nav-hamburger {
-    display: none;
-    visibility: hidden;
-  }
 }
 
 /* brand */
@@ -383,7 +383,7 @@ header nav .nav-sections .nav-drop::after{
 }
 
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>ul>li {
-  width: 20%;
+  width: 25%;
   display: flex;
   flex-wrap: wrap;
   padding-left: 8px;
@@ -403,6 +403,7 @@ header nav .nav-sections .nav-drop::after{
   line-height: 24px;
   margin-left: 10px;
   height: max-content;
+  position: relative;
 }
 
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>ul>li>ul {
@@ -488,13 +489,14 @@ header nav .nav-sections .nav-drop::after{
 } */
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li:last-child p{
   align-items: center;
-    color: #333;
-    cursor: pointer;
-    font-family: Nunito-Bold, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    text-decoration: none;
-    padding: 9px 6px;
+  color: #333;
+  cursor: pointer;
+  font-family: Nunito-Bold, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-decoration: none;
+  padding: 9px 6px;
 }
 .login-button-wrapper .default-content-wrapper {
   position: relative;
@@ -548,6 +550,90 @@ header nav .nav-sections .nav-drop::after{
   display: none;
 }
 
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li:last-child ul>li {
+  width: 12%;
+}
+
+header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
+  content: none;
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(2) > ul > li:nth-child(1) > p::before,
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(2) > ul > li:nth-child(2) > p::before,
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(2) > ul > li:nth-child(3) > p::before,
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(2) > ul > li:nth-child(4) > p::before,
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(1) > p::before,
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(2) > p::before,
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(3) > p::before {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  left: -30px;
+  top: 2px;
+  background-size: 100% 100%;
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(2) > ul > li:nth-child(1) > p::before {
+  background-image: url("https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/home-loan.svg");
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(2) > ul > li:nth-child(2) > p::before {
+  background-image: url("https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/business-loan.svg");
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(2) > ul > li:nth-child(3) > p::before {
+  background-image: url("https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/other-products.svg");
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(2) > ul > li:nth-child(4) > p::before {
+  background-image: url("https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/corporate-financing.svg");
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(1) > p::before {
+  background-image: url("https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/help-support.svg");
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(2) > p::before {
+  background-image: url("https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/existing-customer.svg");
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(3) > p::before {
+  background-image: url("https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/resources.svg");
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(1) > ul>li:nth-child(5) {
+  position: relative;
+}
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(1) > ul>li:nth-child(5)::after {
+  content: "New";
+  position: absolute;
+  right: 30%;
+  background-color: #41c66e;
+  border-radius: 4px;
+  color: #fff;
+  font-family: 'Nunito-Bold',sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 4px 10px;
+}
+
+/* .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:last-child > p::before {
+  height: 20px;
+  width: 27px;
+  display: inline-block;
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  left: 0;
+  top: 11px;
+  background-size: 100% 100%;
+  background-image: url("https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/language-black.svg");
+} */
+
 @media screen and (max-width: 767.99px) {
   .header-wrapper .nav-wrapper nav{
     min-height: unset !important;
@@ -559,20 +645,23 @@ header nav .nav-sections .nav-drop::after{
 
   .header-wrapper .nav-wrapper .nav-hamburger {
     position: absolute;
-    height: 30px;
-    width: 30px;
+    height: 12px;
+    width: 18px;
     right: 1rem;
+    display: block;
+    visibility: visible;
+    top: 37%;
   }
 
   .header-wrapper .nav-wrapper .nav-hamburger button {
-    height: 30px;
-    width: 30px;
+    height: 12px;
+    width: 18px;
   }
 
   .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon {
     height: 1.5px;
     background: #666666;
-    width: 26px;
+    width: 18px;
   }
 
   .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon::before {
@@ -584,7 +673,7 @@ header nav .nav-sections .nav-drop::after{
   }
 
   .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon::before, .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon::after {
-    width: 26px;
+    width: 18px;
     background: #666666;
   }
 
@@ -689,7 +778,8 @@ header nav .nav-sections .nav-drop::after{
     transform: rotate(135deg);
   }
   .login-button-wrapper .default-content-wrapper {
-    left: -45px;
+    left: -35px;
+    top: 2px;
   }
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>ul>li>ul>li {
     margin-bottom: 16px;
@@ -734,6 +824,12 @@ header nav .nav-sections .nav-drop::after{
   .header-wrapper .nav-wrapper nav {
       max-width: 100%;
       padding: 0 16px;
+  }
+}
+
+@media screen and (max-width:1366px) {
+  .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>ul {
+    padding: 0 13%;
   }
 }
 

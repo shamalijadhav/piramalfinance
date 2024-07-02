@@ -90,7 +90,7 @@
 }
 
 .banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser .foreground {
-  width: 60%;
+  width: 62%;
 }
 
 .banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser .foreground .long-description {
@@ -141,7 +141,8 @@
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .long-description>p>strong,
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .long-description>p,
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-one>.background .foreground .text .long-description>p,
-.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .text .long-description>p {
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .text .long-description>p,
+.section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.--skyblue>.background .foreground .text .long-description>p {
   color: var(--gradient-gray);
   font-family: "Nunito-Regular", sans-serif;
   font-size: 24px;
@@ -151,7 +152,7 @@
 }
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground {
-  width: 45%;
+  width: 50%;
 }
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .long-description>p>em {
@@ -198,7 +199,7 @@
 
 .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container {
   position: absolute;
-  left: 150px;
+  left: 160px;
   bottom: 60px;
 }
 
@@ -285,6 +286,26 @@
   color: var(--black);
 }
 
+.banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser.teaser-block-two .foreground {
+  width: 66%;
+}
+
+@media screen and (max-width:1366px) {
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .front-picture img {
+    width: 312px;
+    height: 265px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-two >.background .front-picture img {
+    width: 312px;
+    height: 325px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background {
+    padding: 0 150px 0 160px;
+  }
+}
+
 @media screen and (max-width:768px) {
   .section.banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser {
     height: 100%;
@@ -319,7 +340,8 @@
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .long-description>p>strong,
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .long-description>p,
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-one>.background .foreground .text .long-description>p,
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .text .long-description>p {
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .text .long-description>p,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.--skyblue>.background .foreground .text .long-description>p {
     font-size: .875rem;
     line-height: 1rem;
   }

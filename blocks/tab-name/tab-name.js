@@ -1,4 +1,4 @@
-import { getProps } from "../../scripts/scripts.js";
+import { createCarousle, getProps } from "../../scripts/scripts.js";
 
 function createButton(text, picture) {
     const button = document.createElement("button");
@@ -52,109 +52,7 @@ export default function decorate(block) {
     block.append(carouselInner);
 
     if (classes === "carousel") {
-        block.append(prevButton);
-        block.append(nextButton);
-        prevButton.addEventListener("click", prevSlide);
-        nextButton.addEventListener("click", nextSlide);
-        let currentSlide = 0;
-        let isDragging = false;
-        let startPos = 0;
-        let currentTranslate = 0;
-        let prevTranslate = 0;
-        const carousel = block;
-        const carouselInner = block.querySelector('#carouselInner');
-        const slides = block.querySelectorAll('.carousel-item');
-        const totalSlides = slides.length;
-        const visibleSlides = 4; // Number of slides visible in the viewport
-
-        carousel.addEventListener('mousedown', dragStart);
-        carousel.addEventListener('mouseup', dragEnd);
-        carousel.addEventListener('mouseleave', dragEnd);
-        carousel.addEventListener('mousemove', drag);
-
-        carousel.addEventListener('touchstart', dragStart);
-        carousel.addEventListener('touchend', dragEnd);
-        carousel.addEventListener('touchmove', drag);
-
-        function dragStart(event) {
-            isDragging = true;
-            startPos = getPositionX(event);
-            carouselInner.style.transition = 'none';
-        }
-
-        function dragEnd() {
-            isDragging = false;
-            const movedBy = currentTranslate - prevTranslate;
-
-            if (movedBy < -100) {
-                nextSlide();
-            } else if (movedBy > 100) {
-                prevSlide();
-            } else {
-                setPositionByIndex();
-            }
-        }
-
-        function drag(event) {
-            if (isDragging) {
-                const currentPosition = getPositionX(event);
-                currentTranslate = prevTranslate + currentPosition - startPos;
-                carouselInner.style.transform = `translateX(${currentTranslate}px)`;
-            }
-        }
-
-        function getPositionX(event) {
-            return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
-        }
-
-        function showSlide(index) {
-            // Ensure the slide index does not go below 0 or exceed the last possible start index
-            currentSlide = Math.max(0, Math.min(index, totalSlides - visibleSlides));
-            setPositionByIndex();
-        }
-
-        function setPositionByIndex() {
-            currentTranslate = currentSlide * -carouselInner.clientWidth / visibleSlides;
-            prevTranslate = currentTranslate;
-            carouselInner.style.transition = 'transform 0.5s ease';
-            carouselInner.style.transform = `translateX(${currentTranslate}px)`;
-        }
-
-        function nextSlide() {
-            showSlide(currentSlide + 1);
-            checkLastChildVisibility();
-        }
-
-        function prevSlide() {
-            showSlide(currentSlide - 1);
-            checkLastChildVisibility();
-        }
-
-        // Initialize the carousel
-        showSlide(currentSlide);
-
-        // Check if the last child is visible in the viewport
-        function checkLastChildVisibility() {
-            const lastChild = carouselInner.lastElementChild;
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        console.log('Last child is visible in the viewport');
-                    } else {
-                        console.log('Last child is not visible in the viewport');
-                    }
-                });
-            }, {
-                root: carousel,
-                threshold: 0.1
-            });
-
-            observer.observe(lastChild);
-        }
-
-        // Initialize the observer for the first time
-        checkLastChildVisibility();
-
+        createCarousle(block, prevButton, nextButton);
     }
 
     block.addEventListener("click", function (e) {

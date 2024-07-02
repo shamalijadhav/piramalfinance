@@ -53,10 +53,45 @@ export default function decorate(block) {
             </div>    
     `
 
-        block.addEventListener("click", function (e) {
-            e.currentTarget.querySelector(".stake-pop-up")?.classList.remove("dp-none");
-        })
-    }
+
+    block.querySelectorAll('.offer-documents.block .modal-cta >.cmp-text').forEach(function (blockCards) {
+        blockCards.addEventListener("click", function (e) {
+            e.stopImmediatePropagation();
+            const overlay = document.createElement('div');
+            overlay.classList.add('overlay');
+            const targetModal = e.target.closest('.popup-rich-text').querySelector('.stake-pop-up');
+            if (targetModal.classList.contains('dp-none')) {
+                targetModal.classList.add("dp-block");
+                targetModal.classList.remove("dp-none");
+                document.body.style.overflow = "hidden";
+                document.body.appendChild(overlay);
+            } else {
+                targetModal.classList.add("dp-none");
+                targetModal.classList.remove("dp-block");
+                document.body.removeChild(overlay);
+                document.body.style.overflow = "auto";
+            }
+            e.stopPropagation();
+        });
+    });
+
+    document.querySelectorAll(".stake-pop-up .text.popupText .cmp-text .cross-container img").forEach(function (ele) {
+        ele.addEventListener("click", function (currentEle) {
+            currentEle.stopImmediatePropagation();
+            currentEle.target.closest('.stake-pop-up').classList.remove('dp-block');
+            currentEle.target.closest('.stake-pop-up').classList.add('dp-none');
+            document.body.style.overflow = "auto";
+            var overlay = document.querySelector('.overlay');
+            if (overlay) {
+                document.body.removeChild(overlay);
+            }
+            document.body.removeChild(overlay);
+        });
+
+    });
+
+
+}
 
 //     block.addEventListener("click", function (e) {
 //         document.body.classList.add("popup-active");

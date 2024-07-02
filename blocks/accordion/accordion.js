@@ -8,7 +8,7 @@ export function generateAccordionDOM(block) {
       const heading = element.querySelector("h2,h3,h4,h5,h6");
       summary.append(heading || element.textContent.trim());
     } else {
-       const elementText = element.textContent.trim();
+       const elementText = element.innerHTML;
        var elementDiv = document.createElement("div");
        elementDiv.innerHTML = elementText;
       details.append(elementDiv);

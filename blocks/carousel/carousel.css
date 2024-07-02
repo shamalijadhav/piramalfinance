@@ -109,7 +109,7 @@
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  padding: 0 150px 0 160px;
+  padding: 0 150px;
 }
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .front-picture img {
@@ -299,6 +299,10 @@
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-two >.background .front-picture img {
     width: 312px;
     height: 325px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background {
+    padding: 0 150px 0 160px;
   }
 }
 

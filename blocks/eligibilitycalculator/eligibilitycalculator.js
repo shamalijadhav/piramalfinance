@@ -1,28 +1,28 @@
 import { renderCalculatorData } from "../emiandeligiblitycalc/renderhpcal.js";
 import { homeLoanCalcFunc } from "../emiandeligiblitycalc/homeloancalculators.js";
-import { eligibilityCalculatorHTM } from "./templatehtml.js";
+import { CalcHTM } from "../emiandeligiblitycalc/templatehtml1.js";
 import {xfShowHideBodyClick, firstTabActive } from "../emiandeligiblitycalc/commonfile.js";
 
-let calculatorType, emiCalDiv, elgCalDiv, emiOverlay, elgOverlay, overlay;
+let calculatorType, elgCalDiv, elgOverlay, overlay;
 
 export default function decorate(block) {
   let cfURL = block.querySelector("a")?.textContent.trim();
   // const cfRepsonse = CFApiCall(cfURL);
 
-  const callJson = {
+  const callAJson = {
     total: 1,
     offset: 0,
     limit: 1,
     data: [
       {
         maindivbackground: "emi",
-        title: "EMI Calculator",
+        title: "Eligibility Calculator",
         mainheadingclass: "",
         salaried: {
           salariedcheck: true,
           salariedtabid: "salariedTab",
-          salariedtabname: "employementStatus",
-          salariedtabvalue: "80",
+          salariedtabname: "businessStatus",
+          salariedtabvalue: "65",
           salariedtabtext: "I'm Salaried",
           calculatorsalariedimg: "/content/dam/piramalfinance/product-page/home-loan/calculator-salaried.svg",
           calculatorsalariedimgalt: "salaried",
@@ -30,8 +30,8 @@ export default function decorate(block) {
         business: {
           businesscheck: true,
           businesstabid: "businessTab",
-          businesstabname: "employementStatus",
-          businesstabvalue: "60",
+          businesstabname: "businessStatus",
+          businesstabvalue: "80",
           businesstabtext: "I'm doing Business",
           calculatorbusinessimg: "/content/dam/piramalfinance/product-page/home-loan/calculator-business.svg",
           calculatorbusinessimgalt: "business",
@@ -50,23 +50,49 @@ export default function decorate(block) {
           chechboxemi: true,
           loanamout: [
             {
-              label: "Loan amount (Rs.)",
+              label: "Gross Monthly Income (Rs.)",
               labelyearsvalue: "",
               rupeesign: "₹",
-              dataslider: "em1",
-              dataattr: "loanamt",
-              rangeminvalue: "500000",
-              rangemaxvalue: "50000000",
+              dataslider: "m2",
+              dataattr: "income",
+              rangeminvalue: "20000",
+              rangemaxvalue: "1000000",
               rangestep: "10000",
-              displayvalue: "2500000",
-              minvaluetext: "5L",
-              maxvaluetext: "5Cr",
+              displayvalue: "100000",
+              minvaluetext: "20k",
+              maxvaluetext: "10L",
+            },
+            {
+              label: "Other Loan EMIs (Rs.)",
+              labelyearsvalue: "",
+              rupeesign: "₹",
+              dataslider: "m3",
+              dataattr: "otherloan",
+              rangeminvalue: "0",
+              rangemaxvalue: "500000",
+              rangestep: "5000",
+              displayvalue: "0",
+              minvaluetext: "0",
+              maxvaluetext: "5L",
+            },
+            {
+              label: "Interest Rate (% p.a)",
+              labelyearsvalue: "",
+              rupeesign: "₹",
+              dataslider: "m4",
+              dataattr: "roi",
+              rangeminvalue: "10.5",
+              rangemaxvalue: "20",
+              rangestep: "0.1",
+              displayvalue: "10.5",
+              minvaluetext: "10.50%",
+              maxvaluetext: "20%",
             },
             {
               label: "Loan Tenure (Years)",
-              labelyearsvalue: "Years",
-              rupeesign: "",
-              dataslider: "em2",
+              labelyearsvalue: "",
+              rupeesign: "₹",
+              dataslider: "m6",
               dataattr: "tenure",
               rangeminvalue: "5",
               rangemaxvalue: "30",
@@ -75,39 +101,81 @@ export default function decorate(block) {
               minvaluetext: "5Y",
               maxvaluetext: "30Y",
             },
+          ],
+        },
+        chechboxelibilityobj: {
+          chechboxemi: true,
+          loanamout: [
+            {
+              label: "Gross Annual Income (Rs.)",
+              labelyearsvalue: "",
+              rupeesign: "₹",
+              dataslider: "n2",
+              dataattr: "income",
+              rangeminvalue: "10000",
+              rangemaxvalue: "1000000",
+              rangestep: "10000",
+              displayvalue: "100000",
+              minvaluetext: "10k",
+              maxvaluetext: "10L",
+            },
+            {
+              label: "Other Loan EMIs (Rs.)",
+              labelyearsvalue: "",
+              rupeesign: "₹",
+              dataslider: "n3",
+              dataattr: "otherloan",
+              rangeminvalue: "0",
+              rangemaxvalue: "500000",
+              rangestep: "10000",
+              displayvalue: "0",
+              minvaluetext: "0",
+              maxvaluetext: "5L",
+            },
             {
               label: "Interest Rate (% p.a)",
               labelyearsvalue: "%",
               rupeesign: "",
-              dataslider: "em3",
+              dataslider: "n4",
               dataattr: "roi",
-              rangeminvalue: "10.5",
-              rangemaxvalue: "20",
+              rangeminvalue: "17",
+              rangemaxvalue: "24",
               rangestep: "0.1",
-              displayvalue: "10",
-              minvaluetext: "10.50%",
-              maxvaluetext: "20%",
+              displayvalue: "20",
+              minvaluetext: "17%",
+              maxvaluetext: "24%",
+            },
+            {
+              label: "Loan Tenure (Years)",
+              labelyearsvalue: "",
+              rupeesign: "₹",
+              dataslider: "n5",
+              dataattr: "tenure",
+              rangeminvalue: "1",
+              rangemaxvalue: "4",
+              rangestep: "1",
+              displayvalue: "3",
+              minvaluetext: "1Y",
+              maxvaluetext: "4Y",
             },
           ],
         },
         calendarbox: "/content/dam/piramalfinance/homepage/images/calc-calendarwebp",
         calendarmobile: "/content/dam/piramalfinance/homepage/images/calc-calendarwebp",
         outputtext: "Your home loan EMI is",
-        principaltext: "Principal amount",
-        interesttext: "Interest amount",
         button1text: "Talk to loan expert",
         button2text: "Apply loan now",
-        pageproperties: "hl",
+        pageproperties: "bl",
       },
     ],
     ":type": "sheet",
   };
 
-  block.innerHTML = CalcHTM(callJson);;
+  block.innerHTML = CalcHTM(callAJson);
   try {
-    elgCalDiv = document.querySelector(".homepage-eligibility-calculator-call-xf");
-    elgOverlay = document.querySelector(".cmp-container--caloverlay");
-    overlay = document.querySelector(".modal-overlay");
+    elgCalDiv = document.querySelector(".home-page-calculator-call-xf .eligibilitycalculator-wrapper");
+    elgOverlay = elgCalDiv.querySelector(".cmp-container--caloverlay");
+    // overlay = elgCalDiv.querySelector(".modal-overlay");
     eligibilityCalculatorCallXf();
     homeLoanCalcFunc();
   } catch (error) {
@@ -128,18 +196,19 @@ export function eligibilityCalculatorCallXf() {
       eachTeaserv2.addEventListener("click", function (e) {
         e.stopImmediatePropagation();
         const xfGetAttr = this.getAttribute("data-teaserv2-xf");
-        const findSectionXFShow = document.querySelector("." + xfGetAttr);
-        findSectionXFShow.querySelector(".overlayDiv").classList.add("show");
+        const findSectionXFShow = document.querySelector(".home-page-calculator-call-xf");
+        const currentSection = document.querySelector(".home-page-calculator-call-xf .eligibilitycalculator-wrapper");
+        findSectionXFShow.querySelector('.eligibilitycalculator-wrapper').querySelector(".overlayDiv").classList.add("show");
         if(xfGetAttr == "homepage-eligibility-calculator-call-xf"){
           findSectionXFShow.classList.remove("dp-none"); 
           calculatorType = "eligibility";
           elgOverlay.classList.add("show");
-          overlay.classList.add("show");
+        //   overlay.classList.add("show");
           document.body.style.overflow = "hidden";
-          renderCalculatorData(calculatorType);
-          firstTabActive();
+          renderCalculatorData(currentSection , calculatorType);
+          firstTabActive(currentSection);
         }
-        xfShowHideBodyClick(findSectionXFShow);
+        xfShowHideBodyClick(currentSection);
       });
     });
-}
+} 

@@ -77,11 +77,13 @@ export function homeLoanCalcFunc() {
   //     }
 
   // this for emi and elg calculator click
+
   const emiTabs = document.querySelectorAll(".tab-emi-calc");
   const elgTabs = document.querySelectorAll(".tab-eligibility-calc");
   const emiDivs = document.querySelectorAll(".emicalculator");
-  const emiCalDiv = document.querySelector(".home-page-calculator-call-xf");
   const elgDivs = document.querySelectorAll(".eligibilitycalculator");
+  // const emiCalDiv = document.querySelector(".home-page-calculator-call-xf .homeloancalculator-wrapper");
+  // const elgDivs = document.querySelectorAll(".home-page-calculator-call-xf .eligibilitycalculator");
   const firstHead = document.querySelector(".first-head");
   const secondHead = document.querySelector(".second-head");
   const gstBtn = document.querySelector(".gst-third-tab");

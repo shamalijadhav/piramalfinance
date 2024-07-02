@@ -1,9 +1,9 @@
 import { renderCalculatorData } from "../emiandeligiblitycalc/renderhpcal.js";
 import { homeLoanCalcFunc } from "../emiandeligiblitycalc/homeloancalculators.js";
-import { CalcHTM } from "../emiandeligiblitycalc/templatehtml.js";
+import { CalcHTM } from "../emiandeligiblitycalc/templatehtml1.js";
 import {xfShowHideBodyClick, firstTabActive } from "../emiandeligiblitycalc/commonfile.js";
  
-let calculatorType,emiOverlay, elgOverlay, overlay;
+let calculatorType, emiCalDiv, emiOverlay, overlay;
 
 export default function decorate(block) {
   let cfURL = block.querySelector("a")?.textContent.trim();
@@ -90,6 +90,50 @@ export default function decorate(block) {
             },
           ],
         },
+        chechboxelibilityobj: {
+          chechboxemi: true,
+          loanamout: [
+            {
+              label: "Loan amount (Rs.)",
+              labelyearsvalue: "",
+              rupeesign: "₹",
+              dataslider: "el1",
+              dataattr: "loanamt",
+              rangeminvalue: "100000",
+              rangemaxvalue: "20000000",
+              rangestep: "100000",
+              displayvalue: "800000",
+              minvaluetext: "1L",
+              maxvaluetext: "2Cr",
+            },
+            {
+              label: "Loan Tenure (Years)",
+              labelyearsvalue: "Years",
+              rupeesign: "",
+              dataslider: "el4",
+              dataattr: "tenure",
+              rangeminvalue: "1",
+              rangemaxvalue: "4",
+              rangestep: "1",
+              displayvalue: "10",
+              minvaluetext: "1Y",
+              maxvaluetext: "4Y",
+            },
+            {
+              label: "Interest Rate (% p.a)",
+              labelyearsvalue: "%",
+              rupeesign: "",
+              dataslider: "el3",
+              dataattr: "roi",
+              rangeminvalue: "17",
+              rangemaxvalue: "24",
+              rangestep: "0.1",
+              displayvalue: "20",
+              minvaluetext: "17%",
+              maxvaluetext: "24%",
+            },
+          ],
+        },
         calendarbox: "/content/dam/piramalfinance/homepage/images/calc-calendarwebp",
         calendarmobile: "/content/dam/piramalfinance/homepage/images/calc-calendarwebp",
         outputtext: "Your home loan EMI is",
@@ -105,8 +149,9 @@ export default function decorate(block) {
 
   block.innerHTML = CalcHTM(callJson);
   try {
-    emiOverlay = document.querySelector(".cmp-container--caloverlay");
-    overlay = document.querySelector(".modal-overlay");
+    emiCalDiv = document.querySelector(".home-page-calculator-call-xf .homeloancalculator-wrapper");
+    emiOverlay = emiCalDiv.querySelector(".cmp-container--caloverlay");
+    // overlay = emiCalDiv.querySelector(".modal-overlay");
     homeLoancalculatorCallXf();
     homeLoanCalcFunc();
   } catch (error) {
@@ -133,10 +178,10 @@ export function homeLoancalculatorCallXf() {
           findSectionXFShow.classList.remove("dp-none"); // look
           calculatorType = "emi";
           emiOverlay.classList.add("show");
-          overlay.classList.add("show");
+          // overlay.classList.add("show");
           document.body.style.overflow = "hidden";
-          renderCalculatorData(calculatorType);
-          firstTabActive();
+          renderCalculatorData(findSectionXFShow, calculatorType);
+          firstTabActive(findSectionXFShow);
         }
         xfShowHideBodyClick(findSectionXFShow);
       });

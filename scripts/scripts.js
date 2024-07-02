@@ -68,15 +68,18 @@ export function fetchAPI(method, url, data) {
         const resp = await fetch(url);
         resolve(resp);
       } else if (method === "POST") {
+        data.headerJson = data.headerJson || {
+          "Content-Type": "application/json",
+        }
+        data.headerJson["Content-Type"] = data.headerJson["Content-Type"] ? data.headerJson["Content-Type"] : "application/json";
         const request = new Request(url, {
           method: "POST",
-          body: JSON.stringify(data),
-          headers: {
-            "Content-Type": "application/json",
-          }
+          body: JSON.stringify(data.requestJson),
+          headers: data.headerJson
         });
         const response = await fetch(request);
-        resolve(response);
+        const json = await response.json();
+        resolve({ responseJson: json });
       }
     } catch (error) {
       reject(error);

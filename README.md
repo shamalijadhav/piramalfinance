@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--piramalfinance--shamalijadhav.hlx.page/
-- Live: https://main--piramalfinance--shamalijadhav.hlx.live/
+- Preview: https://main--piramalfinance--WWWPiramalFinanceCOM.hlx.page/
+- Live: https://main--piramalfinance--WWWPiramalFinanceCOM.hlx.live/
 
 ## Installation
 

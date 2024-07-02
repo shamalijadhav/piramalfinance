@@ -9,7 +9,6 @@ export default function () {
 }
 
 !(function (e, t) {
-  debugger;
   "object" == typeof exports && "object" == typeof module
     ? (module.exports = t())
     : "function" == typeof define && define.amd

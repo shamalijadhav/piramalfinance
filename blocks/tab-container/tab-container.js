@@ -1,9 +1,11 @@
 import { generateDetailedTeaserDOM } from '../detailed-teaser/detailed-teaser.js';
 import { generateTeaserDOM } from '../teaser/teaser.js';
+import { generateTabName } from '../tab-name/tab-name.js';
 
 const carouselContainerMapping = {}
 carouselContainerMapping["detailed-teaser"] = generateDetailedTeaserDOM;
 carouselContainerMapping["ss-teaser"] = generateDetailedTeaserDOM;
+carouselContainerMapping["tab-name"] = generateTabName;
 
 export default function decorate(block) {
     const tabid = block.children[0].innerText.trim();

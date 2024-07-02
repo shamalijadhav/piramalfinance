@@ -55,6 +55,7 @@
     padding: 0;
     background-color: transparent;
     position: absolute;
+    border: unset;
 }
 
 .section.years-info-tab-wrapper .tab-name-wrapper .carousel-control picture>img {

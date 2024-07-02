@@ -554,6 +554,10 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   content: none;
 }
 
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(2) > ul > li:nth-child(1) > p::before {
+  content: url('https://publish-p133703-e1305981.adobeaemcloud.com…nt/dam/piramalfinance/header-images/home-loan.svg');
+}
+
 @media screen and (max-width: 767.99px) {
   .header-wrapper .nav-wrapper nav{
     min-height: unset !important;

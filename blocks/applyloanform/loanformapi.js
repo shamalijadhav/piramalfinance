@@ -1,18 +1,23 @@
 // import { ProductLogics } from "./loadformlogic";
 // import { otpPopupFailureFun, removeLoader } from "../../../../clientlibs/support/otppopup/js/otppopup";
-import { accessToken, accessTokenURL, generateOTP, generateOTPURL, leadAPIURL, otpTokenURL, resendOTPUrl, smsURL, verifyOTPURL } from "./loanformapiurls.js";
+import { fetchAPI } from "../../scripts/scripts.js";
+import { accessTokenURL, generateOTPURL, leadAPIURL, otpTokenURL, resendOTPUrl, smsURL, verifyOTPURL } from "./loanformapiurls.js";
 import { cutomerEmployment, cutomerNo, loanFromBtn, loanOtpInput, loanProduct } from "./loanformdom.js";
-import { ProductLogics } from "./loanformlogic";
+import { ProductLogics } from "./loanformlogic.js";
 
 
 
-let loanStatus = "Rejected";
+export function buttonCLick() {
 
-loanFromBtn().addEventListener("click", function ({ currentTarget }) {
-    currentTarget.closest(".loan-form-button-container").classList.add("loader-initialized");
-    loanOtpInput().value = "";
-    workFlow();
-});
+    let loanStatus = "Rejected";
+
+    loanFromBtn().addEventListener("click", function ({ currentTarget }) {
+        // debugger;
+        currentTarget.closest(".loan-form-button-container").classList.add("loader-initialized");
+        loanOtpInput().value = "";
+        workFlow();
+    });
+}
 
 export function getAccessToken() {
     return new Promise(function (resolve) {
@@ -39,16 +44,29 @@ export function AccessTokenAPI() {
         },
     }
 
-    return new Promise(function (resolve, reject) {
-        callPostAPI(accessTokenURL, requestJson)
-            .then(function (response) {
-                resolve(response);
-            })
-            .catch(function (error) {
-                console.warn(error);
-                reject(error);
-                showNetworkFailedScreen(error);
-            });
+    return new Promise(async function (resolve, reject) {
+        try {
+            // const request = new Request(accessTokenURL, {
+            //     method: "POST",
+            //     body: JSON.stringify(requestJson),
+            // });
+
+            const response = await fetchAPI("POST", accessTokenURL, requestJson);
+            resolve(response);
+        } catch (error) {
+            reject(error)
+            showNetworkFailedScreen(error);
+
+        }
+        // callPostAPI(accessTokenURL, requestJson)
+        //     .then(function (response) {
+        //         resolve(response);
+        //     })
+        //     .catch(function (error) {
+        //         console.warn(error);
+        //         reject(error);
+        //         showNetworkFailedScreen(error);
+        //     });
     });
 }
 
@@ -65,7 +83,7 @@ export function generateOTPAPI(access_token, mobileno, productName) {
     }
 
     return new Promise((resolve, reject) => {
-        callPostAPI(generateOTPURL, requesObj)
+        fetchAPI("POST", generateOTPURL, requesObj)
             .then(function (generateOTPRsp, reject) {
                 let generateOTPRspObj = getJsonObj(generateOTPRsp);
                 let otpAuthId = generateOTPRspObj.responseJson.authUniqueId;
@@ -133,7 +151,7 @@ function smsAPI(accessToken) {
     }
 
     return new Promise((resolve, reject) => {
-        callPostAPI(smsURL, requesObj)
+        fetchAPI("POST", smsURL, requesObj)
             .then(function (smsURLRes) {
                 let smsURLResObj = getJsonObj(smsURLRes);
                 resolve(smsURLResObj.responseJson.access_token);
@@ -154,7 +172,7 @@ function leadAPI(accessToken) {
     }
 
     return new Promise(function (resolve, reject) {
-        callPostAPI(leadAPIURL, requestObj)
+        fetchAPI("POST", leadAPIURL, requestObj)
             .then(function (response) {
                 console.log("Data inserted successfully.");
                 resolve("Data inserted successfully.");
@@ -175,11 +193,11 @@ export function verfyOtpAPI(otp) {
     }
 
     return new Promise(function (resolve, reject) {
-        callPostAPI(
+        fetchAPI("POST",
             verifyOTPURL, requestObj)
             .then(function (response) {
                 resolve(response.responseJson);
-            }).catch(function(err){
+            }).catch(function (err) {
                 showNetworkFailedScreen(err);
             })
     });
@@ -198,10 +216,10 @@ export function resendOtpAPI(loanProduct) {
     }
 
     return new Promise(function (resolve, reject) {
-        callPostAPI(resendOTPUrl, requesObj)
+        fetchAPI("POST", resendOTPUrl, requesObj)
             .then(function (response) {
                 resolve(response);
-            }).catch(function(err){
+            }).catch(function (err) {
                 showNetworkFailedScreen(err);
             })
     });

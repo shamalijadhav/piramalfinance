@@ -11,8 +11,8 @@ export function generateTabName(block) {
     // const names = name.innerText.split(",");
     // const ids = id.innerText.split(",");
     // const classes = type.innerText.trim();
-    const [name, id, classes, prev, next, ...imageSrc] = getProps(block, {
-        index: [3, 4]
+    const [name, id, typename, classes, prev, next, ...imageSrc] = getProps(block, {
+        index: [4, 5]
     });
     const names = name.split(",");
     const ids = id.split(",");
@@ -73,8 +73,9 @@ export function generateTabName(block) {
             currentEl.closest(".carousel-item")?.classList.add("active");
         }
     })
+    return block;
 }
 
 export default function decorate(block) {
-    generateTabName(block);
+    return generateTabName(block);
 }

@@ -6,10 +6,10 @@ import { cutomerEmployment, cutomerNo, loanFromBtn, loanOtpInput, loanProduct } 
 import { ProductLogics } from "./loanformlogic.js";
 
 
+let loanStatus = "Rejected";
 
 export function buttonCLick() {
 
-    let loanStatus = "Rejected";
 
     loanFromBtn().addEventListener("click", function ({ currentTarget }) {
         // debugger;
@@ -78,6 +78,7 @@ export function generateOTPAPI(access_token, mobileno, productName) {
             "productName": productName
         },
         "headerJson": {
+            "Content-Type": "application/json",
             "Authorization": "Bearer " + access_token
         }
     }

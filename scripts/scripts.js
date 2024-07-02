@@ -95,7 +95,7 @@ export function getProps(block, config) {
 
 export function currenyCommaSeperation(x) {
   if (typeof x === "number") {
-      x = x.toString();
+    x = x.toString();
   }
 
   // Split the number into integral and decimal parts
@@ -105,10 +105,139 @@ export function currenyCommaSeperation(x) {
 
   // Add commas after every two digits from the right in the integral part
   integralPart = integralPart.replace(/\d(?=(\d{2})+\d$)/g, '$&,');
-  
+
   return integralPart + decimalPart;
 }
 
+export function createCarousle(block, prevButton, nextButton) {
+  block.parentElement.append(prevButton);
+  block.parentElement.append(nextButton);
+  prevButton.addEventListener("click", prevSlide);
+  nextButton.addEventListener("click", nextSlide);
+  let currentSlide = 0;
+  let isDragging = false;
+  let startPos = 0;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
+  const carousel = block;
+  const carouselInner = document.querySelector('#carouselInner');
+  const slides = document.querySelectorAll('.carousel-item');
+  const totalSlides = slides.length;
+
+  let visibleSlides = getVisibleSlides(); // Get initial number of visible slides
+
+  carousel.addEventListener('mousedown', dragStart);
+  carousel.addEventListener('mouseup', dragEnd);
+  carousel.addEventListener('mouseleave', dragEnd);
+  carousel.addEventListener('mousemove', drag);
+
+  carousel.addEventListener('touchstart', dragStart);
+  carousel.addEventListener('touchend', dragEnd);
+  carousel.addEventListener('touchmove', drag);
+
+  carousel.addEventListener('wheel', scrollEvent); // Add scroll event listener
+  window.addEventListener('resize', () => {
+    visibleSlides = getVisibleSlides();
+    setPositionByIndex();
+  });
+
+  function dragStart(event) {
+    isDragging = true;
+    startPos = getPositionX(event);
+    carouselInner.style.transition = 'none';
+  }
+
+  function dragEnd() {
+    isDragging = false;
+    const movedBy = currentTranslate - prevTranslate;
+
+    if (movedBy < -100) {
+      nextSlide();
+    } else if (movedBy > 100) {
+      prevSlide();
+    } else {
+      setPositionByIndex();
+    }
+  }
+
+  function drag(event) {
+    if (isDragging) {
+      const currentPosition = getPositionX(event);
+      currentTranslate = prevTranslate + currentPosition - startPos;
+      carouselInner.style.transform = `translateX(${currentTranslate}px)`;
+    }
+  }
+
+  function getPositionX(event) {
+    return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+  }
+
+  function getVisibleSlides() {
+    return window.innerWidth <= 600 ? 2 : 4;
+  }
+
+  function showSlide(index) {
+    if (index >= slides.length) {
+      // currentSlide = 0;
+    } else if (index < 0) {
+      // currentSlide = slides.length - 1;
+    } else {
+    }
+    currentSlide = Math.max(0, Math.min(index, totalSlides - visibleSlides));
+    setPositionByIndex();
+  }
+
+  function setPositionByIndex() {
+    currentTranslate = currentSlide * -carouselInner.clientWidth / visibleSlides;
+    prevTranslate = currentTranslate;
+    carouselInner.style.transition = 'transform 0.5s ease';
+    carouselInner.style.transform = `translateX(${currentTranslate}px)`;
+  }
+
+  function nextSlide() {
+    showSlide(currentSlide + 1);
+    checkLastChildVisibility();
+  }
+
+  function prevSlide() {
+    showSlide(currentSlide - 1);
+    checkLastChildVisibility();
+  }
+
+  function scrollEvent(event) {
+    if (event.deltaY < 0) {
+      prevSlide();
+    } else {
+      nextSlide();
+    }
+    event.preventDefault();
+  }
+
+  // Initialize the carousel
+  showSlide(currentSlide);
+
+  // Check if the last child is visible in the viewport
+  function checkLastChildVisibility() {
+    const lastChild = carouselInner.lastElementChild;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          console.log('Last child is visible in the viewport - new');
+        } else {
+          console.log('Last child is not visible in the viewport - new ');
+        }
+      });
+    }, {
+      root: carousel,
+      threshold: 0.1
+    });
+
+    observer.observe(lastChild);
+  }
+
+  // Initialize the observer for the first time
+  checkLastChildVisibility();
+}
 /* helper script end */
 
 /**
@@ -273,7 +402,7 @@ async function loadingCustomCss() {
 
 }
 
-document.querySelector("body").addEventListener("click", function(e){
+document.querySelector("body").addEventListener("click", function (e) {
   e.stopImmediatePropagation();
-  e.currentTarget.querySelector(".stake-pop-up.dp-block")?.classList.remove("dp-block"); 
+  e.currentTarget.querySelector(".stake-pop-up.dp-block")?.classList.remove("dp-block");
 })

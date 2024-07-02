@@ -647,6 +647,7 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     right: 1rem;
     display: block;
     visibility: visible;
+    top: 37%;
   }
 
   .header-wrapper .nav-wrapper .nav-hamburger button {
@@ -774,7 +775,7 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     transform: rotate(135deg);
   }
   .login-button-wrapper .default-content-wrapper {
-    left: -45px;
+    left: -35px;
     top: 2px;
   }
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>ul>li>ul>li {

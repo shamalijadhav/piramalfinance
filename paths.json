@@ -2,7 +2,7 @@
   "mappings": [
     "/content/piramalfinance-eds/:/", 
     "/content/piramalfinance-eds/redirects:/redirects.json",
-    "/content/piramalfinance-eds/customer-testimonial.json:/customer-testimonial.json",
+    "/content/piramalfinance-eds/customer-testimonial:/customer-testimonial.json",
     "/content/piramalfinance-eds/test:/test.json"
   ]
 }

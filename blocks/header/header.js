@@ -141,7 +141,10 @@ export default async function decorate(block) {
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
       <span class="nav-hamburger-icon"></span>
     </button>`;
-  hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
+  hamburger.addEventListener('click', (e) => {
+    toggleMenu(nav, navSections)
+    hamburgerHandler(e);
+  });
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
   // prevent mobile nav behavior on window resize
@@ -192,25 +195,25 @@ function clickToBlurHeader() {
 }
 
 function clickToShowMobileNavDropDown(){
-    // Select the element to be clicked
-    var elementToClick = document.querySelector('.section.mobile-view-header .code-wrapper .code div ul li:nth-child(2) ul:nth-child(1)');
-  
-    // Add click event listener to toggle display of another element
-    elementToClick.addEventListener('click', function() {
-      // Select the element whose display you want to toggle
-      var elementToToggle = document.querySelector('.section.mobile-view-header .code-wrapper .code div ul li:nth-child(2) ul:nth-child(2)');
-      var afterArrow = document.querySelector('.section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(2) ul:nth-child(1) li::after')
+  var clickDropDownList = document.querySelectorAll("#nav > div.section.mobile-view-header.page-container.code-container > div > div > div > div > ul > li")
+  clickDropDownList.forEach(function (eachList) {
+    eachList.addEventListener('click',function (e) {
+        var ulElement = eachList.querySelector('ul');
+        if (ulElement.style.display === 'block') {
+            ulElement.style.display = 'none';
+            this.classList.remove('active')
+        } else {
+            ulElement.style.display = 'block';
+            this.classList.add('active')
+        }
+    })
+})
+}
 
-      if (elementToToggle.style.display === 'none') {
-        elementToToggle.style.display = 'block';
-        var borderbtm = document.querySelector('.section.mobile-view-header .code-wrapper .code div ul li:nth-child(2) ul:nth-child(1)');
-        borderbtm.style.borderBottom = 'unset';
-        afterArrow.style.transform = 'rotate(225deg)';
-      } else {
-        elementToToggle.style.display = 'none';
-        var borderbtm = document.querySelector('.section.mobile-view-header .code-wrapper .code div ul li:nth-child(2) ul:nth-child(1)');
-        borderbtm.style.borderBottom = '1px solid #e6e6e6';
-        afterArrow.style.transform = 'rotate(45deg)';
-      }
-    });
+function hamburgerHandler(e){
+  if(e.target.parentNode.getAttribute('aria-label') == "Close navigation"){
+     document.querySelector('.section.mobile-view-header').style.display = 'block';
+  }else if(e.target.parentNode.getAttribute('aria-label') == "Open navigation"){
+    document.querySelector('.section.mobile-view-header').style.display = 'none';
+  }
 }

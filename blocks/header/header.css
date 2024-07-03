@@ -902,27 +902,50 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     position: relative;
   }
 
-  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(1) a,
-  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(2) a,
-  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(3) a,
-  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(4) a,
-  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(1) a,
-  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(2) a,
-  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(3) a,
-  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(4) a,
-  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(1) a,
-  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(2) a,
-  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(3) a,
-  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(4) a,
-  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(1) a,
-  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(2) a,
-  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(3) a,
-  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(4) a,
-  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(1) a,
-  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(2) a,
-  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(3) a,
-  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(4) a{
-    color: #212529;
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(1).active span,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(2).active span,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(3).active span,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(4).active span,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(1).active span,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(2).active span,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(3).active span,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(4).active span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(1).active span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(2).active span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(3).active span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(4).active span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(1).active span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(2).active span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(3).active span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(4).active span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(1).active span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(2).active span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(3).active span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(4).active span{
+    color: #f26841;
+  }
+
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(1) span,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(2) span,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(3) span,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(4) span,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(1) span,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(2) span,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(3) span,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(4) span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(1) span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(2) span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(3) span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(4) span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(1) span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(2) span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(3) span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(4) span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(1) span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(2) span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(3) span,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(4) span{
+    /* color: #212529; */
     font-size: 14px;
     line-height: 20px;
     padding-left: 8px;
@@ -932,14 +955,12 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     display: flex;
     gap: 8px;
   }
+  
   .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(1)::after,
   .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(2)::after,
   .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(3)::after,
   .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(4)::after,
-  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(1)::after,
-  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(2)::after,
   .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(3)::after,
-  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(4)::after,
   .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(1)::after,
   .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(2)::after,
   .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(3)::after,
@@ -1006,6 +1027,29 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   font-size: 14px;
   line-height: 20px;
   padding-left: 5px;
+}
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(1) > span{
+  position: relative;
+  gap: 19%;
+}
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(1) > span::before{
+  position: absolute;
+  content: 'FREE';
+  line-height: 24px;
+  align-items: center;
+  background-color: #41c66e;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-family: Nunito-Bold, sans-serif;
+  font-size: 12px;
+  height: 16px;
+  width: 32px;
+  padding: 1px 7px 1px 7px;
+  text-decoration: none;
+  left: 8%;
+  bottom: 32%;
 }
 }
 

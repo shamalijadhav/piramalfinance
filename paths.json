@@ -7,6 +7,8 @@
     "/content/piramalfinance-eds/home-eligi-calc:/home-eligi-calc.json",
     "/content/piramalfinance-eds/lead-form:/lead-form.json",
     "/content/piramalfinance-eds/home-loan-cities:/home-loan-cities.json",
+    "/content/piramalfinance-eds/home-loan-cities:/personal-loan-cities.json",
+    "/content/piramalfinance-eds/home-loan-cities:/bussiness-loan-cities.json",
     "/content/piramalfinance-eds/test:/test.json"
   ]
 }

@@ -6,9 +6,9 @@ import { targetObject } from "../../scripts/scripts.js";
  
 let calculatorType, emiCalDiv, emiOverlay, overlay;
 
-export default function decorate(block) {
+export default async function decorate(block) {
   let cfURL = block.querySelector("a")?.textContent.trim();
-  // const cfRepsonse = CFApiCall(cfURL);
+  // const cfRepsonse = await CFApiCall(cfURL);
   
   const callJson = {
     total: 1,
@@ -141,7 +141,9 @@ export default function decorate(block) {
         principaltext: "Principal amount",
         interesttext: "Interest amount",
         button1text: "Talk to loan expert",
+        button1link: "https://www.google.com/",
         button2text: "Apply loan now",
+        button2link: "https://www.google.com/",
         pageproperties: "hl",
       },
     ],

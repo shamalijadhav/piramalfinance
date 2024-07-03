@@ -7,9 +7,9 @@ import { targetObject } from "../../scripts/scripts.js";
 let calculatorType, elgCalDiv, elgOverlay, overlay;
 
 
-export default function decorate(block) {
+export default async function decorate(block) {
   let cfURL = block.querySelector("a")?.textContent.trim();
-  // const cfRepsonse = CFApiCall(cfURL);
+  // const cfRepsonse = await CFApiCall(cfURL);
 
   const callAJson = {
     total: 1,
@@ -166,7 +166,9 @@ export default function decorate(block) {
         calendarmobile: "/content/dam/piramalfinance/homepage/images/calc-calendarwebp",
         outputtext: "Your home loan EMI is",
         button1text: "Talk to loan expert",
+        button1link: "https://www.google.com/",
         button2text: "Apply loan now",
+        button2link: "https://www.google.com/",
         pageproperties: "bl",
       },
     ],

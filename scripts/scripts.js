@@ -422,7 +422,8 @@ body?.addEventListener("click", function (e) {
   if (!e.target.closest(".show") && targetObject.model) {
     targetObject.model?.querySelector(".overlayDiv").classList.remove("show");
     document.body.style.overflow = "scroll";
-    body.classList.remove("overlay-active");
+    document.querySelector(".modal-overlay").classList.remove("overlay");
+    document.querySelector(".modal-overlay").classList.add("dp-none");
   }
   else if (!e.target.closest('.stake-pop-up')) {
     document.querySelectorAll(".stake-pop-up").forEach((ele) => {

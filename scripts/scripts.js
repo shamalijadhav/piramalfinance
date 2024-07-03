@@ -117,8 +117,8 @@ export function currenyCommaSeperation(x) {
 }
 
 export function createCarousle(block, prevButton, nextButton) {
-  block.parentElement.append(prevButton);
-  block.parentElement.append(nextButton);
+  block.parentElement ? block.parentElement.append(prevButton) : block.append(prevButton);
+  block.parentElement ? block.parentElement.append(nextButton) : block.append(nextButton);
   prevButton.addEventListener("click", prevSlide);
   nextButton.addEventListener("click", nextSlide);
   let currentSlide = 0;
@@ -422,19 +422,18 @@ body?.addEventListener("click", function (e) {
   if (!e.target.closest(".show") && targetObject.model) {
     targetObject.model?.querySelector(".overlayDiv").classList.remove("show");
     document.body.style.overflow = "scroll";
-    body.classList.remove("overlay-active");
+    document.querySelector(".modal-overlay").classList.remove("overlay");
+    document.querySelector(".modal-overlay").classList.add("dp-none");
+  } else if (!e.target.closest(".stake-pop-up")) {
+      document.querySelectorAll(".stake-pop-up").forEach((ele) => {
+        ele.classList.remove("dp-block");
+        ele.classList.add("dp-none");
+        document.body.style.overflow = "auto";
+      });
+      /* var overlay = document.querySelector('.overlay');
+      if (overlay) {
+        document.body.removeChild(overlay);
+      } */
+     e.currentTarget.querySelector(".stake-pop-up.dp-block")?.classList.remove("dp-block");
   }
-  else if (!e.target.closest('.stake-pop-up')) {
-    document.querySelectorAll(".stake-pop-up").forEach((ele) => {
-      ele.classList.remove('dp-block');
-      ele.classList.add('dp-none');
-      document.body.style.overflow = "auto";
-
-    });
-    var overlay = document.querySelector('.overlay');
-    if (overlay) {
-      document.body.removeChild(overlay);
-    }
-  }
-  e.currentTarget.querySelector(".stake-pop-up.dp-block")?.classList.remove("dp-block");
 });

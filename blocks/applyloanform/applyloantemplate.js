@@ -125,7 +125,7 @@ export function appplyLoanTemplate() {
                                             <input class="cmp-form-text__text" type="text" id="form-loan-type"
                                                 placeholder="${properties.loanTypePlaceholder}" readonly  autocomplete="off">
                                             <span class="arrowimage"><img class="lozad"
-                                                    data-src="/content/dam/piramalfinance/product-page/home-loan/down-arrow.png" alt="arrowimage">
+                                                    data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/down-arrow.png" alt="arrowimage">
                                             </span>
                                         </div>
                                         <div class="option-form-parent">
@@ -183,11 +183,11 @@ export function appplyLoanTemplate() {
                                                         <span
                                                             class="cmp-form-options__field-description">${properties.firstCheckText}</span>
                                                         <img id="" class="icon coloricon lozad"
-                                                            data-src="/content/dam/piramalfinance/product-page/home-loan/salaried-after-selected-icon.svg
+                                                            data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/salaried-after-selected-icon.svg
                                                             "
                                                             alt="salaried-after-selected-icon">
                                                         <img id="" class="icon blackicon lozad"
-                                                            data-src="/content/dam/piramalfinance/product-page/home-loan/salaried-before-selected-icon.svg"
+                                                            data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/salaried-before-selected-icon.svg"
                                                             alt="salaried-before-selected-icon">
                                                     </div>
     
@@ -203,10 +203,10 @@ export function appplyLoanTemplate() {
                                                             id="radio-business" name="emplyoment" type="radio">
                                                         <span class="cmp-form-options__field-description">${properties.secondCheckText}</span>
                                                         <img id="" class="icon coloricon lozad"
-                                                            data-src="/content/dam/piramalfinance/product-page/home-loan/business-loan-after-selected-icon.svg"
+                                                            data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/business-loan-after-selected-icon.svg"
                                                             alt="business-loan-after-selected-icon">
                                                         <img id="" class="icon blackicon lozad"
-                                                            data-src=" /content/dam/piramalfinance/product-page/home-loan/business-loan-before-selcted-icon.svg"
+                                                            data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/business-loan-before-selcted-icon.svg"
                                                             alt="business-loan-before-selcted-icon">
                                                     </div>
                                                 </label>
@@ -230,7 +230,7 @@ export function appplyLoanTemplate() {
                                             <input class="cmp-form-text__text dobclass" type="text" placeholder="${properties.datePickerPlaceholder}"
                                                 id="loan-form-dob" name="text" maxlength="10" autocomplete="off" data-value-type="date">
                                             <span class="arrowimage dobarrow" id="loan-form-cal-id"><img class="lozad"
-                                                data-src="/content/dam/piramalfinance/product-page/home-loan/calendar.png" alt="dobarrow">
+                                                data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/calendar.png" alt="dobarrow">
                                             </span>
     
                                             <span class="loan-form-err invalid-date-msg">
@@ -246,7 +246,7 @@ export function appplyLoanTemplate() {
                                             <input class="cmp-form-text__text" type="text" placeholder="${properties.statePlaceholder}"  autocomplete="off"
                                                 id="form-state" name="text" >
                                             <span class="arrowimage laststate"><img class="lozad"
-                                                data-src="/content/dam/piramalfinance/product-page/home-loan/down-arrow.png" alt="arrowimage"></span>
+                                                data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/down-arrow.png" alt="arrowimage"></span>
                                             <span class="loan-form-err">
                                                 Enter Valid State
                                             </span>
@@ -262,7 +262,7 @@ export function appplyLoanTemplate() {
                                             <input class="cmp-form-text__text" type="text"
                                                 placeholder="${properties.branchPlaceholder}" id="form-branch-city" name="text"  autocomplete="off">
                                             <span class="arrowimage laststate"><img class="lozad"
-                                                data-src="/content/dam/piramalfinance/product-page/home-loan/down-arrow.png" alt="arrowimage"></span>
+                                                data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/down-arrow.png" alt="arrowimage"></span>
                                             <span class="loan-form-err">
                                                 Enter Valid branch
                                             </span>
@@ -292,7 +292,7 @@ export function appplyLoanTemplate() {
                         <div class="loan-form-otp">
                             
                             <div class="loan-form-otp-parent">
-                                <img class="leftarrow lozad" data-src="/content/dam/piramalfinance/product-page/home-loan/back-arrow.png" alt="arrow">
+                                <img class="leftarrow lozad" data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/back-arrow.png" alt="arrow">
                                 <p class="otphead">${properties.verifyHead}</p>
                                 <div class="otpsubheadcontainer">
                                     <p class="otpsubhead">Enter the 4 digit OTP sent to <span class="otp-phone-num" id="loan-form-otpnum">7845789658</span></p>
@@ -358,7 +358,7 @@ export function appplyLoanTemplate() {
                                <p class="main-heading">${properties.errorhead}</p>
                                <p class="main-sub-heading">${properties.errorSubhead}</p>
                                <div class="redbox">
-                                <img class= "alertimg lozad" data-src="/content/dam/piramalfinance/product-page/home-loan/error-warning.svg" alt="error-warning">
+                                <img class= "alertimg lozad" data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/error-warning.svg" alt="error-warning">
                                 
                                 <P>${properties.RedBoxText}</P>
                                </div>

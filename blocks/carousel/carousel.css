@@ -306,9 +306,9 @@
   }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:767.99px) {
   .section.banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser {
-    height: 100%;
+    height: 440px;
   }
 
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background {
@@ -434,80 +434,69 @@
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-one>.background .foreground .text .long-description>p{
     margin-top: 20px;
   }
+  .banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser.teaser-block-two .foreground {
+    width: 100%;
+  }
 }
 
-@media screen and (min-width:768px) and (max-width:1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .section.banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser {
     height: 440px;
   }
 
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background {
+    padding: 0;
+    background-size: 100% 100%;
+  }
+
+  .banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser .foreground,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground {
+    width: 100%;
+    min-height: 450px;
     padding: 0 16px;
-    padding-top: 40px;
-    align-items: start;
-    background-size: cover;
   }
 
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .front-picture img {
-    max-height: 170px;
-    max-width: 200px;
-  }
-
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .front-picture {
-    right: 16px;
-  }
-
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .title>h2, 
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .eyebrow, 
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five .background .foreground .text .title>h3, 
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five .background .foreground .text .eyebrow, 
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six .background .foreground .text .title>h3, 
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six .background .foreground .text .eyebrow, 
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven .background .foreground .text .title>h3, 
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .title>h2,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .eyebrow,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five .background .foreground .text .title>h3,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five .background .foreground .text .eyebrow,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six .background .foreground .text .title>h3,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six .background .foreground .text .eyebrow,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven .background .foreground .text .title>h3,
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven .background .foreground .text .eyebrow {
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 32px;
   }
 
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .short-description>p, 
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .long-description>p>em, 
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .long-description>p>strong, 
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .long-description>p, 
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-one>.background .foreground .text .long-description>p, 
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .text .long-description>p {
-    font-size: 14px;
-    line-height: 20px;
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .long-description>p,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .long-description>p>em,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground .text .long-description>p>strong,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .long-description>p,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-one>.background .foreground .text .long-description>p,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .text .long-description>p,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.--skyblue>.background .foreground .text .long-description>p {
+    font-size: .875rem;
+    line-height: 1rem;
   }
 
   .banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser .foreground .long-description {
     margin-top: 12px;
   }
 
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .cta>a,
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li>p>a {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    padding: 14px 16px;
+    margin: 0;
+  }
+
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .cta {
     margin-top: 24px;
   }
 
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .cta>a,
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li>p>a {
-    font-size: 14px;
-    line-height: 20px;
-    padding: 14px 16px;
-    margin: unset;
-  }
-
-  .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container {
-    left: 16px;
-    bottom: 70px;
-    gap: 8px;
-  }
-
-  .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container>button {
-    height: 5px;
-    width: 5px;
-  }
-
-  .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container>button.selected {
-    width: 13px;
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .long-description {
+    margin-right: 0;
   }
 
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li {
@@ -527,10 +516,42 @@
     line-height: 1.25rem;
   }
 
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text {
+    padding-top: 40px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container {
+    left: 12px;
+    bottom: 40px;
+    gap: 8px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container>button {
+    height: 5px;
+    width: 5px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container>button.selected {
+    width: 13px;
+  }
+
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-two>.background .foreground .text .eyebrow {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: .875rem;
+    line-height: 1rem;
     margin-bottom: 12px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .front-picture img {
+    max-height: 170px;
+    max-width: 200px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .front-picture {
+    right: 16px;
+  }
+
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-two>.background .front-picture {
+    bottom: 0;
   }
 
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .cta-image-wrapper {
@@ -540,13 +561,14 @@
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .cta-image-wrapper>.cta-image>a img {
     height: 30px;
     width: 100px;
-    border-radius: 5px;
+    border-radius: 2px;
   }
+
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-one>.background .foreground .text .long-description>p{
     margin-top: 20px;
   }
-  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-two>.background .front-picture {
-    bottom: 0;
+  .banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser.teaser-block-two .foreground {
+    width: 50%;
   }
 }
 

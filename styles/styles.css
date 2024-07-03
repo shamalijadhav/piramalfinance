@@ -752,6 +752,12 @@ main img {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    padding-top: 71px !important;
+  }
+}
+
 @media (width >=900px) {
   .section.page-container>div {
     max-width: 1240px !important;
@@ -840,5 +846,10 @@ main .section.highlight {
 
 .teaser.block {
   overflow: visible;
-  ;
+}
+
+body.overlay-active {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1111;
 }

@@ -424,18 +424,16 @@ body?.addEventListener("click", function (e) {
     document.body.style.overflow = "scroll";
     document.querySelector(".modal-overlay").classList.remove("overlay");
     document.querySelector(".modal-overlay").classList.add("dp-none");
+  } else if (!e.target.closest(".stake-pop-up")) {
+      document.querySelectorAll(".stake-pop-up").forEach((ele) => {
+        ele.classList.remove("dp-block");
+        ele.classList.add("dp-none");
+        document.body.style.overflow = "auto";
+      });
+      /* var overlay = document.querySelector('.overlay');
+      if (overlay) {
+        document.body.removeChild(overlay);
+      } */
+     e.currentTarget.querySelector(".stake-pop-up.dp-block")?.classList.remove("dp-block");
   }
-  else if (!e.target.closest('.stake-pop-up')) {
-    document.querySelectorAll(".stake-pop-up").forEach((ele) => {
-      ele.classList.remove('dp-block');
-      ele.classList.add('dp-none');
-      document.body.style.overflow = "auto";
-
-    });
-    var overlay = document.querySelector('.overlay');
-    if (overlay) {
-      document.body.removeChild(overlay);
-    }
-  }
-  e.currentTarget.querySelector(".stake-pop-up.dp-block")?.classList.remove("dp-block");
 });

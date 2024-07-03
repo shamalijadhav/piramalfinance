@@ -23,6 +23,7 @@ export function moveAttributes(from, to, attributes) {
 /* helper script start */
 export let targetObject = {
   model: null,
+  isMobile:window.matchMedia("(max-width: 1024px)").matches
 };
 
 export function renderHelper(data, template, callBack) {

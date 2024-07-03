@@ -1,4 +1,4 @@
-.our-media-wrapper .default-content-wrapper h4 {
+.section.our-media-wrapper .default-content-wrapper h4 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 400;
@@ -7,36 +7,56 @@
   margin-bottom: 2rem;
 }
 
-.our-media-wrapper .columns-wrapper .columns div {
-  justify-content: space-around;
-  flex-direction: row;
+.section.our-media-wrapper .columns-wrapper .columns div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  flex-direction: unset;
 }
 
-.our-media-wrapper .columns-wrapper .columns .columns-img-col {
+.section.our-media-wrapper .columns-wrapper .columns .columns-img-col {
   display: flex;
   padding: 0;
+  justify-content: center;
 }
 
-.our-media-wrapper .columns-wrapper .columns div div > picture > img {
+.section.our-media-wrapper .columns-wrapper .columns div div > picture > img {
   height: 100%;
   max-height: 30px;
-  width: 215px;
+  max-width: 215px;
+  width: 100%;
 }
 
-.our-media-wrapper .columns-wrapper .columns div {
-  gap: 4.5rem;
-  padding: 0 9.5rem;
-}
-
-@media screen and (max-width: 767.99px) {
-  .our-media-wrapper .columns-wrapper .columns div {
+@media screen and (max-width: 767px) {
+  .section.our-media-wrapper .columns-wrapper .columns div {
     gap: 2rem;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0;
+    justify-content: space-around;
   }
 
-  .our-media-wrapper .columns-wrapper .columns .columns-img-col {
+  .section.our-media-wrapper .columns-wrapper .columns .columns-img-col {
     width: 45%;
+  }
+
+  .section.our-media-wrapper .default-content-wrapper h4 {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .section.our-media-wrapper .columns-wrapper .columns div div > picture > img {
+    max-height: inherit;
+    max-width: inherit;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section.our-media-wrapper .columns-wrapper .columns div {
+    padding: 0;
+    justify-content: space-around;
   }
 }

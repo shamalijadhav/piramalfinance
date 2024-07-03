@@ -418,7 +418,7 @@ async function loadingCustomCss() {
 
 let body = document.querySelector("body");
 body?.addEventListener("click", function (e) {
-  e.stopImmediatePropagation();
+  // e.stopImmediatePropagation();
   if (!e.target.closest(".show") && targetObject.model) {
     targetObject.model?.querySelector(".overlayDiv").classList.remove("show");
     document.body.style.overflow = "scroll";

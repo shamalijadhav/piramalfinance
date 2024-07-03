@@ -11,7 +11,7 @@ export function generateTabName(block) {
     // const names = name.innerText.split(",");
     // const ids = id.innerText.split(",");
     // const classes = type.innerText.trim();
-    const [name, id, typename, classes, prev, next, ...imageSrc] = getProps(block, {
+    const [name, id, typename, classes, prev, next, nestedTabId, nestedTabActive, ...imageSrc] = getProps(block, {
         index: [4, 5]
     });
     const names = name.split(",");

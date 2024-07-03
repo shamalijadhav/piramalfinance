@@ -39,8 +39,9 @@ function statemasterGetStatesApi() {
         // let stateMasterGraphQLQuery = "query MyQuery { statemasterList { items { state, data } } }";
 
         fetchAPI("GET", url)
-            .then(function (response) {
-                workFlowStatemaster(response.responseJson.data.statemasterList.items);
+            .then(async function (response) {
+                const responseJson = await response.json();
+                workFlowStatemaster(responseJson.data.statemasterList.items);
             })
             .catch(function (error) {
                 console.warn(error);

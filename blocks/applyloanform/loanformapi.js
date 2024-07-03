@@ -10,7 +10,6 @@ let loanStatus = "Rejected";
 
 export function buttonCLick() {
 
-
     loanFromBtn().addEventListener("click", function ({ currentTarget }) {
         // debugger;
         currentTarget.closest(".loan-form-button-container").classList.add("loader-initialized");

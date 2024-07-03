@@ -6,9 +6,9 @@ import { targetObject } from "../../scripts/scripts.js";
  
 let calculatorType, emiCalDiv, emiOverlay, overlay;
 
-export default function decorate(block) {
+export default async function decorate(block) {
   let cfURL = block.querySelector("a")?.textContent.trim();
-  // const cfRepsonse = CFApiCall(cfURL);
+  // const cfRepsonse = await CFApiCall(cfURL);
   
   const callJson = {
     total: 1,
@@ -25,7 +25,7 @@ export default function decorate(block) {
           salariedtabname: "employementStatus",
           salariedtabvalue: "80",
           salariedtabtext: "I'm Salaried",
-          calculatorsalariedimg: "/content/dam/piramalfinance/product-page/home-loan/calculator-salaried.svg",
+          calculatorsalariedimg: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/calculator-salaried.svg",
           calculatorsalariedimgalt: "salaried",
         },
         business: {
@@ -34,7 +34,7 @@ export default function decorate(block) {
           businesstabname: "employementStatus",
           businesstabvalue: "60",
           businesstabtext: "I'm doing Business",
-          calculatorbusinessimg: "/content/dam/piramalfinance/product-page/home-loan/calculator-business.svg",
+          calculatorbusinessimg: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/calculator-business.svg",
           calculatorbusinessimgalt: "business",
         },
         selectloantype: {
@@ -135,13 +135,15 @@ export default function decorate(block) {
             },
           ],
         },
-        calendarbox: "/content/dam/piramalfinance/homepage/images/calc-calendarwebp",
-        calendarmobile: "/content/dam/piramalfinance/homepage/images/calc-calendarwebp",
+        calendarbox: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/homepage/images/calc-tick-mobile.webp",
+        calendarmobile: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/homepage/images/calc-tick-mobile.webp",
         outputtext: "Your home loan EMI is",
         principaltext: "Principal amount",
         interesttext: "Interest amount",
         button1text: "Talk to loan expert",
+        button1link: "",
         button2text: "Apply loan now",
+        button2link: "",
         pageproperties: "hl",
       },
     ],

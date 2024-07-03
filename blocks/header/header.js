@@ -143,7 +143,7 @@ export default async function decorate(block) {
     </button>`;
   hamburger.addEventListener('click', (e) => {
     toggleMenu(nav, navSections)
-    hamburgerHandler(e);
+    hamburgerHandler();
   });
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
@@ -210,10 +210,10 @@ function clickToShowMobileNavDropDown(){
 })
 }
 
-function hamburgerHandler(e){
-  if(e.target.parentNode.getAttribute('aria-label') == "Close navigation"){
+function hamburgerHandler(){
+  if(document.querySelector('.nav-hamburger').querySelector('[aria-label]').ariaLabel.toLowerCase()  == "close navigation"){
      document.querySelector('.section.mobile-view-header').style.display = 'block';
-  }else if(e.target.parentNode.getAttribute('aria-label') == "Open navigation"){
+  }else if(document.querySelector('.nav-hamburger').querySelector('[aria-label]').ariaLabel.toLowerCase() == "open navigation"){
     document.querySelector('.section.mobile-view-header').style.display = 'none';
   }
 }

@@ -846,22 +846,24 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
 
 @media screen and (max-width: 1024px) {
   .section.mobile-view-header {
-    display: block;
+    /* display: block; */
+    display: none;
     position: absolute;
     top: 100%;
-    overflow-y: auto;
     overflow-x: hidden;
-    height: calc(100vh - 35px);
     left: 0;
-    background-color: rgb(250 250 250);
     width: 100%;
+    background-color: #fff;
+    height: calc(100vh - 52px);
+    overflow-y: scroll;
+    position: absolute;
+    top: 66px;
+    transform: translateX(0);
   }
   .section.mobile-view-header .code-wrapper .code div div h2{
     align-items: center;
     color: #333;
     cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     font-family: Nunito-Bold, sans-serif;
     font-size: 1pc;
@@ -872,10 +874,141 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     padding: 1pc 0;
     width: 100%;
   }
-  .section.mobile-view-header .code-wrapper .code div div h2{
 
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(1),
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(2),
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(3),
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(4),
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(1),
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(2),
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(3),
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(4),
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(1),
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(2),
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(3),
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(4),
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(1),
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(2),
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(3),
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(4),
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(1),
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(2),
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(3),
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(4){
+    border-bottom: 1px solid #e6e6e6;
+    margin: unset;
+    display: flex;
+    flex-direction: column;
+    position: relative;
   }
+
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(1) a,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(2) a,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(3) a,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(4) a,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(1) a,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(2) a,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(3) a,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(4) a,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(1) a,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(2) a,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(3) a,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(4) a,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(1) a,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(2) a,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(3) a,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(4) a,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(1) a,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(2) a,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(3) a,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(4) a{
+    color: #212529;
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 8px;
+    font-family: Nunito-Bold, sans-serif;
+    text-decoration: none;
+    padding: 16px 0;
+    display: flex;
+    gap: 8px;
+  }
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(1)::after,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(2)::after,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(3)::after,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(4)::after,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(1)::after,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(2)::after,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(3)::after,
+  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(4)::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(1)::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(2)::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(3)::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(4)::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(1)::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(2)::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(3)::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(4)::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(1)::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(2)::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(3)::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(4)::after{
+    position: absolute;
+    content: '';
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3.5px;
+    margin-top: -3px;
+    transform: rotate(45deg);
+    right: 3px;
+    top: 24px;
 }
+
+.section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) > li:nth-child(1) > ul,
+.section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) > li:nth-child(2) > ul,
+.section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) > li:nth-child(3) > ul,
+.section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) > li:nth-child(4) > ul,
+.section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) > li:nth-child(1) > ul,
+.section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) > li:nth-child(2) > ul,
+.section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) > li:nth-child(3) > ul,
+.section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) > li:nth-child(4) > ul,
+.section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(2) > li:nth-child(4) > ul,
+.section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(2) > li:nth-child(3) > ul,
+.section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(2) > li:nth-child(2) > ul,
+.section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(2) > li:nth-child(1) > ul{
+  display: none;
+  padding-left: 19px;
+}
+/* .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(2) > li:nth-child(1) > ul > li:nth-child(1){
+  margin-bottom: 1pc;
+} */
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(6) > li:nth-child(1) > ul li,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(6) > li:nth-child(2) > ul li,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(6) > li:nth-child(3) > ul li,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(6) > li:nth-child(4) > ul li,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(1) > ul li,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(2) > ul li,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(3) > ul li,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(4) > ul li,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(3) > li:nth-child(1) > ul li,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(3) > li:nth-child(2) > ul li,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(3) > li:nth-child(3) > ul li,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(3) > li:nth-child(4) > ul li,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(2) > li:nth-child(1) > ul li,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(2) > li:nth-child(2) > ul li,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(2) > li:nth-child(3) > ul li,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(2) > li:nth-child(4) > ul li{
+  border-bottom: unset;
+  padding: 0 0 16px;
+  position: unset;
+  color: #212529;
+  font-family: Nunito-Regular, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 5px;
+}
+}
+
 
 
 /* header mobile */

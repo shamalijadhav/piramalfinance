@@ -616,6 +616,31 @@
         "label": "Set next icon on tab carousel"
       },
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "nested-tab-id",
+        "value": "",
+        "label": "Nested Tab Id",
+        "description": "Sets the id of the nested tab."
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "nested-tab-isactive",
+        "value": "dp-none",
+        "label": "Is Active",
+        "options": [
+          {
+            "name": "Hide",
+            "value": "dp-none"
+          },
+          {
+            "name": "Active",
+            "value": "active"
+          }
+        ]
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "tab-image-1",
@@ -661,7 +686,7 @@
         "label": "Tab Id",
         "description": "Sets the id of the tab.",
         "multi": true
-      }      
+      }
     ]
   },
   {

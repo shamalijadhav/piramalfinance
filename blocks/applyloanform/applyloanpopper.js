@@ -1,64 +1,59 @@
 import { formDobInput } from "./loanformdom.js";
 
-document.addEventListener("DOMContentLoaded", function () {
-
-
-
-  let reference = document.getElementById("stateparent");
-  let tooltip = document.getElementById("statecontainer");
-
-  Popper.createPopper(reference, tooltip, {
-    placement: 'bottom',
-    // strategy: 'fixed',
-    modifiers: [
-      {
-        name: 'flip',
-        options: {
-          // allowedAutoPlacements: ['top', 'bottom'],
-        }
-      },
-      {
-        name: 'offset',
-        options: {
-          offset: [0, 0]
-        }
-      },
-
-    ]
-  });
-
-
-
-
-  let reference2 = document.getElementById("branchparent");
-  let tooltip2 = document.getElementById("branchcontainer");
-
-  Popper.createPopper(reference2, tooltip2, {
-    placement: 'bottom',
-    // strategy: 'fixed',
-    modifiers: [
-      {
-        name: 'flip',
-        options: {
-          // allowedAutoPlacements: ['top', 'bottom'],
-        }
-      },
-      {
-        name: 'offset',
-        options: {
-          offset: [0, 0]
-        }
-      },
-
-    ]
-  });
-
-
-
-
-});
 
 export let dpObj;
+
+export function applyLoanPopper(){
+  
+    let reference = document.getElementById("stateparent");
+    let tooltip = document.getElementById("statecontainer");
+  
+    Popper.createPopper(reference, tooltip, {
+      placement: 'bottom',
+      // strategy: 'fixed',
+      modifiers: [
+        {
+          name: 'flip',
+          options: {
+            // allowedAutoPlacements: ['top', 'bottom'],
+          }
+        },
+        {
+          name: 'offset',
+          options: {
+            offset: [0, 0]
+          }
+        },
+  
+      ]
+    });
+  
+  
+  
+  
+    let reference2 = document.getElementById("branchparent");
+    let tooltip2 = document.getElementById("branchcontainer");
+  
+    Popper.createPopper(reference2, tooltip2, {
+      placement: 'bottom',
+      // strategy: 'fixed',
+      modifiers: [
+        {
+          name: 'flip',
+          options: {
+            // allowedAutoPlacements: ['top', 'bottom'],
+          }
+        },
+        {
+          name: 'offset',
+          options: {
+            offset: [0, 0]
+          }
+        },
+  
+      ]
+    });
+
 if (window.matchMedia("(max-width: 767px)").matches) {
   dpObj = new AirDatepicker('#loan-form-dob', {
     position({ $datepicker, $target, $pointer, done }) {
@@ -173,6 +168,11 @@ if (window.matchMedia("(max-width: 767px)").matches) {
 
   });
 }
+
+}
+
+
+
 
 
 

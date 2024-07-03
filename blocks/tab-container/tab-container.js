@@ -1,13 +1,9 @@
 import { generateDetailedTeaserDOM } from '../detailed-teaser/detailed-teaser.js';
 import { generateTeaserDOM } from '../teaser/teaser.js';
-import { generateTabName } from '../tab-name/tab-name.js';
 
 const carouselContainerMapping = {}
 carouselContainerMapping["detailed-teaser"] = generateDetailedTeaserDOM;
-// carouselContainerMapping["teaser"] = generateDetailedTeaserDOM;
-carouselContainerMapping["tab-name"] = function (block) {
-    generateTabName(block.children[1]);
-};
+carouselContainerMapping["ss-teaser"] = generateDetailedTeaserDOM;
 
 export default function decorate(block) {
     const tabid = block.children[0].innerText.trim();
@@ -37,8 +33,7 @@ export default function decorate(block) {
                 generateOtherComponent = carouselContainerMapping[className];
             }
         })
-        // generateOtherComponent = generateOtherComponent ? generateOtherComponent([imagebg, image, ...rest], classes) : generateTeaserDOM([imagebg, image, ...rest], classes);
-        generateOtherComponent = generateOtherComponent ? generateOtherComponent(block) : generateTeaserDOM([imagebg, image, ...rest], classes);
+        generateOtherComponent = generateOtherComponent ? generateOtherComponent([imagebg, image, ...rest], classes) : generateTeaserDOM([imagebg, image, ...rest], classes);
         panel.textContent = '';
         panel.classList.add(blockType, 'block');
         classes.forEach((c) => panel.classList.add(c.trim()));

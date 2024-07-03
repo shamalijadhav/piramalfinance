@@ -686,6 +686,42 @@
         "label": "Tab Id",
         "description": "Sets the id of the tab.",
         "multi": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tab-name-child-1",
+        "value": "",
+        "label": "Tab Name Child 1",
+        "description": "Sets the name of the tab child 1.",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tab-name-child-1-id",
+        "value": "",
+        "label": "Tab Name Child 1 Id",
+        "description": "Sets the id of the tab child 1.",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tab-name-child-2",
+        "value": "",
+        "label": "Tab Name Child 2",
+        "description": "Sets the name of the tab child 2.",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tab-name-child-2-id",
+        "value": "",
+        "label": "Tab Name Child 2 Id",
+        "description": "Sets the id of the tab child 2.",
+        "multi": true
       }
     ]
   },

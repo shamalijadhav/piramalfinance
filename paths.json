@@ -3,6 +3,10 @@
     "/content/piramalfinance-eds/:/", 
     "/content/piramalfinance-eds/redirects:/redirects.json",
     "/content/piramalfinance-eds/cust-testimonial:/cust-testimonial.json",
+    "/content/piramalfinance-eds/home-emi-calc:/home-emi-calc.json",
+    "/content/piramalfinance-eds/home-eligi-calc:/home-eligi-calc.json",
+    "/content/piramalfinance-eds/lead-form:/lead-form.json",
+    "/content/piramalfinance-eds/home-loan-cities:/home-loan-cities.json",
     "/content/piramalfinance-eds/test:/test.json"
   ]
 }

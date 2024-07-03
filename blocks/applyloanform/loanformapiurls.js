@@ -1,6 +1,3 @@
-export { accessTokenURL, generateOTPURL, otpTokenURL, smsURL, leadAPIURL, verifyOTPURL, resendOTPUrl };
-
-
 const accessTokenURL = "https://mobileapi.pchf.in/api/mobile/access-token";
 const generateOTPURL = "https://mobileapi.pchf.in/api/website/generate-otp";
 const otpTokenURL = "https://apisit.piramal.com/oauth/v1/cc/accesstoken";
@@ -8,3 +5,4 @@ const smsURL = "https://apisit.piramal.com/communication/v2/karix/sms-query?ver=
 const leadAPIURL = "https://mobileapi.pchf.in/api/website/insert-lead-data";
 const verifyOTPURL = "https://mobileapi.pchf.in/api/website/verify-otp";
 const resendOTPUrl = "https://mobileapi.pchf.in/api/website/resend-otp";
+export { accessTokenURL, generateOTPURL, otpTokenURL, smsURL, leadAPIURL, verifyOTPURL, resendOTPUrl };

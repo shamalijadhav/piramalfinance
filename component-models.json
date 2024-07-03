@@ -1148,6 +1148,39 @@
                 "value": "card-full-width"
               }
             ]
+          },
+          {
+            "name": "liner-gradient",
+            "children": [
+              {
+                "name": "gradient-blue-gray",
+                "value": "gradient-blue-gray"
+              },
+              {
+                "name": "gradient-blue",
+                "value": "gradient-blue"
+              },
+              {
+                "name": "gradient-brown",
+                "value": "gradient-brown"
+              },
+              {
+                "name": "gradient-dark-blue",
+                "value": "gradient-dark-blue"
+              },
+              {
+                "name": "gradient-gray",
+                "value": "gradient-gray"
+              },
+              {
+                "name": "gradient-teal",
+                "value": "gradient-teal"
+              },
+              {
+                "name": "gradient-blue-green",
+                "value": "gradient-blue-green"
+              }
+            ]
           }
         ]
       },
@@ -1734,6 +1767,39 @@
         "value": "",
         "label": "teaserv2 Attribute",
         "description": "Set TeaserV2 Attribute"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "required": true,
+        "options": [
+          {
+            "name": "Theme",
+            "children": [
+              {
+                "name": "Light",
+                "value": "light"
+              },
+              {
+                "name": "Light",
+                "value": "light"
+              },
+              {
+                "name": "Dark",
+                "value": "dark"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "textwithinnerhtml",
+        "value": "",
+        "label": "Text With RTE"
       }
     ]
   },

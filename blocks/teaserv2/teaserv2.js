@@ -6,7 +6,7 @@ export default function decorate(block) {
 }
 
 function renderTeaserHTMLFactory(props) {
-  const [mainHref, bgImage, frontImage, title, description, mobileDescription, button, buttonHref, bgColor, teaserv2Attr] = props;
+  const [mainHref, bgImage, frontImage, title, description, mobileDescription, button, buttonHref, bgColor, teaserv2Attr, textwithinnerhtml] = props;
 
   const createElement = (tag, className, content) => {
     const element = document.createElement(tag);
@@ -41,7 +41,10 @@ function renderTeaserHTMLFactory(props) {
     newButtonTag = createElement("div", "button-container-text", button?.textContent.trim() || "");
   }
 
-  bgImageDiv.append(frontImageDiv, titleDiv, descriptionDiv, newButtonTag);
+  const textwithDiv = document.createElement("div");
+  textwithDiv.innerHTML = textwithinnerhtml?.innerHTML || "";
+  
+  bgImageDiv.append(frontImageDiv, titleDiv, descriptionDiv, newButtonTag, textwithDiv);
 
   const teaserv2AttrGet = teaserv2Attr?.textContent?.trim() || "";
   teaserv2Attr.closest(".teaserv2-wrapper").setAttribute("data-teaserv2-xf", teaserv2AttrGet);

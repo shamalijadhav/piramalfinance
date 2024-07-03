@@ -1698,6 +1698,39 @@
         "value": "",
         "label": "teaserv2 Attribute",
         "description": "Set TeaserV2 Attribute"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "required": true,
+        "options": [
+          {
+            "name": "Theme",
+            "children": [
+              {
+                "name": "Light",
+                "value": "light"
+              },
+              {
+                "name": "Light",
+                "value": "light"
+              },
+              {
+                "name": "Dark",
+                "value": "dark"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "textwithinnerhtml",
+        "value": "",
+        "label": "Text With RTE"
       }
     ]
   },

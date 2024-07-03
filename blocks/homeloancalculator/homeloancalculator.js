@@ -181,7 +181,8 @@ export function homeLoancalculatorCallXf() {
           findSectionXFShow.classList.remove("dp-none"); // look
           calculatorType = "emi";
           emiOverlay.classList.add("show");
-          document.querySelector("body").classList.add("overlay-active");
+          document.querySelector(".modal-overlay").classList.add("overlay");
+          document.querySelector(".modal-overlay").classList.remove("dp-none");
           // overlay.classList.add("show");
           document.body.style.overflow = "hidden";
           homeLoanCalcFunc(currentSection);

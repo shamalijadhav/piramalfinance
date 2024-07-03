@@ -682,7 +682,7 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   }
 
   .header-wrapper .nav-wrapper nav[aria-expanded="true"] .nav-sections {
-    display: block;
+    display: none;
     position: absolute;
     top: 100%;
     overflow-y: auto;
@@ -966,7 +966,7 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(2) span,
   .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(3) span,
   .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(4) span{
-    /* color: #212529; */
+    color: #212529;
     font-size: 14px;
     line-height: 20px;
     padding-left: 8px;
@@ -996,7 +996,7 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(4)::after{
     position: absolute;
     content: '';
-    border: solid black;
+    border: 1px solid black;
     border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 3.5px;
@@ -1004,8 +1004,30 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     transform: rotate(45deg);
     right: 3px;
     top: 24px;
+    transition: transform .3s linear;
+    display: inline;
 }
-
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(6) li:nth-child(1).active::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(6) li:nth-child(2).active::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(6) li:nth-child(3).active::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(6) li:nth-child(4).active::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(4) li:nth-child(3).active::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(1).active::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(2).active::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(3).active::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(4).active::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(1).active::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(2).active::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(3).active::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(4).active::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(1).active::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(2).active::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(3).active::after,
+  .section.mobile-view-header .code-wrapper .code div div ul:nth-child(1) li:nth-child(4).active::after{
+    /* transform: rotate(225deg);
+    border: 1px solid #f26841;
+    border-width: 0 2px 2px 0; */
+}
 .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) > li:nth-child(1) > ul,
 .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) > li:nth-child(2) > ul,
 .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) > li:nth-child(3) > ul,
@@ -1021,9 +1043,6 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   display: none;
   padding-left: 19px;
 }
-/* .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(2) > li:nth-child(1) > ul > li:nth-child(1){
-  margin-bottom: 1pc;
-} */
 .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(6) > li:nth-child(1) > ul li,
 .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(6) > li:nth-child(2) > ul li,
 .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(6) > li:nth-child(3) > ul li,

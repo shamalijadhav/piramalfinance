@@ -117,8 +117,8 @@ export function currenyCommaSeperation(x) {
 }
 
 export function createCarousle(block, prevButton, nextButton) {
-  block.parentElement.append(prevButton);
-  block.parentElement.append(nextButton);
+  block.parentElement ? block.parentElement.append(prevButton) : block.append(prevButton);
+  block.parentElement ? block.parentElement.append(nextButton) : block.append(nextButton);
   prevButton.addEventListener("click", prevSlide);
   nextButton.addEventListener("click", nextSlide);
   let currentSlide = 0;

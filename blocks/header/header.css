@@ -835,6 +835,28 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul {
+    display: none;
+  }
+  .header-wrapper .nav-wrapper .nav-hamburger {
+    position: absolute;
+    height: 12px;
+    width: 18px;
+    right: 1rem;
+    display: block;
+    visibility: visible;
+    top: 37%;
+  }
+  .login-button-wrapper .default-content-wrapper {
+    left: -35px;
+    top: 2px;
+  }
+  .header-wrapper .nav-wrapper {
+    height: 71px;
+  }
+}
+
 @media screen and (max-width:1366px) {
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>ul {
     padding: 0 8% 0 13%

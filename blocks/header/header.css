@@ -846,7 +846,8 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
 
 @media screen and (max-width: 1024px) {
   .section.mobile-view-header {
-    display: block;
+    display: none;
+    /* display: block; */
     position: absolute;
     top: 100%;
     overflow-x: hidden;

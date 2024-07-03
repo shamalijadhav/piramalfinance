@@ -42,7 +42,7 @@ export function CalcHTM(callJson) {
         <div class="customimage">
             <img data-src="${callJson.data[0].business.calculatorbusinessimg}"
                 class=" customer lozad" alt="${callJson.data[0].business.calculatorbusinessimgalt}"
-                src="${callJson.data[0].business.calculatorbusinessimg}
+                src="${callJson.data[0].business.calculatorbusinessimg}"
                 data-loaded="true">
         </div>
     </div>
@@ -137,8 +137,8 @@ let eligibilityinputdiv = "";
         <div class="outputdiv">
             <div class="output-parent">
                 <div class="mainoutput">
-                    <img data-src="callJson.data[0].calendarbox"
-                        class="outputimg lozad" alt="calendar">
+                    <img data-src="${callJson.data[0].calendarbox}"
+                        class="outputimg lozad" alt="calendar" src="${callJson.data[0].calendarbox}">
                     <img data-src="${callJson.data[0].calendarmobile}"
                         class="outputimg2 lozad" alt="calendar"
                         src="${callJson.data[0].calendarmobile}"
@@ -171,7 +171,7 @@ const eligibilitydiv = callJson.data[0].chechboxelibilityobj.chechboxemi
             <div class="output-parent">
                 <div class="mainoutput">
                     <img data-src="${callJson.data[0].calendarbox}"
-                        class="outputimg lozad" alt="calendar">
+                        class="outputimg lozad" alt="calendar" src="${callJson.data[0].calendarbox}">
                     <img data-src="${callJson.data[0].calendarmobile}"
                         class="outputimg2 lozad" alt="calendar"
                         src="${callJson.data[0].calendarmobile}"
@@ -250,11 +250,11 @@ const eligibilitydiv = callJson.data[0].chechboxelibilityobj.chechboxemi
   
                           <div class="customerbuttons">
   
-                              <a target="_self">
+                              <a href="${callJson.data[0].button1link}" target="_self">
   
                                   <button class="expert">${callJson.data[0].button1text}</button>
                               </a>
-                              <a target="_self">
+                              <a href="${callJson.data[0].button2link}" target="_self">
   
                                   <button class="expert orangeexpert">${callJson.data[0].button2text}</button>
                               </a>

@@ -277,13 +277,21 @@ color: #F58667;
   .footer-section-first .columns > div {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
+  }
+  .footer-section-first .columns > div div:first-child {
+    width: 50%;
+  }
+  .footer-section-first .columns > div div:nth-child(2) {
+    width: 50%;
   }
   .footer-section-first .columns > div > div p {
     font-size: 12px;
     width: 100%;
-    margin-left: auto;
+    padding: 0 0 0 60px;
+    text-align: left;
+    margin: 0;
   }
   .footer-section-second ul > li > p {
     font-size: 0.875rem;
@@ -346,9 +354,6 @@ color: #F58667;
   .footer-section-third .columns-2-cols > div > div p {
     margin: 10px 0 0;
   } */
-  .footer-section-first .columns > div > div:last-child {
-    margin-right: 20%;
-  }
   .footer-section-second .columns-2-cols ul li p:first-child{
     padding-bottom: unset;
   }
@@ -401,9 +406,6 @@ color: #F58667;
   .footer-section-first{
     padding: 24px 0;
   }
-  .footer-section-first .columns > div > div:last-child{
-    margin-right: 10%;
-  }
   .footer-section-first .columns-wrapper p sup{
     background-color: #41C672;
     color: #fff;
@@ -421,6 +423,7 @@ color: #F58667;
     text-align: center;
     justify-content: center;
     right: 77px;
+    left: 0;
   }
   header nav .nav-brand img {
     width: 82px;
@@ -428,19 +431,6 @@ color: #F58667;
   }
   .header-wrapper .nav-wrapper nav .nav-brand .default-content-wrapper>p>picture>img {
     padding: 0;
-  }
-}
-
-@media screen and (max-width: 1400px) {
-  footer.footer-wrapper .footer {
-    max-width: 76.1%;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  footer.footer-wrapper .footer {
-      max-width: 100% ;
-      padding: 0 16px;
   }
   .footer-section-four.columns-container .default-content-wrapper p :last-child{
     display: none;
@@ -455,6 +445,34 @@ color: #F58667;
     width: 25px;
   }
   .footer-section-first .columns-wrapper p sup{
-    right: 27%;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  footer.footer-wrapper .footer {
+    max-width: 76.1%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  footer.footer-wrapper .footer {
+      max-width: 100% ;
+      padding: 0 16px;
+  }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+  .footer-section-first .columns > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+  }
+  .footer-section-first .columns > div div:first-child {
+    width: 50%;
+  }
+  .footer-section-first .columns > div div:nth-child(2) {
+    width: 50%;
   }
 }

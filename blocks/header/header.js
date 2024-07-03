@@ -141,7 +141,10 @@ export default async function decorate(block) {
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
       <span class="nav-hamburger-icon"></span>
     </button>`;
-  hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
+  hamburger.addEventListener('click', (e) => {
+    toggleMenu(nav, navSections)
+    hamburgerHandler(e);
+  });
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
   // prevent mobile nav behavior on window resize
@@ -192,16 +195,25 @@ function clickToBlurHeader() {
 }
 
 function clickToShowMobileNavDropDown(){
-  var clickDropDownList = document.querySelectorAll("#nav > div.section.mobile-view-header.page-container.code-container > div > div > div > div > ul > li > a")
+  var clickDropDownList = document.querySelectorAll("#nav > div.section.mobile-view-header.page-container.code-container > div > div > div > div > ul > li")
   clickDropDownList.forEach(function (eachList) {
     eachList.addEventListener('click',function (e) {
-      e.preventDefault()
-        // this.nextElementSibling.style.display = 'block'
-        if (this.nextElementSibling.style.display === 'block') {
-          this.nextElementSibling.style.display = 'none';
-          } else {
-          this.nextElementSibling.style.display = 'block';
-          }
+        var ulElement = eachList.querySelector('ul');
+        if (ulElement.style.display === 'block') {
+            ulElement.style.display = 'none';
+            this.classList.remove('active')
+        } else {
+            ulElement.style.display = 'block';
+            this.classList.add('active')
+        }
     })
 })
+}
+
+function hamburgerHandler(e){
+  if(e.target.parentNode.getAttribute('aria-label') == "Close navigation"){
+     document.querySelector('.section.mobile-view-header').style.display = 'block';
+  }else if(e.target.parentNode.getAttribute('aria-label') == "Open navigation"){
+    document.querySelector('.section.mobile-view-header').style.display = 'none';
+  }
 }

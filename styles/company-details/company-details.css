@@ -96,6 +96,18 @@
 
 @media screen and (max-width:1024px) {
 
+    .section.company-details-wrapper .tab-link-wrapper .tab-link.block {
+        margin: 0;
+        padding-top: 16px;
+        height: auto;
+    }
+
+    .section.company-details-wrapper .tab-link-wrapper .tab-link.block div:nth-child(3),
+    .section.company-details-wrapper .tab-link-wrapper .tab-link.block div:nth-child(4),
+    .section.company-details-wrapper .tab-link-wrapper .tab-link.block div:nth-child(5) {
+        display: none;
+    }
+
     .section.company-details-wrapper .tab-link-wrapper button.prev,
     .section.company-details-wrapper .tab-link-wrapper button.next {
         display: none;
@@ -103,7 +115,6 @@
 
     .section.company-details-wrapper .tab-link-wrapper .tab-link.block .text.legal-mobile-text {
         display: block;
-        /* padding: 24px 0; */
     }
 
     .section.company-details-wrapper .tab-link-wrapper .tab-link.block .text.legal-mobile-text .cmp-text {
@@ -145,15 +156,17 @@
     }
 
     .section.company-details-wrapper .tab-link-wrapper .tab-link.block .compony-details>div>p {
-        text-align: center;
         border-bottom: 1px solid var(--whisper);
         display: block;
-        padding: 37px 0 16px;
-        color: var(--blackpearl);
-        font-family: 'Nunito-Bold', sans-serif;
+        padding: 28px 0 1pc;
+        position: relative;
+        text-align: center;
+        color: #010812;
+        font-family: Nunito-Bold, sans-serif;
         font-size: 18px;
         font-weight: 700;
         line-height: 27px;
+        text-transform: capitalize;
     }
 
     .section.company-details-wrapper .tab-link-wrapper .tab-link.block .compony-details>div>ul>li a {
@@ -169,10 +182,24 @@
         line-height: 24px;
         margin-top: 16px;
         padding: 0 16px 0 48px;
+        display: block;
+        text-wrap: wrap;
+        margin: 0;
+    }
+
+    .section.company-details-wrapper .tab-link-wrapper .tab-link.block .compony-details>div>ul>li>a:hover,
+    .section.company-details-wrapper .tab-link-wrapper .tab-link.block .compony-details>div>ul>li>strong>a:hover {
+        background-color: transparent;
+        color: var(--black);
+        text-decoration: none;
     }
 
     .section.company-details-wrapper .tab-link-wrapper .tab-link.block>div>div>ul>li>strong>a {
         background-color: transparent;
+    }
+
+    .section.company-details-wrapper .tab-link-wrapper .tab-link.block>div>div>ul>li a:after {
+        display: none;
     }
 
     .section.company-details-wrapper .tab-link-wrapper .tab-link.block .compony-details>div>ul>li:last-child a {
@@ -180,7 +207,7 @@
     }
 
     .section.company-details-wrapper .tab-link-wrapper .tab-link.block .compony-details>div>ul>li a::before {
-        border: 1px solid var(--orange);
+        border: 1px solid #a9a9a9;
         border-radius: 50%;
         content: "";
         display: block;
@@ -193,7 +220,7 @@
     }
 
     .section.company-details-wrapper .tab-link-wrapper .tab-link.block .compony-details>div>ul>li>strong a::after {
-        background: var(--orange);
+        background: #000;
         border-radius: 50%;
         content: "";
         display: block;
@@ -210,12 +237,17 @@
         gap: 0;
         margin: 0;
         flex-direction: column;
+        align-items: baseline;
     }
 
     .section.company-details-wrapper .tab-link-wrapper .tab-link.block .compony-details>div>ul>li>strong>a {
         color: var(--black);
         background-color: transparent;
         font-family: 'Nunito-Bold', sans-serif;
+        padding: 0px 144px 0 48px;
+        width: 100%;
+        display: block;
+        margin: 0;
     }
 
     .section.company-details-wrapper .tab-link-wrapper .tab-link.block .compony-details {
@@ -224,13 +256,14 @@
 
     .section.company-details-wrapper .tab-link-wrapper .tab-link.block .compony-details>div>::before {
         background-color: var(--silver);
+        border-radius: 6px;
         content: "";
         display: block;
         height: 4px;
         left: 0;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 10px;
+        margin-top: 8px;
         position: absolute;
         right: 0;
         top: 0;
@@ -247,7 +280,6 @@
         position: fixed;
         overflow-y: auto;
         flex-direction: column;
-        /* top: 174px; */
         left: 0;
         right: 0;
         bottom: 0;
@@ -262,6 +294,8 @@
 
     .section.company-details-wrapper .tab-link-wrapper .tab-link.block .compony-details.model-mob-hide {
         transform: translateY(0);
+        overflow: hidden;
+        overflow-y: auto;
     }
 
     .body-overlay {
@@ -278,5 +312,11 @@
     body.overlay-active .body-overlay {
         display: block;
         backdrop-filter: blur(0);
+    }
+
+    .section.company-details-wrapper .tab-link-wrapper .tab-link.block .compony-details>div>ul>li {
+        margin-top: 16px;
+        padding: 0;
+        text-align: start;
     }
 }

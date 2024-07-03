@@ -72,6 +72,14 @@ export function generateTabName(block) {
             currentEl.classList.add("active");
             currentEl.closest(".carousel-item")?.classList.add("active");
         }
+        if (document.querySelector(".section.tab-with-cards-wrapper .tab-name-wrapper")) {
+            if (!(document.querySelector(".section.partnerships-cards-wrapper").classList.contains(id) && currentEl.classList.contains("active"))) {
+                document.querySelector(".section.partnerships-cards-wrapper").classList.add("dp-none");
+            }
+            else {
+                document.querySelector(".section.partnerships-cards-wrapper").classList.remove("dp-none")
+            }
+        }
     })
     return block;
 }

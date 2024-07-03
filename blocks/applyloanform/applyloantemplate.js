@@ -1,8 +1,8 @@
 export function appplyLoanTemplate() {
   const properties = {
-    rupeeIcon: "/path/to/rupeeIcon.png",
+    rupeeIcon: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/rupee-icon.svg",
     mainFormHeading: "Main Form Heading",
-    crossOne: "/path/to/crossOne.png",
+    crossOne: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/close-icon.svg",
     loanType: "Loan Type",
     loanTypePlaceholder: "Select Loan Type",
     loanAmount: "Loan Amount",
@@ -24,21 +24,21 @@ export function appplyLoanTemplate() {
     checkboxAnchorText: "terms and conditions",
     checkboxAnchorTextLink: "http://example.com",
     verifyHead: "Verify Your Mobile Number",
-    sucessFirstImg: "/path/to/successFirstImg.png",
-    crossTwo: "/path/to/crossTwo.png",
+    sucessFirstImg: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/loan-sucess.png",
+    crossTwo: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/close-icon.svg",
     FirstLineText: "Your request has been submitted successfully!",
     SecondLineText: "Here is your QR code",
-    sucessSecondImg: "/path/to/successSecondImg.png",
+    sucessSecondImg: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/scanner.svg",
     MobileLineText: "Scan the QR code with your mobile app",
-    scanImgOne: "/path/to/scanImgOne.png",
-    scanImgTwo: "/path/to/scanImgTwo.png",
-    errorImage: "/path/to/errorImage.png",
-    crossThree: "/path/to/crossThree.png",
+    scanImgOne: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/homepage/banner-images/playstore.png",
+    scanImgTwo: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/homepage/banner-images/appstore.png",
+    errorImage: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/loan-error.png",
+    crossThree: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/close-icon.svg",
     errorhead: "Request Failed",
     errorSubhead: "There was an error processing your request.",
     RedBoxText: "Please try again later.",
-    errorImage2: "/path/to/errorImage2.png",
-    crossFour: "/path/to/crossFour.png",
+    errorImage2: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/loan-error.png",
+    crossFour: " https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/close-icon.svg",
     errorMessageOne: "Something went wrong",
     errorMessageTwo: "Please try again.",
     buttonOne: "Submit",
@@ -103,14 +103,14 @@ export function appplyLoanTemplate() {
                         <div class="loan-form-heading-parent ">
                             <div class="cmp-container">
                                 <div class="image">
-                                    <img data-src="${properties.rupeeIcon}" 
+                                    <img data-src="${properties.rupeeIcon}" src="${properties.rupeeIcon}"
                                         class="cmp-image__image lozad"  alt="send">
                                 </div>
                                 <div class="text">
                                     <p>${properties.mainFormHeading}</p>
                                 </div>
                                 <div class="image crossimage">
-                                    <img data-src="${properties.crossOne}" 
+                                    <img data-src="${properties.crossOne}" src="${properties.crossOne}"
                                         class="cmp-image__image lozad" alt="close-icon">
                                 </div>
                             </div>
@@ -124,8 +124,8 @@ export function appplyLoanTemplate() {
                                         <div class="cmp-form-text-parent multiselectoptions">
                                             <input class="cmp-form-text__text" type="text" id="form-loan-type"
                                                 placeholder="${properties.loanTypePlaceholder}" readonly  autocomplete="off">
-                                            <span class="arrowimage"><img class="lozad"
-                                                    data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/down-arrow.png" alt="arrowimage">
+                                            <span class="arrowimage"><img class="lozad" src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/down-arrow.png"
+                                                    data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/down-arrow.png" alt="arrowimage" src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/down-arrow.png">
                                             </span>
                                         </div>
                                         <div class="option-form-parent">
@@ -183,12 +183,10 @@ export function appplyLoanTemplate() {
                                                         <span
                                                             class="cmp-form-options__field-description">${properties.firstCheckText}</span>
                                                         <img id="" class="icon coloricon lozad"
-                                                            data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/salaried-after-selected-icon.svg
-                                                            "
-                                                            alt="salaried-after-selected-icon">
-                                                        <img id="" class="icon blackicon lozad"
-                                                            data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/salaried-before-selected-icon.svg"
-                                                            alt="salaried-before-selected-icon">
+                                                            data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/salaried-after-selected-icon.svg"
+                                                            alt="salaried-after-selected-icon" src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/salaried-after-selected-icon.svg">
+                                                        <img id="" class="icon blackicon lozad" src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/salaried-before-selected-icon.svg"
+                                                            alt="salaried-before-selected-icon" data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/salaried-before-selected-icon.svg">
                                                     </div>
     
                                                         
@@ -202,10 +200,10 @@ export function appplyLoanTemplate() {
                                                         <input class="cmp-form-options__field--radio"
                                                             id="radio-business" name="emplyoment" type="radio">
                                                         <span class="cmp-form-options__field-description">${properties.secondCheckText}</span>
-                                                        <img id="" class="icon coloricon lozad"
+                                                        <img id="" class="icon coloricon lozad" src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/business-loan-after-selected-icon.svg"
                                                             data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/business-loan-after-selected-icon.svg"
                                                             alt="business-loan-after-selected-icon">
-                                                        <img id="" class="icon blackicon lozad"
+                                                        <img id="" class="icon blackicon lozad" src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/business-loan-before-selcted-icon.svg"
                                                             data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/business-loan-before-selcted-icon.svg"
                                                             alt="business-loan-before-selcted-icon">
                                                     </div>
@@ -229,7 +227,7 @@ export function appplyLoanTemplate() {
                                         <div class="cmp-form-text-parent" id="dob-container">
                                             <input class="cmp-form-text__text dobclass" type="text" placeholder="${properties.datePickerPlaceholder}"
                                                 id="loan-form-dob" name="text" maxlength="10" autocomplete="off" data-value-type="date">
-                                            <span class="arrowimage dobarrow" id="loan-form-cal-id"><img class="lozad"
+                                            <span class="arrowimage dobarrow" id="loan-form-cal-id"><img class="lozad" src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/calendar.png"
                                                 data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/calendar.png" alt="dobarrow">
                                             </span>
     
@@ -245,7 +243,7 @@ export function appplyLoanTemplate() {
                                         <div class="cmp-form-text-parent stateparent laststate" id="stateparent">
                                             <input class="cmp-form-text__text" type="text" placeholder="${properties.statePlaceholder}"  autocomplete="off"
                                                 id="form-state" name="text" >
-                                            <span class="arrowimage laststate"><img class="lozad"
+                                            <span class="arrowimage laststate"><img class="lozad" src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/down-arrow.png"
                                                 data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/down-arrow.png" alt="arrowimage"></span>
                                             <span class="loan-form-err">
                                                 Enter Valid State
@@ -261,7 +259,7 @@ export function appplyLoanTemplate() {
                                         <div class="cmp-form-text-parent  branchparent" id="branchparent">
                                             <input class="cmp-form-text__text" type="text"
                                                 placeholder="${properties.branchPlaceholder}" id="form-branch-city" name="text"  autocomplete="off">
-                                            <span class="arrowimage laststate"><img class="lozad"
+                                            <span class="arrowimage laststate"><img class="lozad" src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/down-arrow.png"
                                                 data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/down-arrow.png" alt="arrowimage"></span>
                                             <span class="loan-form-err">
                                                 Enter Valid branch
@@ -292,7 +290,7 @@ export function appplyLoanTemplate() {
                         <div class="loan-form-otp">
                             
                             <div class="loan-form-otp-parent">
-                                <img class="leftarrow lozad" data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/back-arrow.png" alt="arrow">
+                                <img class="leftarrow lozad" src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/back-arrow.png" data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/back-arrow.png" alt="arrow">
                                 <p class="otphead">${properties.verifyHead}</p>
                                 <div class="otpsubheadcontainer">
                                     <p class="otpsubhead">Enter the 4 digit OTP sent to <span class="otp-phone-num" id="loan-form-otpnum">7845789658</span></p>
@@ -323,21 +321,21 @@ export function appplyLoanTemplate() {
                         <div class="sucess-form">
                             <div class="sucess-form-parent">
                                 <div class="cross">
-                                    <img  class="loansucess lozad" data-src="${properties.sucessFirstImg}" alt="loan-sucess-img">
-                                    <img class="crossimage lozad" data-src="${properties.crossTwo}" alt="cross-img">
+                                    <img  class="loansucess lozad" src="${properties.sucessFirstImg}" data-src="${properties.sucessFirstImg}" alt="loan-sucess-img">
+                                    <img class="crossimage lozad" data-src="${properties.crossTwo}" src="${properties.crossTwo}" alt="cross-img">
     
                                 </div>
                                 <p class="loan-request-text">${properties.FirstLineText}</p>
                                 <p class="qrcode-text">${properties.SecondLineText}</p>
                                 <div class="barcode-parent">
     
-                                    <img class="barcode lozad" data-src="${properties.sucessSecondImg}" alt="barcode">
+                                    <img class="barcode lozad" src="${properties.sucessSecondImg}" data-src="${properties.sucessSecondImg}" alt="barcode">
                                 </div>
                                 <div class="mobilescanner">
                                     <p class="mobilescannertext">${properties.MobileLineText}</p>
                                     <div class="mobilebuttons">
-                                        <a href="#"><img data-src="${properties.scanImgOne}" alt="Play Store" class="first-img lozad"></a>
-                                        <a href="#"><img data-src="${properties.scanImgTwo}" alt="App Store" class="second-img lozad"></a>
+                                        <a href="#"><img data-src="${properties.scanImgOne}" src="${properties.scanImgOne}" alt="Play Store" class="first-img lozad"></a>
+                                        <a href="#"><img data-src="${properties.scanImgTwo}" src="${properties.scanImgTwo}" alt="App Store" class="second-img lozad"></a>
                                         
                                     </div>
                                 </div>
@@ -349,16 +347,16 @@ export function appplyLoanTemplate() {
                                <div class="images">
                                    
     
-                                        <img class="errorimage lozad" data-src="${properties.errorImage}" alt="error">
+                                        <img class="errorimage lozad" data-src="${properties.errorImage}" src="${properties.errorImage}" alt="error">
                                   
                                     
-                                        <img class= "failformcross lozad" data-src=" ${properties.crossThree}" alt="cross">
+                                        <img class= "failformcross lozad" src="${properties.crossThree}" data-src="${properties.crossThree}" alt="cross">
                                 
                                </div>
                                <p class="main-heading">${properties.errorhead}</p>
                                <p class="main-sub-heading">${properties.errorSubhead}</p>
                                <div class="redbox">
-                                <img class= "alertimg lozad" data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/error-warning.svg" alt="error-warning">
+                                <img class= "alertimg lozad" src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/error-warning.svg" data-src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/error-warning.svg" alt="error-warning">
                                 
                                 <P>${properties.RedBoxText}</P>
                                </div>
@@ -368,10 +366,10 @@ export function appplyLoanTemplate() {
                             <div class="images">
                                 
     
-                                <img class="errorimage lozad" data-src="${properties.errorImage2}" alt="error">
+                                <img class="errorimage lozad" src="${properties.errorImage2}" data-src="${properties.errorImage2}" alt="error">
                                
                                  
-                                 <img class="failformcross sw-wrongcross lozad" data-src="${properties.crossFour}" alt="cross">
+                                 <img class="failformcross sw-wrongcross lozad" src="${properties.crossFour}" data-src="${properties.crossFour}" alt="cross">
                              
                             </div>
                             <p class="main-heading">${properties.errorMessageOne}</p>

@@ -250,11 +250,11 @@ const eligibilitydiv = callJson.data[0].chechboxelibilityobj.chechboxemi
   
                           <div class="customerbuttons">
   
-                              <a target="_self">
+                              <a href="${callJson.data[0].button1link}" target="_self">
   
                                   <button class="expert">${callJson.data[0].button1text}</button>
                               </a>
-                              <a target="_self">
+                              <a href="${callJson.data[0].button2link}" target="_self">
   
                                   <button class="expert orangeexpert">${callJson.data[0].button2text}</button>
                               </a>

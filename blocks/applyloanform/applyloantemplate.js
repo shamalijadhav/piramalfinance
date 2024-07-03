@@ -47,8 +47,8 @@ export function appplyLoanTemplate() {
     options: [
       {
         "Personal Loan": [
-          { litext: "Loan less than 5 Lac", loantype: "pl" },
-          { litext: "Loan more than 5 Lac", loantype: "pl" },
+          { litext: "Loan less than 5 Lacs", loantype: "pl" },
+          { litext: "Loan more than 5 Lacs", loantype: "pl" },
         ],
       },
       {

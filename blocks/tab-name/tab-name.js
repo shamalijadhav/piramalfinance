@@ -62,7 +62,7 @@ export function generateTabName(block) {
         const nestedTabName = id && document.querySelector('.nested-tab-name-child[data-id=' + id + ']');
         if (nestedTabName) {
             const section = nestedTabName.closest(".section");
-            Array.from(nestedTabName.children[0]).forEach(function (eachTab) {
+            Array.from(nestedTabName.children[0].children).forEach(function (eachTab) {
                 eachTab.classList.remove("active");
             })
             const firsttab = nestedTabName.children[0].children[0];
@@ -90,7 +90,7 @@ export function generateTabName(block) {
             section.querySelectorAll(".tab-container").forEach(function (el, index) {
                 // section.querySelector(".tab-name").children[0].children[index].classList.remove("active");
                 section.querySelector(".tab-name")?.children[0].children[index].classList.remove("active");
-                section.querySelector(".nested-tab-name-child")?.children[0]?.children[index]?.classList.remove("active");
+                section.querySelector(".nested-tab-name-child.active")?.children[0]?.children[index]?.classList.remove("active");
                 el.classList.add("dp-none");
                 el.classList.remove("active");
             })

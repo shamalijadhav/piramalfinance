@@ -17,7 +17,7 @@ export default function decorate(block) {
     const child2 = generateTabName(createBlockElement([copyblock.children[4], copyblock.children[5], "", child2Type, prev, next]))
     child1.dataset.id = ids[0];
     child2.dataset.id = ids[1];
-    child1.classList.add("nested-tab-name-child")
+    child1.classList.add("nested-tab-name-child", "active")
     child2.classList.add("nested-tab-name-child", "dp-none")
     block.append(generateTabName(createBlockElement([copyblock.children[0], copyblock.children[1], "", "", "<", ">"])));
     block.append(child1);

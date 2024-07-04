@@ -1229,6 +1229,15 @@
                 "value": "gradient-blue-green"
               }
             ]
+          },
+          {
+            "name": "on Click Form Class",
+            "children": [
+              {
+                "name": "Click to open form on Single Button",
+                "value": "open-form-on-click"
+              }
+            ]
           }
         ]
       },

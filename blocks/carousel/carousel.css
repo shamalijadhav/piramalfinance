@@ -218,6 +218,11 @@
   opacity: 1;
 }
 
+.section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container>button.selected.--white.teaser-block-two,
+.section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container>button.selected.teaser-block-seven.bg--linear-red  {
+  background-color: var(--white);
+}
+
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.--coralred>.background .foreground .text .title>h2 {
   color: var(--orange);
 }

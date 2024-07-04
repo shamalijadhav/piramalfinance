@@ -166,6 +166,13 @@ export default async function decorate(block) {
   } catch (error) {
     console.log(error)
   }
+
+  // Last element with Image
+  try {
+    block.querySelector('.nav-sections').querySelector('ul').lastElementChild.querySelector('p').innerHTML = `<img src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/language-black.svg" alt="language" class="leveloneimg">`
+  } catch (error) {
+    console.warn(error);
+  }
 }
 
 
@@ -212,7 +219,9 @@ function clickToShowMobileNavDropDown(){
 function hamburgerHandler(){
   if(document.querySelector('.nav-hamburger').querySelector('[aria-label]').ariaLabel.toLowerCase()  == "close navigation"){
      document.querySelector('.section.mobile-view-header').style.display = 'block';
+     document.querySelector('.section.mobile-view-header').classList.add("mobile-slide-navigation");
   }else if(document.querySelector('.nav-hamburger').querySelector('[aria-label]').ariaLabel.toLowerCase() == "open navigation"){
     document.querySelector('.section.mobile-view-header').style.display = 'none';
+    document.querySelector('.section.mobile-view-header').classList.remove("mobile-slide-navigation")
   }
 }

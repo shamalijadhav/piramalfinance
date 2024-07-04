@@ -624,7 +624,7 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(1) > ul>li:nth-child(5)::after {
   content: "New";
   position: absolute;
-  right: 25%;
+  right: 55px;
   background-color: #41c66e;
   border-radius: 4px;
   color: #fff;
@@ -654,6 +654,17 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   background-size: 100% 100%;
   background-image: url("https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/language-black.svg");
 } */
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li.nav-drop[aria-expanded="true"]:last-child >p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -37px;
+  width: calc(100% + 30px);
+  height: 2px;
+  background-color: #f26841;
+  transition: all ease 0.3s;
+}
 
 @media screen and (max-width: 767.99px) {
   .header-wrapper .nav-wrapper nav{
@@ -920,7 +931,7 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     padding: 0 8% 0 13%
   }
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(1) > ul>li:nth-child(5)::after {
-    right: 15%;
+    right: 35px;
   }
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul li:nth-child(5) > ul>li {
     padding-left: unset;
@@ -928,7 +939,6 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
 }
 
 /* header custom css */
-
 
 @media screen and (max-width: 1024px) {
   .section.mobile-view-header {
@@ -979,10 +989,10 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(6) > li:nth-child(3) > span::after,
   .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(6) > li:nth-child(2) > span::after,
   .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(6) > li:nth-child(1) > span::after,
-  .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(4) > span::after,
+  /* .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(4) > span::after, */
   .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(3) > span::after,
-  .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(2) > span::after,
-  .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(1) > span::after,
+  /* .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(2) > span::after, */
+  /* .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(1) > span::after, */
   .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(2) > li:nth-child(4) > span::after,
   .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(2) > li:nth-child(3) > span::after,
   .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(2) > li:nth-child(2) > span::after,
@@ -1004,10 +1014,10 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(2).active span,
   .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(3).active span,
   .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(4).active span,
-  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(1).active span,
-  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(2).active span,
+  /* .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(1).active span, */
+  /* .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(2).active span, */
   .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(3).active span,
-  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(4).active span,
+  /* .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(4).active span, */
   .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(1).active span,
   .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(2).active span,
   .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(3).active span,
@@ -1162,13 +1172,28 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
 .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(2) > li:nth-child(1) > span > img{
   width: 18px;
   height: 18px;
+} 
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(4) > a > span > img{
+  height: 18px;
+  width: 18px;
 }
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) li:nth-child(4) > a > span,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) li:nth-child(2) > a > span,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) li:nth-child(1) > a > span{
+  border-bottom: 1px solid #e6e6e6;
+}
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) li:nth-child(4) > a ,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) li:nth-child(2) > a ,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) li:nth-child(1) > a {
+  text-decoration: none;
+}
+
 /* playstore img banner */
 .section.mobile-view-header .header-mobile-app-store{
   background: linear-gradient(333.16deg, #fef0ec -4.71%, #ebeef0 116.99%);
   border-radius: 15.7755px;
   margin: 16px auto 144px;
-  max-width: 328px;
+  width: 100%;
   padding: 24px 36px;
 }
 .section.mobile-view-header .header-mobile-app-store p{
@@ -1195,6 +1220,18 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   transform: translateX(-100%);
   transition: transform 1s ease-out;
 }
+}  
+@media (min-width: 361px) and (max-width: 1024px) {
+  .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(1) > span {
+      gap: 6.8%;
+  }
+  .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(1) > span::before{
+    left: 3.3%;
+  }
+  .header nav .nav-brand img{
+    height: 44px;
+    width: 82px;
+  }
 }
 
 

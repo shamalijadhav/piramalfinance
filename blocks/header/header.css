@@ -637,9 +637,14 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   padding: 4px 10px;
 }
 
-.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul li:last-child > ul {
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(7) > ul {
   grid-template-columns: repeat(8,minmax(0,1fr));
+  text-align: center;
 }
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(7) > ul > li {
+  padding: 8px 0;
+} 
 
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul li:nth-child(5) > ul>li {
   padding-left: 65px;
@@ -942,6 +947,11 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   }
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul li:nth-child(5) > ul>li {
     padding-left: unset;
+  }
+  .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(7) > ul {
+    padding: 16px 8% 16px 15%;
+    column-gap: 0;
+    text-align: left;
   }
   .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon::before, .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon::after {
     height: 2px;

@@ -124,7 +124,7 @@ export default function decorate(block) {
   if (buttonContainer.children.length) block.append(buttonContainer);
 
   try {
-    document.querySelector('.teaser-block-six .button-container').addEventListener('click', async (e) => {
+    document.querySelector('.open-form-on-click .button-container').addEventListener('click', async (e) => {
       statemasterGetStatesApi();
       validationJSFunc();
       formOpen();

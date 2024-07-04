@@ -1175,6 +1175,18 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   width: 122px;
 }
 }  
+@media (min-width: 361px) and (max-width: 1024px) {
+  .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(1) > span {
+      gap: 6.8%;
+  }
+  .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(1) > span::before{
+    left: 3.3%;
+  }
+  .header nav .nav-brand img{
+    height: 44px;
+    width: 82px;
+  }
+}
 
 
 /* header mobile */

@@ -91,6 +91,9 @@ export default function decorate(block) {
       buttonContainer.append(button);
       button.title = `Slide ${i + 1}`;
       button.dataset.panel = `panel_${i}`;
+      panels[i].classList.forEach(function (panelclass) {
+        button.classList.add(panelclass);
+      })
       if (!i) button.classList.add('selected');
 
       observer.observe(panel);
@@ -109,19 +112,24 @@ export default function decorate(block) {
   function activePanelContainer(panel) {
     panelContainer.scrollTo({ top: 0, left: panel.offsetLeft - panel.parentNode.offsetLeft, behavior: 'smooth' });
   }
-  block.querySelector(".slide-prev").addEventListener("click", function (e) {
-    const actviveBtn = buttonContainer.querySelector(".selected")
+  function slidePrevEventHandler() {
+    const actviveBtn = buttonContainer.querySelector(".selected");
     const activePanel = block.querySelector('[data-panel=' + actviveBtn.dataset.panel + ']');
     const panel = activePanel.previousElementSibling;
-    panel && activePanelContainer(panel)
+    if (panel) activePanelContainer(panel)
+  }
+  function slideNextEventHandler() {
+    const actviveBtn = buttonContainer.querySelector(".selected");
+    const activePanel = block.querySelector('[data-panel=' + actviveBtn.dataset.panel + ']');
+    const panel = activePanel.nextElementSibling ? activePanel.nextElementSibling : block.querySelector('[data-panel');
+    if (panel) activePanelContainer(panel);
+  }
+  block.querySelector(".slide-prev").addEventListener("click", function (e) {
+    slidePrevEventHandler();
   })
   block.querySelector(".slide-next").addEventListener("click", function (e) {
-    const actviveBtn = buttonContainer.querySelector(".selected")
-    const activePanel = block.querySelector('[data-panel=' + actviveBtn.dataset.panel + ']');
-    const panel = activePanel.nextElementSibling;
-    panel && activePanelContainer(panel)
+    slideNextEventHandler();
   })
-  if (buttonContainer.children.length) block.append(buttonContainer);
 
   try {
     document.querySelector('.open-form-on-click .button-container').addEventListener('click', async (e) => {
@@ -133,4 +141,11 @@ export default function decorate(block) {
     console.warn(error);
   }
 
+  if (buttonContainer.children.length) {
+    block.append(buttonContainer)
+    setInterval(function () {
+      // slidePrevEventHandler(true);
+      slideNextEventHandler();
+    }, 5000);
+  };
 }

@@ -179,17 +179,16 @@ function toggleAllNavMobile(sections, expanded = false) {
 function clickToBlurHeader() {
   var headerDropDownList = document.querySelectorAll('.header-wrapper .section.nav-sections .default-content-wrapper ul:first-child > .nav-drop');
   headerDropDownList.forEach(function (eachHeaderdrop) {
-    eachHeaderdrop.addEventListener('click', function (e) {
+    eachHeaderdrop.addEventListener('click', function (e) {  
       const siblings = document.querySelectorAll('.header-wrapper .section.nav-sections .default-content-wrapper ul:first-child > li')
-      siblings.forEach(function (eachSibling) {
-        if (eachSibling.classList.contains('navigation-level-inactive')) {
-          eachSibling.classList.remove('navigation-level-inactive')
-        } else {
-          eachSibling.classList.add('navigation-level-inactive')
-        }
-      })
-      this.classList.remove('navigation-level-inactive');
-      this.classList.add('navigation-level-active');
+      siblings.forEach(li => li.classList.remove("navigation-level-active"));
+      if(this.getAttribute('aria-expanded') == 'true'){
+        this.closest(".default-content-wrapper").classList.add('active');
+        this.classList.add('navigation-level-active');
+      }else{
+        this.closest(".default-content-wrapper").classList.remove('active');
+        this.classList.remove('navigation-level-active');
+      }
     });
   });
 }

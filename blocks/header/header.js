@@ -166,6 +166,13 @@ export default async function decorate(block) {
   } catch (error) {
     console.log(error)
   }
+
+  // Last element with Image
+  try {
+    block.querySelector('.nav-sections').querySelector('ul').lastElementChild.querySelector('p').innerHTML = `<img src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/language-black.svg" alt="language" class="leveloneimg">`
+  } catch (error) {
+    console.warn(error);
+  }
 }
 
 

@@ -132,7 +132,7 @@ export default function decorate(block) {
   })
 
   try {
-    document.querySelector('.open-form-on-click') && document.querySelector('.open-form-on-click .button-container').addEventListener('click', async (e) => {
+    block.querySelector('.open-form-on-click') && block.querySelector('.open-form-on-click .button-container').addEventListener('click', async (e) => {
       statemasterGetStatesApi();
       validationJSFunc();
       formOpen();

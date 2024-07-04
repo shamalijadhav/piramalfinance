@@ -97,7 +97,7 @@ header nav .nav-hamburger-icon::after {
 header nav[aria-expanded='false'] .nav-hamburger-icon,
 header nav[aria-expanded='false'] .nav-hamburger-icon::before,
 header nav[aria-expanded='false'] .nav-hamburger-icon::after {
-  height: 2px;
+  height: 1.5px;
   border-radius: 2px;
   background: currentcolor;
 }
@@ -671,11 +671,11 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   }
 
   .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon::before {
-    top: -8.5px;
+    top: -5px;
   }
 
   .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon::after {
-    top: 7.5px;
+    top: 4.5px;
   }
 
   .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon::before, .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon::after {
@@ -832,6 +832,9 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     height: 44px;
     padding: unset;
   }
+  .header-wrapper .nav-wrapper nav[aria-expanded="true"] .nav-hamburger button .nav-hamburger-icon::before {
+      top: -6px;
+  }
 }
 
 @media screen and (max-width: 1400px) {
@@ -871,6 +874,27 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     width: 82px;
     height: 44px;
     padding: unset;
+  }
+  header nav[aria-expanded='false'] .nav-hamburger-icon::after {
+    top: 6px;
+  }
+  header nav[aria-expanded='false'] .nav-hamburger-icon::before {
+    top: -5px;
+  }
+  header nav[aria-expanded='false'] .nav-hamburger-icon, header nav[aria-expanded='false'] .nav-hamburger-icon::before, header nav[aria-expanded='false'] .nav-hamburger-icon::after {
+    height: 1.5px;
+    border-radius: 2px;
+    background: currentcolor;
+    color: #666;
+    width: 18px;
+  }
+  header.header-wrapper .nav-wrapper nav[aria-expanded="true"] .nav-hamburger .nav-hamburger-icon {
+    height: 18px;
+  }
+  header.header-wrapper .nav-wrapper nav[aria-expanded="true"] .nav-hamburger .nav-hamburger-icon::before,
+  header.header-wrapper .nav-wrapper nav[aria-expanded="true"] .nav-hamburger .nav-hamburger-icon::after {
+    width: 18px;
+    color: #666;
   }
 }
 

@@ -3,10 +3,10 @@ export function appplyLoanTemplate() {
     rupeeIcon: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/rupee-icon.svg",
     mainFormHeading: "Apply Loan In A Minute",
     crossOne: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/product-page/home-loan/close-icon.svg",
-    loanType: "I am looking for?",
+    loanType: "I am looking for? ",
     loanTypePlaceholder: "Select Loan Type",
-    loanAmount: "I need loan amount of",
-    fullNames: "My full name is",
+    loanAmount: "I need loan amount of ",
+    fullNames: "My full name is ",
     fullNamesPlaceholder: "Enter Full Name",
     mobileNumber: "My contact number is",
     mobileNumberPlaceholder: "Enter Mobile Number",
@@ -20,7 +20,7 @@ export function appplyLoanTemplate() {
     statePlaceholder: "Enter State",
     branch: "Branch",
     branchPlaceholder: "Enter Branch",
-    checkboxText: "I agree to the ",
+    checkboxText: "I accept to the ",
     checkboxAnchorText: "terms and conditions",
     checkboxAnchorTextLink: "http://example.com",
     verifyHead: "Verify Your Mobile Number",
@@ -46,16 +46,16 @@ export function appplyLoanTemplate() {
     buttonThree: "Try Again",
     options: [
       {
-        "Personal Loan": [
+        "Personal Loans": [
           { litext: "Loan less than 5 Lacs", loantype: "pl" },
           { litext: "Loan more than 5 Lacs", loantype: "pl" },
         ],
       },
       {
-        "Housing Loan": [{ litext: "Home Loan", loantype: "hl" }],
+        "Housing Loans": [{ litext: "Home Loan", loantype: "hl" }],
       },
       {
-        "Business Loan": [
+        "Business Loans": [
           { litext: "Business Loan", loantype: "ubl" },
           { litext: "Loan against property", loantype: "msme" },
           { litext: "Secured business loan", loantype: "msme" },

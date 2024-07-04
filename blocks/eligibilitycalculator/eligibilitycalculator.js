@@ -164,7 +164,7 @@ export default async function decorate(block) {
         },
         calendarbox: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/homepage/images/calc-tick-mobile.webp",
         calendarmobile: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/homepage/images/calc-tick-mobile.webp",
-        outputtext: "Your home loan EMI is",
+        outputtext: "Your home loan eligibility is",
         button1text: "Talk to loan expert",
         button1link: "",
         button2text: "Apply loan now",

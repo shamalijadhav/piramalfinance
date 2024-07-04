@@ -424,7 +424,8 @@ async function loadingCustomCss() {
 let body = document.querySelector("body");
 body?.addEventListener("click", function (e) {
   // e.stopImmediatePropagation();
-  if (!e.target.closest(".show") && targetObject.model) {
+  let loaninnerform=document.querySelector(".loan-form-sub-parent") || "";
+  if (!e.target.closest(".show") && targetObject.model && loaninnerform?.style.visibility != "visible") {
     targetObject.model?.querySelector(".overlayDiv").classList.remove("show");
     document.body.style.overflow = "scroll";
     document.querySelector(".modal-overlay").classList.remove("overlay");

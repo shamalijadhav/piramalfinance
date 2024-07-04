@@ -57,7 +57,7 @@ export function generateTeaserDOM(props, classes) {
   const bgPictureStyle = bgPicture?.querySelector('img')?.src || "";
   const mobileImageStyle = mobileImage?.querySelector('img')?.src || "";
   let bgImageAllow = bgPictureStyle;
-  if (targetObject.isMobile) {
+  if (targetObject.isTab) {
     bgImageAllow = mobileImageStyle;
   }
 

@@ -919,6 +919,9 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>ul {
     padding: 0 8% 0 13%
   }
+  .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(1) > ul>li:nth-child(5)::after {
+    right: 15%;
+  }
 }
 
 /* header custom css */
@@ -1184,6 +1187,10 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   border-radius: 5px;
   height: 36px;
   width: 122px;
+}
+.mobile-slide-navigation {
+  transform: translateX(-100%);
+  transition: transform 1s ease-out;
 }
 }
 

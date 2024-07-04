@@ -97,7 +97,7 @@ header nav .nav-hamburger-icon::after {
 header nav[aria-expanded='false'] .nav-hamburger-icon,
 header nav[aria-expanded='false'] .nav-hamburger-icon::before,
 header nav[aria-expanded='false'] .nav-hamburger-icon::after {
-  height: 2px;
+  height: 1.5px;
   border-radius: 2px;
   background: currentcolor;
 }
@@ -317,7 +317,7 @@ header nav .nav-sections .nav-drop::after{
   align-items: center;
 }
 
-.header-wrapper .nav-wrapper nav .nav-brand .default-content-wrapper>p>picture>img {
+.header-wrapper .nav-wrapper nav .section.logo-header .imgwithlink-wrapper .image-href-desktop a>picture>img {
   max-width: 108px;
   display: inline-block;
   margin-right: 16px;
@@ -375,7 +375,7 @@ header nav .nav-sections .nav-drop::after{
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>ul {
   width: 100%;
   left: 0;
-  padding: 0 8.7%;
+  padding: 0 11%;
   background-color: rgb(239 239 239);
   position: absolute;
   top: 100%;
@@ -383,9 +383,9 @@ header nav .nav-sections .nav-drop::after{
 }
 
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>ul>li {
-  width: 25%;
+  /* width: 25%;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
   padding-left: 8px;
   padding-right: 8px;
   height: max-content;
@@ -423,11 +423,17 @@ header nav .nav-sections .nav-drop::after{
 }
 
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li[aria-expanded="true"]>ul {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  gap: unset;
+  gap: unset; */
   padding-top: 1rem;
   padding-bottom: 1rem;
+  column-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0 auto;
+  max-width: 100%;
+  row-gap: 20px;
 }
 
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li.nav-drop>p {
@@ -502,21 +508,21 @@ header nav .nav-sections .nav-drop::after{
   position: relative;
 }
 .login-button-wrapper .default-content-wrapper .button-container a{
-    align-items: center;
-    background: #fef0ec;
-    border: 1px solid #f26841;
-    border-radius: 19px;
-    color: #f26841;
-    display: flex;
-    font-family: Nunito-Bold, sans-serif;
-    font-size: 12px;
-    line-height: 16px;
-    min-width: 81px;
-    min-height: 38px;
-    padding-left: 16px;
-    padding-right: 8px;
-    text-decoration: none;
-    margin: unset;
+  align-items: center;
+  background: #fef0ec;
+  border: 1px solid #f26841;
+  border-radius: 19px;
+  color: #f26841;
+  display: flex;
+  font-family: Nunito-Bold, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  min-width: 81px;
+  min-height: 38px;
+  padding-left: 16px;
+  padding-right: 8px;
+  text-decoration: none;
+  margin: unset;
 }
 .login-button-wrapper .default-content-wrapper p:last-child img{
   position: absolute;
@@ -550,9 +556,9 @@ header nav .nav-sections .nav-drop::after{
   display: none;
 }
 
-.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li:last-child ul>li {
+/* .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li:last-child ul>li {
   width: 12%;
-}
+} */
 
 header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   content: none;
@@ -611,7 +617,7 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(1) > ul>li:nth-child(5)::after {
   content: "New";
   position: absolute;
-  right: 30%;
+  right: 25%;
   background-color: #41c66e;
   border-radius: 4px;
   color: #fff;
@@ -665,11 +671,11 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   }
 
   .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon::before {
-    top: -8.5px;
+    top: -5px;
   }
 
   .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon::after {
-    top: 7.5px;
+    top: 4.5px;
   }
 
   .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon::before, .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon::after {
@@ -820,6 +826,15 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>ul {
     padding: 0 8% 0 11%;
   }
+
+  .header-wrapper .nav-wrapper nav .section.logo-header .imgwithlink-wrapper .image-href-desktop a>picture>img {
+    width: 82px;
+    height: 44px;
+    padding: unset;
+  }
+  .header-wrapper .nav-wrapper nav[aria-expanded="true"] .nav-hamburger button .nav-hamburger-icon::before {
+      top: -6px;
+  }
 }
 
 @media screen and (max-width: 1400px) {
@@ -854,6 +869,32 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   }
   .header-wrapper .nav-wrapper {
     height: 71px;
+  }
+  .header-wrapper .nav-wrapper nav .section.logo-header .imgwithlink-wrapper .image-href-desktop a>picture>img {
+    width: 82px;
+    height: 44px;
+    padding: unset;
+  }
+  header nav[aria-expanded='false'] .nav-hamburger-icon::after {
+    top: 6px;
+  }
+  header nav[aria-expanded='false'] .nav-hamburger-icon::before {
+    top: -5px;
+  }
+  header nav[aria-expanded='false'] .nav-hamburger-icon, header nav[aria-expanded='false'] .nav-hamburger-icon::before, header nav[aria-expanded='false'] .nav-hamburger-icon::after {
+    height: 1.5px;
+    border-radius: 2px;
+    background: currentcolor;
+    color: #666;
+    width: 18px;
+  }
+  header.header-wrapper .nav-wrapper nav[aria-expanded="true"] .nav-hamburger .nav-hamburger-icon {
+    height: 18px;
+  }
+  header.header-wrapper .nav-wrapper nav[aria-expanded="true"] .nav-hamburger .nav-hamburger-icon::before,
+  header.header-wrapper .nav-wrapper nav[aria-expanded="true"] .nav-hamburger .nav-hamburger-icon::after {
+    width: 18px;
+    color: #666;
   }
 }
 

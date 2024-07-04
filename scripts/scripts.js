@@ -23,7 +23,7 @@ export function moveAttributes(from, to, attributes) {
 /* helper script start */
 export let targetObject = {
   model: null,
-  isMobile:window.matchMedia("(max-width: 1024px)").matches
+  isMobile: window.matchMedia("(max-width: 1024px)").matches
 };
 
 export function renderHelper(data, template, callBack) {
@@ -117,8 +117,8 @@ export function currenyCommaSeperation(x) {
 }
 
 export function createCarousle(block, prevButton, nextButton) {
-  block.parentElement.append(prevButton);
-  block.parentElement.append(nextButton);
+  block.parentElement ? block.parentElement.append(prevButton) : block.append(prevButton);
+  block.parentElement ? block.parentElement.append(nextButton) : block.append(nextButton);
   prevButton.addEventListener("click", prevSlide);
   nextButton.addEventListener("click", nextSlide);
   let currentSlide = 0;
@@ -143,10 +143,10 @@ export function createCarousle(block, prevButton, nextButton) {
   carousel.addEventListener("touchmove", drag);
 
   carousel.addEventListener("wheel", scrollEvent); // Add scroll event listener
-  window.addEventListener("resize", () => {
+  function carouselResizeEventHandler() {
     visibleSlides = getVisibleSlides();
     setPositionByIndex();
-  });
+  }
 
   function dragStart(event) {
     isDragging = true;
@@ -249,6 +249,10 @@ export function createCarousle(block, prevButton, nextButton) {
   checkLastChildVisibility();
 }
 
+window.addEventListener("resize", () => {
+  targetObject.isMobile = window.matchMedia("(max-width: 1024px)").matches;
+  carouselResizeEventHandler();
+});
 export function createButton(text, picture) {
   const button = document.createElement("button");
   button.classList.add("carousel-control", text);
@@ -429,11 +433,10 @@ body?.addEventListener("click", function (e) {
         ele.classList.remove("dp-block");
         ele.classList.add("dp-none");
         document.body.style.overflow = "auto";
+        document.querySelector(".modal-overlay").classList.remove("overlay")
+        document.querySelector(".modal-overlay").classList.add("dp-none")
       });
-      /* var overlay = document.querySelector('.overlay');
-      if (overlay) {
-        document.body.removeChild(overlay);
-      } */
+
      e.currentTarget.querySelector(".stake-pop-up.dp-block")?.classList.remove("dp-block");
   }
 });

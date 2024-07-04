@@ -913,7 +913,6 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
 
 /* header custom css */
 
-
 @media screen and (max-width: 1024px) {
   .section.mobile-view-header {
     display: none;
@@ -963,10 +962,10 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(6) > li:nth-child(3) > span::after,
   .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(6) > li:nth-child(2) > span::after,
   .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(6) > li:nth-child(1) > span::after,
-  .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(4) > span::after,
+  /* .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(4) > span::after, */
   .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(3) > span::after,
-  .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(2) > span::after,
-  .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(1) > span::after,
+  /* .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(2) > span::after, */
+  /* .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(1) > span::after, */
   .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(2) > li:nth-child(4) > span::after,
   .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(2) > li:nth-child(3) > span::after,
   .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(2) > li:nth-child(2) > span::after,
@@ -988,10 +987,10 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(2).active span,
   .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(3).active span,
   .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(4).active span,
-  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(1).active span,
-  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(2).active span,
+  /* .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(1).active span, */
+  /* .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(2).active span, */
   .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(3).active span,
-  .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(4).active span,
+  /* .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(4) li:nth-child(4).active span, */
   .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(1).active span,
   .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(2).active span,
   .section.mobile-view-header .code-wrapper .code div div ul:nth-child(3) li:nth-child(3).active span,
@@ -1152,7 +1151,7 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   background: linear-gradient(333.16deg, #fef0ec -4.71%, #ebeef0 116.99%);
   border-radius: 15.7755px;
   margin: 16px auto 144px;
-  max-width: 328px;
+  width: 100%;
   padding: 24px 36px;
 }
 .section.mobile-view-header .header-mobile-app-store p{
@@ -1175,8 +1174,7 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   height: 36px;
   width: 122px;
 }
-}
-
+}  
 
 
 /* header mobile */

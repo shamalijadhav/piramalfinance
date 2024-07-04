@@ -726,7 +726,7 @@
 
 .section.testimonial-content-wrapper {
     padding: 64px 0;
-    background-color: var(--cloud);
+    background-color: rgba(235,238,240,0.3);
 }
 
 .section.testimonial-content-wrapper .default-content-wrapper h2 {

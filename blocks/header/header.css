@@ -531,7 +531,12 @@ header nav .nav-sections .nav-drop::after{
   top: 6px;
   right: 7px;
 } 
-
+.default-content-wrapper.active ul li:last-child img{
+  opacity: 0.3;
+}
+.default-content-wrapper ul li:last-child.navigation-level-active img{
+  opacity: 1;
+}
 .default-content-wrapper.active > ul li p {
   color: #ccc !important;
 }
@@ -1021,15 +1026,15 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     position: absolute;
     content: '';
     border: 1px solid black;
-    border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 3.5px;
     margin-top: -3px;
-    transform: rotate(45deg);
+    transform: rotate(135deg);
     right: 3px;
     top: 24px;
-    transition: transform .3s linear;
-    display: inline;
+    transition: transform .5s linear;
+    border-radius: 0 3px 0 0;
+    border-width: 2px 2px 0 0;
   }
   .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(1).active span,
   .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(2).active span,
@@ -1098,9 +1103,11 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(2).active span::after,
   .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(3).active span::after,
   .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(4).active span::after{
-    transform: rotate(225deg);
+    transform: rotate(315deg);
     border: 1px solid #f26841;
-    border-width: 0 2px 2px 0;
+    border-radius: 0 3px 0 0;
+    border-width: 2px 2px 0 0;
+    top: 28px;
 }
 .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) > li:nth-child(1) > ul,
 .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) > li:nth-child(2) > ul,

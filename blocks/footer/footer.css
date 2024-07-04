@@ -470,6 +470,7 @@ footer.footer-wrapper .footer {
     margin-top: 8px;
   }
   
+  .section.mobile-footer-section-third .wrappercreation-wrapper .wrapper-creation-container .image-href-desktop a>picture>img,
   .section.mobile-footer-section-third .wrappercreation-wrapper .wrapper-creation-container .image-href-mobile a>picture>img {
     width: 128px;
     height: 38px;
@@ -503,7 +504,8 @@ footer.footer-wrapper .footer {
     column-gap: 32px;
   }
 
-  .section.footer-follow-us-wrapper .wrappercreation-wrapper .imgwithlink-wrapper .image-href-mobile  a>picture img {
+  .section.footer-follow-us-wrapper .wrappercreation-wrapper .imgwithlink-wrapper .image-href-desktop a>picture img,
+  .section.footer-follow-us-wrapper .wrappercreation-wrapper .imgwithlink-wrapper .image-href-mobile a>picture img {
     width: 22px;
     height: 24px;
   }
@@ -588,6 +590,7 @@ footer.footer-wrapper .footer {
     margin-top: 0;
   }
   
+  .section.mobile-footer-section-third .wrappercreation-wrapper .wrapper-creation-container .image-href-desktop a>picture>img,
   .section.mobile-footer-section-third .wrappercreation-wrapper .wrapper-creation-container .image-href-mobile a>picture>img {
     width: 128px;
     height: 38px;
@@ -613,7 +616,8 @@ footer.footer-wrapper .footer {
     margin-left: 16px;
   }
 
-  .section.footer-follow-us-wrapper .wrappercreation-wrapper .imgwithlink-wrapper .image-href-mobile  a>picture img {
+  .section.footer-follow-us-wrapper .wrappercreation-wrapper .imgwithlink-wrapper .image-href-desktop a>picture img,
+  .section.footer-follow-us-wrapper .wrappercreation-wrapper .imgwithlink-wrapper .image-href-mobile a>picture img {
     width: 25px;
     height: 40px;
   }

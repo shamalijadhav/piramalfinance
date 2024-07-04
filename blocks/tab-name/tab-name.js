@@ -66,7 +66,6 @@ export function generateTabName(block) {
                 eachTab.classList.remove("active");
             })
             const firsttab = nestedTabName.children[0].children[0];
-            firsttab.classList.add("active");
             section.querySelectorAll('.tab-container[data-id]').forEach(function (el, index) {
                 section.querySelector(".tab-name")?.children[0].children[index].classList.remove("active");
                 section.querySelector(".nested-tab-name-child")?.children[0]?.children[index]?.classList.remove("active");
@@ -81,6 +80,7 @@ export function generateTabName(block) {
                 el.classList.add("dp-none");
                 el.classList.remove("active");
             })
+            firsttab.classList.add("active");
             nestedTabName.classList.remove("dp-none");
             nestedTabName.classList.add("active");
             currentEl.classList.add("active");

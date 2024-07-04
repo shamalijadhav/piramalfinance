@@ -81,6 +81,9 @@
     display: block;
 }
 
+.section.awards-recognition-wrapper .tab-name-nested-wrapper .tab-name-nested .nested-tab-name-child button.light>div img{
+    opacity: .5;
+}
 
 .section.awards-recognition-wrapper .tab-container-wrapper .tab-container .panel-container .teaser {
     border-radius: 1pc;

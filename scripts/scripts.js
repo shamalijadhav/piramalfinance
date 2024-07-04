@@ -23,7 +23,7 @@ export function moveAttributes(from, to, attributes) {
 /* helper script start */
 export let targetObject = {
   model: null,
-  isMobile:window.matchMedia("(max-width: 1024px)").matches
+  isMobile: window.matchMedia("(max-width: 1024px)").matches
 };
 
 export function renderHelper(data, template, callBack) {
@@ -143,10 +143,10 @@ export function createCarousle(block, prevButton, nextButton) {
   carousel.addEventListener("touchmove", drag);
 
   carousel.addEventListener("wheel", scrollEvent); // Add scroll event listener
-  window.addEventListener("resize", () => {
+  function carouselResizeEventHandler() {
     visibleSlides = getVisibleSlides();
     setPositionByIndex();
-  });
+  }
 
   function dragStart(event) {
     isDragging = true;
@@ -249,6 +249,10 @@ export function createCarousle(block, prevButton, nextButton) {
   checkLastChildVisibility();
 }
 
+window.addEventListener("resize", () => {
+  targetObject.isMobile = window.matchMedia("(max-width: 1024px)").matches;
+  carouselResizeEventHandler();
+});
 export function createButton(text, picture) {
   const button = document.createElement("button");
   button.classList.add("carousel-control", text);

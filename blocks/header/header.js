@@ -192,7 +192,6 @@ function clickToBlurHeader() {
       if(this.getAttribute('aria-expanded') == 'true'){
         this.closest(".default-content-wrapper").classList.add('active');
         this.classList.add('navigation-level-active');
-        this.closest('.default-content-wrapper ul li').querySelector('img').style.opacity = 1;
       }else{
         this.closest(".default-content-wrapper").classList.remove('active');
         this.classList.remove('navigation-level-active');

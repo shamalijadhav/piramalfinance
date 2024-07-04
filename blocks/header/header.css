@@ -534,6 +534,9 @@ header nav .nav-sections .nav-drop::after{
 .default-content-wrapper.active ul li:last-child img{
   opacity: 0.3;
 }
+.default-content-wrapper ul li:last-child.navigation-level-active img{
+  opacity: 1;
+}
 .default-content-wrapper.active > ul li p {
   color: #ccc !important;
 }

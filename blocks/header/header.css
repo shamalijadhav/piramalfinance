@@ -375,7 +375,7 @@ header nav .nav-sections .nav-drop::after{
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>ul {
   width: 100%;
   left: 0;
-  padding: 0 11%;
+  padding: 0 11.3%;
   background-color: rgb(239 239 239);
   position: absolute;
   top: 100%;
@@ -626,7 +626,7 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(1) > ul>li:nth-child(5)::after {
   content: "New";
   position: absolute;
-  right: 25%;
+  right: 60px;
   background-color: #41c66e;
   border-radius: 4px;
   color: #fff;
@@ -656,6 +656,17 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   background-size: 100% 100%;
   background-image: url("https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/language-black.svg");
 } */
+
+.header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li.nav-drop[aria-expanded="true"]:last-child >p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -37px;
+  width: calc(100% + 30px);
+  height: 2px;
+  background-color: #f26841;
+  transition: all ease 0.3s;
+}
 
 @media screen and (max-width: 767.99px) {
   .header-wrapper .nav-wrapper nav{
@@ -922,7 +933,7 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     padding: 0 8% 0 13%
   }
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(1) > ul>li:nth-child(5)::after {
-    right: 15%;
+    right: 35px;
   }
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul li:nth-child(5) > ul>li {
     padding-left: unset;

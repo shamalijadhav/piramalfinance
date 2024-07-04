@@ -310,6 +310,10 @@
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background {
     padding: 0 150px 0 160px;
   }
+
+  .banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser.teaser-block-two .foreground {
+    width: 70%;
+  }
 }
 
 @media screen and (max-width:767.99px) {

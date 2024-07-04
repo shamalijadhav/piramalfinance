@@ -1172,7 +1172,22 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
 .section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(2) > li:nth-child(1) > span > img{
   width: 18px;
   height: 18px;
+} 
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) > li:nth-child(4) > a > span > img{
+  height: 18px;
+  width: 18px;
 }
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) li:nth-child(4) > a > span,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) li:nth-child(2) > a > span,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) li:nth-child(1) > a > span{
+  border-bottom: 1px solid #e6e6e6;
+}
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) li:nth-child(4) > a ,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) li:nth-child(2) > a ,
+.section.mobile-view-header .code-wrapper .code div > div > ul:nth-child(4) li:nth-child(1) > a {
+  text-decoration: none;
+}
+
 /* playstore img banner */
 .section.mobile-view-header .header-mobile-app-store{
   background: linear-gradient(333.16deg, #fef0ec -4.71%, #ebeef0 116.99%);

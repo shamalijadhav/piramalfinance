@@ -317,7 +317,7 @@ header nav .nav-sections .nav-drop::after{
   align-items: center;
 }
 
-.header-wrapper .nav-wrapper nav .nav-brand .default-content-wrapper>p>picture>img {
+.header-wrapper .nav-wrapper nav .section.logo-header .imgwithlink-wrapper .image-href-desktop a>picture>img {
   max-width: 108px;
   display: inline-block;
   margin-right: 16px;
@@ -502,21 +502,21 @@ header nav .nav-sections .nav-drop::after{
   position: relative;
 }
 .login-button-wrapper .default-content-wrapper .button-container a{
-    align-items: center;
-    background: #fef0ec;
-    border: 1px solid #f26841;
-    border-radius: 19px;
-    color: #f26841;
-    display: flex;
-    font-family: Nunito-Bold, sans-serif;
-    font-size: 12px;
-    line-height: 16px;
-    min-width: 81px;
-    min-height: 38px;
-    padding-left: 16px;
-    padding-right: 8px;
-    text-decoration: none;
-    margin: unset;
+  align-items: center;
+  background: #fef0ec;
+  border: 1px solid #f26841;
+  border-radius: 19px;
+  color: #f26841;
+  display: flex;
+  font-family: Nunito-Bold, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  min-width: 81px;
+  min-height: 38px;
+  padding-left: 16px;
+  padding-right: 8px;
+  text-decoration: none;
+  margin: unset;
 }
 .login-button-wrapper .default-content-wrapper p:last-child img{
   position: absolute;
@@ -820,6 +820,12 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>ul {
     padding: 0 8% 0 11%;
   }
+
+  .header-wrapper .nav-wrapper nav .section.logo-header .imgwithlink-wrapper .image-href-desktop a>picture>img {
+    width: 82px;
+    height: 44px;
+    padding: unset;
+  }
 }
 
 @media screen and (max-width: 1400px) {
@@ -854,6 +860,11 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   }
   .header-wrapper .nav-wrapper {
     height: 71px;
+  }
+  .header-wrapper .nav-wrapper nav .section.logo-header .imgwithlink-wrapper .image-href-desktop a>picture>img {
+    width: 82px;
+    height: 44px;
+    padding: unset;
   }
 }
 

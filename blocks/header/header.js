@@ -219,7 +219,9 @@ function clickToShowMobileNavDropDown(){
 function hamburgerHandler(){
   if(document.querySelector('.nav-hamburger').querySelector('[aria-label]').ariaLabel.toLowerCase()  == "close navigation"){
      document.querySelector('.section.mobile-view-header').style.display = 'block';
+     document.querySelector('.section.mobile-view-header').classList.add("mobile-slide-navigation");
   }else if(document.querySelector('.nav-hamburger').querySelector('[aria-label]').ariaLabel.toLowerCase() == "open navigation"){
     document.querySelector('.section.mobile-view-header').style.display = 'none';
+    document.querySelector('.section.mobile-view-header').classList.remove("mobile-slide-navigation")
   }
 }

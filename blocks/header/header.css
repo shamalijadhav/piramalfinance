@@ -922,6 +922,9 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(1) > ul>li:nth-child(5)::after {
     right: 15%;
   }
+  .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul li:nth-child(5) > ul>li {
+    padding-left: unset;
+  }
 }
 
 /* header custom css */

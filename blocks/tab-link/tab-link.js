@@ -5,7 +5,7 @@ export default function decorate(block) {
     const [, classes, prev, next] = getProps(block, {
         picture: true
     })
-    if (classes === "carousel" && !targetObject.isMobile) {
+    if (classes === "carousel" && !targetObject.isTab) {
         block.children[3].remove();
         block.children[2].remove();
         block.children[1].remove();

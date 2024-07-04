@@ -281,7 +281,7 @@ footer.footer-wrapper .footer {
 
 @media screen and (max-width:1366px) {
   .footer-section-first .columns-wrapper p sup {
-    right: 27%;
+    right: 102px;
   }
   .footer-section-third {
     display: none;
@@ -620,6 +620,18 @@ footer.footer-wrapper .footer {
 
   .section.footer-last-wrapper .default-content-wrapper {
     padding-bottom: 48px;
+  }
+
+  .footer-section-first {
+    padding-top: 48px;
+  }
+
+  .footer-section-second .columns > div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-section-second .columns > div > div {
+    width: 25%;
   }
 /* footer third section onwords css end  */
 }

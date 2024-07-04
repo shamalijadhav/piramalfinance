@@ -138,7 +138,7 @@ export default async function decorate(block) {
         calendarbox: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/homepage/images/calc-calendar-mobile.webp",
         calendarmobile: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/homepage/images/calc-calendar-mobile.webp",
         outputtext1: "Your home loan EMI is",
-        outputtext2: "Your home loan EMI is",
+        outputtext2: "Your business loan EMI is",
         principaltext: "Principal amount",
         interesttext: "Interest amount",
         button1text: "Talk to loan expert",

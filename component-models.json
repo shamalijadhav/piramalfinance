@@ -2107,5 +2107,16 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "homeloancalculatorv2",
+    "fields": [
+      {
+        "component": "text-input",
+        "label": "URL of Content Fragment",
+        "name": "text",
+        "valueType": "string"
+      }
+    ]
   }
 ]

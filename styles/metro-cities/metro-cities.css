@@ -29,38 +29,51 @@
     padding-bottom: 8px;
 }
 
-.section.metro-cities-wrapper .default-content-wrapper>ul {
+.section.metro-cities-wrapper .city-list-wrapper {
+    padding: 0 0 80px 0;
+}
+
+.section.metro-cities-wrapper .default-content-wrapper>ul,
+.section.metro-cities-wrapper .city-list-wrapper .city-list > ul{
     display: grid;
     gap: 24px;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     list-style-type: disc;
 }
 
-.section.metro-cities-wrapper .default-content-wrapper>ul li {
+.section.metro-cities-wrapper .default-content-wrapper>ul li,
+.section.metro-cities-wrapper .city-list-wrapper .city-list > ul li {
     display: list-item;
     list-style-position: inside;
     list-style-type: disc;
 }
 
-.section.metro-cities-wrapper .default-content-wrapper>ul li::marker {
+.section.metro-cities-wrapper .default-content-wrapper>ul li::marker,
+.section.metro-cities-wrapper .city-list-wrapper .city-list > ul li::marker {
     color: #f26841;
     font-size: 19px;
 }
 
-.section.metro-cities-wrapper .default-content-wrapper>ul li a {
+.section.metro-cities-wrapper .default-content-wrapper>ul li a,
+.section.metro-cities-wrapper .city-list-wrapper .city-list > ul li a {
     color: #333;
     font-family: 'Nunito-Regular', sans-serif;
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
 }
-.section.metro-cities-wrapper .default-content-wrapper>ul li a:hover{
+.section.metro-cities-wrapper .default-content-wrapper>ul li a:hover,
+.section.metro-cities-wrapper .city-list-wrapper .city-list > ul li a:hover{
     color: #f26841
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
     .section.metro-cities-wrapper .default-content-wrapper {
         padding: 40px 0;
+    }
+
+    .section.metro-cities-wrapper .city-list-wrapper {
+        padding: 0 0 40px 0;
     }
 
     .section.metro-cities-wrapper .default-content-wrapper>h2 {
@@ -76,7 +89,8 @@
         margin-bottom: 20px;
     }
 
-    .section.metro-cities-wrapper .default-content-wrapper>ul {
+    .section.metro-cities-wrapper .default-content-wrapper>ul,
+    .section.metro-cities-wrapper .city-list-wrapper .city-list > ul {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }

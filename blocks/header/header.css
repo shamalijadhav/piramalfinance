@@ -531,7 +531,12 @@ header nav .nav-sections .nav-drop::after{
   top: 6px;
   right: 7px;
 } 
-
+.default-content-wrapper.active ul li:last-child img{
+  opacity: 0.3;
+}
+.default-content-wrapper ul li:last-child.navigation-level-active img{
+  opacity: 1;
+}
 .default-content-wrapper.active > ul li p {
   color: #ccc !important;
 }
@@ -541,8 +546,6 @@ header nav .nav-sections .nav-drop::after{
 
 .navigation-level-active p{
   color: #333 !important;
-}
-.navigation-level-inactive p{
 }
 
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li:last-child[aria-expanded="true"]>p::before {
@@ -659,7 +662,7 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -37px;
+  bottom: -36px;
   width: calc(100% + 30px);
   height: 2px;
   background-color: #f26841;
@@ -881,17 +884,8 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul {
     display: none;
   }
-  .header-wrapper .nav-wrapper .nav-hamburger {
-    position: absolute;
-    height: 12px;
-    width: 18px;
-    right: 1rem;
-    display: block;
-    visibility: visible;
-    top: 37%;
-  }
   .login-button-wrapper .default-content-wrapper {
-    left: -35px;
+    left: -50px;
     top: 2px;
   }
   .header-wrapper .nav-wrapper {
@@ -901,6 +895,16 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     width: 82px;
     height: 44px;
     padding: unset;
+  }
+  .header-wrapper .nav-wrapper .nav-hamburger {
+    position: absolute;
+    height: 12px;
+    width: 18px;
+    right: 1rem;
+    display: block;
+    visibility: visible;
+    top: 37%;
+    right: 25px;
   }
   header nav[aria-expanded='false'] .nav-hamburger-icon::after {
     top: 6px;
@@ -924,17 +928,29 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     color: #666;
     height: 1.5px;
   }
+  header.header-wrapper .nav-wrapper nav[aria-expanded="true"] .nav-hamburger {
+    top: 26px;
+  }
 }
 
 @media screen and (max-width:1366px) {
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>ul {
-    padding: 0 8% 0 13%
+    padding: 0 8% 0 14%
   }
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(1) > ul>li:nth-child(5)::after {
     right: 35px;
   }
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul li:nth-child(5) > ul>li {
     padding-left: unset;
+  }
+  .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon::before, .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon::after {
+    height: 2px;
+  }
+  .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon {
+    height: 2px;
+  }
+  header nav[aria-expanded='false'] .nav-hamburger-icon::after {
+    top: 5px;
   }
 }
 
@@ -1000,15 +1016,15 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     position: absolute;
     content: '';
     border: 1px solid black;
-    border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 3.5px;
     margin-top: -3px;
-    transform: rotate(45deg);
+    transform: rotate(135deg);
     right: 3px;
     top: 24px;
-    transition: transform .3s linear;
-    display: inline;
+    transition: transform .5s linear;
+    border-radius: 0 3px 0 0;
+    border-width: 2px 2px 0 0;
   }
   .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(1).active span,
   .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) li:nth-child(2).active span,
@@ -1077,9 +1093,11 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(2).active span::after,
   .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(3).active span::after,
   .section.mobile-view-header .code-wrapper .code div div ul:nth-child(2) li:nth-child(4).active span::after{
-    transform: rotate(225deg);
+    transform: rotate(315deg);
     border: 1px solid #f26841;
-    border-width: 0 2px 2px 0;
+    border-radius: 0 3px 0 0;
+    border-width: 2px 2px 0 0;
+    top: 28px;
 }
 .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) > li:nth-child(1) > ul,
 .section.mobile-view-header .code-wrapper .code div  div  ul:nth-child(6) > li:nth-child(2) > ul,

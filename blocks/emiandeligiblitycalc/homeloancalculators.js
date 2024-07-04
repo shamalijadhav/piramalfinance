@@ -104,7 +104,7 @@ export function homeLoanCalcFunc(currentSection) {
     }
 
     if (secondHead) {
-      secondHead.style.display = "none";
+      secondHead.style.display = "block";
       firstHead.style.display = "block";
     }
   }
@@ -126,7 +126,7 @@ export function homeLoanCalcFunc(currentSection) {
     }
 
     if (secondHead) {
-      firstHead.style.display = "none";
+      firstHead.style.display = "block";
       secondHead.style.display = "block";
     }
   }

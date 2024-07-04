@@ -145,7 +145,7 @@ let eligibilityinputdiv = "";
                         data-loaded="true">
 
                     <p class="outputdes">
-                        ${callJson.data[0].outputtext}
+                        ${callJson.data[0].outputtext1}
                     </p>
                     <div class="outputans" data-cal-result="resultAmt">₹34,438/-</div>
 
@@ -178,7 +178,7 @@ const eligibilitydiv = callJson.data[0].chechboxelibilityobj.chechboxemi
                         data-loaded="true">
 
                     <p class="outputdes">
-                        ${callJson.data[0].outputtext}
+                        ${callJson.data[0].outputtext2}
                     </p>
                     <div class="outputans" data-cal-result="resultAmt">₹34,438/-</div>
 

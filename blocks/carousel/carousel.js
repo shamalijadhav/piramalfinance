@@ -146,6 +146,6 @@ export default function decorate(block) {
     setInterval(function () {
       // slidePrevEventHandler(true);
       slideNextEventHandler();
-    }, 5000);
+    }, 7000);
   };
 }

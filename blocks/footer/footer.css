@@ -64,6 +64,7 @@ footer.footer-wrapper .footer {
   text-align: right;
   margin-right: 20%;
   position: relative;
+  cursor: pointer;
 }
 .footer-section-first .columns-wrapper p sup{
   background-color: #41C672;
@@ -284,9 +285,23 @@ footer.footer-wrapper .footer {
     right: 102px;
   }
   .footer-section-third {
-    display: none;
+    /* display: block; */
+    grid-template-columns: 15% 14% 31% 1fr;
   }
+  /* .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon::before, 
+  .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon::after {
+    height: 1px;
+  }
+  .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon::before {
+    top: -4px;
+  } */
 }
+
+/* @media (min-width:1024px) and (max-width:1366px) {
+  .footer-section-third {
+    display: block;
+  }
+} */
 @media screen and (max-width: 767px) {
   .footer-wrapper .footer {
     padding: 1.5rem 1rem;
@@ -529,6 +544,9 @@ footer.footer-wrapper .footer {
   .section.footer-last-wrapper .default-content-wrapper {
     padding-bottom: 24px;
   }
+  .section.footer-section-third {
+    display: none;
+  }
 /* footer third section onwords css end  */
 }
 
@@ -634,8 +652,11 @@ footer.footer-wrapper .footer {
     flex-direction: row;
     justify-content: space-between;
   }
+  .section.footer-section-third {
+    display: none;
+  }
   .footer-section-second .columns > div > div {
-    width: 25%;
+    width: 50%;
   }
 /* footer third section onwords css end  */
 }

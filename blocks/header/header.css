@@ -542,8 +542,6 @@ header nav .nav-sections .nav-drop::after{
 .navigation-level-active p{
   color: #333 !important;
 }
-.navigation-level-inactive p{
-}
 
 .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li:last-child[aria-expanded="true"]>p::before {
   content: "";
@@ -659,7 +657,7 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -37px;
+  bottom: -36px;
   width: calc(100% + 30px);
   height: 2px;
   background-color: #f26841;
@@ -881,17 +879,8 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul {
     display: none;
   }
-  .header-wrapper .nav-wrapper .nav-hamburger {
-    position: absolute;
-    height: 12px;
-    width: 18px;
-    right: 1rem;
-    display: block;
-    visibility: visible;
-    top: 37%;
-  }
   .login-button-wrapper .default-content-wrapper {
-    left: -35px;
+    left: -50px;
     top: 2px;
   }
   .header-wrapper .nav-wrapper {
@@ -901,6 +890,16 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     width: 82px;
     height: 44px;
     padding: unset;
+  }
+  .header-wrapper .nav-wrapper .nav-hamburger {
+    position: absolute;
+    height: 12px;
+    width: 18px;
+    right: 1rem;
+    display: block;
+    visibility: visible;
+    top: 37%;
+    right: 25px;
   }
   header nav[aria-expanded='false'] .nav-hamburger-icon::after {
     top: 6px;
@@ -924,17 +923,29 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     color: #666;
     height: 1.5px;
   }
+  header.header-wrapper .nav-wrapper nav[aria-expanded="true"] .nav-hamburger {
+    top: 26px;
+  }
 }
 
 @media screen and (max-width:1366px) {
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul>li>ul {
-    padding: 0 8% 0 13%
+    padding: 0 8% 0 14%
   }
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper > ul > li:nth-child(6) > ul > li:nth-child(1) > ul>li:nth-child(5)::after {
     right: 35px;
   }
   .header-wrapper .nav-wrapper nav .nav-sections .default-content-wrapper>ul li:nth-child(5) > ul>li {
     padding-left: unset;
+  }
+  .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon::before, .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon::after {
+    height: 2px;
+  }
+  .header-wrapper .nav-wrapper .nav-hamburger button .nav-hamburger-icon {
+    height: 2px;
+  }
+  header nav[aria-expanded='false'] .nav-hamburger-icon::after {
+    top: 5px;
   }
 }
 

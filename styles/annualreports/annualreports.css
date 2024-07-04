@@ -1,0 +1,106 @@
+/* annual reports start */
+.section.annual-reports-wrapper .default-content-wrapper h2 {
+    color: var(--orange);
+    font-family: Nunito-Extrabold, sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 42px;
+    margin: 24px 0;
+}
+
+.section.annual-reports-wrapper .default-content-wrapper ul {
+    margin-top: 16px;
+}
+
+.section.annual-reports-wrapper .default-content-wrapper ul>li {
+    margin-bottom: 16px;
+}
+
+.section.annual-reports-wrapper .default-content-wrapper ul>li>a {
+    background: var(--whitesmoke);
+    border-radius: 4px;
+    color: #333;
+    display: block;
+    font-family: Nunito-Regular, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 20px 50px 20px 16px;
+    position: relative;
+}
+
+.section.annual-reports-wrapper .default-content-wrapper ul>li>a:hover {
+    background: var(--orange);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.section.annual-reports-wrapper .default-content-wrapper ul>li>a::after {
+    content: "";
+    background-image: url('https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/company/stakeholders/pdf-icon.png');
+    position: absolute;
+    right: 24px;
+    top: 35%;
+    height: 20px;
+    width: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.section.annual-reports-wrapper .default-content-wrapper ul>li>a:hover::after {
+    content: "";
+    background-image: url('https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/company/stakeholders/pdf-white.png');
+    position: absolute;
+    right: 24px;
+    top: 35%;
+    height: 20px;
+    width: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 767px) {
+    .section.annual-reports-wrapper .default-content-wrapper h2 {
+        font-size: 18px;
+        line-height: 27px;
+        margin: 40px 0 14px;
+    }
+
+    .section.annual-reports-wrapper .default-content-wrapper ul {
+        margin-top: 12px;
+    }
+
+    .section.annual-reports-wrapper .default-content-wrapper ul>li {
+        margin-bottom: 12px;
+    }
+}
+
+/* annual reports end */
+
+
+/* offer documents start */
+
+.section.offer-documents-wrapper .default-content-wrapper ul>li>a::after {
+    content: "";
+    background-image: url('https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/company/stakeholders/download-icon.png');
+    position: absolute;
+    right: 24px;
+    top: 35%;
+    height: 20px;
+    width: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.section.annual-reports-wrapper .default-content-wrapper ul>li>a:hover::after {
+    content: "";
+    background-image: url('https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/company/stakeholders/download-icon-white.png');
+    position: absolute;
+    right: 24px;
+    top: 35%;
+    height: 20px;
+    width: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* offer documents end */

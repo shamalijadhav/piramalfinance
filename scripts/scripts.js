@@ -408,6 +408,7 @@ async function loadingCustomCss() {
     `${window.hlx.codeBasePath}/styles/partnership/partnership.css`,
     `${window.hlx.codeBasePath}/styles/rupee-cards/rupee-card.css`,
     `${window.hlx.codeBasePath}/styles/interest-rates-disclosure/interest-rates-disclosure.css`,
+    `${window.hlx.codeBasePath}/styles/annualreports/annualreports.css`,
   ]
 
   loadCssArray.forEach(async (eachCss) => {

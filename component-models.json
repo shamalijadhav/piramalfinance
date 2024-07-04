@@ -739,18 +739,35 @@
       },
       {
         "component": "select",
-        "name": "carouselshowtype",
-        "value": "primary",
-        "label": "Type",
+        "name": "child1carouselshowtype",
+        "value": "normal",
+        "label": "Child 1 Type",
         "valueType": "string",
         "options": [
           {
-            "name": "primary",
-            "value": "primary"
+            "name": "normal",
+            "value": "normal"
           },
           {
-            "name": "secondary",
-            "value": "secondary"
+            "name": "carousel",
+            "value": "carousel"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "child2carouselshowtype",
+        "value": "normal",
+        "label": "Child 2 Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "normal",
+            "value": "normal"
+          },
+          {
+            "name": "carousel",
+            "value": "carousel"
           }
         ]
       }

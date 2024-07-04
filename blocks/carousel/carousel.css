@@ -201,6 +201,7 @@
   position: absolute;
   left: 160px;
   bottom: 60px;
+  gap: 8px;
 }
 
 .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container>button {

@@ -32,7 +32,7 @@ export function stateMasterApi() {
     });
 }
 
-function statemasterGetStatesApi() {
+export function statemasterGetStatesApi() {
     return new Promise((resolve, reject) => {
         let url = "https://publish-p133703-e1305981.adobeaemcloud.com/graphql/execute.json/piramalfinance/State%20City%20Master";
 

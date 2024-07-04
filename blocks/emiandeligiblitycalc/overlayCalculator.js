@@ -1,5 +1,5 @@
 import { resetCalculator } from "./resetCalculator.js";
-// import { renderCalculatorData } from "./renderhpcal.js";
+
 
 export default function overlayCalculator() {
   var emiCalDiv = document.querySelector(".cmp-teaser--emicalculatorteaser");
@@ -19,8 +19,12 @@ export default function overlayCalculator() {
         renderCalculatorData(calculatorType);
         firstTabActive();
       } else {
-        emiOverlay.classList.remove("show");
-        overlay.classList.remove("show");
+        emi; //overlay.classList.remove("show");
+        document.querySelector(".modal-overlay").classList.remove("overlay");
+        document.querySelector(".modal-overlay").classList.add("dp-none");
+        //overlay.classList.remove("show");
+        document.querySelector(".modal-overlay").classList.remove("overlay");
+        document.querySelector(".modal-overlay").classList.add("dp-none");
         document.body.style.overflow = "auto";
       }
     });
@@ -35,8 +39,12 @@ export default function overlayCalculator() {
         renderCalculatorData(calculatorType);
         firstTabActive();
       } else {
-        elgOverlay.classList.remove("show");
-        overlay.classList.remove("show");
+        elg; //overlay.classList.remove("show");
+        document.querySelector(".modal-overlay").classList.remove("overlay");
+        document.querySelector(".modal-overlay").classList.add("dp-none");
+        //overlay.classList.remove("show");
+        document.querySelector(".modal-overlay").classList.remove("overlay");
+        document.querySelector(".modal-overlay").classList.add("dp-none");
 
         document.body.style.overflow = "auto";
       }
@@ -44,13 +52,19 @@ export default function overlayCalculator() {
   }
 
   overlay.addEventListener("click", function () {
-    overlay.classList.remove("show");
+    //overlay.classList.remove("show");
+    document.querySelector(".modal-overlay").classList.remove("overlay");
+    document.querySelector(".modal-overlay").classList.add("dp-none");
     document.body.style.overflow = "auto";
-    emiOverlay.classList.remove("show");
-    elgOverlay.classList.remove("show");
+    emi; //overlay.classList.remove("show");
+    document.querySelector(".modal-overlay").classList.remove("overlay");
+    document.querySelector(".modal-overlay").classList.add("dp-none");
+    elg; //overlay.classList.remove("show");
+    document.querySelector(".modal-overlay").classList.remove("overlay");
+    document.querySelector(".modal-overlay").classList.add("dp-none");
   });
 
-function firstTabActive() {
+  function firstTabActive() {
     let calculator = document.querySelector(".overlayDiv.show .homeloancalculator");
     let firstTab = calculator.querySelector(".tab-emi-calc");
     let firstCalDiv = calculator.querySelector(".emicalculator");

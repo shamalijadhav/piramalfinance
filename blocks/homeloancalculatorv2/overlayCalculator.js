@@ -65,7 +65,7 @@ export default function overlayCalculator() {
   });
 
   function firstTabActive() {
-    let calculator = document.querySelector(".overlayDiv.show .homeloancalculator");
+    let calculator = document.querySelector(".show .homeloancalculator");
     let firstTab = calculator.querySelector(".tab-emi-calc");
     let firstCalDiv = calculator.querySelector(".emicalculator");
     resetCalculator(firstCalDiv);

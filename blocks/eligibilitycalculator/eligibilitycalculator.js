@@ -162,9 +162,10 @@ export default async function decorate(block) {
             },
           ],
         },
-        calendarbox: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/homepage/images/calc-calendarwebp",
-        calendarmobile: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/homepage/images/calc-calendarwebp",
-        outputtext: "Your home loan EMI is",
+        calendarbox: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/homepage/images/calc-tick-mobile.webp",
+        calendarmobile: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/homepage/images/calc-tick-mobile.webp",
+        outputtext1: "Your home loan eligibility is",
+        outputtext2: "Your business loan eligibility is",
         button1text: "Talk to loan expert",
         button1link: "",
         button2text: "Apply loan now",
@@ -204,13 +205,14 @@ export function eligibilityCalculatorCallXf() {
         findSectionXFShow.querySelector(".eligibilitycalculator-wrapper").querySelector(".overlayDiv").classList.add("show");
         if (xfGetAttr == "homepage-eligibility-calculator-call-xf") {
           findSectionXFShow.classList.remove("dp-none");
-          document.querySelector("body").classList.add("overlay-active");
+          document.querySelector(".modal-overlay").classList.add("overlay");
+          document.querySelector(".modal-overlay").classList.remove("dp-none");
           calculatorType = "eligibility";
           elgOverlay.classList.add("show");
           //   overlay.classList.add("show");
           document.body.style.overflow = "hidden";
-          renderCalculatorData(currentSection, calculatorType);
           homeLoanCalcFunc(currentSection);
+          renderCalculatorData(currentSection, calculatorType);
           firstTabActive(currentSection);
         }
         targetObject.model = currentSection;

@@ -723,3 +723,37 @@
 .testimonial.block.secondary .happy-customer .info-card .customerclassfive .card-images {
     display: none;
 } 
+
+.section.testimonial-content-wrapper {
+    padding: 64px 0;
+    background-color: rgba(235,238,240,0.3);
+}
+
+.section.testimonial-content-wrapper .default-content-wrapper h2 {
+    color: #000;
+    display: block;
+    font-family: 'Nunito-Extrabold',sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 40px;
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+@media screen and (max-width:767px) {
+    .section.testimonial-content-wrapper {
+        padding: 40px 16px;
+    }
+
+    .section.testimonial-content-wrapper .default-content-wrapper h2 {
+        font-size: 20px;
+        line-height: 28px;
+        padding-bottom: 4px;
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+    .section.testimonial-content-wrapper {
+        padding: 40px 16px;
+    }
+}

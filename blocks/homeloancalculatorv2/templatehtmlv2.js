@@ -1,7 +1,7 @@
-export function CalcHTM(callJson) {
+export function calcHtmlv2(callJson) {
   const salaried = callJson.data[0].salaried.salariedcheck
     ? `
-<li id="salaryTab" class="firsttab onetab" style="display: block; background: rgb(255, 255, 255);">
+<li id="salaryTab" class="firsttab onetab">
     <div class="customecheck">
         <div class="salary-parent">
             <input type="radio" id="${callJson.data[0].salaried.salariedtabid}" name="${callJson.data[0].salaried.salariedtabname}"
@@ -57,7 +57,7 @@ let emiinputdiv = "";
           <div class="data">
               <label class="description">${each.label}</label>
               <!-- add class yearstext for displaying textvalue -->
-              <div class="inputdivs ${each.labelyearsvalue ? "yearstext" : ''} ">
+              <div class="inputdivs ">
       
                   <span class="rupee">${each.rupeesign}</span>
       
@@ -87,7 +87,7 @@ let eligibilityinputdiv = "";
           <div class="data">
               <label class="description">${each.label}</label>
               <!-- add class yearstext for displaying textvalue -->
-              <div class="inputdivs ${each.labelyearsvalue ? "yearstext" : ''} ">
+              <div class="inputdivs ">
       
                   <span class="rupee">${each.rupeesign}</span>
       
@@ -145,7 +145,7 @@ let eligibilityinputdiv = "";
                         data-loaded="true">
 
                     <p class="outputdes">
-                        ${callJson.data[0].outputtext1}
+                        ${callJson.data[0].outputtext}
                     </p>
                     <div class="outputans" data-cal-result="resultAmt">₹34,438/-</div>
 
@@ -178,7 +178,7 @@ const eligibilitydiv = callJson.data[0].chechboxelibilityobj.chechboxemi
                         data-loaded="true">
 
                     <p class="outputdes">
-                        ${callJson.data[0].outputtext2}
+                        ${callJson.data[0].outputtext}
                     </p>
                     <div class="outputans" data-cal-result="resultAmt">₹34,438/-</div>
 
@@ -193,7 +193,7 @@ const eligibilitydiv = callJson.data[0].chechboxelibilityobj.chechboxemi
     : "";
 
   return `
- <div class="container responsivegrid overlayDiv cmp-container--caloverlay">
+ <div class="container responsivegrid show">
       <div id="container-7dfdb51cd4" class="cmp-container">
           <div class="title home-loan-title">
               <div id="title-bd2a9ac3b1" class="cmp-title">

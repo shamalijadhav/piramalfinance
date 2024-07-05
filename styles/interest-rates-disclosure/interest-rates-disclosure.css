@@ -107,6 +107,19 @@
     color: var(--text-color);
 }
 
+.section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion>details>div>ul>li::after {
+    content: "";
+    background-image: url('https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/company/stakeholders/pdf-icon.png');
+    position: absolute;
+    right: 24px;
+    top: 35%;
+    height: 20px;
+    width: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: #333;
+}
+
 
 @media screen and (max-width: 767px) {
     .section.interest-rates-accordian-wrapper .default-content-wrapper h2 {
@@ -126,6 +139,11 @@
     .section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion>details>div>ul>li>ul>li>a {
         font-size: 12px;
         line-height: 18px;
+    }
+
+    .section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion>details>div>ul>li::after {
+        height: 15px;
+        width: 15px;
     }
 }
 
@@ -180,6 +198,16 @@
     position: relative;
     border: none;
  }
+
+ .section.media-acc-wrapper .accordion-group-wrapper .accordion-group .accordion>details>summary::before {
+    content: "";
+    background-image: url('https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/company/stakeholders/bell.png');
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 24px;
+}
+
 
  .section.media-acc-wrapper .accordion-group-wrapper .accordion-group .accordion>details >div>ul >li::before{
     background: var(--text-color);

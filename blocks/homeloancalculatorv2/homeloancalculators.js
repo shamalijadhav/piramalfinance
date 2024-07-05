@@ -78,16 +78,14 @@ export function homeLoanCalcFunc(currentSection) {
 
   // this for emi and elg calculator click
 
-  const emiTabs = currentSection.querySelectorAll(".tab-emi-calc");
-  const elgTabs = currentSection.querySelectorAll(".tab-eligibility-calc");
-  const emiDivs = currentSection.querySelectorAll(".emicalculator.commoncalculator");
-  const elgDivs = currentSection.querySelectorAll(".eligibilitycalculator.commoncalculator");
-  // const emiCalDiv = document.querySelector(".home-page-calculator-call-xf .homeloancalculator-wrapper");
-  // const elgDivs = document.querySelectorAll(".home-page-calculator-call-xf .eligibilitycalculator");
-  const firstHead = currentSection.querySelector(".first-head");
-  const secondHead = currentSection.querySelector(".second-head");
-  const gstBtn = currentSection.querySelector(".gst-third-tab");
-
+  const emiTabs = document.querySelectorAll(".tab-emi-calc");
+  const elgTabs = document.querySelectorAll(".tab-eligibility-calc");
+  const emiDivs = document.querySelectorAll(".emicalculator");
+  const elgDivs = document.querySelectorAll(".eligibilitycalculator");
+  const firstHead = document.querySelector(".first-head");
+  const secondHead = document.querySelector(".second-head");
+  const gstBtn = document.querySelector(".gst-third-tab");
+  
   // Function to handle click on emi tabs
   function handleEmiTabClick(index) {
     // Activate emi tab and deactivate eligibility tab
@@ -104,7 +102,7 @@ export function homeLoanCalcFunc(currentSection) {
     }
 
     if (secondHead) {
-      secondHead.style.display = "block";
+      secondHead.style.display = "none";
       firstHead.style.display = "block";
     }
   }
@@ -126,7 +124,7 @@ export function homeLoanCalcFunc(currentSection) {
     }
 
     if (secondHead) {
-      firstHead.style.display = "block";
+      firstHead.style.display = "none";
       secondHead.style.display = "block";
     }
   }

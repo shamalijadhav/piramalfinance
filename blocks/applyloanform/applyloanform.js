@@ -6,8 +6,6 @@ import { stateMasterApi } from "./statemasterapi.js";
 import { validationJSFunc } from "./validation.js";
 import AirDatepicker from "../datepickerlib/datepickerlib.js";
 import Popper from "../datepickerlib/popper.js";
-import { loanFromBtn, loanOtpInput } from "./loanformdom.js";
-import { workFlow } from "./loanformapi.js";
 import { buttonCLick } from "./loanformapi.js";
 
 export default async function decorate(block) {

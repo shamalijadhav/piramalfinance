@@ -56,17 +56,17 @@ function toggleAllNavSections(sections, expanded = false) {
  */
 function toggleMenu(nav, navSections, forceExpanded = null) {
   const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
-  const button = nav.querySelector('.nav-hamburger button');
+  // const button = nav.querySelector('.nav-hamburger button');
   document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
   nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
   toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
-  button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
+  // button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
   // enable nav dropdown keyboard accessibility
   const navDrops = navSections.querySelectorAll('.nav-drop');
   if (isDesktop.matches) {
     navDrops.forEach((drop) => {
       if (!drop.hasAttribute('tabindex')) {
-        drop.setAttribute('role', 'button');
+        // drop.setAttribute('role', 'button');
         drop.setAttribute('tabindex', 0);
         drop.addEventListener('focus', focusNavSection);
       }
@@ -136,16 +136,35 @@ export default async function decorate(block) {
   }
 
   // hamburger for mobile
-  const hamburger = document.createElement('div');
+  /* const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
       <span class="nav-hamburger-icon"></span>
     </button>`;
   hamburger.addEventListener('click', (e) => {
     toggleMenu(nav, navSections)
-    hamburgerHandler(e);
+    hamburgerHandler();
+  }); */
+  // nav.prepend(hamburger);
+  const hamburger = document.createElement('div');
+  hamburger.classList.add('nav-hamburger');
+  hamburger.innerHTML = `<div class="hambuger-menu" aria-controls="nav" aria-label="Open navigation">
+    <div class="hamburger-image-custom">
+        <img src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/icons8-hamburger-menu-100.png" alt="hamburger-icon">
+    </div>
+    <div class="cross-image-custom">
+        <img src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/icons8-cross-100.png" alt="cross-icon">
+    </div>
+</div>`;
+nav.prepend(hamburger);
+nav.querySelector('.hambuger-menu').addEventListener('click', function () {
+    if(this.closest('.hambuger-menu').getAttribute('aria-label') == "Open navigation"){
+      this.closest('.hambuger-menu').setAttribute('aria-label', "Close navigation");
+    }else{
+      this.closest('.hambuger-menu').setAttribute('aria-label', "Open navigation");
+    }
+    hamburgerHandler();
   });
-  nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
   // prevent mobile nav behavior on window resize
   toggleMenu(nav, navSections, isDesktop.matches);
@@ -166,6 +185,13 @@ export default async function decorate(block) {
   } catch (error) {
     console.log(error)
   }
+
+  // Last element with Image
+  try {
+    block.querySelector('.nav-sections').querySelector('ul').lastElementChild.querySelector('p').innerHTML = `<img src="https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/header-images/language-black.svg" alt="language" class="leveloneimg">`
+  } catch (error) {
+    console.warn(error);
+  }
 }
 
 
@@ -179,17 +205,16 @@ function toggleAllNavMobile(sections, expanded = false) {
 function clickToBlurHeader() {
   var headerDropDownList = document.querySelectorAll('.header-wrapper .section.nav-sections .default-content-wrapper ul:first-child > .nav-drop');
   headerDropDownList.forEach(function (eachHeaderdrop) {
-    eachHeaderdrop.addEventListener('click', function (e) {
+    eachHeaderdrop.addEventListener('click', function (e) {  
       const siblings = document.querySelectorAll('.header-wrapper .section.nav-sections .default-content-wrapper ul:first-child > li')
-      siblings.forEach(function (eachSibling) {
-        if (eachSibling.classList.contains('navigation-level-inactive')) {
-          eachSibling.classList.remove('navigation-level-inactive')
-        } else {
-          eachSibling.classList.add('navigation-level-inactive')
-        }
-      })
-      this.classList.remove('navigation-level-inactive');
-      this.classList.add('navigation-level-active');
+      siblings.forEach(li => li.classList.remove("navigation-level-active"));
+      if(this.getAttribute('aria-expanded') == 'true'){
+        this.closest(".default-content-wrapper").classList.add('active');
+        this.classList.add('navigation-level-active');
+      }else{
+        this.closest(".default-content-wrapper").classList.remove('active');
+        this.classList.remove('navigation-level-active');
+      }
     });
   });
 }
@@ -210,10 +235,12 @@ function clickToShowMobileNavDropDown(){
 })
 }
 
-function hamburgerHandler(e){
-  if(e.target.parentNode.getAttribute('aria-label') == "Close navigation"){
+function hamburgerHandler(){
+  if(document.querySelector('.nav-hamburger').querySelector('[aria-label]').ariaLabel.toLowerCase()  == "close navigation"){
      document.querySelector('.section.mobile-view-header').style.display = 'block';
-  }else if(e.target.parentNode.getAttribute('aria-label') == "Open navigation"){
+     document.querySelector('.section.mobile-view-header').classList.add("mobile-slide-navigation");
+  }else if(document.querySelector('.nav-hamburger').querySelector('[aria-label]').ariaLabel.toLowerCase() == "open navigation"){
     document.querySelector('.section.mobile-view-header').style.display = 'none';
+    document.querySelector('.section.mobile-view-header').classList.remove("mobile-slide-navigation")
   }
 }

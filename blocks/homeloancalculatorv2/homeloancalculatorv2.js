@@ -1,10 +1,10 @@
-import { renderCalculatorData } from "../emiandeligiblitycalc/renderhpcal.js";
-import { homeLoanCalcFunc } from "../emiandeligiblitycalc/homeloancalculators.js";
-import { CalcHTM } from "../emiandeligiblitycalc/templatehtml1.js";
-import {firstTabActive } from "../emiandeligiblitycalc/commonfile.js";
+import { renderCalculatorData } from "./renderhpcal.js";
+import { homeLoanCalcFunc } from "./homeloancalculators.js";
+import {firstTabActive } from "./commonfile.js";
 import { targetObject } from "../../scripts/scripts.js";
+import { calcHtmlv2 } from "./templatehtmlv2.js";
  
-let calculatorType, emiCalDiv, emiOverlay, overlay;
+let calculatorType, emiCalDiv, emiOverlay;
 
 export default async function decorate(block) {
   let cfURL = block.querySelector("a")?.textContent.trim();
@@ -17,7 +17,7 @@ export default async function decorate(block) {
     data: [
       {
         maindivbackground: "emi",
-        title: "EMI Calculator",
+        title: "",
         mainheadingclass: "",
         salaried: {
           salariedcheck: true,
@@ -85,7 +85,7 @@ export default async function decorate(block) {
               rangeminvalue: "10.5",
               rangemaxvalue: "20",
               rangestep: "0.1",
-              displayvalue: "11",
+              displayvalue: "10",
               minvaluetext: "10.50%",
               maxvaluetext: "20%",
             },
@@ -135,10 +135,9 @@ export default async function decorate(block) {
             },
           ],
         },
-        calendarbox: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/homepage/images/calc-calendar-mobile.webp",
-        calendarmobile: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/homepage/images/calc-calendar-mobile.webp",
-        outputtext1: "Your home loan EMI is",
-        outputtext2: "Your business loan EMI is",
+        calendarbox: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/homepage/images/calc-tick-mobile.webp",
+        calendarmobile: "https://publish-p133703-e1305981.adobeaemcloud.com/content/dam/piramalfinance/homepage/images/calc-tick-mobile.webp",
+        outputtext: "Your home loan EMI is",
         principaltext: "Principal amount",
         interesttext: "Interest amount",
         button1text: "Talk to loan expert",
@@ -151,12 +150,17 @@ export default async function decorate(block) {
     ":type": "sheet",
   };
 
-  block.innerHTML = CalcHTM(callJson);
+  block.innerHTML = calcHtmlv2(callJson);
   try {
-    emiCalDiv = document.querySelector(".home-page-calculator-call-xf .homeloancalculator-wrapper");
-    emiOverlay = emiCalDiv.querySelector(".cmp-container--caloverlay");
+    let currentSection = document.querySelector(".home-page-calculator-call-xf");
+    // emiCalDiv = document.querySelector(".home-page-calculator-call-xf");
+    // emiOverlay = emiCalDiv.querySelector(".cmp-container--caloverlay");
     // overlay = emiCalDiv.querySelector(".modal-overlay");
-    homeLoancalculatorCallXf();
+    debugger;
+    homeLoanCalcFunc(currentSection);
+    renderCalculatorData(currentSection,calculatorType);
+    firstTabActive(currentSection);
+    // homeLoancalculatorCallXf();
   } catch (error) {
     console.warn(error);
   }
@@ -169,7 +173,7 @@ export async function CFApiCall(cfurl) {
   return responseJson;
 }
 
-export function homeLoancalculatorCallXf() {
+/* export function homeLoancalculatorCallXf() {
   document.querySelectorAll("[data-teaserv2-xf='home-page-calculator-call-xf']") &&
     document.querySelectorAll("[data-teaserv2-xf='home-page-calculator-call-xf']").forEach((eachTeaserv2) => {
       eachTeaserv2.addEventListener("click", function (e) {
@@ -184,7 +188,6 @@ export function homeLoancalculatorCallXf() {
           emiOverlay.classList.add("show");
           document.querySelector(".modal-overlay").classList.add("overlay");
           document.querySelector(".modal-overlay").classList.remove("dp-none");
-          // overlay.classList.add("show");
           document.body.style.overflow = "hidden";
           homeLoanCalcFunc(currentSection);
           renderCalculatorData(currentSection, calculatorType);
@@ -194,5 +197,5 @@ export function homeLoancalculatorCallXf() {
         // xfShowHideBodyClick(currentSection);
       });
     });
-}
+} */
 

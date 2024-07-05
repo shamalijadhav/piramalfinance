@@ -616,6 +616,31 @@
         "label": "Set next icon on tab carousel"
       },
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "nested-tab-id",
+        "value": "",
+        "label": "Nested Tab Id",
+        "description": "Sets the id of the nested tab."
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "nested-tab-isactive",
+        "value": "dp-none",
+        "label": "Is Active",
+        "options": [
+          {
+            "name": "Hide",
+            "value": "dp-none"
+          },
+          {
+            "name": "Active",
+            "value": "active"
+          }
+        ]
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "tab-image-1",
@@ -661,7 +686,91 @@
         "label": "Tab Id",
         "description": "Sets the id of the tab.",
         "multi": true
-      }      
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tab-name-child-1",
+        "value": "",
+        "label": "Tab Name Child 1",
+        "description": "Sets the name of the tab child 1.",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tab-name-child-1-id",
+        "value": "",
+        "label": "Tab Name Child 1 Id",
+        "description": "Sets the id of the tab child 1.",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tab-name-child-2",
+        "value": "",
+        "label": "Tab Name Child 2",
+        "description": "Sets the name of the tab child 2.",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tab-name-child-2-id",
+        "value": "",
+        "label": "Tab Name Child 2 Id",
+        "description": "Sets the id of the tab child 2.",
+        "multi": true
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "previcon",
+        "value": "",
+        "label": "Previous Icon"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "nexticon",
+        "value": "",
+        "label": "Next Icon"
+      },
+      {
+        "component": "select",
+        "name": "child1carouselshowtype",
+        "value": "normal",
+        "label": "Child 1 Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "normal",
+            "value": "normal"
+          },
+          {
+            "name": "carousel",
+            "value": "carousel"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "child2carouselshowtype",
+        "value": "normal",
+        "label": "Child 2 Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "normal",
+            "value": "normal"
+          },
+          {
+            "name": "carousel",
+            "value": "carousel"
+          }
+        ]
+      }
     ]
   },
   {
@@ -1085,6 +1194,48 @@
               {
                 "name": "gridcolumnfw",
                 "value": "card-full-width"
+              }
+            ]
+          },
+          {
+            "name": "liner-gradient",
+            "children": [
+              {
+                "name": "gradient-blue-gray",
+                "value": "gradient-blue-gray"
+              },
+              {
+                "name": "gradient-blue",
+                "value": "gradient-blue"
+              },
+              {
+                "name": "gradient-brown",
+                "value": "gradient-brown"
+              },
+              {
+                "name": "gradient-dark-blue",
+                "value": "gradient-dark-blue"
+              },
+              {
+                "name": "gradient-gray",
+                "value": "gradient-gray"
+              },
+              {
+                "name": "gradient-teal",
+                "value": "gradient-teal"
+              },
+              {
+                "name": "gradient-blue-green",
+                "value": "gradient-blue-green"
+              }
+            ]
+          },
+          {
+            "name": "on Click Form Class",
+            "children": [
+              {
+                "name": "Click to open form on Single Button",
+                "value": "open-form-on-click"
               }
             ]
           }
@@ -1673,6 +1824,39 @@
         "value": "",
         "label": "teaserv2 Attribute",
         "description": "Set TeaserV2 Attribute"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "required": true,
+        "options": [
+          {
+            "name": "Theme",
+            "children": [
+              {
+                "name": "Light",
+                "value": "light"
+              },
+              {
+                "name": "Light",
+                "value": "light"
+              },
+              {
+                "name": "Dark",
+                "value": "dark"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "textwithinnerhtml",
+        "value": "",
+        "label": "Text With RTE"
       }
     ]
   },
@@ -1915,6 +2099,17 @@
   },
   {
     "id": "datepickerlib",
+    "fields": [
+      {
+        "component": "text-input",
+        "label": "URL of Content Fragment",
+        "name": "text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "homeloancalculatorv2",
     "fields": [
       {
         "component": "text-input",

@@ -1,11 +1,11 @@
-import { createButton, createCarousle, getProps } from "../../scripts/scripts.js";
+import { createButton, createCarousle, getProps,targetObject } from "../../scripts/scripts.js";
 
 export default function decorate(block) {
     console.log("tab link block");
     const [, classes, prev, next] = getProps(block, {
         picture: true
     })
-    if (classes === "carousel") {
+    if (classes === "carousel" && !targetObject.isTab) {
         block.children[3].remove();
         block.children[2].remove();
         block.children[1].remove();
@@ -46,9 +46,11 @@ export default function decorate(block) {
         if (model.classList.contains("model-mob-hide")) {
             model.classList.remove("model-mob-hide");
             document.body.classList.remove("overlay-active");
+            document.body.style.overflow="auto";
         } else {
             model.classList.add("model-mob-hide");
             document.querySelector("body").classList.add("overlay-active");
+            document.body.style.overflow="hidden";
         }
     })
 
@@ -60,5 +62,6 @@ export default function decorate(block) {
     overlay.addEventListener('click', function () {
         model.classList.remove("model-mob-hide");
         document.body.classList.remove("overlay-active");
+        document.body.style.overflow="auto";
     });
 } 
